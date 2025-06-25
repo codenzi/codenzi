@@ -33,8 +33,7 @@
         .lang-selector { margin-bottom: 30px; text-align: center; background-color: var(--light-blue); padding: 15px; border-radius: 8px; }
         .lang-selector label { font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--dark-blue); margin-right: 10px; }
         .lang-selector select { padding: 8px 12px; border-radius: 5px; border: 1px solid #ddd; font-size: 1em; cursor: pointer; }
-        .lang-content { display: none; }
-        #tr { display: block; }
+        .lang-content { display: none; } /* Varsayılan olarak tüm diller gizli */
         @media (max-width: 768px) {
             .container { padding: 20px 25px; }
             h1 { font-size: 2em; }
@@ -329,7 +328,7 @@
                 <h2>۶. بچوں کی رازداری</h2>
                 <p>چونکہ ہماری ایپلیکیشن کوئی ذاتی ڈیٹا جمع نہیں کرتی ہے، اس لیے یہ جان بوجھ کر 13 سال سے کم عمر بچوں سے معلومات جمع نہیں کرتی ہے۔</p>
                 <h2>۷. اس پالیسی میں تبدیلیاں</h2>
-                <p>اس پالیسی کو اپ ڈیٹ کیا جا سکتا ہے۔ تبدیلیاں اس صفحے پر پوسٹ کی جائیں گی۔</p>
+                <p>اس پالিসি کو اپ ڈیٹ کیا جا سکتا ہے۔ تبدیلیاں اس صفحے پر پوسٹ کی جائیں گی۔</p>
                 <h2>۸. ہم سے رابطہ کریں</h2>
                 <p>سوالات کے لیے: Baki Tunçer (Codenzi Labs), <strong>tuncerbaki235@gmail.com</strong></p>
             </div>
@@ -349,7 +348,7 @@
                 <h2>5. Hak Cipta</h2>
                 <p>Musik yang digunakan dalam Aplikasi, berjudul "Tears", disediakan oleh [MX Audio Library] di bawah lisensi Creative Commons Atribusi (CC BY). Sumber: [https://www.youtube.com/watch?v=UtBKz9FNycM&list=PLrwRxC8CpxfEvyh0UzRGzo95x0JRkCrPr&index=4].</p>
                 <h2>6. Privasi Anak-Anak</h2>
-                <p>Karena Aplikasi kami tidak mengumpulkan data pribadi apa pun, aplikasi ini не secara sadar mengumpulkan informasi dari anak-anak di bawah usia 13 tahun.</p>
+                <p>Karena Aplikasi kami tidak mengumpulkan data pribadi apa pun, aplikasi ini tidak secara sadar mengumpulkan informasi dari anak-anak di bawah usia 13 tahun.</p>
                 <h2>7. Perubahan pada Kebijakan Ini</h2>
                 <p>Kebijakan ini dapat diperbarui. Perubahan akan diposting di halaman ini.</p>
                 <h2>8. Hubungi Kami</h2>
@@ -448,15 +447,44 @@
     </main>
 
     <script>
-        document.getElementById('lang-select').addEventListener('change', function() {
-            var selectedLang = this.value;
-            document.querySelectorAll('.lang-content').forEach(function(el) {
-                el.style.display = 'none';
-            });
-            var contentToShow = document.getElementById(selectedLang);
-            if(contentToShow) {
-                contentToShow.style.display = 'block';
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dil değiştirme işlevini tanımla
+            function setLanguage(lang) {
+                // Tüm dil içeriklerini gizle
+                document.querySelectorAll('.lang-content').forEach(function(el) {
+                    el.style.display = 'none';
+                });
+
+                // Seçilen dilin içeriğini göster
+                var contentToShow = document.getElementById(lang);
+                if (contentToShow) {
+                    contentToShow.style.display = 'block';
+                    // Açılır menüyü de seçilen dille eşleştir
+                    document.getElementById('lang-select').value = lang;
+                } else {
+                    // Eğer dil bulunamazsa, İngilizce'ye geri dön
+                    document.getElementById('en').style.display = 'block';
+                    document.getElementById('lang-select').value = 'en';
+                }
             }
+
+            // --- Sayfa yüklendiğinde dil tespiti ---
+            // Tarayıcı dilini al (örn: 'tr-TR' -> 'tr')
+            const userLang = navigator.language.slice(0, 2);
+
+            // Açılır menüdeki mevcut tüm dilleri al
+            const availableLangs = Array.from(document.getElementById('lang-select').options).map(option => option.value);
+
+            // Kullanıcının dili mevcutsa onu, değilse İngilizce'yi varsayılan olarak ayarla
+            const defaultLang = availableLangs.includes(userLang) ? userLang : 'en';
+
+            // Başlangıç dilini ayarla
+            setLanguage(defaultLang);
+
+            // --- Manuel dil değişikliği için olay dinleyicisi ---
+            document.getElementById('lang-select').addEventListener('change', function() {
+                setLanguage(this.value);
+            });
         });
     </script>
 
