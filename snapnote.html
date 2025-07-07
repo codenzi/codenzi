@@ -49,26 +49,6 @@
             color: var(--dark-blue);
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-blue);
-            color: #fff;
-            border: 2px solid var(--primary-blue);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--dark-blue);
-            border-color: var(--dark-blue);
-            transform: translateY(-2px);
-        }
-
         /* Header ve Navigasyon */
         .header {
             background-color: #fff;
@@ -97,7 +77,6 @@
         .logo a {
            color: var(--dark-blue);
         }
-
 
         /* Gizlilik Sayfası Stilleri */
         .privacy-page {
@@ -149,13 +128,18 @@
 
         .privacy-page ul {
             list-style-type: disc;
-            margin-left: 30px;
+            padding-left: 30px;
             margin-bottom: 20px;
             color: #444;
         }
 
         .privacy-page li {
             margin-bottom: 10px;
+        }
+        
+        .privacy-page li strong {
+            font-weight: 600;
+            color: var(--dark-blue);
         }
 
         .privacy-page .last-updated {
@@ -165,14 +149,6 @@
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
-        }
-
-        .privacy-page .back-to-home {
-            display: block;
-            text-align: center;
-            margin-top: 40px;
-            font-size: 1.1em;
-            font-weight: 600;
         }
         
         /* Footer */
@@ -199,16 +175,19 @@
 
         @media (max-width: 768px) {
            .privacy-page .container {
-              padding: 20px;
+              padding: 25px;
            }
            .privacy-page h1 {
               font-size: 2.2em;
+              margin-bottom: 30px;
            }
            .privacy-page h2 {
-              font-size: 1.5em;
+              font-size: 1.6em;
+           }
+           .privacy-page p {
+              font-size: 1em;
            }
         }
-
     </style>
 </head>
 <body>
@@ -225,7 +204,7 @@
         <div class="container">
             <h1>Acil Not Uygulaması Gizlilik Politikası</h1>
 
-            <p>Bu Gizlilik Politikası, Codenzi Labs ("biz", "bize" veya "bizim") tarafından geliştirilen Acil Not ("Uygulama") mobil uygulamasını kullandığınızda kişisel verilerinizin nasıl işlendiğini ve korunduğunu açıklamaktadır. Geliştirici Baki Tunçer tarafından yönetilen Codenzi Labs, gizliliğinize en üst düzeyde önem vermektedir.</p>
+            <p>Bu Gizlilik Politikası, Google Play'de <strong>Codenzi Labs</strong> yayıncı adıyla faaliyet gösteren ve geliştirici <strong>Baki Tunçer</strong> ("biz", "bize" veya "bizim") tarafından geliştirilen Acil Not ("Uygulama") mobil uygulamasını kullandığınızda kişisel verilerinizin nasıl işlendiğini ve korunduğunu açıklamaktadır. Gizliliğiniz bizim için en yüksek önceliktir.</p>
             <p>Uygulamayı indirerek, yükleyerek veya kullanarak, bu Gizlilik Politikasında açıklanan prensipleri anladığınızı ve kabul ettiğinizi beyan edersiniz.</p>
 
             <h2>1. Veri Sorumlusu</h2>
@@ -233,56 +212,44 @@
             <ul>
                 <li><strong>Yayıncı Unvanı:</strong> Codenzi Labs</li>
                 <li><strong>Geliştirici:</strong> Baki Tunçer</li>
-                <li><strong>E-posta:</strong> info@codenzi.com</li>
+                <li><strong>E-posta:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></li>
                 <li><strong>Web Sitesi:</strong> <a href="https://www.codenzi.com" target="_blank">https://www.codenzi.com</a></li>
             </ul>
 
-            <h2>2. Kişisel Verilerin İşlenmesi Prensibi: Yerel ve Sunucusuz Çalışma</h2>
-            <p>Gizliliğinize olan bağlılığımızın bir kanıtı olarak, <strong>Acil Not uygulaması kişisel verilerinizi sunucularımıza toplamaz, göndermez veya herhangi bir şekilde uzaktan işlemez.</strong> Uygulamanın temel felsefesi, tüm verilerinizin kontrolünün tamamen sizde olmasıdır. Oluşturduğunuz tüm notlar, ses kayıtları ve diğer veriler yalnızca kendi cihazınızda, yerel olarak saklanır.</p>
+            <h2>2. Temel Felsefemiz: Gizlilik ve Yerel Depolama</h2>
+            <p>Gizliliğinize olan sarsılmaz bağlılığımızın bir kanıtı olarak, <strong>Acil Not uygulaması kişisel verilerinizi sunucularımıza toplamaz, göndermez, analiz etmez veya herhangi bir şekilde uzaktan işlemez.</strong> Uygulamanın temel felsefesi, tüm verilerinizin kontrolünün tamamen ve yalnızca sizde olmasıdır. Oluşturduğunuz tüm notlar, ses kayıtları, parolalar ve diğer veriler, sunucularımıza aktarılmaksızın sadece kendi cihazınızın güvenli depolama alanında yerel olarak saklanır.</p>
 
-            <h2>3. İşlenen Veri Kategorileri ve İşlenme Amaçları</h2>
-            <p>Uygulamanın düzgün çalışması için yalnızca aşağıdaki veri kategorileri, tamamen cihazınız üzerinde işlenir:</p>
-            <h3>Not İçerikleriniz</h3>
+            <h2>3. İşlenen Veri Kategorileri ve Hukuki Sebepleri</h2>
+            <p>Uygulamanın düzgün çalışması için yalnızca aşağıdaki veri kategorileri, tamamen sizin kontrolünüzde ve cihazınız üzerinde işlenir:</p>
             <ul>
-                <li><strong>Veri:</strong> Oluşturduğunuz notların başlıkları, metin içerikleri, kontrol listesi maddeleri ve bu maddelerin işaretlenme durumları.</li>
-                <li><strong>Amaç:</strong> Uygulamanın temel not alma işlevini yerine getirmek.</li>
-                <li><strong>Hukuki Sebep:</strong> Bir sözleşmenin ifası (KVKK Madde 5/2-c).</li>
-            </ul>
-            <h3>Sesli Not Verileriniz</h3>
-            <ul>
-                <li><strong>Veri:</strong> Kaydedilen ses dosyasının cihazınızdaki dosya yolu bilgisi.</li>
-                <li><strong>Amaç:</strong> Sesli not özelliğini sunmak.</li>
-                <li><strong>Hukuki Sebep:</strong> Açık rızanız.</li>
-            </ul>
-            <h3>Uygulama Güvenlik Verileri</h3>
-            <ul>
-                <li><strong>Veri:</strong> Uygulama kilidi parolası (SHA-256 Hash + Salt ile şifrelenmiş).</li>
-                <li><strong>Amaç:</strong> Uygulamanıza yetkisiz erişimi engellemek.</li>
-                <li><strong>Hukuki Sebep:</strong> Meşru menfaatlerimiz.</li>
+                <li><strong>Not İçerikleriniz:</strong> Oluşturduğunuz notların başlıkları, metin içerikleri, kontrol listesi maddeleri ve ses kaydı dosyalarınızın cihazınızdaki yolları gibi veriler, uygulamanın temel not alma işlevini yerine getirmek amacıyla "bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması" hukuki sebebine (KVKK Madde 5/2-c) dayanarak işlenir.</li>
+                <li><strong>Uygulama Güvenlik Verileri:</strong> Uygulama kilidi özelliğini aktif ettiğinizde belirlediğiniz parola, "veri sorumlusunun meşru menfaatleri" hukuki sebebine (KVKK Madde 5/2-f) dayanarak, aşağıda "Veri Güvenliği Taahhüdümüz" başlığında detaylandırıldığı gibi yüksek güvenlikli şifreleme yöntemleriyle (SHA-256 Hash + Salt) cihazınızda saklanır.</li>
+                <li><strong>Cihaz İzinleri:</strong> Sesli Not Kaydı için Mikrofon izni (`RECORD_AUDIO`), yalnızca siz bu özelliği aktif olarak kullandığınızda, "açık rızanız" (KVKK Madde 5/1) alınarak istenir. Bu izin, verilerinizi toplamak için değil, yalnızca ses kaydı işlevini o an için yerine getirmek amacıyla kullanılır.</li>
             </ul>
 
-            <h2>4. Cihaz İzinleri</h2>
-            <p><strong>Mikrofon İzni (`RECORD_AUDIO`):</strong> Bu izin, yalnızca siz "Sesli Not Kaydet" özelliğini aktif olarak kullandığınızda istenir. İzin vermemeniz durumunda, uygulamanın diğer tüm özelliklerini sorunsuzca kullanmaya devam edebilirsiniz.</p>
+            <h2>4. Veri Güvenliği Taahhüdümüz</h2>
+            <p>Verilerinizin güvenliği en büyük önceliğimizdir. Bu kapsamda, sektördeki en iyi uygulamaları benimseyerek aşağıdaki teknik ve idari tedbirleri uyguluyoruz:</p>
+             <ul>
+                <li><strong>Sunucusuz Mimari:</strong> Verilerinizin sunucularımıza gönderilmemesi, harici bir güvenlik ihlali veya veri sızıntısı riskini temelden ortadan kaldırır. Kontrol tamamen sizdedir.</li>
+                <li><strong>Kriptografik Parola Koruması:</strong> Parolanız asla düz metin olarak saklanmaz. Geri döndürülemez olan <strong>SHA-256 hash algoritması</strong> ve her parola için özel oluşturulan rastgele bir <strong>"Tuz (Salt)"</strong> tekniği ile şifrelenir. Bu şifrelenmiş veri, Android'in en yüksek güvenlikli depolama mekanizması olan <strong>`EncryptedSharedPreferences`</strong> içerisinde saklanır. Bu sayede, biz dahil hiç kimse orijinal parolanıza erişemez.</li>
+            </ul>
 
-            <h2>5. Veri Güvenliği</h2>
-            <p>Verilerinizin güvenliği en büyük önceliğimizdir. Sunucusuz mimari ve gelişmiş parola koruması (SHA-256 Hash + Salt ve EncryptedSharedPreferences) ile verileriniz cihazınızda güvendedir. Orijinal parolanıza bizim dahi erişimimiz yoktur.</p>
+            <h2>5. Geleceğe Yönelik Şeffaflık: Bulut Yedekleme</h2>
+            <p>Gelecekte, notlarınızı kaybetmemeniz ve farklı cihazlardan erişebilmeniz için, isteğe bağlı olarak üçüncü taraf bulut depolama hizmetleriyle (örneğin, Google Drive) entegre bir yedekleme özelliği eklemeyi planlıyoruz. Bu özellik kullanıma sunulduğunda:</p>
+            <ul>
+                <li>Bu özellik tamamen <strong>isteğe bağlı (opt-in)</strong> olacaktır. Yedeklemeyi siz açıkça aktif etmediğiniz sürece hiçbir veriniz cihazınızdan ayrılmayacaktır.</li>
+                <li>Yedeklemeyi seçmeniz durumunda, verilerinizin ilgili bulut hizmetine nasıl aktarılacağı ve o hizmetin kendi gizlilik politikaları hakkında sizi şeffaf bir şekilde bilgilendireceğiz.</li>
+                <li>Bu özellik hayata geçmeden önce bu Gizlilik Politikası güncellenecek, uygulama içinde size net bilgilendirme yapılacak ve gerekirse onayınız alınacaktır.</li>
+            </ul>
 
-            <h2>6. Gelecekte Eklenebilecek Bulut Yedekleme Özelliği</h2>
-            <p>Gelecekte, notlarınızı isteğe bağlı olarak yedekleyebilmeniz için üçüncü taraf bulut depolama hizmetleriyle (örneğin, Google Drive) entegrasyon sağlayan bir özellik eklemeyi planlıyoruz. Bu özellik tamamen <strong>isteğe bağlı (opt-in)</strong> olacaktır. Bu özellik hayata geçmeden önce bu Gizlilik Politikası güncellenecek ve sizden gerekli onaylar alınacaktır.</p>
+            <h2>6. Çocukların Gizliliği</h2>
+            <p>Uygulamamız <strong>yetişkinleri hedeflemektedir.</strong> 13 yaşın (veya ilgili ülkelerdeki eşdeğer yasal yaş sınırının) altındaki çocukların kullanımı için tasarlanmamıştır ve bu yaş grubundan bilerek kişisel veri toplamayız. Eğer bir ebeveyn veya vasi olarak, çocuğunuzun bu politika hilafına bilgi sağladığını düşünüyorsanız, derhal bizimle iletişime geçin.</p>
 
-            <h2>7. Çocukların Gizliliği</h2>
-            <p>Uygulamamız yetişkinleri hedeflemektedir ve 13 yaşın (veya ilgili ülkelerdeki eşdeğer yaş sınırının) altındaki bireylerden bilerek kişisel veri toplamaz. Eğer bir ebeveyn veya vasi olarak, çocuğunuzun bize bilgi sağladığını düşünüyorsanız, derhal bizimle iletişime geçin.</p>
+            <h2>7. Veri Saklama ve İmha Politikası</h2>
+            <p>Sildiğiniz notlar, yanlışlıkla silmeye karşı bir önlem olarak 30 gün boyunca "Çöp Kutusu"nda tutulur. Bu süre sonunda, veriler geri döndürülemez şekilde otomatik olarak kalıcı olarak silinir.</p>
 
-            <h2>8. Veri Saklama ve İmha</h2>
-            <p>Sildiğiniz notlar, 30 gün boyunca "Çöp Kutusu"nda tutulur ve bu süre sonunda geri döndürülemez şekilde otomatik olarak kalıcı olarak silinir.</p>
-
-            <h2>9. Kullanıcı Haklarınız (KVKK Madde 11)</h2>
-            <p>KVKK'nın 11. maddesi uyarınca sahip olduğunuz hakları (bilgi talep etme, düzeltme, silme vb.) kullanmak için aşağıda belirtilen e-posta adresimiz üzerinden bizimle iletişime geçebilirsiniz.</p>
-
-            <h2>10. İletişim</h2>
-            <p>Bu Gizlilik Politikası ile ilgili her türlü soru ve talebiniz için lütfen bizimle iletişime geçin:</p>
-            <p><strong>Codenzi Labs</strong><br>
-            <strong>E-posta:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+            <h2>8. Veri Sahibi Olarak Haklarınız (KVKK Madde 11)</h2>
+            <p>Verileriniz cihazınızda yerel olarak saklandığı için, bu verilere erişim, bunları düzeltme, silme ve yönetme yetkisi tamamen sizdedir. Bununla birlikte, kanun kapsamındaki haklarınız ve politikamızla ilgili sorularınız için aşağıda belirtilen e-posta adresimiz üzerinden bizimle iletişime geçebilirsiniz.</p>
 
             <p class="last-updated">Son Güncelleme Tarihi: 7 Temmuz 2025</p>
 
