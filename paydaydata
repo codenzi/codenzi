@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payday - Veri Yönetimi ve Silme / Data Management & Deletion</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #3498db;
+            --dark-blue: #2c3e50;
+            --background-light: #f4f7f6;
+            --border-color: #ddd;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--background-light);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-blue);
+            text-align: center;
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6em;
+            color: var(--primary-blue);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+        p, li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        a {
+            color: var(--primary-blue);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        strong {
+            color: var(--dark-blue);
+        }
+        .app-name { font-weight: bold; color: var(--primary-blue); }
+        .developer-name { font-weight: bold; color: var(--dark-blue); }
+        .last-updated { font-size: 0.9em; color: #777; text-align: center; margin-bottom: 30px; }
+        .footer { text-align: center; margin-top: 40px; font-size: 14px; color: #777; }
+        
+        /* Dil Gizleme Stilleri */
+        .lang-en, .lang-tr { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="tr" class="lang-tr">
+            <h1><span class="app-name">Payday</span> Veri Yönetimi ve Silme</h1>
+            <p class="last-updated">Geliştirici: <span class="developer-name">Codenza</span> | Son Güncelleme: 7 Temmuz 2025</p>
+
+            <p>Bu sayfa, <span class="app-name">Payday</span> uygulamasındaki verilerinizi yönetme ve silme seçeneklerinizi açıklar.</p>
+
+            <h2>Seçenek 1: Hesabın ve Tüm Verilerin Kalıcı Olarak Silinmesi</h2>
+            <p>Bu işlem, hesabınızı ve uygulama ile ilişkili <strong>tüm verilerinizi</strong> kalıcı olarak siler. Bu işlem geri alınamaz.</p>
+            
+            <h3>Adımlar:</h3>
+            <ol>
+                <li>Payday uygulamasından <strong>Ayarlar > Hesap</strong> bölümüne gidin.</li>
+                <li><strong>"Hesabı ve Verileri Sil"</strong> seçeneğine dokunun ve onay adımlarını takip edin.</li>
+            </ol>
+            
+            <h3>Silinecek Veri Türleri:</h3>
+            <ul>
+                <li><strong>Kişisel Bilgiler:</strong> Adınız ve e-posta adresiniz.</li>
+                <li><strong>Finansal Veriler:</strong> Tüm harcamalarınız, hedefleriniz ve maaş bilgileriniz.</li>
+                <li><strong>Google Drive Yedekleri:</strong> Uygulamanın oluşturduğu tüm bulut yedekleriniz.</li>
+                <li><strong>Uygulama Ayarları ve Tercihleri.</strong></li>
+            </ul>
+             <p><strong>Veri Saklama Süresi:</strong> Talep üzerine verileriniz aktif sistemlerden anında, tüm yedekleme sistemlerimizden ise en fazla 90 gün içinde tamamen temizlenir.</p>
+
+            <hr style="margin-top: 40px; margin-bottom: 30px; border: 0; border-top: 1px solid #eee;">
+
+            <h2>Seçenek 2: Belirli Verilerin Silinmesi (Hesabı Silmeden)</h2>
+            <p>Hesabınızı korurken sadece belirli veri türlerini silmek mümkündür. Bu işlemler doğrudan uygulama içinden yapılır:</p>
+            <ul>
+                <li><strong>Tek Bir Harcamayı Silmek İçin:</strong> Ana ekrandaki harcama listesinde, silmek istediğiniz öğeye uzun basarak "Sil" seçeneğini kullanın.</li>
+                <li><strong>Bir Tasarruf Hedefini Silmek İçin:</strong> Hedefler listesinde, silmek istediğiniz hedefe uzun basarak "Sil" seçeneğini kullanın.</li>
+                <li><strong>Tekrarlayan Harcama Şablonunu Silmek İçin:</strong> "Ayarlar > Tekrarlayan Harcamalar" ekranından ilgili şablonu silebilirsiniz.</li>
+            </ul>
+            <p>Bu işlemler yalnızca seçtiğiniz belirli veriyi siler, hesabınız veya diğer verileriniz etkilenmez.</p>
+
+        </div>
+
+        <div id="en" class="lang-en">
+            <h1><span class="app-name">Payday</span> Data Management and Deletion</h1>
+            <p class="last-updated">Developer: <span class="developer-name">Codenza</span> | Last Updated: July 7, 2025</p>
+
+            <p>This page describes your options for managing and deleting your data within the <span class="app-name">Payday</span> application.</p>
+
+            <h2>Option 1: Permanent Deletion of Account and All Data</h2>
+            <p>This action permanently deletes your account and <strong>all data</strong> associated with the application. This action cannot be undone.</p>
+            
+            <h3>Steps:</h3>
+            <ol>
+                <li>In the Payday app, go to <strong>Settings > Account</strong>.</li>
+                <li>Tap on <strong>"Delete Account and Data"</strong> and follow the confirmation steps.</li>
+            </ol>
+            
+            <h3>Types of Data to be Deleted:</h3>
+            <ul>
+                <li><strong>Personal Info:</strong> Your name and email address.</li>
+                <li><strong>Financial Data:</strong> All your expenses, goals, and salary information.</li>
+                <li><strong>Google Drive Backups:</strong> All cloud backups created by the app.</li>
+                <li><strong>Application Settings and Preferences.</strong></li>
+            </ul>
+            <p><strong>Data Retention:</strong> Upon request, your data is removed from active systems immediately and completely purged from all our backup systems within a maximum of 90 days.</p>
+            
+            <hr style="margin-top: 40px; margin-bottom: 30px; border: 0; border-top: 1px solid #eee;">
+
+            <h2>Option 2: Deletion of Specific Data (Without Deleting Account)</h2>
+            <p>It is possible to delete specific types of data while keeping your account active. These actions are performed directly within the app:</p>
+            <ul>
+                <li><strong>To Delete a Single Expense:</strong> On the main screen's transaction list, long-press the item you wish to delete and select "Delete".</li>
+                <li><strong>To Delete a Savings Goal:</strong> In the goals list, long-press the goal you wish to delete and select "Delete".</li>
+                <li><strong>To Delete a Recurring Expense Template:</strong> You can delete templates from the "Settings > Recurring Transactions" screen.</li>
+            </ul>
+            <p>These actions only delete the specific data you select; your account and other data will not be affected.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 <span class="developer-name">Codenza</span></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage; 
+            const langCode = userLang.split('-')[0];
+            const contentTR = document.getElementById('tr');
+            const contentEN = document.getElementById('en');
+            
+            if (langCode === 'tr' && contentTR) {
+                contentTR.style.display = 'block';
+                document.documentElement.lang = 'tr';
+            } else if (contentEN) {
+                contentEN.style.display = 'block';
+                document.documentElement.lang = 'en';
+            }
+        });
+    </script>
+
+</body>
+</html>
