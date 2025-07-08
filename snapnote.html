@@ -8,48 +8,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        /* Genel Ayarlar */
         :root {
-            --primary-blue: #3498db; /* Temel Mavi */
-            --dark-blue: #2c3e50;    /* Koyu Mavi/Lacivert */
-            --light-blue: #e8f5fd;   /* Çok Açık Mavi */
-            --accent-blue: #6a93cb;  /* Orta Mavi */
+            --primary-blue: #3498db;
+            --dark-blue: #2c3e50;
+            --light-blue: #e8f5fd;
+            --accent-blue: #6a93cb;
             --text-color: #333;
             --light-text: #f0f0f0;
             --background-light: #f4f7f6;
             --border-color: #ddd;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Open Sans', sans-serif;
             color: var(--text-color);
             background-color: var(--background-light);
             line-height: 1.6;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         a {
             text-decoration: none;
             color: var(--primary-blue);
             transition: color 0.3s ease;
         }
-
         a:hover {
             color: var(--dark-blue);
         }
-
-        /* Header ve Navigasyon */
         .header {
             background-color: #fff;
             padding: 15px 0;
@@ -60,31 +52,25 @@
             width: 100%;
             z-index: 1000;
         }
-
         .header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 2.2em;
             color: var(--dark-blue);
             font-weight: 700;
         }
-        
         .logo a {
            color: var(--dark-blue);
         }
-
-        /* Gizlilik Sayfası Stilleri */
         .privacy-page {
             padding: 80px 0;
             background-color: #fff;
             min-height: calc(100vh - 120px);
         }
-
         .privacy-page .container {
             max-width: 900px;
             background-color: #fff;
@@ -92,7 +78,6 @@
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
-
         .privacy-page h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 2.8em;
@@ -100,7 +85,6 @@
             text-align: center;
             margin-bottom: 40px;
         }
-
         .privacy-page h2 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.8em;
@@ -110,7 +94,6 @@
             padding-bottom: 5px;
             border-bottom: 2px solid var(--light-blue);
         }
-
         .privacy-page h3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.3em;
@@ -118,30 +101,25 @@
             margin-top: 25px;
             margin-bottom: 10px;
         }
-
         .privacy-page p {
             font-size: 1.05em;
             line-height: 1.7;
             margin-bottom: 15px;
             color: #444;
         }
-
         .privacy-page ul {
             list-style-type: disc;
             padding-left: 30px;
             margin-bottom: 20px;
             color: #444;
         }
-
         .privacy-page li {
             margin-bottom: 10px;
         }
-        
         .privacy-page li strong {
             font-weight: 600;
             color: var(--dark-blue);
         }
-
         .privacy-page .last-updated {
             font-size: 0.9em;
             color: #777;
@@ -150,8 +128,6 @@
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
         }
-        
-        /* Footer */
         .footer {
             background-color: var(--dark-blue);
             color: var(--light-text);
@@ -159,25 +135,19 @@
             text-align: center;
             font-size: 0.95em;
         }
-
         .footer p {
             margin-bottom: 8px;
         }
-
         .footer a {
             color: var(--primary-blue);
             font-weight: 600;
         }
-
         .footer a:hover {
             text-decoration: underline;
         }
-        
-        /* Dil switcher için başlangıçta görünmez yapma */
         .lang-en, .lang-tr {
             display: none;
         }
-
         @media (max-width: 768px) {
            .privacy-page .container {
               padding: 25px;
@@ -193,7 +163,6 @@
               font-size: 1em;
            }
         }
-
     </style>
 </head>
 <body>
@@ -224,14 +193,19 @@
                 </ul>
 
                 <h2>2. Temel Felsefemiz: Gizlilik ve Yerel Depolama</h2>
-                <p>Gizliliğinize olan sarsılmaz bağlılığımızın bir kanıtı olarak, <strong>Snapnote uygulaması kişisel verilerinizi sunucularımıza toplamaz, göndermez, analiz etmez veya herhangi bir şekilde uzaktan işlemez.</strong> Uygulamanın temel felsefesi, tüm verilerinizin kontrolünün tamamen ve yalnızca sizde olmasıdır. Oluşturduğunuz tüm notlar, ses kayıtları, parolalar ve diğer veriler, sunucularımıza aktarılmaksızın sadece kendi cihazınızın güvenli depolama alanında yerel olarak saklanır.</p>
+                <p>Gizliliğinize olan sarsılmaz bağlılığımızın bir kanıtı olarak, <strong>Snapnote uygulaması kişisel verilerinizi sunucularımıza toplamaz, göndermez, analiz etmez veya herhangi bir şekilde uzaktan işlemez.</strong> Uygulamanın temel felsefesi, tüm verilerinizin kontrolünün tamamen ve yalnızca sizde olmasıdır. Oluşturduğunuz tüm notlar, ses kayıtları, fotoğraflar, parolalar ve diğer veriler, sunucularımıza aktarılmaksızın sadece kendi cihazınızın güvenli depolama alanında yerel olarak saklanır.</p>
 
                 <h2>3. İşlenen Veri Kategorileri ve Hukuki Sebepleri</h2>
                  <p>Uygulamanın düzgün çalışması için yalnızca aşağıdaki veri kategorileri, tamamen sizin kontrolünüzde ve cihazınız üzerinde işlenir:</p>
                 <ul>
-                    <li><strong>Not İçerikleriniz:</strong> Oluşturduğunuz notların başlıkları, metin içerikleri, kontrol listesi maddeleri ve ses kaydı dosyalarınızın cihazınızdaki yolları gibi veriler, uygulamanın temel not alma işlevini yerine getirmek amacıyla "bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması" hukuki sebebine (KVKK Madde 5/2-c) dayanarak işlenir.</li>
+                    <li><strong>Not İçerikleriniz:</strong> Oluşturduğunuz notların başlıkları, metin içerikleri, kontrol listesi maddeleri, fotoğraflarınız ve ses kaydı dosyalarınızın cihazınızdaki yolları gibi veriler, uygulamanın temel not alma işlevini yerine getirmek amacıyla "bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması" hukuki sebebine (KVKK Madde 5/2-c) dayanarak işlenir.</li>
                     <li><strong>Uygulama Güvenlik Verileri:</strong> Uygulama kilidi özelliğini aktif ettiğinizde belirlediğiniz parola, "veri sorumlusunun meşru menfaatleri" hukuki sebebine (KVKK Madde 5/2-f) dayanarak, aşağıda "Veri Güvenliği Taahhüdümüz" başlığında detaylandırıldığı gibi yüksek güvenlikli şifreleme yöntemleriyle (SHA-256 Hash + Salt) cihazınızda saklanır.</li>
-                    <li><strong>Cihaz İzinleri:</strong> Sesli Not Kaydı için Mikrofon izni (`RECORD_AUDIO`), yalnızca siz bu özelliği aktif olarak kullandığınızda, "açık rızanız" (KVKK Madde 5/1) alınarak istenir. Bu izin, verilerinizi toplamak için değil, yalnızca ses kaydı işlevini o an için yerine getirmek amacıyla kullanılır.</li>
+                    <li><strong>Cihaz İzinleri:</strong> Uygulama, temel işlevlerini yerine getirmek için belirli izinlere ihtiyaç duyar. Bu izinler, yalnızca siz ilgili özelliği aktif olarak kullandığınızda, "açık rızanız" (KVKK Madde 5/1) alınarak istenir ve verilerinizi toplamak için değil, yalnızca o anki işlevi yerine getirmek amacıyla kullanılır:
+                        <ul>
+                            <li><strong>Mikrofon İzni (`RECORD_AUDIO`):</strong> Sesli not kaydı yapmak istediğinizde istenir.</li>
+                            <li><strong>Kamera İzni (`CAMERA`):</strong> Nota eklemek için fotoğraf çekmek istediğinizde istenir.</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <h2>4. Veri Güvenliği Taahhüdümüz</h2>
@@ -257,7 +231,7 @@
 
                 <h2>8. Veri Sahibi Olarak Haklarınız (KVKK Madde 11)</h2>
                 <p>Verileriniz cihazınızda yerel olarak saklandığı için, bu verilere erişim, bunları düzeltme, silme ve yönetme yetkisi tamamen sizdedir. Bununla birlikte, kanun kapsamındaki haklarınız ve politikamızla ilgili sorularınız için aşağıda belirtilen e-posta adresimiz üzerinden bizimle iletişime geçebilirsiniz.</p>
-                <p class="last-updated">Son Güncelleme Tarihi: 7 Temmuz 2025</p>
+                <p class="last-updated">Son Güncelleme Tarihi: 8 Temmuz 2025</p>
             </div>
 
             <div id="privacy-en" class="lang-en">
@@ -275,14 +249,19 @@
                 </ul>
 
                 <h2>2. Our Core Philosophy: Privacy and Local Storage</h2>
-                <p>As a testament to our unwavering commitment to your privacy, the <strong>SnapNote does not collect, send, analyze, or remotely process your personal data on our servers in any way.</strong> The core philosophy of the Application is that you have complete and sole control over all your data. All the notes, voice recordings, passwords, and other data you create are stored locally only in the secure storage area of your own device, without being transferred to our servers.</p>
+                <p>As a testament to our unwavering commitment to your privacy, the <strong>SnapNote does not collect, send, analyze, or remotely process your personal data on our servers in any way.</strong> The core philosophy of the Application is that you have complete and sole control over all your data. All the notes, voice recordings, photos, passwords, and other data you create are stored locally only in the secure storage area of your own device, without being transferred to our servers.</p>
 
                 <h2>3. Categories of Data Processed and Legal Bases</h2>
                 <p>For the proper functioning of the Application, only the following data categories are processed, entirely under your control and on your device:</p>
                 <ul>
-                    <li><strong>Your Note Content:</strong> Data such as the titles of your notes, text content, checklist items, and the paths of your voice recording files on your device are processed based on the legal ground of "being directly related to the establishment or performance of a contract" (KVKK, Art. 5/2-c) to fulfill the basic note-taking function of the Application.</li>
+                    <li><strong>Your Note Content:</strong> Data such as the titles of your notes, text content, checklist items, and the paths of your photos and voice recording files on your device are processed based on the legal ground of "being directly related to the establishment or performance of a contract" (KVKK, Art. 5/2-c) to fulfill the basic note-taking function of the Application.</li>
                     <li><strong>Application Security Data:</strong> When you activate the application lock feature, the password you set is stored on your device using high-security encryption methods (SHA-256 Hash + Salt), as detailed in the "Our Commitment to Data Security" section below, based on the legal ground of "legitimate interests of the data controller" (KVKK, Art. 5/2-f).</li>
-                    <li><strong>Device Permissions:</strong> The Microphone permission (`RECORD_AUDIO`) for Voice Note Recording is requested only when you actively use this feature, based on your "explicit consent" (KVKK, Art. 5/1). If you do not grant permission, you can continue to use all other features of the Application without any issues. This permission is not used to collect your data but solely to perform the voice recording function at that moment.</li>
+                    <li><strong>Device Permissions:</strong> The Application requires certain permissions to perform its core functions. These permissions are requested only when you actively use the corresponding feature, based on your "explicit consent" (KVKK, Art. 5/1), and are used solely for that function at that moment, not to collect your data:
+                        <ul>
+                            <li><strong>Microphone Permission (`RECORD_AUDIO`):</strong> Requested when you want to record a voice note.</li>
+                            <li><strong>Camera Permission (`CAMERA`):</strong> Requested when you want to take a photo to add to a note.</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <h2>4. Our Commitment to Data Security</h2>
@@ -308,7 +287,7 @@
 
                 <h2>8. Your Rights as a Data Subject (KVKK, Art. 11)</h2>
                 <p>As your data is stored locally on your device, the authority to access, correct, delete, and manage this data is entirely yours. However, you can contact us at the email address below for your rights under the law and for any questions about our policy.</p>
-                <p class="last-updated">Last Updated: July 7, 2025</p>
+                <p class="last-updated">Last Updated: July 8, 2025</p>
             </div>
         </div>
     </main>
@@ -322,23 +301,18 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Tarayıcının dilini al (örn: "tr-TR", "tr", "en-US", "en")
             const userLang = navigator.language || navigator.userLanguage; 
-
-            // Türkçe ve İngilizce içerik elementlerini seç
             const turkishContent = document.getElementById('privacy-tr');
             const englishContent = document.getElementById('privacy-en');
             
-            // Eğer dil Türkçe ise
             if (userLang.startsWith('tr')) {
-                turkishContent.style.display = 'block'; // Türkçe içeriği göster
-                englishContent.style.display = 'none';  // İngilizce içeriği gizle
-                document.documentElement.lang = 'tr';   // HTML etiketinin dilini "tr" yap
+                turkishContent.style.display = 'block';
+                englishContent.style.display = 'none';
+                document.documentElement.lang = 'tr';
             } else {
-                // Diğer tüm diller için
-                turkishContent.style.display = 'none';   // Türkçe içeriği gizle
-                englishContent.style.display = 'block';  // İngilizce içeriği göster
-                document.documentElement.lang = 'en';   // HTML etiketinin dilini "en" yap
+                turkishContent.style.display = 'none';
+                englishContent.style.display = 'block';
+                document.documentElement.lang = 'en';
             }
         });
     </script>
