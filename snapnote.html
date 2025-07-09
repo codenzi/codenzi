@@ -101,7 +101,7 @@
             margin-top: 25px;
             margin-bottom: 10px;
         }
-        .privacy-page p {
+        .privacy-page p, .privacy-page ul {
             font-size: 1.05em;
             line-height: 1.7;
             margin-bottom: 15px;
@@ -110,13 +110,11 @@
         .privacy-page ul {
             list-style-type: disc;
             padding-left: 30px;
-            margin-bottom: 20px;
-            color: #444;
         }
         .privacy-page li {
             margin-bottom: 10px;
         }
-        .privacy-page li strong {
+        .privacy-page li strong, .privacy-page .important-notice strong {
             font-weight: 600;
             color: var(--dark-blue);
         }
@@ -127,6 +125,13 @@
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
+        }
+        .important-notice {
+            background-color: var(--light-blue);
+            border-left: 5px solid var(--primary-blue);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
         .footer {
             background-color: var(--dark-blue);
@@ -150,17 +155,17 @@
         }
         @media (max-width: 768px) {
            .privacy-page .container {
-              padding: 25px;
+             padding: 25px;
            }
            .privacy-page h1 {
-              font-size: 2.2em;
-              margin-bottom: 30px;
+             font-size: 2.2em;
+             margin-bottom: 30px;
            }
            .privacy-page h2 {
-              font-size: 1.6em;
+             font-size: 1.6em;
            }
            .privacy-page p {
-              font-size: 1em;
+             font-size: 1em;
            }
         }
     </style>
@@ -180,11 +185,11 @@
 
             <div id="privacy-tr" class="lang-tr">
                 <h1>SnapNote Gizlilik Politikası</h1>
-                <p>Bu Gizlilik Politikası, Google Play'de <strong>Codenzi Labs</strong> yayıncı adıyla faaliyet gösteren ve geliştirici <strong>Baki Tunçer</strong> ("biz", "bize" veya "bizim") tarafından geliştirilen SnapNote ("Uygulama") mobil uygulamasını kullandığınızda kişisel verilerinizin nasıl işlendiğini ve korunduğunu açıklamaktadır. Gizliliğiniz bizim için en yüksek önceliktir.</p>
+                <p>Bu Gizlilik Politikası, Google Play'de <strong>Codenzi Labs</strong> yayıncı adıyla faaliyet gösteren ve geliştirici <strong>Baki Tunçer</strong> ("biz", "bize" veya "bizim") tarafından geliştirilen SnapNote ("Uygulama") mobil uygulamasını kullandığınızda kişisel verilerinizin nasıl işlendiğini ve korunduğunu açıklamaktadır. Gizliliğiniz ve verilerinizin kontrolü bizim için en yüksek önceliktir.</p>
                 <p>Uygulamayı indirerek, yükleyerek veya kullanarak, bu Gizlilik Politikasında açıklanan prensipleri anladığınızı ve kabul ettiğinizi beyan edersiniz.</p>
 
                 <h2>1. Veri Sorumlusu</h2>
-                <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili uluslararası mevzuat (GDPR vb.) uyarınca, kişisel verilerinizle ilgili olarak Veri Sorumlusu:</p>
+                <p>Kişisel verilerinizle ilgili olarak Veri Sorumlusu:</p>
                 <ul>
                     <li><strong>Yayıncı Unvanı:</strong> Codenzi Labs</li>
                     <li><strong>Geliştirici:</strong> Baki Tunçer</li>
@@ -192,55 +197,51 @@
                     <li><strong>Web Sitesi:</strong> <a href="https://www.codenzi.com" target="_blank">https://www.codenzi.com</a></li>
                 </ul>
 
-                <h2>2. Temel Felsefemiz: Gizlilik ve Yerel Depolama</h2>
-                <p>Gizliliğinize olan sarsılmaz bağlılığımızın bir kanıtı olarak, <strong>Snapnote uygulaması kişisel verilerinizi sunucularımıza toplamaz, göndermez, analiz etmez veya herhangi bir şekilde uzaktan işlemez.</strong> Uygulamanın temel felsefesi, tüm verilerinizin kontrolünün tamamen ve yalnızca sizde olmasıdır. Oluşturduğunuz tüm notlar, ses kayıtları, fotoğraflar, parolalar ve diğer veriler, sunucularımıza aktarılmaksızın sadece kendi cihazınızın güvenli depolama alanında yerel olarak saklanır.</p>
+                <h2>2. Temel Felsefemiz: Verileriniz Sadece Sizin Kontrolünüzde</h2>
+                <p>Snapnote, gizlilik odaklı bir tasarıma sahiptir. <strong>Uygulama, kişisel verilerinizi (notlar, resimler, ses kayıtları vb.) kendi sunucularımıza toplamaz, göndermez, satmaz veya analiz etmez.</strong> Verilerinizin tamamı, aşağıda açıklanan istisnalar dışında, yalnızca kendi cihazınızın güvenli depolama alanında saklanır.</p>
 
-                <h2>3. İşlenen Veri Kategorileri ve Hukuki Sebepleri</h2>
-                 <p>Uygulamanın düzgün çalışması için yalnızca aşağıdaki veri kategorileri, tamamen sizin kontrolünüzde ve cihazınız üzerinde işlenir:</p>
+                <h2>3. Veri İşleme Amaçları ve Hukuki Sebepler</h2>
+                <p>Uygulamanın düzgün çalışması için bazı veriler, tamamen sizin kontrolünüzde ve cihazınız üzerinde işlenir:</p>
                 <ul>
-                    <li><strong>Not İçerikleriniz:</strong> Oluşturduğunuz notların başlıkları, metin içerikleri, kontrol listesi maddeleri, fotoğraflarınız ve ses kaydı dosyalarınızın cihazınızdaki yolları gibi veriler, uygulamanın temel not alma işlevini yerine getirmek amacıyla "bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması" hukuki sebebine (KVKK Madde 5/2-c) dayanarak işlenir.</li>
-                    <li><strong>Uygulama Güvenlik Verileri:</strong> Uygulama kilidi özelliğini aktif ettiğinizde belirlediğiniz parola, "veri sorumlusunun meşru menfaatleri" hukuki sebebine (KVKK Madde 5/2-f) dayanarak, aşağıda "Veri Güvenliği Taahhüdümüz" başlığında detaylandırıldığı gibi yüksek güvenlikli şifreleme yöntemleriyle (SHA-256 Hash + Salt) cihazınızda saklanır.</li>
-                    <li><strong>Cihaz İzinleri:</strong> Uygulama, temel işlevlerini yerine getirmek için belirli izinlere ihtiyaç duyar. Bu izinler, yalnızca siz ilgili özelliği aktif olarak kullandığınızda, "açık rızanız" (KVKK Madde 5/1) alınarak istenir ve verilerinizi toplamak için değil, yalnızca o anki işlevi yerine getirmek amacıyla kullanılır:
+                    <li><strong>Not İçerikleriniz:</strong> Metinler, kontrol listeleri, resim ve ses dosyası yolları gibi veriler, uygulamanın temel not alma işlevini yerine getirmek amacıyla "bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması" hukuki sebebine dayanarak cihazınızda yerel olarak işlenir.</li>
+                    <li><strong>İsteğe Bağlı Google Drive Yedeklemesi:</strong> Verilerinizi korumak ve cihazlarınız arasında senkronize etmek için, <strong>tamamen sizin açık rızanız ve talebiniz üzerine</strong>, notlarınızı ve ayarlarınızı kendi kişisel Google Drive hesabınıza yedekleyebilirsiniz. Bu işlem sırasında verileriniz, yalnızca sizin Google hesabınıza ait olan ve başka uygulamaların erişemediği özel bir "Uygulama Verileri" klasörüne (`appDataFolder`) yüklenir. <strong>Bu verilere bizim erişimimiz yoktur.</strong> Yedekleme işlemi, "açık rızanız" hukuki sebebine (KVKK Madde 5/1) dayanır.</li>
+                    <li><strong>Uygulama Güvenlik Verileri (Parola):</strong> Uygulama kilidi özelliğini aktif ettiğinizde belirlediğiniz parola, aşağıda detaylandırıldığı gibi yüksek güvenlikli şifreleme yöntemleriyle (SHA-256 Hash + Salt) cihazınızda saklanır. Bu işlem, "veri sorumlusunun meşru menfaatleri" hukuki sebebine (KVKK Madde 5/2-f) dayanır.</li>
+                    <li><strong>Cihaz İzinleri:</strong> Uygulama, temel işlevlerini yerine getirmek için belirli izinlere ihtiyaç duyar. Bu izinler, yalnızca siz ilgili özelliği aktif olarak kullandığınızda istenir ve verilerinizi toplamak için değil, yalnızca o anki işlevi yerine getirmek amacıyla kullanılır:
                         <ul>
-                            <li><strong>Mikrofon İzni (`RECORD_AUDIO`):</strong> Sesli not kaydı yapmak istediğinizde istenir.</li>
-                            <li><strong>Kamera İzni (`CAMERA`):</strong> Nota eklemek için fotoğraf çekmek istediğinizde istenir.</li>
+                            <li><strong>Mikrofon (`RECORD_AUDIO`):</strong> Sesli not kaydı veya sesi metne çevirme özelliğini kullandığınızda istenir.</li>
+                            <li><strong>Kamera (`CAMERA`):</strong> Nota eklemek için fotoğraf çekmek istediğinizde istenir.</li>
+                            <li><strong>İnternet (`INTERNET`):</strong> İsteğe bağlı Google Drive yedekleme/geri yükleme özelliğini kullanmanız için gereklidir.</li>
                         </ul>
                     </li>
                 </ul>
 
-                <h2>4. Veri Güvenliği Taahhüdümüz</h2>
-                <p>Verilerinizin güvenliği en büyük önceliğimizdir. Bu kapsamda, sektördeki en iyi uygulamaları benimseyerek aşağıdaki teknik ve idari tedbirleri uyguluyoruz:</p>
+                <h2>4. Parola Güvenliği ve Sorumluluk</h2>
+                <p>Verilerinizin güvenliği en büyük önceliğimizdir. Bu kapsamda, sektördeki en iyi uygulamaları benimseyerek aşağıdaki teknik tedbirleri uyguluyoruz:</p>
                 <ul>
-                    <li><strong>Sunucusuz Mimari:</strong> Verilerinizin sunucularımıza gönderilmemesi, harici bir güvenlik ihlali veya veri sızıntısı riskini temelden ortadan kaldırır. Kontrol tamamen sizdedir.</li>
-                    <li><strong>Kriptografik Parola Koruması:</strong> Parolanız asla düz metin olarak saklanmaz. Geri döndürülemez olan <strong>SHA-256 hash algoritması</strong> ve her parola için özel oluşturulan rastgele bir <strong>"Tuz (Salt)"</strong> tekniği ile şifrelenir. Bu şifrelenmiş veri, Android'in en yüksek güvenlikli depolama mekanizması olan <strong>`EncryptedSharedPreferences`</strong> içerisinde saklanır. Bu sayede, biz dahil hiç kimse orijinal parolanıza erişemez.</li>
+                    <li><strong>Kriptografik Parola Koruması:</strong> Parolanız asla düz metin olarak saklanmaz. Geri döndürülemez olan <strong>SHA-256 hash algoritması</strong> ve her parola için özel oluşturulan rastgele bir <strong>"Tuz (Salt)"</strong> tekniği ile şifrelenir. Bu şifrelenmiş veri, Android'in en yüksek güvenlikli depolama mekanizması olan <strong>`EncryptedSharedPreferences`</strong> içerisinde saklanır.</li>
                 </ul>
-
-                <h2>5. Geleceğe Yönelik Şeffaflık: Bulut Yedekleme</h2>
-                <p>Gelecekte, notlarınızı kaybetmemeniz ve farklı cihazlardan erişebilmeniz için, isteğe bağlı olarak üçüncü taraf bulut depolama hizmetleriyle (örneğin, Google Drive) entegre bir yedekleme özelliği eklemeyi planlıyoruz. Bu özellik kullanıma sunulduğunda:</p>
-                 <ul>
-                    <li>Bu özellik tamamen <strong>isteğe bağlı (opt-in)</strong> olacaktır. Yedeklemeyi siz açıkça aktif etmediğiniz sürece hiçbir veriniz cihazınızdan ayrılmayacaktır.</li>
-                    <li>Yedeklemeyi seçmeniz durumunda, verilerinizin ilgili bulut hizmetine nasıl aktarılacağı ve o hizmetin kendi gizlilik politikaları hakkında sizi şeffaf bir şekilde bilgilendireceğiz.</li>
-                    <li>Bu özellik hayata geçmeden önce bu Gizlilik Politikası güncellenecek, uygulama içinde size net bilgilendirme yapılacak ve gerekirse onayınız alınacaktır.</li>
-                </ul>
+                <div class="important-notice">
+                    <p><strong>ÖNEMLİ UYARI:</strong> Kullandığımız bu ileri düzey şifreleme tekniği, parolanızın kurtarılamaz olduğu anlamına gelir. <strong>Biz dahil hiç kimse, unuttuğunuz bir parolayı sıfırlayamaz, kurtaramaz veya size bildiremez.</strong> Parolanızın ve Google Drive'a yedeklenmiş şifreli verilerinizin sorumluluğu tamamen size aittir. Parolanızı unutmanız durumunda, şifre ile korunan notlarınıza ve yedeklerinize erişiminizi kalıcı olarak kaybedebilirsiniz.</p>
+                </div>
+                
+                <h2>5. Veri Saklama ve İmha Politikası</h2>
+                <p>Sildiğiniz notlar, yanlışlıkla silmeye karşı bir önlem olarak 30 gün boyunca cihazınızdaki "Çöp Kutusu"nda tutulur. Bu süre sonunda, veriler geri döndürülemez şekilde otomatik olarak kalıcı olarak silinir. Bu otomatik silme işlemi, cihazınızın arka planda görev çalıştırma ayarlarına bağlı olarak günde bir kez tetiklenir.</p>
 
                 <h2>6. Çocukların Gizliliği</h2>
-                <p>Uygulamamız <strong>yetişkinleri hedeflemektedir.</strong> 13 yaşın (veya ilgili ülkelerdeki eşdeğer yasal yaş sınırının) altındaki çocukların kullanımı için tasarlanmamıştır ve bu yaş grubundan bilerek kişisel veri toplamayız. Eğer bir ebeveyn veya vasi olarak, çocuğunuzun bu politika hilafına bilgi sağladığını düşünüyorsanız, derhal bizimle iletişime geçin.</p>
+                <p>Uygulamamız genel kullanıcı kitlesini hedeflemektedir ve 13 yaşın (veya ilgili ülkelerdeki eşdeğer yasal yaş sınırının) altındaki çocuklardan bilerek kişisel veri toplamaz. Eğer bir ebeveyn veya vasi olarak, çocuğunuzun bu politika hilafına bilgi sağladığını düşünüyorsanız, derhal bizimle iletişime geçin.</p>
 
-                <h2>7. Veri Saklama ve İmha Politikası</h2>
-                <p>Sildiğiniz notlar, yanlışlıkla silmeye karşı bir önlem olarak 30 gün boyunca "Çöp Kutusu"nda tutulur. Bu süre sonunda, veriler geri döndürülemez şekilde otomatik olarak kalıcı olarak silinir.</p>
-
-                <h2>8. Veri Sahibi Olarak Haklarınız (KVKK Madde 11)</h2>
-                <p>Verileriniz cihazınızda yerel olarak saklandığı için, bu verilere erişim, bunları düzeltme, silme ve yönetme yetkisi tamamen sizdedir. Bununla birlikte, kanun kapsamındaki haklarınız ve politikamızla ilgili sorularınız için aşağıda belirtilen e-posta adresimiz üzerinden bizimle iletişime geçebilirsiniz.</p>
-                <p class="last-updated">Son Güncelleme Tarihi: 8 Temmuz 2025</p>
+                <h2>7. Veri Sahibi Olarak Haklarınız (KVKK Madde 11)</h2>
+                <p>Verileriniz cihazınızda yerel olarak saklandığı için, bu verilere erişim, bunları düzeltme, silme ve yönetme yetkisi tamamen sizdedir. Bununla birlikte, kanun kapsamındaki haklarınız ve politikamızla ilgili sorularınız için yukarıda belirtilen e-posta adresimiz üzerinden bizimle iletişime geçebilirsiniz.</p>
+                <p class="last-updated">Son Güncelleme Tarihi: 9 Temmuz 2025</p>
             </div>
 
             <div id="privacy-en" class="lang-en">
                 <h1>SnapNote Privacy Policy</h1>
-                <p>This Privacy Policy explains how your personal data is processed and protected when you use the SnapNote ("Application") mobile application, developed by developer <strong>Baki Tunçer</strong> under the publisher name <strong>Codenzi Labs</strong> ("we", "us", or "our") on Google Play. Your privacy is our highest priority.</p>
+                <p>This Privacy Policy explains how your personal data is processed and protected when you use the SnapNote ("Application") mobile application, developed by developer <strong>Baki Tunçer</strong> under the publisher name <strong>Codenzi Labs</strong> ("we", "us", or "our") on Google Play. Your privacy and control over your data are our highest priorities.</p>
                 <p>By downloading, installing, or using the Application, you declare that you understand and accept the principles described in this Privacy Policy.</p>
 
                 <h2>1. Data Controller</h2>
-                <p>In accordance with the Personal Data Protection Law No. 6698 (KVKK) and relevant international regulations (e.g., GDPR), the Data Controller for your personal data is:</p>
+                <p>The Data Controller for your personal data is:</p>
                 <ul>
                     <li><strong>Publisher Name:</strong> Codenzi Labs</li>
                     <li><strong>Developer:</strong> Baki Tunçer</li>
@@ -248,46 +249,42 @@
                     <li><strong>Website:</strong> <a href="https://www.codenzi.com" target="_blank">https://www.codenzi.com</a></li>
                 </ul>
 
-                <h2>2. Our Core Philosophy: Privacy and Local Storage</h2>
-                <p>As a testament to our unwavering commitment to your privacy, the <strong>SnapNote does not collect, send, analyze, or remotely process your personal data on our servers in any way.</strong> The core philosophy of the Application is that you have complete and sole control over all your data. All the notes, voice recordings, photos, passwords, and other data you create are stored locally only in the secure storage area of your own device, without being transferred to our servers.</p>
+                <h2>2. Our Core Philosophy: Your Data is Under Your Control</h2>
+                <p>SnapNote is designed with a privacy-first approach. <strong>The Application does not collect, send, sell, or analyze your personal data (notes, images, voice recordings, etc.) on our servers.</strong> All of your data, with the exceptions explained below, is stored solely in the secure storage area of your own device.</p>
 
-                <h2>3. Categories of Data Processed and Legal Bases</h2>
-                <p>For the proper functioning of the Application, only the following data categories are processed, entirely under your control and on your device:</p>
+                <h2>3. Purposes of Data Processing and Legal Bases</h2>
+                <p>For the proper functioning of the Application, some data is processed entirely under your control and on your device:</p>
                 <ul>
-                    <li><strong>Your Note Content:</strong> Data such as the titles of your notes, text content, checklist items, and the paths of your photos and voice recording files on your device are processed based on the legal ground of "being directly related to the establishment or performance of a contract" (KVKK, Art. 5/2-c) to fulfill the basic note-taking function of the Application.</li>
-                    <li><strong>Application Security Data:</strong> When you activate the application lock feature, the password you set is stored on your device using high-security encryption methods (SHA-256 Hash + Salt), as detailed in the "Our Commitment to Data Security" section below, based on the legal ground of "legitimate interests of the data controller" (KVKK, Art. 5/2-f).</li>
-                    <li><strong>Device Permissions:</strong> The Application requires certain permissions to perform its core functions. These permissions are requested only when you actively use the corresponding feature, based on your "explicit consent" (KVKK, Art. 5/1), and are used solely for that function at that moment, not to collect your data:
+                    <li><strong>Your Note Content:</strong> Data such as texts, checklists, and paths to image and audio files are processed locally on your device based on the legal ground of "being directly related to the establishment or performance of a contract" to fulfill the core note-taking functionality of the Application.</li>
+                    <li><strong>Optional Google Drive Backup:</strong> To protect your data and sync it across devices, you can back up your notes and settings to your personal Google Drive account, <strong>based entirely on your explicit consent and request.</strong> During this process, your data is uploaded to a special "Application Data" folder (`appDataFolder`) in your Google account, which is inaccessible to other applications. <strong>We do not have access to this data.</strong> The backup process relies on the legal basis of your "explicit consent".</li>
+                    <li><strong>Application Security Data (Password):</strong> When you activate the application lock feature, the password you set is stored on your device using high-security encryption methods (SHA-256 Hash + Salt), as detailed below. This process is based on the "legitimate interests of the data controller" legal ground.</li>
+                    <li><strong>Device Permissions:</strong> The Application requires certain permissions to perform its core functions. These permissions are requested only when you actively use the corresponding feature and are used solely for that function, not for data collection:
                         <ul>
-                            <li><strong>Microphone Permission (`RECORD_AUDIO`):</strong> Requested when you want to record a voice note.</li>
-                            <li><strong>Camera Permission (`CAMERA`):</strong> Requested when you want to take a photo to add to a note.</li>
+                            <li><strong>Microphone (`RECORD_AUDIO`):</strong> Requested when you use the voice note recording or speech-to-text feature.</li>
+                            <li><strong>Camera (`CAMERA`):</strong> Requested when you want to take a photo to add to a note.</li>
+                            <li><strong>Internet (`INTERNET`):</strong> Required for you to use the optional Google Drive backup/restore functionality.</li>
                         </ul>
                     </li>
                 </ul>
 
-                <h2>4. Our Commitment to Data Security</h2>
-                <p>The security of your data is our top priority. In this context, we implement the following technical and administrative measures by adopting industry best practices:</p>
+                <h2>4. Password Security and Your Responsibility</h2>
+                <p>The security of your data is our top priority. We implement the following technical measures by adopting industry best practices:</p>
                 <ul>
-                    <li><strong>Serverless Architecture:</strong> The fact that your data is not sent to our servers fundamentally eliminates the risk of an external security breach or data leak. The control is entirely yours.</li>
-                    <li><strong>Cryptographic Password Protection:</strong> Your password is never stored in plain text. It is encrypted with the irreversible <strong>SHA-256 hash algorithm</strong> and a random <strong>"Salt"</strong> technique created specifically for each password. This encrypted data is stored in <strong>`EncryptedSharedPreferences`</strong>, one of Android's most secure storage mechanisms. This way, no one, including us, can access your original password.</li>
+                    <li><strong>Cryptographic Password Protection:</strong> Your password is never stored in plain text. It is encrypted with the irreversible <strong>SHA-256 hash algorithm</strong> and a random <strong>"Salt"</strong> technique generated specifically for each password. This encrypted data is stored in <strong>`EncryptedSharedPreferences`</strong>, one of Android's most secure storage mechanisms.</li>
                 </ul>
+                <div class="important-notice">
+                    <p><strong>IMPORTANT NOTICE:</strong> This advanced encryption technique means that your password is unrecoverable. <strong>No one, including us, can reset, recover, or inform you of a forgotten password.</strong> The responsibility for your password and the encrypted data backed up to Google Drive lies entirely with you. If you forget your password, you may permanently lose access to your password-protected notes and backups.</p>
+                </div>
                 
-                <h2>5. Transparency for the Future: Cloud Backup Feature</h2>
-                <p>In the future, we plan to add an optional backup feature integrated with third-party cloud storage services (e.g., Google Drive) so you don't lose your notes and can access them from different devices. When this feature becomes available:</p>
-                 <ul>
-                    <li>This feature will be entirely <strong>opt-in</strong>. No data will ever leave your device unless you explicitly enable the backup.</li>
-                    <li>If you choose to back up, we will clearly inform you about how your data will be transferred to the respective cloud service and about that service's own privacy policies.</li>
-                    <li>This Privacy Policy will be updated, you will be clearly informed within the application, and your consent will be obtained if necessary before this feature is implemented.</li>
-                </ul>
+                <h2>5. Data Retention and Deletion Policy</h2>
+                <p>Notes you delete are kept in the "Trash" on your device for 30 days as a precaution against accidental deletion. At the end of this period, the data is automatically and irretrievably deleted permanently. This automatic deletion is triggered once a day, depending on your device's background task execution settings.</p>
 
                 <h2>6. Children's Privacy</h2>
-                <p>Our application is targeted at <strong>adults.</strong> It is not designed for use by individuals under the age of 13 (or the equivalent legal age in relevant countries), and we do not knowingly collect personal data from this age group. If you, as a parent or guardian, believe that your child has provided us with information in violation of this policy, please contact us immediately.</p>
+                <p>Our application is intended for a general audience and does not knowingly collect personal data from children under the age of 13 (or the equivalent legal age in relevant countries). If you, as a parent or guardian, believe that your child has provided us with information in violation of this policy, please contact us immediately.</p>
 
-                <h2>7. Data Retention and Deletion Policy</h2>
-                <p>Notes you delete are kept in the "Trash" for 30 days as a precaution against accidental deletion. At the end of this period, the data is automatically and irretrievably deleted permanently.</p>
-
-                <h2>8. Your Rights as a Data Subject (KVKK, Art. 11)</h2>
-                <p>As your data is stored locally on your device, the authority to access, correct, delete, and manage this data is entirely yours. However, you can contact us at the email address below for your rights under the law and for any questions about our policy.</p>
-                <p class="last-updated">Last Updated: July 8, 2025</p>
+                <h2>7. Your Rights as a Data Subject</h2>
+                <p>As your data is stored locally on your device, the authority to access, correct, delete, and manage this data is entirely yours. However, you can contact us at the email address provided above for questions regarding your rights under the law and our policy.</p>
+                <p class="last-updated">Last Updated: July 9, 2025</p>
             </div>
         </div>
     </main>
