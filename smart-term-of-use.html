@@ -34,79 +34,97 @@
 
     <div class="region-selector">
         <label for="region-terms">View terms for your region:</label>
-        <select id="region-terms" onchange="switchRegion(this.value, 'terms')">
+        <select id="region-terms" onchange="switchRegion(this.value)">
             <option value="general">General / International</option>
-            <option value="eu">European Union / EEA</option>
+            <option value="eu">European Union / EEA (English)</option>
+            <option value="de">Deutschland (Deutsch)</option>
             <option value="ca">California, USA</option>
-            <option value="tr">Turkey</option>
+            <option value="tr">Türkiye (Türkçe)</option>
         </select>
     </div>
 
-    <div id="general-terms" class="region-specific-content active">
-
+    <div id="general" class="region-specific-content active">
         <h2>1. Legally Binding Agreement</h2>
-        <p>These Terms of Use ("Terms") constitute a binding contract between you ("User," "you") and **Baki Tunçer, operating as Codenzi Labs** ("we," "us," "our"), regarding your use of the Smart Archive application ("Service"). By downloading, installing, accessing, or using the Service in any way, you acknowledge that you have read, understood, and unconditionally agree to be bound by all provisions of these Terms and our Privacy Policy, which is incorporated by reference. IF YOU DO NOT AGREE TO EVERY PROVISION OF THESE TERMS, YOU ARE PROHIBITED FROM USING THE SERVICE AND MUST IMMEDIATELY DELETE IT.</p>
+        <p>These Terms of Use ("Terms") constitute a binding contract between you ("User") and **Baki Tunçer, operating as Codenzi Labs** ("we," "us," "our"), regarding your use of the Smart Archive application ("Service"). By downloading, installing, or using the Service, you confirm you are of legal age and you accept these Terms in their entirety. IF YOU DO NOT AGREE, YOU ARE PROHIBITED FROM USING THE SERVICE AND MUST DELETE IT.</p>
 
-        <h2>2. The Service is a Tool Provided "AS-IS"</h2>
-        <p>You acknowledge and accept that the Service is a software tool provided for your convenience on an "AS-IS" and "AS-AVAILABLE" basis. We do not promise, warrant, or guarantee any specific functionality or outcome. The optional backup feature is merely a utility that connects to your personal Google Drive account. WE ARE NOT A DATA STORAGE, ARCHIVING, OR BACKUP SERVICE. The name "Smart Archive" is a brand name and does not imply any warranty of fitness for archiving purposes.</p>
-        <div class="important-notice">
-            <strong>YOUR DATA, YOUR SOLE RESPONSIBILITY:</strong> The security, integrity, and legality of your files ("User Content") depend entirely on you. You are solely responsible for independently backing up your important data through other means. We shall have no liability for any loss of data.
-        </div>
-
-        <h2>3. Your Warranties and Absolute Responsibilities</h2>
-        <p>By using the Service, you represent, warrant, and covenant that:</p>
-        <ul>
-            <li>**Content Legality & Rights:** You own or have secured all necessary and explicit legal rights (including copyrights, trademarks, and privacy rights) for all User Content you store, manage, or back up. You warrant that your content is not illegal, defamatory, fraudulent, or infringing on any third-party rights in any jurisdiction worldwide.</li>
-            <li>**Account Security:** You are solely and completely responsible for maintaining the confidentiality and security of your device and your Google Account credentials. Any loss of data or unauthorized access resulting from a compromised account or device is your sole responsibility and liability.</li>
-            <li>**Assumption of All Risks:** You knowingly and voluntarily assume all risks associated with using the Service, including but not limited to, the risk of data loss, data corruption, security breaches, software bugs, or Service unavailability.</li>
-        </ul>
-
-        <h2>4. Prohibited Activities</h2>
-        <p>You are strictly prohibited from using the Service for any of the following purposes: (i) to engage in, promote, or facilitate any unlawful or fraudulent activity; (ii) to infringe on any intellectual property or other proprietary rights of any party; (iii) to harass, abuse, threaten, or defame any person or entity; (iv) to store or transmit viruses, malware, or other malicious code; or (v) to reverse-engineer, decompile, disassemble, or otherwise attempt to discover or extract the source code of the Service.</p>
-
-        <h2>5. Third-Party Services (Google AdMob, Firebase, Drive)</h2>
-        <p>The Service is built upon and integrates with third-party services provided by Google. Your use of the Service constitutes your acknowledgment and acceptance of the applicable terms of service and privacy policies of these third parties. We are not an agent of Google and are not liable for any failure, data practice, security breach, or action of any third party.</p>
-
-        <h2>6. ABSOLUTE DISCLAIMER OF ALL WARRANTIES</h2>
-        <p>TO THE MAXIMUM AND FULLEST EXTENT PERMITTED BY LAW, CODENZI LABS (BAKI TUNÇER) EXPRESSLY AND UNEQUIVOCALLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, ANY AND ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL MEET YOUR REQUIREMENTS, BE UNINTERRUPTED, TIMELY, SECURE, ACCURATE, OR ERROR-FREE, OR THAT ANY DATA, INCLUDING YOUR USER CONTENT, WILL BE SECURE OR NOT OTHERWISE LOST, CORRUPTED, OR DAMAGED.</p>
-
-        <h2>7. EXTREME AND COMPREHENSIVE LIMITATION OF LIABILITY</h2>
-        <p>YOU EXPRESSLY UNDERSTAND AND AGREE THAT, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL CODENZI LABS (BAKI TUNÇER), ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR LICENSORS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO THE USE OF, OR INABILITY TO USE, THE SERVICE.</p>
-        <p>THIS LIMITATION OF LIABILITY SECTION APPLIES WHETHER THE ALLEGED LIABILITY IS BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR ANY OTHER LEGAL BASIS, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE FOREGOING LIMITATION OF LIABILITY SHALL APPLY TO THE FULLEST EXTENT PERMITTED BY LAW IN THE APPLICABLE JURISDICTION. IN JURISDICTIONS THAT DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, OUR LIABILITY SHALL BE LIMITED TO THE EXTENT PERMITTED BY LAW. REGARDLESS OF THE FOREGOING, THE TOTAL AGGREGATE LIABILITY OF CODENZI LABS (BAKI TUNÇER) IN ANY MATTER ARISING FROM OR RELATED TO THE SERVICE IS EXPRESSLY AND ABSOLUTELY LIMITED TO **ONE UNITED STATES DOLLAR ($1.00 USD)**.</p>
-
-        <h2>8. Full and Complete Indemnification</h2>
-        <p>You agree to defend, indemnify, and hold harmless Baki Tunçer and Codenzi Labs from and against any and all conceivable claims, liabilities, damages, judgments, awards, losses, costs, debts, and expenses (including but not limited to reasonable attorney's fees) arising from or in any way connected with: (i) your use of and access to the Service, including any data or content transmitted or received by you; (ii) your violation of any term of these Terms; (iii) your violation of any third-party right, including any right of privacy or intellectual property rights; (iv) your violation of any applicable law, rule, or regulation; or (v) any claim or damages that arise as a result of any of your User Content.</p>
+        <h2>2. Service Provided "AS-IS"</h2>
+        <p>The Service is a software tool provided on an "AS-IS" and "AS-AVAILABLE" basis. WE ARE NOT A DATA STORAGE OR BACKUP SERVICE. You are solely responsible for independently backing up your important data.</p>
         
-        <h2>9. Governing Law and Exclusive Jurisdiction</h2>
-        <p>These Terms shall be governed by the substantive laws of the Republic of Turkey, without regard to its conflict of law principles. You irrevocably agree to submit to the exclusive personal jurisdiction of the courts located in Istanbul, Turkey, for the resolution of any and all legal matters or disputes arising from these Terms or your use of the Service.</p>
+        <h2>3. DISCLAIMER OF ALL WARRANTIES</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE EXPRESSLY DISCLAIM ALL WARRANTIES OF ANY KIND, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+
+        <h2>4. LIMITATION OF LIABILITY</h2>
+        <p>TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, PUNITIVE, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR OTHER INTANGIBLE LOSSES. OUR TOTAL AGGREGATE LIABILITY TO YOU SHALL NOT EXCEED ONE UNITED STATES DOLLAR ($1.00 USD).</p>
+
+        <h2>5. Full Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless Baki Tunçer and Codenzi Labs from all claims, liabilities, and expenses (including attorney's fees) arising from your use of the Service or your violation of these Terms.</p>
+        
+        <h2>6. Governing Law</h2>
+        <p>These Terms are governed by the laws of the Republic of Turkey. Disputes shall be resolved in the courts of Istanbul, Turkey.</p>
     </div>
 
-    <div id="eu-terms" class="region-specific-content">
-        <h2>Addendum for the European Economic Area (EEA)</h2>
-        <p>The general terms apply. If you are a consumer in the EEA, you benefit from any mandatory provisions of the law of the country in which you are resident. Nothing in these Terms is intended to limit your statutory consumer rights under the laws of your local jurisdiction that cannot be waived by contract. The Limitation of Liability (Section 7) applies to the fullest extent permissible and does not exclude liability for gross negligence or willful misconduct.</p>
+    <div id="eu" class="region-specific-content">
+        <h2>Terms of Use (European Economic Area)</h2>
+        <p>For users in the EEA, the following terms apply. These terms are governed by the laws of your country of residence.</p>
+        <h3>1. Agreement and Service</h3>
+        <p>By using our Service, you agree to these terms. The Service is provided by **Baki Tunçer (Codenzi Labs)**. It is a tool for managing your own files on your device and is provided "as is".</p>
+        <h3>2. Your Responsibility</h3>
+        <p>You are responsible for the legality of the content you store and for securing your device and Google account. We recommend regular, independent backups of your important data.</p>
+        <h3>3. Liability</h3>
+        <p>We are liable for damages caused by willful misconduct or gross negligence. In the case of slight negligence, we are only liable for the breach of essential contractual obligations, limited to the foreseeable damage typical for the contract. This limitation does not apply to damages to life, body, or health. Our liability under mandatory statutory provisions remains unaffected.</p>
+        <h3>4. Consumer Rights</h3>
+        <p>If you are a consumer, you benefit from any mandatory provisions of the law of the country in which you are resident. Nothing in these terms affects your rights as a consumer to rely on such mandatory provisions of local law.</p>
     </div>
-    <div id="ca-terms" class="region-specific-content">
-        <h2>Addendum for California, USA</h2>
-        <p>The general terms apply. If you are a California resident, you explicitly waive California Civil Code Section 1542, which says: "A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release and that, if known by him or her, would have materially affected his or her settlement with the debtor or released party."</p>
+
+    <div id="de" class="region-specific-content">
+        <h2>Nutzungsbedingungen (Deutschland)</h2>
+        <p>Für Nutzer in Deutschland gelten die folgenden Bedingungen. Diese unterliegen deutschem Recht.</p>
+        <h3>1. Vereinbarung und Dienstleistung</h3>
+        <p>Durch die Nutzung unseres Dienstes stimmen Sie diesen Bedingungen zu. Der Dienst wird von **Baki Tunçer (Codenzi Labs)** bereitgestellt. Es handelt sich um ein Werkzeug zur Verwaltung Ihrer eigenen Dateien auf Ihrem Gerät und wird "wie besehen" zur Verfügung gestellt.</p>
+        <h3>2. Ihre Verantwortung</h3>
+        <p>Sie sind für die Rechtmäßigkeit der von Ihnen gespeicherten Inhalte und für die Sicherung Ihres Geräts und Ihres Google-Kontos verantwortlich. Wir empfehlen regelmäßige, unabhängige Sicherungen Ihrer wichtigen Daten.</p>
+        <h3>3. Haftung</h3>
+        <p>Wir haften für Schäden, die auf Vorsatz oder grober Fahrlässigkeit beruhen. Bei leichter Fahrlässigkeit haften wir nur bei Verletzung wesentlicher Vertragspflichten, beschränkt auf den vertragstypischen, vorhersehbaren Schaden. Diese Haftungsbeschränkung gilt nicht für Schäden an Leben, Körper oder Gesundheit. Unsere Haftung nach zwingenden gesetzlichen Vorschriften bleibt unberührt.</p>
+        <h3>4. Verbraucherrechte</h3>
+        <p>Als Verbraucher profitieren Sie von allen zwingenden Bestimmungen des Rechts des Landes, in dem Sie Ihren Wohnsitz haben.</p>
     </div>
-    <div id="tr-terms" class="region-specific-content">
-        <h2>Türkiye'deki Kullanıcılar için Ek Şartlar</h2>
-        <p>Yukarıda belirtilen genel şartlar, Türk Hukuku'nun emredici hükümleri saklı kalmak kaydıyla geçerlidir. Bu Sözleşme'den doğan tüm uyuşmazlıklarda İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri münhasıran yetkilidir.</p>
+    
+    <div id="ca" class="region-specific-content">
+        <h2>Terms of Use (California, USA)</h2>
+        <p>For users in California, the "General / International" terms apply in full. In addition, you explicitly waive your rights under California Civil Code Section 1542, which states: "A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release and that, if known by him or her, would have materially affected his or her settlement with the debtor or released party."</p>
+    </div>
+
+    <div id="tr" class="region-specific-content">
+        <h2>Kullanım Koşulları (Türkiye)</h2>
+        <h3>1. Yasal Olarak Bağlayıcı Sözleşme</h3>
+        <p>Bu Kullanım Koşulları ("Koşullar"), Smart Archive uygulamasını ("Hizmet") kullanımınıza ilişkin olarak siz ("Kullanıcı") ile **Codenzi Labs markası altında faaliyet gösteren Baki Tunçer** ("biz") arasında yasal olarak bağlayıcı bir sözleşme teşkil eder. Hizmeti indirerek veya kullanarak, bu Koşulların tamamını okuduğunuzu, anladığınızı ve kayıtsız şartsız kabul ettiğinizi onaylarsınız. KABUL ETMİYORSANIZ, HİZMETİ KULLANMANIZ YASAKTIR.</p>
+
+        <h3>2. Hizmetin "Olduğu Gibi" Sunulması</h3>
+        <p>Hizmetin, size kolaylık sağlamak amacıyla "OLDUĞU GİBİ" ve "MEVCUT OLDUĞU ŞEKLİYLE" sunulan bir yazılım aracı olduğunu kabul edersiniz. BİZ BİR VERİ DEPOLAMA VEYA YEDEKLEME HİZMETİ DEĞİLİZ. Önemli verilerinizi bağımsız olarak yedeklemek yalnızca sizin sorumluluğunuzdadır.</p>
+
+        <h3>3. Garantilerin Tümüyle Reddi</h3>
+        <p>YASALARIN İZİN VERDİĞİ EN GENİŞ ÖLÇÜDE, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME GARANTİLERİ DE DAHİL OLMAK ÜZERE, AÇIK VEYA ZIMNİ HER TÜRLÜ GARANTİYİ AÇIKÇA REDDEDERİZ.</p>
+
+        <h3>4. Sorumluluğun Kapsamlı Olarak Sınırlandırılması</h3>
+        <p>YÜRÜRLÜKTEKİ YASALARIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, HİÇBİR DURUMDA BİZ, KÂR KAYBI, VERİ KAYBI VEYA DİĞER MADDİ OLMAYAN KAYIPLAR DAHİL OLMAK ÜZERE, DOLAYLI, CEZAİ, ARIZİ, ÖZEL VEYA EMSAL TEŞKİL EDEN ZARARLARDAN SORUMLU OLMAYACAĞIZ. HİZMETTEN KAYNAKLANAN VEYA HİZMETLE İLGİLİ HERHANGİ BİR KONUDAKİ TOPLAM YÜKÜMLÜLÜĞÜMÜZ BİR AMERİKAN DOLARI (1.00 USD) İLE SINIRLIDIR.</p>
+
+        <h3>5. Tam Tazminat Yükümlülüğü</h3>
+        <p>Hizmeti kullanımınızdan veya bu Koşulları ihlal etmenizden kaynaklanan tüm iddia, yükümlülük ve masraflara (avukatlık ücretleri dahil) karşı Baki Tunçer ve Codenzi Labs'ı savunmayı, tazmin etmeyi ve zarar görmesini önlemeyi kabul edersiniz.</p>
+
+        <h3>6. Yetkili Hukuk ve Yargı Yeri</h3>
+        <p>Bu Koşullar, Türkiye Cumhuriyeti yasalarına tabidir. Bu Koşullardan kaynaklanan tüm uyuşmazlıkların çözümünde İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri münhasıran yetkilidir.</p>
     </div>
 </main>
 <script>
-    function switchRegion(region, type) {
-        document.querySelectorAll('.region-specific-content').forEach(el => {
-            const elType = el.id.split('-')[1];
-            if (elType === type) {
-                el.style.display = 'none';
-                el.classList.remove('active');
-            }
-        });
-        const specificEl = document.getElementById(`${region}-${type}`);
-        if (specificEl) {
-            specificEl.style.display = 'block';
-            specificEl.classList.add('active');
+    function switchRegion(region) {
+        document.querySelectorAll('.region-specific-content').forEach(el => el.style.display = 'none');
+        const targetEl = document.getElementById(region);
+        if (targetEl) {
+            targetEl.style.display = 'block';
+            targetEl.classList.add('active');
+        } else {
+            document.getElementById('general').style.display = 'block';
+            document.getElementById('general').classList.add('active');
         }
     }
     document.addEventListener('DOMContentLoaded', function() {
@@ -114,23 +132,18 @@
         const langPrefix = userLang.split('-')[0];
         const regionSelect = document.getElementById('region-terms');
         let targetRegion = 'general';
+
         if (langPrefix === 'tr') {
             targetRegion = 'tr';
-        } else if (['de', 'fr', 'es', 'it', 'nl', 'pl', 'sv', 'pt', 'ro'].includes(langPrefix)) {
+        } else if (langPrefix === 'de') {
+            targetRegion = 'de';
+        } else if (['fr', 'es', 'it', 'nl', 'pl', 'sv', 'pt', 'ro'].includes(langPrefix)) {
             targetRegion = 'eu';
         }
+
         if(regionSelect) {
             regionSelect.value = targetRegion;
-            // Initially show only the determined region
-            document.querySelectorAll('.region-specific-content').forEach(el => el.style.display = 'none');
-            const targetEl = document.getElementById(`${targetRegion}-terms`);
-            if (targetEl) {
-                targetEl.style.display = 'block';
-                targetEl.classList.add('active');
-            } else {
-                document.getElementById('general-terms').style.display = 'block';
-                document.getElementById('general-terms').classList.add('active');
-            }
+            switchRegion(targetRegion);
         }
     });
 </script>
