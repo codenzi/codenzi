@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Archive - Terms of Use</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS provided by the user */
+        :root {
+            --primary-blue: #3498db;
+            --dark-blue: #2c3e50;
+            --light-blue: #e8f5fd;
+            --accent-blue: #6a93cb;
+            --text-color: #333;
+            --light-text: #f0f0f0;
+            --background-light: #f4f7f6;
+            --border-color: #ddd;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text-color); background-color: var(--background-light); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: var(--primary-blue); transition: color 0.3s ease; }
+        a:hover { color: var(--dark-blue); }
+        .privacy-page { padding: 80px 0; background-color: #fff; min-height: calc(100vh - 120px); }
+        .privacy-page .container { max-width: 900px; background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .privacy-page h1 { font-family: 'Poppins', sans-serif; font-size: 2.8em; color: var(--dark-blue); text-align: center; margin-bottom: 40px; }
+        .privacy-page h2 { font-family: 'Poppins', sans-serif; font-size: 1.8em; color: var(--primary-blue); margin-top: 35px; margin-bottom: 15px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        .privacy-page h3 { font-family: 'Poppins', sans-serif; font-size: 1.3em; color: var(--dark-blue); margin-top: 25px; margin-bottom: 10px; }
+        .privacy-page p, .privacy-page li { font-size: 1.05em; line-height: 1.7; margin-bottom: 15px; color: #444; }
+        .privacy-page ul { list-style-type: disc; margin-left: 30px; margin-bottom: 20px; }
+        .privacy-page .last-updated { font-size: 0.9em; color: #777; text-align: center; margin-top: 30px; }
+        .privacy-page .back-to-home { display: block; text-align: center; margin-top: 40px; font-size: 1.1em; font-weight: 600; }
+        .region-selector { margin-bottom: 30px; text-align: center; }
+        .region-selector select { padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); font-size: 1em; }
+        .region-specific-content { display: none; }
+        .region-specific-content.active { display: block; }
+        .important-notice { background-color: var(--light-blue); border-left: 5px solid var(--primary-blue); padding: 15px; margin: 20px 0; border-radius: 5px;}
+    </style>
+</head>
+<body>
+
+<main class="privacy-page">
+    <div class="container">
+        <h1>Terms of Use</h1>
+
+        <div class="region-selector">
+            <label for="region">View terms for your region:</label>
+            <select id="region" onchange="switchRegion(this.value)">
+                <option value="general">General / International</option>
+                <option value="eu">European Union / EEA (GDPR)</option>
+                <option value="ca">California, USA (CCPA/CPRA)</option>
+                <option value="tr">Turkey (KVKK)</option>
+            </select>
+        </div>
+
+        <p class="last-updated">Last Updated: July 14, 2025</p>
+
+        <div id="general" class="region-specific-content active">
+            <h2>1. Agreement to Terms</h2>
+            <p>By downloading, installing, accessing, or using the Smart Archive mobile application ("Service"), you agree to be bound by these Terms of Use ("Terms"). These Terms constitute a legally binding agreement between you and Codenzi ("we," "us," or "our"). If you do not agree to these Terms, you are not permitted to use the Service and must immediately uninstall it.</p>
+
+            <h2>2. The Service</h2>
+            <p>Smart Archive is a tool designed to help you organize your digital life. The service allows you to:</p>
+            <ul>
+                <li>Store digital files, including documents, receipts, images, and other media ("User Content") in the application's private storage area on your device.</li>
+                <li>Categorize and manage this User Content.</li>
+                <li>Optionally, initiate backups of your User Content to your own personal Google Drive account.</li>
+            </ul>
+            <div class="important-notice">
+                <p><strong>IMPORTANT:</strong> The Service is supported by advertising, which may be personalized to your interests. We use services like Google AdMob, Firebase Analytics (for usage statistics), and Firebase Crashlytics (for error reporting) to maintain and improve the application. Your use of the Service constitutes your acknowledgment of this.</p>
+            </div>
+
+            <h2>3. User Content and Responsibility</h2>
+            <h3>3.1. Ownership and Control</h3>
+            <p>You retain full ownership of and responsibility for all User Content you store in the Service. We claim no ownership rights over your files. All your files are stored locally on your device within the app's secure sandbox.</p>
+            <h3>3.2. Google Drive Backup Feature</h3>
+            <p>The Service offers an optional feature to back up your User Content to your personal Google Drive account. When you use this feature:</p>
+            <ul>
+                <li>You authorize the Service to access your Google Drive for the sole purpose of creating and managing a specific backup folder ("SmartArchiveBackup"). The Service will not access other files or folders in your Drive.</li>
+                <li>The backup is stored in <strong>your</strong> Google Drive account, under <strong>your</strong> control and subject to Google's terms and privacy policies.</li>
+                <li><strong>You are solely responsible for managing your Google Drive storage space, security, and access.</strong> We are not responsible for any issues arising from your Google Drive account, including data loss, security breaches, or storage limitations.</li>
+            </ul>
+
+            <h2>4. User Conduct and Restrictions</h2>
+            <p>You agree that you will not use the Service to store, share, or transmit any User Content that:</p>
+            <ul>
+                <li>Is illegal, unlawful, or fraudulent.</li>
+                <li>Infringes on any third party's intellectual property rights, including copyright, trademark, or patent.</li>
+                <li>Is defamatory, obscene, harassing, threatening, or invasive of another's privacy.</li>
+                <li>Contains viruses, malware, or other malicious code.</li>
+            </ul>
+            <p>You are responsible for all activities that occur under your account.</p>
+
+            <h2>5. Third-Party Services</h2>
+            <p>The Service relies on several third-party services to function. By using our Service, you also agree to the terms and policies of these providers:</p>
+            <ul>
+                <li><strong>Google Drive:</strong> For cloud backup and restore functionality.</li>
+                <li><strong>Google AdMob:</strong> For displaying advertisements.</li>
+                <li><strong>Firebase Analytics & Crashlytics:</strong> For collecting anonymous usage statistics and crash reports to help us improve the app.</li>
+            </ul>
+            <p>We are not liable for the actions, data handling practices, or failures of these third-party services.</p>
+
+            <h2>6. Disclaimer of Warranties</h2>
+            <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, SECURE, ERROR-FREE, OR THAT YOUR DATA WILL BE SAFE FROM LOSS OR CORRUPTION. YOU USE THE SERVICE AT YOUR OWN RISK.</p>
+
+            <h2>7. Limitation of Liability</h2>
+            <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, CODENZI, ITS AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
+            <ul>
+                <li>Your access to or use of, or inability to access or use, the Service;</li>
+                <li>Any conduct or content of any third party on the Service, including third-party service providers like Google;</li>
+                <li>Any User Content obtained from the Service;</li>
+                <li>Unauthorized access, use, or alteration of your transmissions or content, including any data stored on your device or in your personal Google Drive account.</li>
+            </ul>
+            <p>THIS LIMITATION OF LIABILITY APPLIES WHETHER THE CLAIM IS BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+            <h2>8. Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless Codenzi and its employees, contractors, and directors from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney's fees) arising from: (i) your use of and access to the Service; (ii) your violation of any term of these Terms; (iii) your violation of any third-party right, including without limitation any copyright, property, or privacy right; or (iv) any claim that your User Content caused damage to a third party.</p>
+            
+            <h2>9. Governing Law and Jurisdiction</h2>
+            <p>These Terms shall be governed by the laws of the Republic of Turkey, without regard to its conflict of law provisions. You agree to submit to the personal and exclusive jurisdiction of the courts located in Istanbul, Turkey to resolve any dispute or claim arising from these Terms.</p>
+        </div>
+
+        <div id="eu" class="region-specific-content">
+            <h2>Additional Terms for Users in the European Union (EU), EEA, and UK</h2>
+            <p>If you are a user in the EU, European Economic Area (EEA), or the United Kingdom, the following terms apply in addition to the general terms, in accordance with the General Data Protection Regulation (GDPR).</p>
+            <h3>Legal Basis for Processing Personal Data</h3>
+            <p>We process your personal data based on the following legal grounds:</p>
+            <ul>
+                <li><strong>Performance of a Contract:</strong> To provide you with the core functionalities of the Service as described in these Terms.</li>
+                <li><strong>Consent:</strong> We will request your consent to process data for personalized advertising via Google's User Messaging Platform (UMP). You can withdraw this consent at any time through the app's settings.</li>
+                <li><strong>Legitimate Interests:</strong> We process anonymous data for service improvement, such as usage statistics (Firebase Analytics) and crash reporting (Firebase Crashlytics). Our legitimate interest is to maintain and improve a stable and user-friendly application.</li>
+            </ul>
+            <h3>Your Rights Under GDPR</h3>
+            <p>You have statutory rights in relation to your personal data, including the right to access, rectify, erase, restrict processing of, and port your data. As all your primary content is stored on your device or in your personal Google Drive, you can directly manage, access, and delete it. To exercise your rights regarding data processed by us (e.g., analytics identifiers), please contact us.</p>
+            <h3>Data Transfers</h3>
+            <p>By using services from Google (Drive, AdMob, Firebase), you acknowledge that your data may be transferred to and processed in countries outside the EU/EEA, primarily the United States. Google uses Standard Contractual Clauses and other legal mechanisms to ensure that such transfers are compliant with GDPR.</p>
+        </div>
+
+        <div id="ca" class="region-specific-content">
+            <h2>Additional Terms for Users in California, USA</h2>
+            <p>If you are a resident of California, these terms apply in addition to the general terms, in accordance with the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA).</p>
+            <h3>Your Rights Under CCPA/CPRA</h3>
+            <p>You have specific rights regarding your personal information:</p>
+            <ul>
+                <li><strong>Right to Know/Access:</strong> You have the right to request information about the categories and specific pieces of personal information we have collected about you.</li>
+                <li><strong>Right to Delete:</strong> You have the right to request the deletion of your personal information. Note that since your files are stored locally or on your own Google Drive, you have direct control to delete them at any time.</li>
+                <li><strong>Right to Opt-Out of Sale/Sharing:</strong> We do not sell your personal information. However, the use of advertising partners like AdMob for personalized advertising may be considered "sharing" under the CPRA. You can control this via the consent management platform presented to you in the app and modify your choices in the settings.</li>
+                <li><strong>Right to Correct:</strong> You have the right to request correction of inaccurate personal information.</li>
+                <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+            </ul>
+        </div>
+
+        <div id="tr" class="region-specific-content">
+            <h2>Türkiye'deki Kullanıcılar için Ek Şartlar ve Aydınlatma Metni</h2>
+            <p>Eğer Türkiye'de ikamet eden bir kullanıcı iseniz, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca aşağıdaki şartlar genel şartlara ek olarak geçerlidir.</p>
+            <h3>Veri Sorumlusu</h3>
+            <p>KVKK kapsamında kişisel verilerinizle ilgili olarak Veri Sorumlusu Codenzi'dir.</p>
+            <h3>Kişisel Verilerin İşlenme Amaçları ve Hukuki Sebepleri</h3>
+            <p>Kişisel verileriniz, aşağıdaki amaçlar ve hukuki sebeplere dayalı olarak işlenmektedir:</p>
+            <ul>
+                <li><strong>Sözleşmenin İfası:</strong> Hizmetin temel fonksiyonlarının (dosya saklama, yedekleme) sunulması.</li>
+                <li><strong>Açık Rıza:</strong> Kişiselleştirilmiş reklamların gösterilmesi (Google AdMob).</li>
+                <li><strong>Meşru Menfaat:</strong> Uygulama hatalarını tespit etmek ve gidermek (Firebase Crashlytics) ve kullanıcı deneyimini iyileştirmek için anonim kullanım istatistikleri toplamak (Firebase Analytics).</li>
+            </ul>
+            <h3>Verilerin Aktarımı</h3>
+            <p>Kişisel verileriniz, Hizmet'in sağlanabilmesi için Google Drive (kullanıcının kendi hesabı), Google AdMob ve Firebase gibi yurt dışında yerleşik üçüncü taraf hizmet sağlayıcılara aktarılmaktadır. Bu aktarım, açık rızanıza veya KVKK'nın 8. ve 9. maddelerinde belirtilen diğer şartlara dayalı olarak gerçekleştirilir.</p>
+            <h3>KVKK Kapsamındaki Haklarınız</h3>
+            <p>KVKK'nın 11. maddesi uyarınca haklarınız şunlardır: Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacını ve uygun kullanılıp kullanılmadığını öğrenme, verilerin aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, silinmesini veya yok edilmesini isteme ve bu işlemlerin üçüncü kişilere bildirilmesini isteme, işlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme, kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme. Bu haklarınızı kullanmak için aşağıda belirtilen e-posta adresi üzerinden bizimle iletişime geçebilirsiniz.</p>
+            <h3>Uyuşmazlıkların Çözümü</h3>
+            <p>Bu Sözleşme'den doğan tüm uyuşmazlıkların çözümünde İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri münhasıran yetkilidir.</p>
+        </div>
+
+        <h2>10. Term and Termination</h2>
+        <p>These Terms will remain in full force and effect while you use the Service. We may terminate or suspend your access to the Service at any time, for any reason, without notice, which may result in the forfeiture and destruction of all information associated with your use. You can terminate your agreement to these Terms at any time by uninstalling the application.</p>
+        
+        <h2>11. Changes to Terms</h2>
+        <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+
+        <h2>12. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us at: <a href="mailto:your-email@codenzi.com">your-email@codenzi.com</a></p>
+
+        <a href="#" class="back-to-home">Back to Homepage</a>
+    </div>
+</main>
+
+<script>
+    function switchRegion(region) {
+        document.querySelectorAll('.region-specific-content').forEach(function(el) {
+            el.classList.remove('active');
+        });
+        document.getElementById(region).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
