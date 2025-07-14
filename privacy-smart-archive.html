@@ -1,210 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Archive - Privacy Policy</title>
+    <title>Smart Archive - Gizlilik Politikası</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <style>
-        /* Provided CSS by the user */
+        /* Genel Ayarlar */
         :root {
-            --primary-blue: #3498db;
-            --dark-blue: #2c3e50;
-            --light-blue: #e8f5fd;
-            --accent-blue: #6a93cb;
+            --primary-blue: #3498db; /* Temel Mavi */
+            --dark-blue: #2c3e50;    /* Koyu Mavi/Lacivert */
+            --light-blue: #e8f5fd;   /* Çok Açık Mavi */
+            --accent-blue: #6a93cb;  /* Orta Mavi */
             --text-color: #333;
             --light-text: #f0f0f0;
             --background-light: #f4f7f6;
             --border-color: #ddd;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; color: var(--text-color); background-color: var(--background-light); line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        a { text-decoration: none; color: var(--primary-blue); transition: color 0.3s ease; }
-        a:hover { color: var(--dark-blue); }
-        .privacy-page { padding: 80px 0; background-color: #fff; min-height: calc(100vh - 120px); }
-        .privacy-page .container { max-width: 900px; background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .privacy-page h1 { font-family: 'Poppins', sans-serif; font-size: 2.8em; color: var(--dark-blue); text-align: center; margin-bottom: 40px; }
-        .privacy-page h2 { font-family: 'Poppins', sans-serif; font-size: 1.8em; color: var(--primary-blue); margin-top: 35px; margin-bottom: 15px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
-        .privacy-page h3 { font-family: 'Poppins', sans-serif; font-size: 1.3em; color: var(--dark-blue); margin-top: 25px; margin-bottom: 10px; }
-        .privacy-page p, .privacy-page li { font-size: 1.05em; line-height: 1.7; margin-bottom: 15px; color: #444; }
-        .privacy-page ul { list-style-type: disc; margin-left: 30px; margin-bottom: 20px; }
-        .privacy-page .last-updated { font-size: 0.9em; color: #777; text-align: center; margin-bottom: 30px; }
-        .privacy-page .back-to-home { display: block; text-align: center; margin-top: 40px; font-size: 1.1em; font-weight: 600; }
-        .region-selector { margin-bottom: 30px; text-align: center; }
-        .region-selector select { padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); font-size: 1em; }
-        .region-specific-content { display: none; }
-        .region-specific-content.active { display: block; }
-        .important-notice { background-color: var(--light-blue); border-left: 5px solid var(--primary-blue); padding: 15px; margin: 20px 0; border-radius: 5px;}
-        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        .data-table th, .data-table td { border: 1px solid var(--border-color); padding: 12px; text-align: left; }
-        .data-table th { background-color: var(--light-blue); font-family: 'Poppins', sans-serif; color: var(--dark-blue); }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--dark-blue);
+        }
+        
+        strong {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        /* Header ve Navigasyon */
+        .header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 30px;
+        }
+
+        .navbar ul li a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--dark-blue);
+            font-size: 1.05em;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .navbar ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Ana İçerik Stilleri */
+        .policy-page {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .policy-page .container {
+            max-width: 900px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        .policy-page h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.6em;
+            color: var(--dark-blue);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .policy-page h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7em;
+            color: var(--primary-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .policy-page h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+            color: var(--dark-blue);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .policy-page p, .policy-page li {
+            font-size: 1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .policy-page ul, .policy-page ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .policy-page li {
+            margin-bottom: 10px;
+        }
+        
+        .policy-page .last-updated {
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .disclaimer-box {
+            background-color: var(--light-blue);
+            border-left: 5px solid var(--primary-blue);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .disclaimer-box p {
+            margin: 0;
+            font-size: 0.95em;
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
     </style>
 </head>
 <body>
 
-<main class="privacy-page">
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: July 14, 2025</p>
-
-        <div class="region-selector">
-            <label for="region">View policy for your region:</label>
-            <select id="region" onchange="switchRegion(this.value)">
-                <option value="general">General / International</option>
-                <option value="eu">European Union / EEA (GDPR)</option>
-                <option value="ca">California, USA (CCPA/CPRA)</option>
-                <option value="tr">Turkey (KVKK)</option>
-            </select>
-        </div>
-
-        <div id="general" class="region-specific-content active">
-            <h2>1. Introduction</h2>
-            <p>Welcome to Smart Archive, provided by Codenzi ("we," "us," or "our"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application ("Service").</p>
-            <div class="important-notice">
-                <p><strong>Core Principle: You Control Your Data.</strong> The files, documents, and media you save in Smart Archive ("User Content") are stored locally on your device. The optional Google Drive backup feature saves your User Content to <strong>your own</strong> Google Drive account, which we do not have access to. Your privacy and the security of your content are paramount.</p>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Smart Archive</h1>
             </div>
-
-            <h2>2. Information We Collect</h2>
-            <p>To provide and improve our Service, we collect the following types of information:</p>
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Type of Information</th>
-                        <th>Source</th>
-                        <th>Purpose</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>User Content</strong> (Files, Images, etc.)</td>
-                        <td>Provided directly by you</td>
-                        <td>Stored locally on your device for core app functionality. We do not access, view, or upload this content to our servers.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Technical and Usage Data</strong></td>
-                        <td>Collected automatically via <strong>Firebase Analytics</strong></td>
-                        <td>Anonymous data such as device type, OS version, feature usage frequency, and general location (e.g., country). This helps us understand user behavior to improve the app. This data is aggregated and does not personally identify you.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Crash and Performance Data</strong></td>
-                        <td>Collected automatically via <strong>Firebase Crashlytics</strong></td>
-                        <td>Technical information about app crashes and performance issues, including device state at the time of a crash. This helps us diagnose and fix bugs.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Advertising Data</strong></td>
-                        <td>Collected automatically via <strong>Google AdMob</strong></td>
-                        <td>Device identifiers (like a mobile advertising ID) and interaction data with ads. This is used to serve relevant ads and support the Service financially.</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>3. How We Use Your Information</h2>
-            <p>We use the information we collect for the following purposes:</p>
-            <ul>
-                <li><strong>To Provide and Maintain the Service:</strong> To enable you to store, manage, and back up your User Content.</li>
-                <li><strong>To Improve the Service:</strong> We analyze anonymous usage and performance data to identify trends, fix bugs, and enhance features.</li>
-                <li><strong>To Support the Service Financially:</strong> We display advertisements through Google AdMob, which helps keep the core features of the app free.</li>
-                <li><strong>To Secure the Service:</strong> To prevent fraud and ensure compliance with our Terms of Use.</li>
-            </ul>
-
-            <h2>4. How We Share Your Information</h2>
-            <p>We do not sell your personal information. We only share data with trusted third-party service providers as necessary to operate the Service. You are in control of any sharing you initiate.</p>
-            <ul>
-                <li><strong>With Google (as a Service Provider):</strong> We share technical data with Google for the purposes of analytics (Firebase), crash reporting (Crashlytics), and advertising (AdMob). Google's use of this data is governed by their own privacy policies.</li>
-                <li><strong>With Your Own Google Drive Account:</strong> When you initiate a backup, you authorize the app to transfer your User Content to your own Google Drive account. This is a transfer you control, and we have no visibility or liability regarding the data once it is in your Drive.</li>
-                <li><strong>For Legal Reasons:</strong> We may disclose information if required to do so by law or in the good faith belief that such action is necessary to comply with a legal obligation, protect our rights, or prevent fraud.</li>
-            </ul>
-
-            <h2>5. Data Storage, Security, and Retention</h2>
-            <h3>Data Storage</h3>
-            <p>Your User Content is stored exclusively in two places, both under your control:</p>
-            <ol>
-                <li><strong>On Your Device:</strong> Within the application's private, sandboxed storage area.</li>
-                <li><strong>In Your Google Drive Account:</strong> If you use the optional backup feature.</li>
-            </ol>
-            <p>We do not have a copy of your User Content on our servers.</p>
-            <h3>Security</h3>
-            <p>We implement reasonable technical measures to protect the information processed by the app. However, please be aware that no security measures are perfect or impenetrable. You are responsible for the security of your device and your Google account credentials.</p>
-            <h3>Data Retention</h3>
-            <p>We retain technical data (analytics, crash reports) for as long as necessary to fulfill the purposes outlined in this policy. You can delete your User Content from your device and your Google Drive at any time.</p>
-
-            <h2>6. Children's Privacy</h2>
-            <p>The Service is not intended for use by children under the age of 13, or the equivalent minimum age in the relevant jurisdiction. We do not knowingly collect personal information from children.</p>
-
-            <h2>7. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy within the app and updating the "Last Updated" date.</p>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#english">English</a></li>
+                    <li><a href="#turkish">Türkçe</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div id="eu" class="region-specific-content">
-            <h2>Additional Information for Users in the European Union (EU), EEA, and UK</h2>
-            <p>If you are located in the European Union, European Economic Area, or the United Kingdom, you have certain rights under the General Data Protection Regulation (GDPR).</p>
-            <h3>Legal Basis for Processing</h3>
-            <p>Our legal basis for collecting and using the personal information described above will depend on the information concerned and the context in which we collect it. We process data on the following bases:</p>
-            <ul>
-                <li><strong>Consent:</strong> For processing data for personalized advertising. We use Google's User Messaging Platform (UMP) to obtain this consent. You can withdraw your consent at any time in the app's settings.</li>
-                <li><strong>Legitimate Interests:</strong> For processing anonymous analytics and crash data to improve our Service, provided that such processing does not override your rights and freedoms.</li>
-            </ul>
-            <h3>Your Data Protection Rights</h3>
-            <p>You have the following rights:</p>
-            <ul>
-                <li>The right to <strong>access, update, or delete</strong> the information we have on you.</li>
-                <li>The right of <strong>rectification</strong>.</li>
-                <li>The right to <strong>object</strong> to our processing.</li>
-                <li>The right of <strong>restriction</strong>.</li>
-                <li>The right to <strong>data portability</strong>.</li>
-                <li>The right to <strong>withdraw consent</strong> at any time.</li>
-            </ul>
-            <p>Since your primary data (User Content) is on your device or your Google Drive, you have direct control over it. For data related to analytics or advertising identifiers, please contact us.</p>
+    <main class="policy-page">
+        <div class="container">
+            
+            <article id="english">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: July 15, 2025</p>
+
+                <h2>1. Our Commitment to Your Privacy</h2>
+                <p>Your privacy is of paramount importance to us. This policy outlines our principles regarding information in the Smart Archive App ("App"). Our core philosophy is <strong>data minimization</strong> and <strong>user control</strong>. We have architected the App to function without ever needing to access, see, or store your personal files and content ("Content").</p>
+                
+                <h2>2. Data We Absolutely DO NOT Collect, See, or Access</h2>
+                <p>To be unequivocally clear, the Developer <strong>DOES NOT</strong> see, collect, store, transmit, or have any form of access to the files you archive or the content within them. Your Content remains exclusively:</p>
+                <ul>
+                    <li><strong>Locally on Your Device:</strong> Stored within the App's private data directory, which is "sandboxed" by the Android Operating System, making it inaccessible to other applications without your explicit, manual action (e.g., using the 'Share' feature).</li>
+                    <li><strong>In Your Personal Google Drive Account:</strong> If you choose to use the optional backup feature, your files are encrypted during transit and transferred directly between your device and your own Google account via Google's secure APIs. We do not act as an intermediary, and we never see, process, or store this data.</li>
+                </ul>
+
+                <h2>3. Information Collected by Integrated Third-Party Services</h2>
+                <p>To ensure the App is functional, stable, and free of charge, we utilize industry-standard third-party services which collect limited, generally non-personally identifiable data:</p>
+                <ul>
+                    <li><strong>Firebase Analytics:</strong> We collect anonymized usage events and statistics to understand how users interact with the App's features (e.g., which buttons are clicked, screen views, feature popularity). This data is aggregated and helps us make informed decisions to improve the user experience. This may include a resettable device identifier provided by Google, but it is not linked to your personal identity by us.</li>
+                    <li><strong>Firebase Crashlytics:</strong> In the event of an App crash, this service automatically sends us an anonymous technical report. This report contains information such as the device model, OS version, and the state of the App at the time of the crash (a "stack trace"). This is crucial for diagnosing and fixing bugs. It does not contain your personal files or any personally identifiable information.</li>
+                    <li><strong>Google AdMob:</strong> This is our advertising partner that displays ads within the App. To provide more relevant advertising and for its own operational purposes, Google may use your device's advertising ID. You can typically reset this ID or opt out of personalized advertising through your device's system settings. We also implement Google's User Messaging Platform (UMP) to request your consent for data collection for advertising purposes in relevant jurisdictions.</li>
+                </ul>
+
+                <h2>4. Data Security</h2>
+                <p>While we do not handle your primary Content, we take reasonable measures to ensure the App itself is secure. However, the ultimate security of your archived files depends on factors under your control, such as the physical security of your device, the use of a strong device passcode or biometric lock, and the security of your Google account (e.g., using a strong, unique password and two-factor authentication).</p>
+
+                <h2>5. Children's Privacy</h2>
+                <p>The App is not directed to, nor intended for use by, children under the age of 13 or the equivalent minimum age in the relevant jurisdiction. We do not knowingly collect any personal information from children. If we become aware that we have inadvertently collected such information, we will take steps to delete it.</p>
+                
+                <h2>6. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the "Last Updated" date at the top of this policy. We encourage you to review this policy periodically.</p>
+
+                <h2>7. Contact Us</h2>
+                <p>For any questions about this Privacy Policy or our privacy practices, please contact us at: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+            </article>
+
+            <hr style="margin: 50px 0; border: 1px solid var(--border-color);">
+
+            <article id="turkish">
+                <h1>Gizlilik Politikası</h1>
+                <p class="last-updated">Son Güncelleme: 15 Temmuz 2025</p>
+
+                <h2>1. Gizliliğe Olan Bağlılığımız</h2>
+                <p>Gizliliğiniz bizim için son derece önemlidir. Bu politika, Smart Archive Uygulamasındaki ("Uygulama") bilgilere ilişkin ilkelerimizi özetlemektedir. Temel felsefemiz <strong>veri minimizasyonu</strong> ve <strong>kullanıcı kontrolüdür</strong>. Uygulamayı, kişisel dosyalarınıza ve içeriğinize ("İçerik") asla erişme, görme veya saklama ihtiyacı duymadan çalışacak şekilde tasarladık.</p>
+                
+                <h2>2. Kesinlikle Toplamadığımız, Görmediğimiz veya Erişmediğimiz Veriler</h2>
+                <p>Açık ve net olmak gerekirse, Geliştirici, arşivlediğiniz dosyaları veya bunların içindeki içeriği <strong>GÖRMEZ, TOPLAMAZ, SAKLAMAZ, İLETMEZ</strong> veya bunlara herhangi bir şekilde erişmez. İçeriğiniz yalnızca şu şekilde saklanır:</p>
+                <ul>
+                    <li><strong>Yerel Olarak Cihazınızda:</strong> Android İşletim Sistemi tarafından "korumalı alana alınmış" olan, Uygulamanın özel veri dizininde saklanır. Bu, sizin açık ve manuel bir eyleminiz olmadan (örneğin, 'Paylaş' özelliğini kullanmak gibi) diğer uygulamaların erişemeyeceği anlamına gelir.</li>
+                    <li><strong>Kişisel Google Drive Hesabınızda:</strong> İsteğe bağlı yedekleme özelliğini kullanmayı seçerseniz, dosyalarınız aktarım sırasında şifrelenir ve Google'ın güvenli API'leri aracılığıyla doğrudan cihazınız ile kendi Google hesabınız arasında aktarılır. Bu süreçte bir aracı olarak hareket etmeyiz ve bu veriyi asla görmeyiz, işlemeyiz veya saklamayız.</li>
+                </ul>
+
+                <h2>3. Entegre Üçüncü Taraf Hizmetleri Tarafından Toplanan Bilgiler</h2>
+                <p>Uygulamanın işlevsel, kararlı ve ücretsiz olmasını sağlamak için, genellikle kişisel olarak tanımlayıcı olmayan sınırlı verileri toplayan endüstri standardı üçüncü taraf hizmetleri kullanıyoruz:</p>
+                <ul>
+                    <li><strong>Firebase Analytics:</strong> Kullanıcıların Uygulamanın özellikleriyle nasıl etkileşime girdiğini anlamak için (örneğin, hangi düğmelerin tıklandığı, ekran görüntülemeleri, özellik popülerliği) anonimleştirilmiş kullanım olaylarını ve istatistiklerini toplarız. Bu veriler birleştirilir ve kullanıcı deneyimini iyileştirmek için bilinçli kararlar almamıza yardımcı olur. Bu, Google tarafından sağlanan sıfırlanabilir bir cihaz tanımlayıcısını içerebilir, ancak tarafımızca kişisel kimliğinizle ilişkilendirilmez.</li>
+                    <li><strong>Firebase Crashlytics:</strong> Uygulamanın kilitlenmesi durumunda, bu hizmet bize otomatik olarak anonim bir teknik rapor gönderir. Bu rapor, cihaz modeli, işletim sistemi sürümü ve kilitlenme anında Uygulamanın durumu ("yığın izi") gibi bilgileri içerir. Bu, hataları teşhis etmemiz ve düzeltmemiz için çok önemlidir. Kişisel dosyalarınızı veya kişisel olarak tanımlanabilir herhangi bir bilgiyi içermez.</li>
+                    <li><strong>Google AdMob:</strong> Bu, Uygulama içinde reklamları görüntüleyen reklam ortağımızdır. Google, daha alakalı reklamlar sunmak ve kendi operasyonel amaçları için cihazınızın reklam kimliğini kullanabilir. Genellikle cihazınızın sistem ayarlarından bu kimliği sıfırlayabilir veya kişiselleştirilmiş reklamlardan çıkabilirsiniz. Ayrıca, ilgili yargı bölgelerinde reklam amaçlı veri toplanması için onayınızı istemek üzere Google'ın Kullanıcı Mesajlaşma Platformu'nu (UMP) uygularız.</li>
+                </ul>
+
+                <h2>4. Veri Güvenliği</h2>
+                <p>Birincil İçeriğinizi biz işlememekle birlikte, Uygulamanın kendisinin güvenli olmasını sağlamak için makul önlemler alırız. Ancak, arşivlenmiş dosyalarınızın nihai güvenliği, cihazınızın fiziksel güvenliği, güçlü bir cihaz parolası veya biyometrik kilit kullanımı ve Google hesabınızın güvenliği (örneğin, güçlü, benzersiz bir parola ve iki faktörlü kimlik doğrulama ayarları) gibi sizin kontrolünüz altındaki faktörlere bağlıdır.</p>
+
+                <h2>5. Çocukların Gizliliği</h2>
+                <p>Uygulama, 13 yaşın altındaki veya ilgili yargı alanındaki eşdeğer asgari yaşın altındaki çocuklar tarafından kullanılmak üzere tasarlanmamıştır veya onlara yönelik değildir. Çocuklardan bilerek herhangi bir kişisel bilgi toplamıyoruz. Farkında olmadan bu tür bilgileri topladığımızı öğrenirsek, bunları silmek için adımlar atacağız.</p>
+                
+                <h2>6. Bu Politikadaki Değişiklikler</h2>
+                <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Bu politikanın üst kısmındaki "Son Güncelleme" tarihini güncelleyerek sizi önemli değişikliklerden haberdar edeceğiz. Bu politikayı periyodik olarak gözden geçirmenizi öneririz.</p>
+                
+                <h2>7. Bize Ulaşın</h2>
+                <p>Bu Gizlilik Politikası veya gizlilik uygulamalarımız hakkında herhangi bir sorunuz varsa, lütfen bizimle şu adresten iletişime geçin: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+            </article>
+
         </div>
-
-        <div id="ca" class="region-specific-content">
-            <h2>Your California Privacy Rights (CCPA/CPRA)</h2>
-            <p>If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), provides you with specific rights regarding your personal information.</p>
-            <ul>
-                <li><strong>Right to Know:</strong> You can request to know what personal information we collect, use, and disclose.</li>
-                <li><strong>Right to Delete:</strong> You can request the deletion of your personal information. As your User Content is stored locally or on your own Google Drive, you can directly delete it.</li>
-                <li><strong>Right to Opt-Out of Sale/Sharing:</strong> We do not sell your data. However, our use of Google AdMob for personalized ads may constitute "sharing" under CPRA. You can opt-out of this sharing via the privacy choices presented in the app.</li>
-                <li><strong>Right to Correct:</strong> You have the right to request the correction of inaccurate personal information.</li>
-                <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
-            </ul>
-        </div>
-
-        <div id="tr" class="region-specific-content">
-            <h2>Türkiye'deki Kullanıcılar için Ek Bilgiler (KVKK Aydınlatma Metni)</h2>
-            <p>Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca Türkiye'de ikamet eden kullanıcılarımızı bilgilendirmek amacıyla hazırlanmıştır.</p>
-            <h3>Veri Sorumlusu</h3>
-            <p>KVKK kapsamında, kişisel verilerinizle ilgili olarak Veri Sorumlusu Codenzi'dir.</p>
-            <h3>İşlenen Kişisel Veriler, İşleme Amaçları ve Hukuki Sebepler</h3>
-            <p>Uygulamamızda işlenen veriler, amaçları ve hukuki sebepleri aşağıda detaylandırılmıştır:</p>
-            <ul>
-                <li><strong>Kullanıcı İçerikleri:</strong> Tarafınızca uygulamaya yüklenen dosya ve belgelerdir. Bu veriler yalnızca cihazınızda ve talimatınız üzerine kendi Google Drive hesabınızda saklanır. İşleme hukuki sebebi, KVKK Madde 5/2(c) uyarınca "bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması" ve "veri işlemenin zorunlu olmasıdır." Biz bu içeriğe erişmeyiz.</li>
-                <li><strong>Teknik, Reklam ve Analitik Veriler:</strong> Cihaz kimlikleri, çökme raporları ve anonim kullanım istatistikleridir. Bu veriler; hizmeti iyileştirmek, hataları gidermek ve reklam sunarak hizmeti finanse etmek amacıyla, KVKK Madde 5/2(f) uyarınca "ilgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması" ve kişiselleştirilmiş reklamlar için KVKK Madde 5/1 uyarınca "açık rızanız" hukuki sebeplerine dayalı olarak işlenir.</li>
-            </ul>
-            <h3>Kişisel Verilerin Aktarımı</h3>
-            <p>Teknik verileriniz, hizmet aldığımız Google'ın yurt dışındaki (örn. Amerika Birleşik Devletleri) sunucularına aktarılmaktadır. Bu aktarım, açık rızanız veya KVKK'nın 9. maddesinde belirtilen şartlar dahilinde gerçekleştirilir.</p>
-            <h3>KVKK Kapsamındaki Haklarınız</h3>
-            <p>KVKK'nın 11. maddesi uyarınca, veri sorumlusuna başvurarak; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacını ve uygunluğunu öğrenme, verilerin aktarıldığı üçüncü kişileri bilme, düzeltilmesini isteme, silinmesini veya yok edilmesini isteme, bu işlemlerin üçüncü kişilere bildirilmesini isteme, otomatik sistemlerle analiz edilmesiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve kanuna aykırı işlenme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme haklarına sahipsiniz.</p>
-        </div>
-
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
-        <p><a href="mailto:your-email@codenzi.com">info@codenzi.com</a></p>
-
-        <a href="#" class="back-to-home">Back to Homepage</a>
-    </div>
-</main>
-
-<script>
-    function switchRegion(region) {
-        document.querySelectorAll('.region-specific-content').forEach(function(el) {
-            el.classList.remove('active');
-        });
-        document.getElementById(region).classList.add('active');
-    }
-</script>
+    </main>
 
 </body>
 </html>
