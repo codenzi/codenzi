@@ -189,6 +189,21 @@
             color: var(--dark-blue);
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Cihaz dilini al (örneğin: "tr-TR", "en-US")
+            const userLang = navigator.language || navigator.userLanguage; 
+
+            // Türkçe ise Türkçe bölümünü göster, değilse İngilizce'yi
+            if (userLang.startsWith('tr')) {
+                document.getElementById('english').style.display = 'none';
+                document.getElementById('turkish').style.display = 'block';
+            } else {
+                document.getElementById('english').style.display = 'block';
+                document.getElementById('turkish').style.display = 'none';
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -197,88 +212,84 @@
             <div class="logo">
                 <h1>Smart Archive</h1>
             </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#english">English</a></li>
-                    <li><a href="#turkish">Türkçe</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <main class="policy-page">
         <div class="container">
             
-            <article id="english">
+            <article id="english" style="display: none;">
                 <h1>Privacy Policy</h1>
                 <p class="last-updated">Last Updated: July 15, 2025</p>
 
-                <h2>1. Our Commitment to Your Privacy</h2>
-                <p>Your privacy is of paramount importance to us. This policy outlines our principles regarding information in the Smart Archive App ("App"). Our core philosophy is <strong>data minimization</strong> and <strong>user control</strong>. We have architected the App to function without ever needing to access, see, or store your personal files and content ("Content").</p>
+                <h2>1. Our Unwavering Commitment to Your Privacy</h2>
+                <p>Your privacy is not just a policy; it is the foundational principle of the "Smart Archive" application ("App"). This document details our data handling practices with maximum transparency. Our core architecture is built upon <strong>absolute data minimization</strong> and empowering <strong>total user control</strong>. We have deliberately engineered the App to function without ever needing to access, see, analyze, or store your personal files and content ("Content").</p>
                 
-                <h2>2. Data We Absolutely DO NOT Collect, See, or Access</h2>
-                <p>To be unequivocally clear, the Developer <strong>DOES NOT</strong> see, collect, store, transmit, or have any form of access to the files you archive or the content within them. Your Content remains exclusively:</p>
+                <h2>2. The Golden Rule: Data We Absolutely DO NOT Collect, See, or Access</h2>
+                <p>To be unequivocally clear and to eliminate any ambiguity, the Developer <strong>DOES NOT</strong> see, collect, store, transmit, analyze, or have any form of access to the files you archive or the content within them. Your Content remains exclusively and entirely under your control in one of two locations:</p>
                 <ul>
-                    <li><strong>Locally on Your Device:</strong> Stored within the App's private data directory, which is "sandboxed" by the Android Operating System, making it inaccessible to other applications without your explicit, manual action (e.g., using the 'Share' feature).</li>
-                    <li><strong>In Your Personal Google Drive Account:</strong> If you choose to use the optional backup feature, your files are encrypted during transit and transferred directly between your device and your own Google account via Google's secure APIs. We do not act as an intermediary, and we never see, process, or store this data.</li>
+                    <li><strong>Locally on Your Device:</strong> Your Content is stored within the App's private data directory, which is "sandboxed" by the Android Operating System. This security measure makes it inaccessible to other applications and to us, without your explicit, manual action (e.g., using the operating system's 'Share' functionality).</li>
+                    <li><strong>In Your Personal Google Drive Account:</strong> Should you choose to use the optional backup feature, your Content is encrypted during transit and transferred directly between your device and your own Google account via Google's secure APIs. We do not act as an intermediary, a host, or a processor for this data. We never see, process, or store your backed-up Content. The management and security of this data are subject to your agreement with Google.</li>
+                </ul>
+                <div class="disclaimer-box">
+                    <p><strong>Note on Camera and File Access Permissions:</strong> The App requests Camera and File access permissions solely to enable its core functionality—allowing you to import files into the App's secure, local storage. This access is only ever active when you, the user, explicitly initiate an action to add a file. We do not access your camera or files in the background.</p>
+                </div>
+                <h2>3. Information Processed by Vetted Third-Party Services</h2>
+                <p>To ensure the App is functional, stable, and can be offered free of charge, we utilize a limited number of industry-standard third-party services. These services collect limited, generally non-personally identifiable technical data. We do not share your Content with them.</p>
+                <ul>
+                    <li><strong>Firebase Analytics:</strong> We collect anonymized usage events and statistics to understand how users interact with the App's features (e.g., which buttons are clicked, screen views, feature popularity). This data is aggregated and is crucial for making informed decisions to improve the user experience. This may include a resettable device identifier provided by Google, which is not linked to your personal identity by us.</li>
+                    <li><strong>Firebase Crashlytics:</strong> In the event of an App crash, this service automatically sends us an anonymous technical report. This report contains information such as the device model, OS version, and the state of the App at the time of the crash (a "stack trace"). This technical data is essential for diagnosing and fixing bugs to improve app stability. It does not contain your personal files or any personally identifiable information.</li>
+                    <li><strong>Google AdMob and User Consent (UMP):</strong> This is our advertising partner that displays ads within the App. To provide advertising and for its own operational purposes, Google may use your device's advertising ID. In accordance with privacy regulations such as GDPR, we use Google's User Messaging Platform (UMP) to request your consent for data collection for advertising purposes. You have full control over your consent choices and can typically reset your advertising ID or opt out of personalized advertising through your device's system settings. For more information on how Google uses data, please review <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">their policies</a>.</li>
                 </ul>
 
-                <h2>3. Information Collected by Integrated Third-Party Services</h2>
-                <p>To ensure the App is functional, stable, and free of charge, we utilize industry-standard third-party services which collect limited, generally non-personally identifiable data:</p>
-                <ul>
-                    <li><strong>Firebase Analytics:</strong> We collect anonymized usage events and statistics to understand how users interact with the App's features (e.g., which buttons are clicked, screen views, feature popularity). This data is aggregated and helps us make informed decisions to improve the user experience. This may include a resettable device identifier provided by Google, but it is not linked to your personal identity by us.</li>
-                    <li><strong>Firebase Crashlytics:</strong> In the event of an App crash, this service automatically sends us an anonymous technical report. This report contains information such as the device model, OS version, and the state of the App at the time of the crash (a "stack trace"). This is crucial for diagnosing and fixing bugs. It does not contain your personal files or any personally identifiable information.</li>
-                    <li><strong>Google AdMob:</strong> This is our advertising partner that displays ads within the App. To provide more relevant advertising and for its own operational purposes, Google may use your device's advertising ID. You can typically reset this ID or opt out of personalized advertising through your device's system settings. We also implement Google's User Messaging Platform (UMP) to request your consent for data collection for advertising purposes in relevant jurisdictions.</li>
-                </ul>
-
-                <h2>4. Data Security</h2>
-                <p>While we do not handle your primary Content, we take reasonable measures to ensure the App itself is secure. However, the ultimate security of your archived files depends on factors under your control, such as the physical security of your device, the use of a strong device passcode or biometric lock, and the security of your Google account (e.g., using a strong, unique password and two-factor authentication).</p>
+                <h2>4. Data Security and User Responsibility</h2>
+                <p>While we are committed to securing the App's code, the ultimate security of your archived files is a shared responsibility that primarily rests with you. The security of your Content depends on factors entirely under your control, such as the physical security of your device, the use of a strong device passcode or biometric lock, and the security of your Google account (e.g., using a strong, unique password and two-factor authentication).</p>
 
                 <h2>5. Children's Privacy</h2>
-                <p>The App is not directed to, nor intended for use by, children under the age of 13 or the equivalent minimum age in the relevant jurisdiction. We do not knowingly collect any personal information from children. If we become aware that we have inadvertently collected such information, we will take steps to delete it.</p>
+                <p>The App is not directed to, nor intended for use by, children under the age of 13 or the equivalent minimum age in the relevant jurisdiction. We do not knowingly collect any personal information from children. If we become aware that we have inadvertently collected such information, we will take immediate steps to delete it.</p>
                 
-                <h2>6. Changes to This Policy</h2>
-                <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the "Last Updated" date at the top of this policy. We encourage you to review this policy periodically.</p>
+                <h2>6. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by updating the "Last Updated" date at the top of this policy. We encourage you to review this policy periodically.</p>
 
                 <h2>7. Contact Us</h2>
-                <p>For any questions about this Privacy Policy or our privacy practices, please contact us at: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+                <p>For any questions, concerns, or clarifications about this Privacy Policy or our privacy practices, please do not hesitate to contact us at: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
             </article>
 
-            <hr style="margin: 50px 0; border: 1px solid var(--border-color);">
-
-            <article id="turkish">
+            <article id="turkish" style="display: none;">
                 <h1>Gizlilik Politikası</h1>
                 <p class="last-updated">Son Güncelleme: 15 Temmuz 2025</p>
 
-                <h2>1. Gizliliğe Olan Bağlılığımız</h2>
-                <p>Gizliliğiniz bizim için son derece önemlidir. Bu politika, Smart Archive Uygulamasındaki ("Uygulama") bilgilere ilişkin ilkelerimizi özetlemektedir. Temel felsefemiz <strong>veri minimizasyonu</strong> ve <strong>kullanıcı kontrolüdür</strong>. Uygulamayı, kişisel dosyalarınıza ve içeriğinize ("İçerik") asla erişme, görme veya saklama ihtiyacı duymadan çalışacak şekilde tasarladık.</p>
+                <h2>1. Gizliliğinize Olan Sarsılmaz Bağlılığımız</h2>
+                <p>Gizliliğiniz bizim için sadece bir politika değil, "Smart Archive" uygulamasının ("Uygulama") temel mimari prensibidir. Bu belge, veri işleme uygulamalarımızı maksimum şeffaflıkla açıklamaktadır. Temel mimarimiz, <strong>mutlak veri minimizasyonu</strong> ve <strong>tam kullanıcı kontrolünü</strong> güçlendirme üzerine kuruludur. Uygulamayı, kişisel dosyalarınıza ve içeriğinize ("İçerik") hiçbir zaman erişme, görme, analiz etme veya saklama ihtiyacı duymayacak şekilde kasıtlı olarak tasarladık.</p>
                 
-                <h2>2. Kesinlikle Toplamadığımız, Görmediğimiz veya Erişmediğimiz Veriler</h2>
-                <p>Açık ve net olmak gerekirse, Geliştirici, arşivlediğiniz dosyaları veya bunların içindeki içeriği <strong>GÖRMEZ, TOPLAMAZ, SAKLAMAZ, İLETMEZ</strong> veya bunlara herhangi bir şekilde erişmez. İçeriğiniz yalnızca şu şekilde saklanır:</p>
+                <h2>2. Altın Kural: Kesinlikle Toplamadığımız, Görmediğimiz veya Erişmediğimiz Veriler</h2>
+                <p>Her türlü belirsizliği ortadan kaldırmak için açık ve net bir şekilde belirtmek isteriz ki, Geliştirici, arşivlediğiniz dosyaları veya bunların içindeki içeriği <strong>GÖRMEZ, TOPLAMAZ, SAKLAMAZ, İLETMEZ, ANALİZ ETMEZ</strong> veya bunlara herhangi bir şekilde erişmez. İçeriğiniz, tamamen sizin kontrolünüz altında olmak üzere, yalnızca iki yerden birinde bulunur:</p>
                 <ul>
-                    <li><strong>Yerel Olarak Cihazınızda:</strong> Android İşletim Sistemi tarafından "korumalı alana alınmış" olan, Uygulamanın özel veri dizininde saklanır. Bu, sizin açık ve manuel bir eyleminiz olmadan (örneğin, 'Paylaş' özelliğini kullanmak gibi) diğer uygulamaların erişemeyeceği anlamına gelir.</li>
-                    <li><strong>Kişisel Google Drive Hesabınızda:</strong> İsteğe bağlı yedekleme özelliğini kullanmayı seçerseniz, dosyalarınız aktarım sırasında şifrelenir ve Google'ın güvenli API'leri aracılığıyla doğrudan cihazınız ile kendi Google hesabınız arasında aktarılır. Bu süreçte bir aracı olarak hareket etmeyiz ve bu veriyi asla görmeyiz, işlemeyiz veya saklamayız.</li>
+                    <li><strong>Yerel Olarak Cihazınızda:</strong> İçeriğiniz, Android İşletim Sistemi tarafından "korumalı alana alınmış" (sandboxed) olan, Uygulamanın özel veri dizininde saklanır. Bu güvenlik önlemi, sizin açık ve manuel bir eyleminiz (örneğin, işletim sisteminin 'Paylaş' işlevini kullanmak gibi) olmadan diğer uygulamaların ve bizim erişemeyeceğimiz anlamına gelir.</li>
+                    <li><strong>Kişisel Google Drive Hesabınızda:</strong> İsteğe bağlı yedekleme özelliğini kullanmayı seçerseniz, İçeriğiniz aktarım sırasında şifrelenir ve Google'ın güvenli API'leri aracılığıyla doğrudan cihazınız ile kendi Google hesabınız arasında aktarılır. Bu süreçte bir aracı, ev sahibi veya işlemci olarak hareket etmeyiz. Yedeklenmiş İçeriğinizi asla görmeyiz, işlemeyiz veya saklamayız. Bu verilerin yönetimi ve güvenliği, sizin Google ile olan sözleşmenize tabidir.</li>
+                </ul>
+                <div class="disclaimer-box">
+                    <p><strong>Kamera ve Dosya Erişimi İzinleri Hakkında Not:</strong> Uygulama, Kamera ve Dosya erişim izinlerini yalnızca temel işlevselliğini etkinleştirmek, yani dosyaları Uygulamanın güvenli, yerel deposuna aktarmanıza olanak tanımak için ister. Bu erişim, yalnızca siz kullanıcı olarak bir dosya ekleme eylemini açıkça başlattığınızda aktif olur. Arka planda kameranıza veya dosyalarınıza erişmeyiz.</p>
+                </div>
+                <h2>3. İncelenmiş Üçüncü Taraf Hizmetleri Tarafından İşlenen Bilgiler</h2>
+                <p>Uygulamanın işlevsel, kararlı olmasını ve ücretsiz olarak sunulabilmesini sağlamak için, sınırlı sayıda, genellikle kişisel olarak tanımlayıcı olmayan teknik verileri toplayan, endüstri standardı üçüncü taraf hizmetleri kullanıyoruz. İçeriğinizi onlarla paylaşmayız.</p>
+                <ul>
+                    <li><strong>Firebase Analytics:</strong> Kullanıcıların Uygulamanın özellikleriyle nasıl etkileşime girdiğini anlamak için (örneğin, hangi düğmelerin tıklandığı, ekran görüntülemeleri, özellik popülerliği) anonimleştirilmiş kullanım olaylarını ve istatistiklerini toplarız. Bu veriler birleştirilir ve kullanıcı deneyimini iyileştirmek için bilinçli kararlar almamız için hayati önem taşır. Bu, Google tarafından sağlanan sıfırlanabilir bir cihaz tanımlayıcısını içerebilir, ancak tarafımızca kişisel kimliğinizle ilişkilendirilmez.</li>
+                    <li><strong>Firebase Crashlytics:</strong> Uygulamanın kilitlenmesi durumunda, bu hizmet bize otomatik olarak anonim bir teknik rapor gönderir. Bu rapor, cihaz modeli, işletim sistemi sürümü ve kilitlenme anında Uygulamanın durumu ("yığın izi") gibi bilgileri içerir. Bu teknik veriler, kararlılığı artırmak için hataları teşhis etmemiz ve düzeltmemiz için esastır. Kişisel dosyalarınızı veya kişisel olarak tanımlanabilir herhangi bir bilgiyi içermez.</li>
+                    <li><strong>Google AdMob ve Kullanıcı Rızası (UMP):</strong> Bu, Uygulama içinde reklamları görüntüleyen reklam ortağımızdır. Reklam sağlamak ve kendi operasyonel amaçları için Google, cihazınızın reklam kimliğini kullanabilir. GDPR gibi gizlilik düzenlemelerine uygun olarak, reklam amaçlı veri toplanması için onayınızı istemek üzere Google'ın Kullanıcı Mesajlaşma Platformu'nu (UMP) kullanırız. Rıza seçimleriniz üzerinde tam kontrole sahipsiniz ve genellikle cihazınızın sistem ayarlarından reklam kimliğinizi sıfırlayabilir veya kişiselleştirilmiş reklamlardan çıkabilirsiniz. Google'ın verileri nasıl kullandığı hakkında daha fazla bilgi için lütfen <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">politikalarını</a> inceleyin.</li>
                 </ul>
 
-                <h2>3. Entegre Üçüncü Taraf Hizmetleri Tarafından Toplanan Bilgiler</h2>
-                <p>Uygulamanın işlevsel, kararlı ve ücretsiz olmasını sağlamak için, genellikle kişisel olarak tanımlayıcı olmayan sınırlı verileri toplayan endüstri standardı üçüncü taraf hizmetleri kullanıyoruz:</p>
-                <ul>
-                    <li><strong>Firebase Analytics:</strong> Kullanıcıların Uygulamanın özellikleriyle nasıl etkileşime girdiğini anlamak için (örneğin, hangi düğmelerin tıklandığı, ekran görüntülemeleri, özellik popülerliği) anonimleştirilmiş kullanım olaylarını ve istatistiklerini toplarız. Bu veriler birleştirilir ve kullanıcı deneyimini iyileştirmek için bilinçli kararlar almamıza yardımcı olur. Bu, Google tarafından sağlanan sıfırlanabilir bir cihaz tanımlayıcısını içerebilir, ancak tarafımızca kişisel kimliğinizle ilişkilendirilmez.</li>
-                    <li><strong>Firebase Crashlytics:</strong> Uygulamanın kilitlenmesi durumunda, bu hizmet bize otomatik olarak anonim bir teknik rapor gönderir. Bu rapor, cihaz modeli, işletim sistemi sürümü ve kilitlenme anında Uygulamanın durumu ("yığın izi") gibi bilgileri içerir. Bu, hataları teşhis etmemiz ve düzeltmemiz için çok önemlidir. Kişisel dosyalarınızı veya kişisel olarak tanımlanabilir herhangi bir bilgiyi içermez.</li>
-                    <li><strong>Google AdMob:</strong> Bu, Uygulama içinde reklamları görüntüleyen reklam ortağımızdır. Google, daha alakalı reklamlar sunmak ve kendi operasyonel amaçları için cihazınızın reklam kimliğini kullanabilir. Genellikle cihazınızın sistem ayarlarından bu kimliği sıfırlayabilir veya kişiselleştirilmiş reklamlardan çıkabilirsiniz. Ayrıca, ilgili yargı bölgelerinde reklam amaçlı veri toplanması için onayınızı istemek üzere Google'ın Kullanıcı Mesajlaşma Platformu'nu (UMP) uygularız.</li>
-                </ul>
-
-                <h2>4. Veri Güvenliği</h2>
-                <p>Birincil İçeriğinizi biz işlememekle birlikte, Uygulamanın kendisinin güvenli olmasını sağlamak için makul önlemler alırız. Ancak, arşivlenmiş dosyalarınızın nihai güvenliği, cihazınızın fiziksel güvenliği, güçlü bir cihaz parolası veya biyometrik kilit kullanımı ve Google hesabınızın güvenliği (örneğin, güçlü, benzersiz bir parola ve iki faktörlü kimlik doğrulama ayarları) gibi sizin kontrolünüz altındaki faktörlere bağlıdır.</p>
+                <h2>4. Veri Güvenliği ve Kullanıcı Sorumluluğu</h2>
+                <p>Uygulamanın kodunu güvence altına almaya kararlı olsak da, arşivlenmiş dosyalarınızın nihai güvenliği, öncelikli olarak size bağlı olan paylaşılan bir sorumluluktur. İçeriğinizin güvenliği, cihazınızın fiziksel güvenliği, güçlü bir cihaz parolası veya biyometrik kilit kullanımı ve Google hesabınızın güvenliği (örneğin, güçlü, benzersiz bir parola ve iki faktörlü kimlik doğrulama kullanımı) gibi tamamen sizin kontrolünüz altındaki faktörlere bağlıdır.</p>
 
                 <h2>5. Çocukların Gizliliği</h2>
-                <p>Uygulama, 13 yaşın altındaki veya ilgili yargı alanındaki eşdeğer asgari yaşın altındaki çocuklar tarafından kullanılmak üzere tasarlanmamıştır veya onlara yönelik değildir. Çocuklardan bilerek herhangi bir kişisel bilgi toplamıyoruz. Farkında olmadan bu tür bilgileri topladığımızı öğrenirsek, bunları silmek için adımlar atacağız.</p>
+                <p>Uygulama, 13 yaşın altındaki veya ilgili yargı alanındaki eşdeğer asgari yaşın altındaki çocuklara yönelik değildir veya onlar tarafından kullanılmak üzere tasarlanmamıştır. Çocuklardan bilerek herhangi bir kişisel bilgi toplamıyoruz. Farkında olmadan bu tür bilgileri topladığımızı öğrenirsek, bunları silmek için derhal adımlar atacağız.</p>
                 
                 <h2>6. Bu Politikadaki Değişiklikler</h2>
-                <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Bu politikanın üst kısmındaki "Son Güncelleme" tarihini güncelleyerek sizi önemli değişikliklerden haberdar edeceğiz. Bu politikayı periyodik olarak gözden geçirmenizi öneririz.</p>
-                
+                <p>Bu Gizlilik Politikasını, uygulamalarımızdaki değişiklikleri yansıtmak veya diğer operasyonel, yasal veya düzenleyici nedenlerle zaman zaman güncelleyebiliriz. Bu politikanın üst kısmındaki "Son Güncelleme" tarihini güncelleyerek sizi önemli değişikliklerden haberdar edeceğiz. Bu politikayı periyodik olarak gözden geçirmenizi öneririz.</p>
+
                 <h2>7. Bize Ulaşın</h2>
-                <p>Bu Gizlilik Politikası veya gizlilik uygulamalarımız hakkında herhangi bir sorunuz varsa, lütfen bizimle şu adresten iletişime geçin: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+                <p>Bu Gizlilik Politikası veya gizlilik uygulamalarımız hakkında herhangi bir sorunuz, endişeniz veya açıklama talebiniz için lütfen bizimle iletişime geçmekten çekinmeyin: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
             </article>
 
         </div>
