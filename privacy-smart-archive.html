@@ -3,281 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Archive Privacy Policy - Codenzi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Smart Archive - Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Varsayılan olarak Türkçe metinleri gizle */
-        .lang-tr {
-            display: none;
+        /* Provided CSS by the user */
+        :root {
+            --primary-blue: #3498db;
+            --dark-blue: #2c3e50;
+            --light-blue: #e8f5fd;
+            --accent-blue: #6a93cb;
+            --text-color: #333;
+            --light-text: #f0f0f0;
+            --background-light: #f4f7f6;
+            --border-color: #ddd;
         }
-        /* JavaScript ile body etiketine 'lang-tr-active' sınıfı eklendiğinde tam tersini yap */
-        body.lang-tr-active .lang-tr {
-            display: initial; /* inline veya block gibi orijinal davranışını korur */
-        }
-        body.lang-tr-active .lang-en {
-            display: none;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text-color); background-color: var(--background-light); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: var(--primary-blue); transition: color 0.3s ease; }
+        a:hover { color: var(--dark-blue); }
+        .privacy-page { padding: 80px 0; background-color: #fff; min-height: calc(100vh - 120px); }
+        .privacy-page .container { max-width: 900px; background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .privacy-page h1 { font-family: 'Poppins', sans-serif; font-size: 2.8em; color: var(--dark-blue); text-align: center; margin-bottom: 40px; }
+        .privacy-page h2 { font-family: 'Poppins', sans-serif; font-size: 1.8em; color: var(--primary-blue); margin-top: 35px; margin-bottom: 15px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        .privacy-page h3 { font-family: 'Poppins', sans-serif; font-size: 1.3em; color: var(--dark-blue); margin-top: 25px; margin-bottom: 10px; }
+        .privacy-page p, .privacy-page li { font-size: 1.05em; line-height: 1.7; margin-bottom: 15px; color: #444; }
+        .privacy-page ul { list-style-type: disc; margin-left: 30px; margin-bottom: 20px; }
+        .privacy-page .last-updated { font-size: 0.9em; color: #777; text-align: center; margin-bottom: 30px; }
+        .privacy-page .back-to-home { display: block; text-align: center; margin-top: 40px; font-size: 1.1em; font-weight: 600; }
+        .region-selector { margin-bottom: 30px; text-align: center; }
+        .region-selector select { padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); font-size: 1em; }
+        .region-specific-content { display: none; }
+        .region-specific-content.active { display: block; }
+        .important-notice { background-color: var(--light-blue); border-left: 5px solid var(--primary-blue); padding: 15px; margin: 20px 0; border-radius: 5px;}
+        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .data-table th, .data-table td { border: 1px solid var(--border-color); padding: 12px; text-align: left; }
+        .data-table th { background-color: var(--light-blue); font-family: 'Poppins', sans-serif; color: var(--dark-blue); }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Codenzi</h1>
+
+<main class="privacy-page">
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: July 14, 2025</p>
+
+        <div class="region-selector">
+            <label for="region">View policy for your region:</label>
+            <select id="region" onchange="switchRegion(this.value)">
+                <option value="general">General / International</option>
+                <option value="eu">European Union / EEA (GDPR)</option>
+                <option value="ca">California, USA (CCPA/CPRA)</option>
+                <option value="tr">Turkey (KVKK)</option>
+            </select>
+        </div>
+
+        <div id="general" class="region-specific-content active">
+            <h2>1. Introduction</h2>
+            <p>Welcome to Smart Archive, provided by Codenzi ("we," "us," or "our"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application ("Service").</p>
+            <div class="important-notice">
+                <p><strong>Core Principle: You Control Your Data.</strong> The files, documents, and media you save in Smart Archive ("User Content") are stored locally on your device. The optional Google Drive backup feature saves your User Content to <strong>your own</strong> Google Drive account, which we do not have access to. Your privacy and the security of your content are paramount.</p>
             </div>
-            <nav class="navbar">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <span class="lang-en">Home</span>
-                            <span class="lang-tr">Anasayfa</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+
+            <h2>2. Information We Collect</h2>
+            <p>To provide and improve our Service, we collect the following types of information:</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Type of Information</th>
+                        <th>Source</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>User Content</strong> (Files, Images, etc.)</td>
+                        <td>Provided directly by you</td>
+                        <td>Stored locally on your device for core app functionality. We do not access, view, or upload this content to our servers.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical and Usage Data</strong></td>
+                        <td>Collected automatically via <strong>Firebase Analytics</strong></td>
+                        <td>Anonymous data such as device type, OS version, feature usage frequency, and general location (e.g., country). This helps us understand user behavior to improve the app. This data is aggregated and does not personally identify you.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Crash and Performance Data</strong></td>
+                        <td>Collected automatically via <strong>Firebase Crashlytics</strong></td>
+                        <td>Technical information about app crashes and performance issues, including device state at the time of a crash. This helps us diagnose and fix bugs.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advertising Data</strong></td>
+                        <td>Collected automatically via <strong>Google AdMob</strong></td>
+                        <td>Device identifiers (like a mobile advertising ID) and interaction data with ads. This is used to serve relevant ads and support the Service financially.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect for the following purposes:</p>
+            <ul>
+                <li><strong>To Provide and Maintain the Service:</strong> To enable you to store, manage, and back up your User Content.</li>
+                <li><strong>To Improve the Service:</strong> We analyze anonymous usage and performance data to identify trends, fix bugs, and enhance features.</li>
+                <li><strong>To Support the Service Financially:</strong> We display advertisements through Google AdMob, which helps keep the core features of the app free.</li>
+                <li><strong>To Secure the Service:</strong> To prevent fraud and ensure compliance with our Terms of Use.</li>
+            </ul>
+
+            <h2>4. How We Share Your Information</h2>
+            <p>We do not sell your personal information. We only share data with trusted third-party service providers as necessary to operate the Service. You are in control of any sharing you initiate.</p>
+            <ul>
+                <li><strong>With Google (as a Service Provider):</strong> We share technical data with Google for the purposes of analytics (Firebase), crash reporting (Crashlytics), and advertising (AdMob). Google's use of this data is governed by their own privacy policies.</li>
+                <li><strong>With Your Own Google Drive Account:</strong> When you initiate a backup, you authorize the app to transfer your User Content to your own Google Drive account. This is a transfer you control, and we have no visibility or liability regarding the data once it is in your Drive.</li>
+                <li><strong>For Legal Reasons:</strong> We may disclose information if required to do so by law or in the good faith belief that such action is necessary to comply with a legal obligation, protect our rights, or prevent fraud.</li>
+            </ul>
+
+            <h2>5. Data Storage, Security, and Retention</h2>
+            <h3>Data Storage</h3>
+            <p>Your User Content is stored exclusively in two places, both under your control:</p>
+            <ol>
+                <li><strong>On Your Device:</strong> Within the application's private, sandboxed storage area.</li>
+                <li><strong>In Your Google Drive Account:</strong> If you use the optional backup feature.</li>
+            </ol>
+            <p>We do not have a copy of your User Content on our servers.</p>
+            <h3>Security</h3>
+            <p>We implement reasonable technical measures to protect the information processed by the app. However, please be aware that no security measures are perfect or impenetrable. You are responsible for the security of your device and your Google account credentials.</p>
+            <h3>Data Retention</h3>
+            <p>We retain technical data (analytics, crash reports) for as long as necessary to fulfill the purposes outlined in this policy. You can delete your User Content from your device and your Google Drive at any time.</p>
+
+            <h2>6. Children's Privacy</h2>
+            <p>The Service is not intended for use by children under the age of 13, or the equivalent minimum age in the relevant jurisdiction. We do not knowingly collect personal information from children.</p>
+
+            <h2>7. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy within the app and updating the "Last Updated" date.</p>
         </div>
-    </header>
 
-    <section class="privacy-page">
-        <div class="container">
-            <h1>
-                <span class="lang-en">Smart Archive Privacy Policy</span>
-                <span class="lang-tr">Akıllı Arşiv (Smart Archive) Gizlilik Politikası</span>
-            </h1>
-            <p class="last-updated">
-                <span class="lang-en">Last Updated: June 24, 2025</span>
-                <span class="lang-tr">Son Güncelleme Tarihi: 24 Haziran 2025</span>
-            </p>
-
-            <p>
-                <span class="lang-en">This privacy policy describes our practices regarding the collection, use, and disclosure of information when you use the <strong>Smart Archive</strong> ("Application") mobile application, provided by <strong>Baki Tunçer</strong> (Publisher Name: <strong>Codenzi Labs</strong>) ("we", "us", or "our").</span>
-                <span class="lang-tr">Bu gizlilik politikası, <strong>Baki Tunçer</strong> (Yayıncı Adı: <strong>Codenzi Labs</strong>) ("biz", "bize" veya "bizim") tarafından sunulan <strong>Akıllı Arşiv / Smart Archive</strong> ("Uygulama") mobil uygulamasını kullanımınızla ilgili bilgi toplama, kullanma ve açıklama uygulamalarımızı açıklamaktadır.</span>
-            </p>
-            <p>
-                <span class="lang-en">By using our Application, you agree to the practices described in this policy.</span>
-                <span class="lang-tr">Uygulamamızı kullanarak, bu politikada açıklanan uygulamaları kabul etmiş olursunuz.</span>
-            </p>
-
-            <h2>
-                <span class="lang-en">1. Information We Collect</span>
-                <span class="lang-tr">1. Topladığımız Bilgiler</span>
-            </h2>
-            <p>
-                <span class="lang-en">The primary purpose of our Application is to store your files securely and privately. Accordingly, the types of information we collect are as follows:</span>
-                <span class="lang-tr">Uygulamamızın temel amacı, dosyalarınızı güvenli ve özel bir şekilde saklamaktır. Bu doğrultuda topladığımız bilgi türleri şunlardır:</span>
-            </p>
+        <div id="eu" class="region-specific-content">
+            <h2>Additional Information for Users in the European Union (EU), EEA, and UK</h2>
+            <p>If you are located in the European Union, European Economic Area, or the United Kingdom, you have certain rights under the General Data Protection Regulation (GDPR).</p>
+            <h3>Legal Basis for Processing</h3>
+            <p>Our legal basis for collecting and using the personal information described above will depend on the information concerned and the context in which we collect it. We process data on the following bases:</p>
             <ul>
-                <li>
-                    <strong>
-                        <span class="lang-en">Data Provided by You:</span>
-                        <span class="lang-tr">Sizin Tarafınızdan Sağlanan Veriler:</span>
-                    </strong>
-                    <span class="lang-en"> For the Application to perform its core function, we collect and store the files (e.g., PDF documents, images, text files, etc.) that you choose to send via the "Share" menu from other applications. This action is entirely under your control.</span>
-                    <span class="lang-tr"> Uygulamanın temel işlevini yerine getirebilmesi için, diğer uygulamalardan "Paylaş" menüsü aracılığıyla göndermeyi seçtiğiniz dosyaları (örneğin PDF belgeleri, resimler, metin dosyaları vb.) toplar ve saklarız. Bu işlem tamamen sizin kontrolünüzdedir.</span>
-                </li>
-                <li>
-                    <strong>
-                        <span class="lang-en">Automatically Collected Technical Data:</span>
-                        <span class="lang-tr">Otomatik Olarak Toplanan Teknik Veriler:</span>
-                    </strong>
-                    <ul>
-                        <li>
-                            <strong><span class="lang-en">File Metadata:</span><span class="lang-tr">Dosya Meta Verileri:</span></strong>
-                            <span class="lang-en"> To help you manage your archive, we process metadata of the stored files, such as their name, size, and date.</span>
-                            <span class="lang-tr"> Arşivinizi yönetmenize yardımcı olmak için saklanan dosyaların adı, boyutu, tarihi gibi meta verilerini işleriz.</span>
-                        </li>
-                        <li>
-                            <strong><span class="lang-en">File Hash Values:</span><span class="lang-tr">Dosya Hash Değerleri:</span></strong>
-                            <span class="lang-en"> To prevent you from creating multiple copies of the same file, we generate and store a cryptographic summary (MD5 hash) from the content of the stored files. This summary cannot be used to restore the original file content.</span>
-                            <span class="lang-tr"> Aynı dosyanın birden fazla kopyasını oluşturmanızı önlemek amacıyla, saklanan dosyaların içeriğinden kriptografik bir özet (MD5 hash) oluşturur ve bu özeti saklarız. Bu özet, dosyanın orijinal içeriğini geri getirmek için kullanılamaz.</span>
-                        </li>
-                        <li>
-                            <strong><span class="lang-en">Application Preferences:</span><span class="lang-tr">Uygulama Tercihleri:</span></strong>
-                            <span class="lang-en"> We store settings you choose on your device to personalize your in-app experience, such as the selected theme (Light/Dark/System).</span>
-                            <span class="lang-tr"> Uygulama içi deneyiminizi kişiselleştirmek için seçtiğiniz tema (Aydınlık/Karanlık/Sistem) gibi ayarları cihazınızda saklarız.</span>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>
-                        <span class="lang-en">Data Collected by Third-Party Services (Advertising and Analytics):</span>
-                        <span class="lang-tr">Üçüncü Taraf Hizmetleri Tarafından Toplanan Veriler (Reklam ve Analiz):</span>
-                    </strong>
-                    <span class="lang-en"> Our Application may use advertising and analytics services to maintain and improve our services.</span>
-                    <span class="lang-tr"> Uygulamamız, hizmetlerimizi sürdürmek ve iyileştirmek amacıyla reklam ve analiz hizmetleri kullanabilir.</span>
-                    <ul>
-                        <li>
-                            <strong><span class="lang-en">Google AdMob:</span><span class="lang-tr">Google AdMob:</span></strong>
-                            <span class="lang-en"> We may use the Google AdMob service to display ads within the Application. AdMob may collect your device's Advertising ID, IP address, and other technical information about your device to serve you more relevant ads. For more information on how Google uses data, please visit the <a href="https://policies.google.com/technologies/ads" target="_blank">Google Ad Policy</a> page.</span>
-                            <span class="lang-tr"> Uygulama içerisinde reklam göstermek için Google AdMob hizmetini kullanabiliriz. AdMob, size daha alakalı reklamlar sunmak amacıyla cihazınızın Reklam Kimliği (Advertising ID), IP adresi ve cihazınızla ilgili diğer teknik bilgileri toplayabilir. Google'ın verileri nasıl kullandığı hakkında daha fazla bilgi için <a href="https://policies.google.com/technologies/ads" target="_blank">Google Reklam Politikası</a> sayfasını ziyaret edebilirsiniz.</span>
-                        </li>
-                        <li>
-                            <strong><span class="lang-en">Analytics Services:</span><span class="lang-tr">Analiz Hizmetleri:</span></strong>
-                            <span class="lang-en"> We may use analytics tools like Google Analytics for Firebase to understand application performance and improve the user experience. These tools may collect anonymized data about how the application is used (e.g., which features are used how often, app crash reports, etc.).</span>
-                            <span class="lang-tr"> Uygulama performansını anlamak ve kullanıcı deneyimini iyileştirmek amacıyla Google Analytics for Firebase gibi analiz araçları kullanabiliriz. Bu araçlar, uygulamanın nasıl kullanıldığına dair anonimleştirilmiş veriler (örneğin, hangi özelliklerin ne sıklıkla kullanıldığı, uygulama çökme raporları vb.) toplayabilir.</span>
-                        </li>
-                    </ul>
-                </li>
+                <li><strong>Consent:</strong> For processing data for personalized advertising. We use Google's User Messaging Platform (UMP) to obtain this consent. You can withdraw your consent at any time in the app's settings.</li>
+                <li><strong>Legitimate Interests:</strong> For processing anonymous analytics and crash data to improve our Service, provided that such processing does not override your rights and freedoms.</li>
             </ul>
-
-            <h2>
-                <span class="lang-en">2. How We Use Your Information</span>
-                <span class="lang-tr">2. Bilgileri Nasıl Kullanıyoruz?</span>
-            </h2>
-            <p>
-                <span class="lang-en">We use the information we collect for the following purposes:</span>
-                <span class="lang-tr">Topladığımız bilgileri aşağıdaki amaçlar için kullanırız:</span>
-            </p>
+            <h3>Your Data Protection Rights</h3>
+            <p>You have the following rights:</p>
             <ul>
-                <li><span class="lang-en">To provide the core features of the Application: storing, listing, viewing, and managing your files.</span><span class="lang-tr">Uygulamanın temel özelliklerini sunmak: Dosyalarınızı saklamak, listelemek, görüntülemek ve yönetmek.</span></li>
-                <li><span class="lang-en">To personalize the user experience (e.g., applying your chosen theme).</span><span class="lang-tr">Kullanıcı deneyimini kişiselleştirmek (örneğin, seçtiğiniz temayı uygulamak).</span></li>
-                <li><span class="lang-en">To use storage space efficiently by preventing the storage of duplicate files.</span><span class="lang-tr">Tekrarlanan dosyaların saklanmasını engelleyerek depolama alanını verimli kullanmak.</span></li>
-                <li><span class="lang-en">To serve advertisements through our third-party advertising partners.</span><span class="lang-tr">Üçüncü taraf reklam ortaklarımız aracılığıyla reklamlar sunmak.</span></li>
-                <li><span class="lang-en">To analyze usage statistics to identify bugs and improve performance in the Application.</span><span class="lang-tr">Uygulamadaki hataları tespit etmek ve performansı artırmak için kullanım istatistiklerini analiz etmek.</span></li>
+                <li>The right to <strong>access, update, or delete</strong> the information we have on you.</li>
+                <li>The right of <strong>rectification</strong>.</li>
+                <li>The right to <strong>object</strong> to our processing.</li>
+                <li>The right of <strong>restriction</strong>.</li>
+                <li>The right to <strong>data portability</strong>.</li>
+                <li>The right to <strong>withdraw consent</strong> at any time.</li>
             </ul>
-
-            <h2>
-                <span class="lang-en">3. Data Storage and Security</span>
-                <span class="lang-tr">3. Veri Saklama ve Güvenlik</span>
-            </h2>
-            <p>
-                <strong>
-                    <span class="lang-en">The privacy and security of your data are of the utmost importance to us.</span>
-                    <span class="lang-tr">Verilerinizin gizliliği ve güvenliği bizim için en üst düzeyde önemlidir.</span>
-                </strong>
-            </p>
-            <ul>
-                <li>
-                    <strong>
-                        <span class="lang-en">ALL YOUR FILES AND DATA ARE STORED SOLELY AND EXCLUSIVELY IN THE SECURE INTERNAL STORAGE OF YOUR OWN DEVICE.</span>
-                        <span class="lang-tr">TÜM DOSYALARINIZ VE VERİLERİNİZ, SADECE VE SADECE SİZİN KENDİ CİHAZINIZIN GÜVENLİ DAHİLİ DEPOLAMA ALANINDA SAKLANIR.</span>
-                    </strong>
-                </li>
-                <li><span class="lang-en">None of your files, metadata, or personal information is uploaded, backed up, or transferred to a server on the internet by us or any third party. You are in complete control.</span><span class="lang-tr">Hiçbir dosyanız, meta veriniz veya kişisel bilginiz bizim tarafımızdan veya herhangi bir üçüncü tarafça internetteki bir sunucuya yüklenmez, yedeklenmez veya aktarılmaz. Tüm kontrol sizdedir.</span></li>
-                <li><span class="lang-en">For the security of your data, we rely on the standard security mechanisms provided by the Android operating system.</span><span class="lang-tr">Verilerinizin güvenliği için Android işletim sisteminin sunduğu standart güvenlik mekanizmalarına güvenmekteyiz.</span></li>
-            </ul>
-
-            <h2>
-                <span class="lang-en">4. Data Sharing</span>
-                <span class="lang-tr">4. Veri Paylaşımı</span>
-            </h2>
-            <p>
-                <span class="lang-en">We do not share your data with anyone, except in the following circumstances:</span>
-                <span class="lang-tr">Aşağıdaki durumlar haricinde verilerinizi kimseyle paylaşmayız:</span>
-            </p>
-            <ul>
-                <li><strong><span class="lang-en">At Your Request:</span><span class="lang-tr">Sizin Talebinizle:</span></strong><span class="lang-en"> When you initiate sharing a file with another application or person using the "Share" feature within the Application.</span><span class="lang-tr"> Uygulama içindeki "Paylaş" özelliğini kullanarak bir dosyayı başka bir uygulama veya kişiyle paylaşmayı siz başlattığınızda.</span></li>
-                <li><strong><span class="lang-en">Advertising and Analytics Partners:</span><span class="lang-tr">Reklam ve Analiz Ortakları:</span></strong><span class="lang-en"> As stated in the "Information We Collect" section above, Google AdMob and analytics services may collect certain technical data to provide their services in accordance with their own privacy policies.</span><span class="lang-tr"> Yukarıda "Topladığımız Bilgiler" bölümünde belirtildiği gibi, Google AdMob ve analiz servisleri, kendi gizlilik politikaları doğrultusunda hizmetlerini sunabilmek için belirli teknik verileri toplayabilir.</span></li>
-                <li><strong><span class="lang-en">Legal Requirements:</span><span class="lang-tr">Yasal Zorunluluklar:</span></strong><span class="lang-en"> We may disclose information if required to do so by law or in response to a valid request from a public authority.</span><span class="lang-tr"> Yasal bir zorunluluk veya resmi bir makam talebi olması durumunda, yasaların gerektirdiği ölçüde bilgi paylaşımı yapabiliriz.</span></li>
-            </ul>
-
-            <h2>
-                <span class="lang-en">5. Your Rights and Choices</span>
-                <span class="lang-tr">5. Haklarınız ve Seçenekleriniz</span>
-            </h2>
-            <ul>
-                <li><strong><span class="lang-en">Data Access and Deletion:</span><span class="lang-tr">Veri Erişimi ve Silme:</span></strong><span class="lang-en"> You can access all the files you have stored in the Application at any time and delete them permanently.</span><span class="lang-tr"> Uygulama içinde sakladığınız tüm dosyalara dilediğiniz zaman erişebilir ve bunları kalıcı olarak silebilirsiniz.</span></li>
-                <li><strong><span class="lang-en">Uninstalling the Application:</span><span class="lang-tr">Uygulamayı Kaldırma:</span></strong><span class="lang-en"> When you uninstall the Application from your device, all files, settings, and other data stored by the application are permanently deleted from your device.</span><span class="lang-tr"> Uygulamayı cihazınızdan kaldırdığınızda, uygulama tarafından saklanan tüm dosyalar, ayarlar ve diğer veriler cihazınızdan kalıcı olarak silinir.</span></li>
-                <li><strong><span class="lang-en">Opting Out of Personalized Ads:</span><span class="lang-tr">Kişiselleştirilmiş Reklamları Devre Dışı Bırakma:</span></strong><span class="lang-en"> You can reset your advertising ID or opt out of personalized advertising from your device's settings menu (Usually Settings > Google > Ads).</span><span class="lang-tr"> Cihazınızın ayarlar menüsünden (Genellikle Ayarlar > Google > Reklamlar) reklam kimliğinizi sıfırlayabilir veya kişiselleştirilmiş reklamları devre dışı bırakabilirsiniz.</span></li>
-            </ul>
-
-            <h2>
-                <span class="lang-en">6. Children's Privacy</span>
-                <span class="lang-tr">6. Çocukların Gizliliği</span>
-            </h2>
-            <p>
-                <span class="lang-en">Our Application is not directed to children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with such information, please contact us. If we become aware that we have collected this data, we will take steps to remove it from our systems immediately.</span>
-                <span class="lang-tr">Uygulamamız 13 yaşın altındaki çocuklara yönelik değildir. Bilinçli olarak 13 yaşın altındaki çocuklardan kişisel olarak tanımlanabilir bilgiler toplamıyoruz. Ebeveyn veya vasi olarak, çocuğunuzun bize bu tür bilgiler sağladığını fark ederseniz, lütfen bizimle iletişime geçin. Böyle bir durum tespit edildiğinde, bu verileri derhal sistemimizden sileriz.</span>
-            </p>
-
-            <h2>
-                <span class="lang-en">7. Changes to This Privacy Policy</span>
-                <span class="lang-tr">7. Bu Gizlilik Politikasındaki Değişiklikler</span>
-            </h2>
-            <p>
-                <span class="lang-en">We may update this privacy policy from time to time. When we make any changes, we will notify you by posting the new policy on this page and updating the "Last Updated" date at the top. You are advised to review this policy periodically.</span>
-                <span class="lang-tr">Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Herhangi bir değişiklik yaptığımızda, yeni politikayı bu sayfada yayınlayarak ve sayfanın başındaki "Son Güncelleme Tarihi"ni değiştirerek sizi bilgilendireceğiz. Politikayı periyodik olarak gözden geçirmeniz tavsiye edilir.</span>
-            </p>
-
-            <h2>
-                <span class="lang-en">8. Contact Us</span>
-                <span class="lang-tr">8. Bize Ulaşın</span>
-            </h2>
-            <p>
-                <span class="lang-en">If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at the email address below:</span>
-                <span class="lang-tr">Bu Gizlilik Politikası ile ilgili herhangi bir sorunuz veya öneriniz varsa, lütfen aşağıdaki e-posta adresi üzerinden bizimle iletişime geçmekten çekinmeyin:</span>
-            </p>
-            <p>
-                <strong>Baki Tunçer (Codenzi Labs)</strong><br>
-                <span class="lang-en">Email:</span><span class="lang-tr">E-posta:</span> <strong>tuncerbaki235@gmail.com</strong>
-            </p>
-            
-            <p class="back-to-home">
-                <a href="index.html">
-                    <span class="lang-en">Back to Home</span>
-                    <span class="lang-tr">Ana Sayfaya Geri Dön</span>
-                </a>
-            </p>
+            <p>Since your primary data (User Content) is on your device or your Google Drive, you have direct control over it. For data related to analytics or advertising identifiers, please contact us.</p>
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>
-                <span class="lang-en">&copy; 2025 Codenzi. All Rights Reserved.</span>
-                <span class="lang-tr">&copy; 2025 Codenzi. Tüm Hakları Saklıdır.</span>
-            </p>
-            <p>
-                <a href="privacy-genel.html">
-                    <span class="lang-en">Privacy Policy</span>
-                    <span class="lang-tr">Gizlilik Politikası</span>
-                </a>
-            </p>
+        <div id="ca" class="region-specific-content">
+            <h2>Your California Privacy Rights (CCPA/CPRA)</h2>
+            <p>If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), provides you with specific rights regarding your personal information.</p>
+            <ul>
+                <li><strong>Right to Know:</strong> You can request to know what personal information we collect, use, and disclose.</li>
+                <li><strong>Right to Delete:</strong> You can request the deletion of your personal information. As your User Content is stored locally or on your own Google Drive, you can directly delete it.</li>
+                <li><strong>Right to Opt-Out of Sale/Sharing:</strong> We do not sell your data. However, our use of Google AdMob for personalized ads may constitute "sharing" under CPRA. You can opt-out of this sharing via the privacy choices presented in the app.</li>
+                <li><strong>Right to Correct:</strong> You have the right to request the correction of inaccurate personal information.</li>
+                <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+            </ul>
         </div>
-    </footer>
 
-    <script>
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            const titles = {
-                en: 'Smart Archive Privacy Policy - Codenzi',
-                tr: 'Akıllı Arşiv (Smart Archive) Gizlilik Politikası - Codenzi'
-            };
+        <div id="tr" class="region-specific-content">
+            <h2>Türkiye'deki Kullanıcılar için Ek Bilgiler (KVKK Aydınlatma Metni)</h2>
+            <p>Bu bölüm, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca Türkiye'de ikamet eden kullanıcılarımızı bilgilendirmek amacıyla hazırlanmıştır.</p>
+            <h3>Veri Sorumlusu</h3>
+            <p>KVKK kapsamında, kişisel verilerinizle ilgili olarak Veri Sorumlusu Codenzi'dir.</p>
+            <h3>İşlenen Kişisel Veriler, İşleme Amaçları ve Hukuki Sebepler</h3>
+            <p>Uygulamamızda işlenen veriler, amaçları ve hukuki sebepleri aşağıda detaylandırılmıştır:</p>
+            <ul>
+                <li><strong>Kullanıcı İçerikleri:</strong> Tarafınızca uygulamaya yüklenen dosya ve belgelerdir. Bu veriler yalnızca cihazınızda ve talimatınız üzerine kendi Google Drive hesabınızda saklanır. İşleme hukuki sebebi, KVKK Madde 5/2(c) uyarınca "bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması" ve "veri işlemenin zorunlu olmasıdır." Biz bu içeriğe erişmeyiz.</li>
+                <li><strong>Teknik, Reklam ve Analitik Veriler:</strong> Cihaz kimlikleri, çökme raporları ve anonim kullanım istatistikleridir. Bu veriler; hizmeti iyileştirmek, hataları gidermek ve reklam sunarak hizmeti finanse etmek amacıyla, KVKK Madde 5/2(f) uyarınca "ilgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması" ve kişiselleştirilmiş reklamlar için KVKK Madde 5/1 uyarınca "açık rızanız" hukuki sebeplerine dayalı olarak işlenir.</li>
+            </ul>
+            <h3>Kişisel Verilerin Aktarımı</h3>
+            <p>Teknik verileriniz, hizmet aldığımız Google'ın yurt dışındaki (örn. Amerika Birleşik Devletleri) sunucularına aktarılmaktadır. Bu aktarım, açık rızanız veya KVKK'nın 9. maddesinde belirtilen şartlar dahilinde gerçekleştirilir.</p>
+            <h3>KVKK Kapsamındaki Haklarınız</h3>
+            <p>KVKK'nın 11. maddesi uyarınca, veri sorumlusuna başvurarak; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işlenme amacını ve uygunluğunu öğrenme, verilerin aktarıldığı üçüncü kişileri bilme, düzeltilmesini isteme, silinmesini veya yok edilmesini isteme, bu işlemlerin üçüncü kişilere bildirilmesini isteme, otomatik sistemlerle analiz edilmesiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve kanuna aykırı işlenme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme haklarına sahipsiniz.</p>
+        </div>
 
-            const userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-            
-            
-            const isTurkish = userLang.startsWith('tr');
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+        <p><a href="mailto:your-email@codenzi.com">info@codenzi.com</a></p>
 
-           
-            const lang = isTurkish ? 'tr' : 'en';
+        <a href="#" class="back-to-home">Back to Homepage</a>
+    </div>
+</main>
 
-            
-            document.documentElement.lang = lang;
-            document.title = titles[lang];
-            
-            
-            if (isTurkish) {
-                document.body.classList.add('lang-tr-active');
-            }
+<script>
+    function switchRegion(region) {
+        document.querySelectorAll('.region-specific-content').forEach(function(el) {
+            el.classList.remove('active');
         });
+        document.getElementById(region).classList.add('active');
+    }
+</script>
 
-        
-        const menuToggle = document.querySelector('.menu-toggle');
-        if (menuToggle) {
-            menuToggle.addEventListener('click', function() {
-                var navbar = document.querySelector('.navbar ul');
-                navbar.classList.toggle('active');
-                this.classList.toggle('is-active');
-            });
-        }
-    </script>
 </body>
 </html>
