@@ -1,151 +1,314 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Archive - Terms of Use</title>
+    <title>Smart Archive - Kullanım Koşulları</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary-blue: #3498db; --dark-blue: #2c3e50; --light-blue: #e8f5fd; --text-color: #333; --background-light: #f4f7f6; --border-color: #ddd; --danger-red: #e74c3c; --danger-light: #fbeae8; }
-        body { font-family: 'Open Sans', sans-serif; color: var(--text-color); background-color: var(--background-light); line-height: 1.7; }
-        .container { max-width: 900px; margin: 40px auto; padding: 40px; background-color: #fff; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        h1 { font-family: 'Poppins', sans-serif; font-size: 2.5em; color: var(--dark-blue); text-align: center; margin-bottom: 20px; }
-        h2 { font-family: 'Poppins', sans-serif; font-size: 1.7em; color: var(--primary-blue); margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
-        h3 { font-family: 'Poppins', sans-serif; font-size: 1.2em; color: var(--dark-blue); margin-top: 25px; margin-bottom: 10px; }
-        p, li { font-size: 1.05em; margin-bottom: 15px; color: #444; }
-        ul { list-style-type: disc; margin-left: 30px; margin-bottom: 20px; }
-        .last-updated { font-size: 0.9em; color: #777; text-align: center; margin-bottom: 30px; }
-        .region-selector { margin-bottom: 30px; text-align: center; background-color: var(--light-blue); padding: 15px; border-radius: 8px; }
-        .region-selector select { padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); font-size: 1em; }
-        .region-specific-content { display: none; }
-        .region-specific-content.active { display: block; }
-        .legal-notice, .important-notice { background-color: var(--danger-light); border: 1px solid var(--danger-red); color: var(--dark-blue); padding: 20px; margin: 0 0 30px 0; border-radius: 5px; text-align: center; font-weight: 600; }
-        .important-notice { background-color: #fffbe6; border-left: 5px solid #fcc419; text-align: left; }
+        /* Genel Ayarlar */
+        :root {
+            --primary-blue: #3498db; /* Temel Mavi */
+            --dark-blue: #2c3e50;    /* Koyu Mavi/Lacivert */
+            --light-blue: #e8f5fd;   /* Çok Açık Mavi */
+            --accent-blue: #6a93cb;  /* Orta Mavi */
+            --text-color: #333;
+            --light-text: #f0f0f0;
+            --background-light: #f4f7f6;
+            --border-color: #ddd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--dark-blue);
+        }
+        
+        strong {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        /* Header ve Navigasyon */
+        .header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 30px;
+        }
+
+        .navbar ul li a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--dark-blue);
+            font-size: 1.05em;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .navbar ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Ana İçerik Stilleri */
+        .policy-page {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .policy-page .container {
+            max-width: 900px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        .policy-page h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.6em;
+            color: var(--dark-blue);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .policy-page h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7em;
+            color: var(--primary-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .policy-page h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+            color: var(--dark-blue);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .policy-page p, .policy-page li {
+            font-size: 1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .policy-page ul, .policy-page ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .policy-page li {
+            margin-bottom: 10px;
+        }
+        
+        .policy-page .last-updated {
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .disclaimer-box {
+            background-color: var(--light-blue);
+            border-left: 5px solid var(--primary-blue);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .disclaimer-box p {
+            margin: 0;
+            font-size: 0.95em;
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
     </style>
 </head>
 <body>
-<main class="container">
-    <div class="legal-notice">
-        LEGAL NOTICE: YOUR USE OF THIS APPLICATION IS STRICTLY CONDITIONAL UPON YOUR UNCONDITIONAL ACCEPTANCE OF THE LEGALLY BINDING TERMS DETAILED BELOW.
-    </div>
 
-    <h1>Terms of Use</h1>
-    <p class="last-updated">Effective Date: July 14, 2025</p>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Smart Archive</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#english">English</a></li>
+                    <li><a href="#turkish">Türkçe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="region-selector">
-        <label for="region-terms">View terms for your region:</label>
-        <select id="region-terms" onchange="switchRegion(this.value)">
-            <option value="general">General / International</option>
-            <option value="eu">European Union / EEA (English)</option>
-            <option value="de">Deutschland (Deutsch)</option>
-            <option value="ca">California, USA</option>
-            <option value="tr">Türkiye (Türkçe)</option>
-        </select>
-    </div>
+    <main class="policy-page">
+        <div class="container">
+            
+            <article id="english">
+                <h1>Terms of Use</h1>
+                <p class="last-updated">Last Updated: July 15, 2025</p>
+                
+                <h2>1. Unconditional Acceptance of Terms</h2>
+                <p>By downloading, installing, accessing, or otherwise using the "Smart Archive" application ("App"), you ("User") acknowledge that you have read, understood, and agree to be unequivocally and legally bound by these Terms of Use ("Terms") in their entirety. These Terms constitute a complete and binding agreement between you and the App's developer ("Developer", "we", "us", "our"). <strong>If you do not agree to any part of these Terms, you are expressly prohibited from using the App and must immediately cease all use and uninstall it from your device.</strong></p>
 
-    <div id="general" class="region-specific-content active">
-        <h2>1. Legally Binding Agreement</h2>
-        <p>These Terms of Use ("Terms") constitute a binding contract between you ("User") and **Baki Tunçer, operating as Codenzi Labs** ("we," "us," "our"), regarding your use of the Smart Archive application ("Service"). By downloading, installing, or using the Service, you confirm you are of legal age and you accept these Terms in their entirety. IF YOU DO NOT AGREE, YOU ARE PROHIBITED FROM USING THE SERVICE AND MUST DELETE IT.</p>
+                <h2>2. Scope of Service</h2>
+                <p>The App is a utility tool provided for the purpose of local digital file archiving on your personal device. The App also provides optional, user-initiated features that integrate with third-party services, including but not limited to, data backup and restoration via the User's personal Google Drive account. The App's continued development and availability are supported by advertisements delivered through Google AdMob, and its stability is monitored using Firebase services.</p>
 
-        <h2>2. Service Provided "AS-IS"</h2>
-        <p>The Service is a software tool provided on an "AS-IS" and "AS-AVAILABLE" basis. WE ARE NOT A DATA STORAGE OR BACKUP SERVICE. You are solely responsible for independently backing up your important data.</p>
-        
-        <h2>3. DISCLAIMER OF ALL WARRANTIES</h2>
-        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE EXPRESSLY DISCLAIM ALL WARRANTIES OF ANY KIND, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+                <h2>3. User's Sole and Absolute Responsibility</h2>
+                <p>You are, and will remain, exclusively and entirely responsible for all files, data, metadata, and any other content ("Content") that you create, import, store, manage, categorize, or back up using the App. By using the App, you explicitly agree that:</p>
+                <ul>
+                    <li><strong>Content Legality and Ownership:</strong> You represent and warrant that you are the rightful owner of your Content or possess all necessary licenses, rights, consents, and permissions to use, store, and manage it within the App. You agree not to use the App to store or manage any Content that is illegal, infringes on any third-party rights (including copyright, trademark, and privacy rights), or is otherwise harmful, abusive, or objectionable.</li>
+                    <li><strong>Indemnification:</strong> You agree to indemnify, defend, and hold harmless the Developer and its affiliates from any and all claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising from or in any way connected with your Content, your use of the App, or your violation of these Terms.</li>
+                    <li><strong>Data Security and Management:</strong> All your Content is stored locally on your device or, if you use the optional feature, within your own personal Google Drive account. <strong>We do not see, access, collect, or store your Content on our servers.</strong> The security, confidentiality, and management of your Content on your device and within your Google account are your sole responsibilities.</li>
+                </ul>
 
-        <h2>4. LIMITATION OF LIABILITY</h2>
-        <p>TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, PUNITIVE, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR OTHER INTANGIBLE LOSSES. OUR TOTAL AGGREGATE LIABILITY TO YOU SHALL NOT EXCEED ONE UNITED STATES DOLLAR ($1.00 USD).</p>
+                <h2>4. Third-Party Services and External Dependencies</h2>
+                <p>The App's functionality relies on several third-party services. Your use of these features signifies your acceptance of their respective terms and policies. The Developer has no control over these services and assumes no liability for their operation.</p>
+                <ul>
+                    <li><strong>Google Drive Backup:</strong> This feature is provided as an optional convenience and IS NOT a guaranteed backup service. The Developer is not responsible for the successful creation, integrity, security, or restoration of your backups. Any data loss, corruption, backup failure, or inability to restore data from your Google Drive is entirely outside our control and is your sole risk. Your use of this feature is subject to the <a href="https://www.google.com/drive/terms-of-service/" target="_blank" rel="noopener noreferrer">Google Drive Terms of Service</a>.</li>
+                    <li><strong>Google AdMob & Firebase:</strong> To support the App and improve its functionality, we use Google AdMob for advertising and Firebase (including Analytics and Crashlytics) for usage analysis and stability monitoring. These services collect data as outlined in their own privacy policies. We are not liable for the data collection practices, security, or functionality of Google's services. Your use of the App constitutes consent to the data practices of these integrated Google services.</li>
+                </ul>
+                
+                <div class="disclaimer-box">
+                    <p><strong>CRITICAL DISCLAIMER OF ALL WARRANTIES:</strong><br>THE APP IS PROVIDED ON A STRICTLY "AS IS" AND "AS AVAILABLE" BASIS. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE DEVELOPER EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, SECURE, ERROR-FREE, FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS, OR THAT ANY OF YOUR DATA, INCLUDING BACKUPS, WILL BE SECURE OR NOT OTHERWISE LOST, CORRUPTED, OR DAMAGED.</p>
+                </div>
+                
+                <h2>5. Absolute and Complete Limitation of Liability</h2>
+                <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE DEVELOPER, ITS AFFILIATES, OR LICENSORS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO THE USE OF, OR INABILITY TO USE, THIS APP. THIS LIMITATION APPLIES WHETHER THE ALLEGED LIABILITY IS BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR ANY OTHER BASIS, EVEN IF THE DEVELOPER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. <strong>YOU ASSUME TOTAL RESPONSIBILITY AND RISK FOR YOUR USE OF THE APP AND YOUR DATA.</strong> YOUR SOLE REMEDY AGAINST THE DEVELOPER FOR DISSATISFACTION WITH THE APP IS TO STOP USING THE APP.</p>
+                
+                <h2>6. Intellectual Property</h2>
+                <p>All rights, title, and interest in and to the App itself, including its source code, visual design, user interface, and branding, are and will remain the exclusive property of the Developer. These Terms grant you no right or license to use the Smart Archive name, logos, or other brand features.</p>
 
-        <h2>5. Full Indemnification</h2>
-        <p>You agree to defend, indemnify, and hold harmless Baki Tunçer and Codenzi Labs from all claims, liabilities, and expenses (including attorney's fees) arising from your use of the Service or your violation of these Terms.</p>
-        
-        <h2>6. Governing Law</h2>
-        <p>These Terms are governed by the laws of the Republic of Turkey. Disputes shall be resolved in the courts of Istanbul, Turkey.</p>
-    </div>
+                <h2>7. Termination</h2>
+                <p>We may terminate or suspend your access to the App immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms. Upon termination, your right to use the App will cease immediately.</p>
 
-    <div id="eu" class="region-specific-content">
-        <h2>Terms of Use (European Economic Area)</h2>
-        <p>For users in the EEA, the following terms apply. These terms are governed by the laws of your country of residence.</p>
-        <h3>1. Agreement and Service</h3>
-        <p>By using our Service, you agree to these terms. The Service is provided by **Baki Tunçer (Codenzi Labs)**. It is a tool for managing your own files on your device and is provided "as is".</p>
-        <h3>2. Your Responsibility</h3>
-        <p>You are responsible for the legality of the content you store and for securing your device and Google account. We recommend regular, independent backups of your important data.</p>
-        <h3>3. Liability</h3>
-        <p>We are liable for damages caused by willful misconduct or gross negligence. In the case of slight negligence, we are only liable for the breach of essential contractual obligations, limited to the foreseeable damage typical for the contract. This limitation does not apply to damages to life, body, or health. Our liability under mandatory statutory provisions remains unaffected.</p>
-        <h3>4. Consumer Rights</h3>
-        <p>If you are a consumer, you benefit from any mandatory provisions of the law of the country in which you are resident. Nothing in these terms affects your rights as a consumer to rely on such mandatory provisions of local law.</p>
-    </div>
+                <h2>8. Governing Law and Jurisdiction</h2>
+                <p>These Terms shall be governed and construed in accordance with the laws of the Republic of Turkey, without regard to its conflict of law provisions. You agree to submit to the exclusive jurisdiction of the courts located in Istanbul, Turkey to resolve any legal matter arising from these Terms.</p>
+                
+                <h2>9. Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will indicate the date of the last revision. By continuing to access or use our App after those revisions become effective, you agree to be bound by the revised terms.</p>
 
-    <div id="de" class="region-specific-content">
-        <h2>Nutzungsbedingungen (Deutschland)</h2>
-        <p>Für Nutzer in Deutschland gelten die folgenden Bedingungen. Diese unterliegen deutschem Recht.</p>
-        <h3>1. Vereinbarung und Dienstleistung</h3>
-        <p>Durch die Nutzung unseres Dienstes stimmen Sie diesen Bedingungen zu. Der Dienst wird von **Baki Tunçer (Codenzi Labs)** bereitgestellt. Es handelt sich um ein Werkzeug zur Verwaltung Ihrer eigenen Dateien auf Ihrem Gerät und wird "wie besehen" zur Verfügung gestellt.</p>
-        <h3>2. Ihre Verantwortung</h3>
-        <p>Sie sind für die Rechtmäßigkeit der von Ihnen gespeicherten Inhalte und für die Sicherung Ihres Geräts und Ihres Google-Kontos verantwortlich. Wir empfehlen regelmäßige, unabhängige Sicherungen Ihrer wichtigen Daten.</p>
-        <h3>3. Haftung</h3>
-        <p>Wir haften für Schäden, die auf Vorsatz oder grober Fahrlässigkeit beruhen. Bei leichter Fahrlässigkeit haften wir nur bei Verletzung wesentlicher Vertragspflichten, beschränkt auf den vertragstypischen, vorhersehbaren Schaden. Diese Haftungsbeschränkung gilt nicht für Schäden an Leben, Körper oder Gesundheit. Unsere Haftung nach zwingenden gesetzlichen Vorschriften bleibt unberührt.</p>
-        <h3>4. Verbraucherrechte</h3>
-        <p>Als Verbraucher profitieren Sie von allen zwingenden Bestimmungen des Rechts des Landes, in dem Sie Ihren Wohnsitz haben.</p>
-    </div>
-    
-    <div id="ca" class="region-specific-content">
-        <h2>Terms of Use (California, USA)</h2>
-        <p>For users in California, the "General / International" terms apply in full. In addition, you explicitly waive your rights under California Civil Code Section 1542, which states: "A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release and that, if known by him or her, would have materially affected his or her settlement with the debtor or released party."</p>
-    </div>
+                <h2>10. Contact Information</h2>
+                <p>If you have any questions about these Terms, please contact us at: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+            </article>
 
-    <div id="tr" class="region-specific-content">
-        <h2>Kullanım Koşulları (Türkiye)</h2>
-        <h3>1. Yasal Olarak Bağlayıcı Sözleşme</h3>
-        <p>Bu Kullanım Koşulları ("Koşullar"), Smart Archive uygulamasını ("Hizmet") kullanımınıza ilişkin olarak siz ("Kullanıcı") ile **Codenzi Labs markası altında faaliyet gösteren Baki Tunçer** ("biz") arasında yasal olarak bağlayıcı bir sözleşme teşkil eder. Hizmeti indirerek veya kullanarak, bu Koşulların tamamını okuduğunuzu, anladığınızı ve kayıtsız şartsız kabul ettiğinizi onaylarsınız. KABUL ETMİYORSANIZ, HİZMETİ KULLANMANIZ YASAKTIR.</p>
+            <hr style="margin: 50px 0; border: 1px solid var(--border-color);">
 
-        <h3>2. Hizmetin "Olduğu Gibi" Sunulması</h3>
-        <p>Hizmetin, size kolaylık sağlamak amacıyla "OLDUĞU GİBİ" ve "MEVCUT OLDUĞU ŞEKLİYLE" sunulan bir yazılım aracı olduğunu kabul edersiniz. BİZ BİR VERİ DEPOLAMA VEYA YEDEKLEME HİZMETİ DEĞİLİZ. Önemli verilerinizi bağımsız olarak yedeklemek yalnızca sizin sorumluluğunuzdadır.</p>
+            <article id="turkish">
+                <h1>Kullanım Koşulları</h1>
+                <p class="last-updated">Son Güncelleme: 15 Temmuz 2025</p>
 
-        <h3>3. Garantilerin Tümüyle Reddi</h3>
-        <p>YASALARIN İZİN VERDİĞİ EN GENİŞ ÖLÇÜDE, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME GARANTİLERİ DE DAHİL OLMAK ÜZERE, AÇIK VEYA ZIMNİ HER TÜRLÜ GARANTİYİ AÇIKÇA REDDEDERİZ.</p>
+                <h2>1. Koşulların Kayıtsız Şartsız Kabulü</h2>
+                <p>"Smart Archive" uygulamasını ("Uygulama") indirerek, kurarak, erişerek veya başka bir şekilde kullanarak, bu Kullanım Koşullarını ("Koşullar") tamamen okuduğunuzu, anladığınızı ve kayıtsız şartsız yasal olarak bağlı kalacağınızı kabul edersiniz. Bu Koşullar, siz ("Kullanıcı") ve Uygulamanın geliştiricisi ("Geliştirici", "biz", "bize", "bizim") arasında eksiksiz ve bağlayıcı bir sözleşme teşkil eder. <strong>Bu Koşulların herhangi bir bölümünü kabul etmiyorsanız, Uygulamayı kullanmanız açıkça yasaktır ve derhal tüm kullanımı durdurmalı ve cihazınızdan kaldırmalısınız.</strong></p>
 
-        <h3>4. Sorumluluğun Kapsamlı Olarak Sınırlandırılması</h3>
-        <p>YÜRÜRLÜKTEKİ YASALARIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, HİÇBİR DURUMDA BİZ, KÂR KAYBI, VERİ KAYBI VEYA DİĞER MADDİ OLMAYAN KAYIPLAR DAHİL OLMAK ÜZERE, DOLAYLI, CEZAİ, ARIZİ, ÖZEL VEYA EMSAL TEŞKİL EDEN ZARARLARDAN SORUMLU OLMAYACAĞIZ. HİZMETTEN KAYNAKLANAN VEYA HİZMETLE İLGİLİ HERHANGİ BİR KONUDAKİ TOPLAM YÜKÜMLÜLÜĞÜMÜZ BİR AMERİKAN DOLARI (1.00 USD) İLE SINIRLIDIR.</p>
+                <h2>2. Hizmetin Kapsamı</h2>
+                <p>Uygulama, kişisel cihazınızda yerel dijital dosya arşivleme amacıyla sağlanan bir yardımcı araçtır. Uygulama ayrıca, Kullanıcının kişisel Google Drive hesabı aracılığıyla veri yedekleme ve geri yükleme dahil ancak bunlarla sınırlı olmamak üzere, kullanıcı tarafından başlatılan isteğe bağlı özellikler sunar. Uygulamanın sürekli geliştirilmesi ve kullanılabilirliği, Google AdMob aracılığıyla sunulan reklamlarla desteklenir ve kararlılığı Firebase hizmetleri kullanılarak izlenir.</p>
 
-        <h3>5. Tam Tazminat Yükümlülüğü</h3>
-        <p>Hizmeti kullanımınızdan veya bu Koşulları ihlal etmenizden kaynaklanan tüm iddia, yükümlülük ve masraflara (avukatlık ücretleri dahil) karşı Baki Tunçer ve Codenzi Labs'ı savunmayı, tazmin etmeyi ve zarar görmesini önlemeyi kabul edersiniz.</p>
+                <h2>3. Kullanıcının Yegane ve Mutlak Sorumluluğu</h2>
+                <p>Uygulamayı kullanarak oluşturduğunuz, içe aktardığınız, depoladığınız, yönettiğiniz, kategorize ettiğiniz veya yedeklediğiniz tüm dosyalar, veriler, meta veriler ve diğer her türlü içerikten ("İçerik") münhasıran ve tamamen siz sorumlusunuz ve sorumlu kalacaksınız. Uygulamayı kullanarak şunları açıkça kabul edersiniz:</p>
+                <ul>
+                    <li><strong>İçerik Yasallığı ve Mülkiyeti:</strong> İçeriğinizin yasal sahibi olduğunuzu veya Uygulama içinde kullanmak, depolamak ve yönetmek için gerekli tüm lisanslara, haklara, onaylara ve izinlere sahip olduğunuzu beyan ve garanti edersiniz. Uygulamayı yasa dışı, üçüncü taraf haklarını (telif hakkı, ticari marka ve gizlilik hakları dahil) ihlal eden veya başka bir şekilde zararlı, kötü niyetli veya sakıncalı herhangi bir İçeriği depolamak veya yönetmek için kullanmamayı kabul edersiniz.</li>
+                    <li><strong>Tazminat Yükümlülüğü:</strong> İçeriğinizden, Uygulamayı kullanımınızdan veya bu Koşulları ihlal etmenizden kaynaklanan veya bunlarla herhangi bir şekilde bağlantılı olan her türlü iddia, yükümlülük, hasar, kayıp ve masrafa (makul avukatlık ücretleri dahil) karşı Geliştiriciyi ve bağlı kuruluşlarını tazmin etmeyi, savunmayı ve zararsız tutmayı kabul edersiniz.</li>
+                    <li><strong>Veri Güvenliği ve Yönetimi:</strong> Tüm İçeriğiniz yerel olarak cihazınızda veya isteğe bağlı özelliği kullanırsanız kendi kişisel Google Drive hesabınızda saklanır. <strong>Sunucularımızda İçeriğinizi görmüyor, erişmiyor, toplamıyor veya saklamıyoruz.</strong> Cihazınızdaki ve Google hesabınızdaki İçeriğinizin güvenliği, gizliliği ve yönetimi tamamen sizin sorumluluğunuzdadır.</li>
+                </ul>
 
-        <h3>6. Yetkili Hukuk ve Yargı Yeri</h3>
-        <p>Bu Koşullar, Türkiye Cumhuriyeti yasalarına tabidir. Bu Koşullardan kaynaklanan tüm uyuşmazlıkların çözümünde İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri münhasıran yetkilidir.</p>
-    </div>
-</main>
-<script>
-    function switchRegion(region) {
-        document.querySelectorAll('.region-specific-content').forEach(el => el.style.display = 'none');
-        const targetEl = document.getElementById(region);
-        if (targetEl) {
-            targetEl.style.display = 'block';
-            targetEl.classList.add('active');
-        } else {
-            document.getElementById('general').style.display = 'block';
-            document.getElementById('general').classList.add('active');
-        }
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        const userLang = navigator.language || navigator.userLanguage;
-        const langPrefix = userLang.split('-')[0];
-        const regionSelect = document.getElementById('region-terms');
-        let targetRegion = 'general';
+                <h2>4. Üçüncü Taraf Hizmetleri ve Harici Bağımlılıklar</h2>
+                <p>Uygulamanın işlevselliği, çeşitli üçüncü taraf hizmetlerine dayanmaktadır. Bu özellikleri kullanımınız, onların ilgili şartlarını ve politikalarını kabul ettiğiniz anlamına gelir. Geliştiricinin bu hizmetler üzerinde hiçbir kontrolü yoktur ve bunların işleyişi için hiçbir sorumluluk kabul etmez.</p>
+                <ul>
+                    <li><strong>Google Drive Yedeklemesi:</strong> Bu özellik, isteğe bağlı bir kolaylık olarak sunulmaktadır ve GARANTİLİ BİR YEDEKLEME HİZMETİ DEĞİLDİR. Geliştirici, yedeklerinizin başarılı bir şekilde oluşturulmasından, bütünlüğünden, güvenliğinden veya geri yüklenmesinden sorumlu değildir. Google Drive'ınızdan kaynaklanan herhangi bir veri kaybı, bozulma, yedekleme hatası veya verileri geri yükleyememe durumu tamamen kontrolümüz dışındadır ve riski yalnızca size aittir. Bu özelliği kullanımınız <a href="https://www.google.com/drive/terms-of-service/" target="_blank" rel="noopener noreferrer">Google Drive Hizmet Şartları</a>'na tabidir.</li>
+                    <li><strong>Google AdMob ve Firebase:</strong> Uygulamayı desteklemek ve işlevselliğini artırmak için reklamcılık amacıyla Google AdMob'u ve kullanım analizi ile kararlılık takibi için Firebase'i (Analytics ve Crashlytics dahil) kullanıyoruz. Bu hizmetler, kendi gizlilik politikalarında belirtildiği şekilde veri toplar. Google hizmetlerinin veri toplama uygulamaları, güvenliği veya işlevselliğinden sorumlu değiliz. Uygulamayı kullanmanız, bu entegre Google hizmetlerinin veri uygulamalarına onay verdiğiniz anlamına gelir.</li>
+                </ul>
+                
+                <div class="disclaimer-box">
+                    <p><strong>TÜM GARANTİLERİN KRİTİK REDDİ BEYANI:</strong><br>UYGULAMA, KESİNLİKLE "OLDUĞU GİBİ" VE "MEVCUT OLDUĞU GİBİ" ESASINA GÖRE SUNULMAKTADIR. YASALARIN İZİN VERDİĞİ EN GENİŞ ÖLÇÜDE, GELİŞTİRİCİ, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK, MÜLKİYET VE İHLAL ETMEME GİBİ ZIMNİ GARANTİLER DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE, AÇIK, ZIMNİ VEYA YASAL HER TÜRLÜ GARANTİYİ AÇIKÇA REDDEDER. UYGULAMANIN KESİNTİSİZ, GÜVENLİ, HATASIZ, VİRÜSLERDEN VEYA DİĞER ZARARLI BİLEŞENLERDEN ARINDIRILMIŞ OLACAĞINI VEYA YEDEKLER DAHİL VERİLERİNİZİN GÜVENDE OLACAĞINI, KAYBOLMAYACAĞINI, BOZULMAYACAĞINI VEYA HASAR GÖRMEYECEĞİNİ GARANTİ ETMİYORUZ.</p>
+                </div>
+                
+                <h2>5. Mutlak ve Tam Sorumluluğun Sınırlandırılması</h2>
+                <p>YÜRÜRLÜKTEKİ YASALARIN İZİN VERDİĞİ EN ÜST DÜZEYDE, GELİŞTİRİCİ, BAĞLI KURULUŞLARI VEYA LİSANSÖRLERİ, BU UYGULAMANIN KULLANIMINDAN VEYA KULLANILAMAMASINDAN KAYNAKLANAN, KÂR KAYBI, İTİBAR KAYBI, KULLANIM KAYBI, VERİ KAYBI VEYA DİĞER MADDİ OLMAYAN KAYIPLAR İÇİN HASARLAR DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE, HİÇBİR DOĞRUDAN, DOLAYLI, CEZAİ, ARIZİ, ÖZEL, SONUÇSAL VEYA EMSAL TEŞKİL EDEN ZARARDAN HİÇBİR DURUMDA SORUMLU TUTULAMAZ. BU SINIRLAMA, İDDİA EDİLEN SORUMLULUĞUN SÖZLEŞME, HAKSIZ FİİL, İHMAL, KUSURSUZ SORUMLULUK VEYA BAŞKA BİR TEMELE DAYANIP DAYANMADIĞINA BAKILMAKSIZIN, GELİŞTİRİCİYE BU TÜR BİR ZARAR OLASILIĞI BİLDİRİLMİŞ OLSA BİLE GEÇERLİDİR. <strong>UYGULAMANIN KULLANIMI VE VERİLERİNİZLE İLGİLİ TÜM SORUMLULUĞU VE RİSKİ SİZ ÜSTLENİRSİNİZ.</strong> UYGULAMADAN DUYDUĞUNUZ MEMNUNİYETSİZLİĞE KARŞI GELİŞTİRİCİYE KARŞI TEK ÇARENİZ UYGULAMAYI KULLANMAYI BIRAKMAKTIR.</p>
+                
+                <h2>6. Fikri Mülkiyet</h2>
+                <p>Uygulamanın kendisi, kaynak kodu, görsel tasarımı, kullanıcı arayüzü ve markalaması dahil olmak üzere tüm haklar, unvan ve menfaatler Geliştiricinin münhasır mülkiyetindedir ve öyle kalacaktır. Bu Koşullar size Smart Archive adını, logolarını veya diğer marka özelliklerini kullanma hakkı veya lisansı vermez.</p>
 
-        if (langPrefix === 'tr') {
-            targetRegion = 'tr';
-        } else if (langPrefix === 'de') {
-            targetRegion = 'de';
-        } else if (['fr', 'es', 'it', 'nl', 'pl', 'sv', 'pt', 'ro'].includes(langPrefix)) {
-            targetRegion = 'eu';
-        }
+                <h2>7. Fesih</h2>
+                <p>Bu Koşulları ihlal etmeniz de dahil olmak üzere herhangi bir nedenle, önceden bildirimde bulunmaksızın veya herhangi bir yükümlülük altına girmeksizin Uygulamaya erişiminizi derhal feshedebilir veya askıya alabiliriz. Fesih üzerine, Uygulamayı kullanma hakkınız derhal sona erecektir.</p>
 
-        if(regionSelect) {
-            regionSelect.value = targetRegion;
-            switchRegion(targetRegion);
-        }
-    });
-</script>
+                <h2>8. Geçerli Hukuk ve Yargı Yetkisi</h2>
+                <p>Bu Koşullar, kanunlar ihtilafı hükümlerine bakılmaksızın Türkiye Cumhuriyeti kanunlarına göre yönetilecek ve yorumlanacaktır. Bu Koşullardan kaynaklanan herhangi bir hukuki meselenin çözümü için İstanbul, Türkiye'de bulunan mahkemelerin münhasır yargı yetkisini kabul edersiniz.</p>
+                
+                <h2>9. Koşullardaki Değişiklikler</h2>
+                <p>Tamamen kendi takdirimize bağlı olarak, bu Koşulları herhangi bir zamanda değiştirme veya yenileme hakkını saklı tutarız. Son revizyon tarihini belirteceğiz. Bu revizyonlar yürürlüğe girdikten sonra Uygulamamıza erişmeye veya kullanmaya devam ederek, revize edilmiş şartlara bağlı kalmayı kabul etmiş olursunuz.</p>
+                
+                <h2>10. İletişim Bilgileri</h2>
+                <p>Bu Koşullar hakkında herhangi bir sorunuz varsa, lütfen bizimle şu adresten iletişime geçin: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+            </article>
+
+        </div>
+    </main>
+
 </body>
 </html>
