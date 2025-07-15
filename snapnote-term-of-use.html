@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapNote - Kullanım Koşulları</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Genel Ayarlar */
+        :root {
+            --primary-blue: #3498db; /* Temel Mavi */
+            --dark-blue: #2c3e50;    /* Koyu Mavi/Lacivert */
+            --light-blue: #e8f5fd;   /* Çok Açık Mavi */
+            --accent-blue: #6a93cb;  /* Orta Mavi */
+            --text-color: #333;
+            --light-text: #f0f0f0;
+            --background-light: #f4f7f6;
+            --border-color: #ddd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--dark-blue);
+        }
+        
+        strong {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        /* Header ve Navigasyon */
+        .header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 30px;
+        }
+
+        .navbar ul li a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--dark-blue);
+            font-size: 1.05em;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .navbar ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Ana İçerik Stilleri */
+        .policy-page {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .policy-page .container {
+            max-width: 900px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        .policy-page h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.6em;
+            color: var(--dark-blue);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .policy-page h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.7em;
+            color: var(--primary-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .policy-page h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+            color: var(--dark-blue);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .policy-page p, .policy-page li {
+            font-size: 1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .policy-page ul, .policy-page ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .policy-page li {
+            margin-bottom: 10px;
+        }
+        
+        .policy-page .last-updated {
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .disclaimer-box {
+            background-color: var(--light-blue);
+            border-left: 5px solid var(--primary-blue);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .disclaimer-box p {
+            margin: 0;
+            font-size: 0.95em;
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>SnapNote</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#english">English</a></li>
+                    <li><a href="#turkish">Türkçe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="policy-page">
+        <div class="container">
+            
+            <article id="english">
+                <h1>Terms of Use</h1>
+                <p class="last-updated">Last Updated: July 15, 2025</p>
+                
+                <h2>1. Acceptance of Terms</h2>
+                <p>Thank you for downloading, installing, or using the "SnapNote" ("App") mobile application. These Terms of Use ("Terms") are a legally binding agreement that governs your use of the App. Please read these Terms carefully. By accessing or using the App, you declare that you have read, understood, and agree to be bound by these Terms.</p>
+
+                <h2>2. Description of Service and Disclaimer of Warranty</h2>
+                <p>SnapNote is a note-taking application that allows users to create, edit, and manage notes containing text, checklists, photos, and audio recordings. The App offers features such as local storage on the device, optional password protection, and backup to the user's own Google Drive account or local export.</p>
+                
+                <div class="disclaimer-box">
+                    <p><strong>IMPORTANT DISCLAIMER REGARDING DATA:</strong><br>The App is provided "AS IS" and "AS AVAILABLE." There is absolutely <strong>NO GUARANTEE</strong> regarding the security, integrity, or permanence of your data. Data loss can occur due to software bugs, hardware failures, operating system updates, user error, or other unforeseen circumstances. The backup features (Google Drive, local export) are provided as a convenience only and are not guaranteed to work flawlessly. <strong>The developer cannot be held responsible for any data loss, corruption, or inability to access your data.</strong> The responsibility for protecting and backing up your data rests solely with you.</p>
+                </div>
+                
+                <h2>3. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, the developer shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the App; (b) any conduct or content of any third party on the App; (c) any content obtained from the App; and (d) unauthorized access, use, or alteration of your transmissions or content. Your sole and exclusive remedy for any dispute with us is the discontinuation of your use of the App.</p>
+
+                <h3>3.1. Password Management</h3>
+                <p>The security and remembrance of the password you set are your responsibility. If you forget your password, you may permanently lose access to your encrypted data. The developer does not have access to your password and does not offer a password recovery service.</p>
+
+                <h3>3.2. Data Deletion</h3>
+                <p>Data moved to the Trash may be permanently deleted after a certain period. Once permanently deleted, data cannot be recovered. The developer is not responsible for data loss resulting from accidental deletions.</p>
+
+                <h2>4. User Obligations</h2>
+                <p>You agree not to use the App for any illegal purpose or in violation of these Terms. You are responsible for securing your device and your Google Drive account.</p>
+
+                <h2>5. Changes to Terms</h2>
+                <p>We reserve the right to modify these Terms at any time. We will indicate the date of the last revision. Your continued use of the App after the changes constitutes your acceptance of the new Terms.</p>
+                
+                <h2>6. Contact</h2>
+                <p>If you have any questions about these Terms, please contact us at: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+            </article>
+
+            <hr style="margin: 50px 0; border: 1px solid var(--border-color);">
+
+            <article id="turkish">
+                <h1>Kullanım Koşulları</h1>
+                <p class="last-updated">Son Güncelleme: 15 Temmuz 2025</p>
+
+                <h2>1. Koşulların Kabulü</h2>
+                <p>"SnapNote" ("Uygulama") mobil uygulamasını indirdiğiniz, kurduğunuz veya kullandığınız için teşekkür ederiz. Bu Kullanım Koşulları ("Koşullar"), Uygulamayı kullanımınızı düzenleyen yasal olarak bağlayıcı bir sözleşmedir. Lütfen bu Koşulları dikkatlice okuyun. Uygulamaya erişerek veya Uygulamayı kullanarak, bu Koşulları okuduğunuzu, anladığınızı ve bunlara bağlı kalmayı kabul ettiğinizi beyan edersiniz.</p>
+
+                <h2>2. Hizmetin Tanımı ve Garanti Reddi</h2>
+                <p>SnapNote, kullanıcıların metin, kontrol listeleri, fotoğraf ve ses kayıtları içeren notlar oluşturmasına, düzenlemesine ve yönetmesine olanak tanıyan bir not alma uygulamasıdır. Uygulama, notların yerel olarak cihazda saklanması, isteğe bağlı parola ile korunması ve kullanıcının kendi Google Drive hesabına yedeklenmesi veya yerel olarak dışa aktarılması gibi özellikler sunar.</p>
+
+                <div class="disclaimer-box">
+                    <p><strong>VERİLERLE İLGİLİ ÖNEMLİ SORUMSUZLUK BEYANI:</strong><br>Uygulama "OLDUĞU GİBİ" ve "MEVCUT OLDUĞU ŞEKLİYLE" sunulmaktadır. Verilerinizin güvenliği, bütünlüğü veya kalıcılığı konusunda <strong>KESİNLİKLE HİÇBİR GARANTİ VERİLMEMEKTEDİR.</strong> Yazılım hataları, donanım arızaları, işletim sistemi güncellemeleri, kullanıcı hataları veya diğer öngörülemeyen durumlar nedeniyle veri kaybı yaşanabilir. Yedekleme özellikleri (Google Drive, yerel dışa aktarma) yalnızca bir kolaylık olarak sunulmuştur ve kusursuz çalışmaları garanti edilmez. <strong>Herhangi bir veri kaybından, bozulmasından veya verilerinize erişememenizden geliştirici sorumlu tutulamaz.</strong> Verilerinizi koruma ve yedekleme sorumluluğu yalnızca size aittir.</p>
+                </div>
+
+                <h2>3. Sorumluluğun Sınırlandırılması</h2>
+                <p>Yasaların izin verdiği en geniş ölçüde, geliştirici; (a) Uygulamaya erişiminiz veya Uygulamayı kullanımınızdan ya da kullanamamanızdan; (b) Uygulama üzerinde herhangi bir üçüncü tarafın davranışından veya içeriğinden; (c) Uygulamadan elde edilen herhangi bir içerikten; ve (d) yetkisiz erişim, kullanım veya içeriğinizin veya verilerinizin değiştirilmesinden kaynaklanan, kâr, veri, kullanım, itibar veya diğer maddi olmayan kayıplar dahil olmak üzere, herhangi bir doğrudan, dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zarardan sorumlu olmayacaktır. Bizimle olan herhangi bir anlaşmazlık için tek ve münhasır çözüm yolunuz, Uygulamayı kullanımınızı sonlandırmaktır.</p>
+                
+                <h3>3.1. Parola Yönetimi</h3>
+                <p>Belirlediğiniz parolanın güvenliği ve hatırlanması sizin sorumluluğunuzdadır. Parolanızı unutmanız durumunda, şifrelenmiş verilerinize erişimi kalıcı olarak kaybedebilirsiniz. Geliştiricinin parolanıza erişimi yoktur ve parola kurtarma hizmeti sunmamaktadır.</p>
+
+                <h3>3.2. Veri Silme İşlemleri</h3>
+                <p>Çöp Kutusu'na taşınan veriler belirli bir süre sonra kalıcı olarak silinebilir. Bir kez kalıcı olarak silinen veriler geri getirilemez. Yanlışlıkla yapılan silme işlemlerinden doğacak veri kayıplarından geliştirici sorumlu değildir.</p>
+
+                <h2>4. Kullanıcı Yükümlülükleri</h2>
+                <p>Uygulamayı yasa dışı veya bu Koşullar tarafından yasaklanmış herhangi bir amaç için kullanmayacağınızı kabul edersiniz. Cihazınızın ve Google Drive hesabınızın güvenliğini sağlamak sizin sorumluluğunuzdadır.</p>
+
+                <h2>5. Koşullardaki Değişiklikler</h2>
+                <p>Bu Koşulları herhangi bir zamanda değiştirme hakkını saklı tutarız. Son revizyon tarihini belirteceğiz. Değişiklikler sonrası Uygulamayı kullanmaya devam etmeniz, yeni Koşulları kabul ettiğiniz anlamına gelir.</p>
+
+                <h2>6. İletişim</h2>
+                <p>Bu Kullanım Koşulları ile ilgili herhangi bir sorunuz varsa, lütfen bizimle şu adresten iletişime geçin: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+            </article>
+
+        </div>
+    </main>
+
+</body>
+</html>
