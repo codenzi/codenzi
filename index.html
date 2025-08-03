@@ -4,10 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="wZCaK97_CpiYinwtjYKW1tyHKMARZe-OSra6bOAe8AQ" />
-    <title>Codenzi - Uygulama Geliştirme Çözümleri</title>
+    <title>Codenzi - Hayatı Kolaylaştıran Mobil Uygulamalar</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        .app-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .app-card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .app-card-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .app-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .app-card .app-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        .app-card p {
+            font-family: 'Open Sans', sans-serif;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+        .btn-google-play {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            margin-top: auto; /* Kartın en altına hizalar */
+        }
+        .btn-google-play:hover {
+            background-color: #0056b3;
+        }
+        @media (min-width: 768px) {
+            .app-card {
+                flex-direction: row;
+            }
+            .app-card-image {
+                width: 250px;
+                height: auto;
+                object-fit: contain;
+                padding: 1rem;
+            }
+            .app-card-content {
+                flex-basis: 65%;
+            }
+        }
+        @media (min-width: 1024px) {
+             .app-card-image {
+                width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -18,11 +104,11 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="#hero">Anasayfa</a></li>
+                    <li><a href="#apps">Uygulamalarımız</a></li>
                     <li><a href="#about">Hakkımızda</a></li>
-                    <li><a href="#services">Hizmetlerimiz</a></li>
                     <li><a href="#why-us">Neden Biz?</a></li>
                     <li><a href="#contact">İletişim</a></li>
-                    <li><a href="privacy-genel.html">Genel Gizlilik Politikası</a></li>
+                    <li><a href="privacy-genel.html">Gizlilik Politikası</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle" id="mobile-menu">
@@ -36,12 +122,48 @@
     <section id="hero" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Dijital Geleceğinizi Kodluyoruz</h2>
-                <p>Google Play için yenilikçi ve kullanıcı odaklı mobil uygulamalar geliştiriyoruz. Fikirlerinizi gerçeğe dönüştürün!</p>
-                <a href="#contact" class="btn btn-primary">Hemen İletişime Geçin</a>
+                <h2>Dijital Hayatınıza Değer Katıyoruz</h2>
+                <p>Google Play'de yayınladığımız yenilikçi, güvenli ve kullanıcı odaklı uygulamaları keşfedin. Fikirlerinizi gerçeğe dönüştürüyoruz!</p>
+                <a href="#apps" class="btn btn-primary">Uygulamalarımızı Keşfedin</a>
             </div>
             <div class="hero-image">
                 <img src="logo.png" alt="Codenzi Logosu" class="hero-app-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="apps" class="services"> <div class="container">
+            <h2 class="section-title">Uygulamalarımız</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <img src="snapnote.webp" alt="SnapNote Uygulama Tanıtımı" class="app-card-image">
+                    <div class="app-card-content">
+                        <h3>SnapNote</h3>
+                        <p class="app-tagline">Hayatın hızında düşünen tek not defteri.</p>
+                        <p>Fikirlerinizi anında yakalayan, widget'larla ana ekranınıza taşıyan, zengin metin formatları ve SHA-256 şifreleme ile notlarınızı güvende tutan akıllı not defteri. Gizli Google Drive yedeklemesi ile anılarınız daima korunur.</p>
+                        <a href="#" class="btn-google-play">Google Play'de Gör</a>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <img src="akilli-arsiv.webp" alt="Akıllı Arşiv Uygulama Tanıtımı" class="app-card-image">
+                    <div class="app-card-content">
+                        <h3>Akıllı Arşiv</h3>
+                        <p class="app-tagline">Telefonunuzdaki kaosa hükmedin. Sonsuza dek.</p>
+                        <p>WhatsApp, Gmail ve diğer uygulamalardan gelen tüm önemli dosyaları tek dokunuşla merkezileştirin. Akıllı kopya engelleyici ile depolama alanından tasarruf edin ve otomatik Google Drive yedeklemesi ile dijital varlıklarınızı güvence altına alın.</p>
+                        <a href="#" class="btn-google-play">Google Play'de Gör</a>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <img src="payday.webp" alt="Payday Uygulama Tanıtımı" class="app-card-image">
+                    <div class="app-card-content">
+                        <h3>Payday</h3>
+                        <p class="app-tagline">Finansal gücü elinize alın ve geleceğinizi bugün şekillendirin.</p>
+                        <p>Kişisel finansal zekanız Payday ile tanışın. Birikim hedeflerinizi otomatikleştirin, akıllı harcama uyarıları alın ve para biriktirmeyi bir oyuna dönüştürün. Kırılmaz gizlilik kalkanı ile verileriniz sadece size aittir.</p>
+                        <a href="#" class="btn-google-play">Google Play'de Gör</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -51,40 +173,11 @@
             <h2 class="section-title">Hakkımızda</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p><strong>Codenzi</strong>, mobil uygulama dünyasında yeni bir soluk getirmek amacıyla 2025 yılında kurulmuş genç ve dinamik bir yazılım şirketidir. Google Play platformu özelinde uzmanlaşarak, kullanıcı deneyimini merkeze alan, yenilikçi ve performansı yüksek uygulamalar geliştirmeyi misyon edindik.</p>
-                    <p>Her büyüklükteki işletme ve girişimci için özelleştirilmiş çözümler sunarak, dijital vizyonlarını hayata geçirmelerine yardımcı oluyoruz. Kuruluşumuzdan bu yana, teknolojiye olan tutkumuz ve çözüm odaklı yaklaşımımızla müşteri memnuniyetini en üst seviyede tutmayı hedefliyoruz.</p>
+                    <p><strong>Codenzi</strong>, mobil uygulama dünyasında yeni bir soluk getirmek amacıyla 2025 yılında kurulmuş genç ve dinamik bir yazılım startup'ıdır. Google Play platformu özelinde uzmanlaşarak, kullanıcı deneyimini merkeze alan, yenilikçi ve performansı yüksek uygulamalar geliştirmeyi misyon edindik.</p>
                     <p>Amacımız, sadece kod yazmak değil; kullanıcıların hayatına değer katan, sektörde fark yaratan ve geleceğin trendlerini belirleyen mobil deneyimler tasarlamak ve geliştirmektir. Codenzi olarak, dijital dünyada sizinle birlikte büyümek için sabırsızlanıyoruz.</p>
                 </div>
                 <div class="about-image">
                     <img src="logo.png" alt="Codenzi Logosu" class="hero-app-image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Hizmetlerimiz</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <i class="fas fa-mobile-alt service-icon"></i>
-                    <h3>Özel Mobil Uygulama Geliştirme</h3>
-                    <p>İşletmenize özel, Android platformunda performanslı ve kullanıcı dostu uygulamalar tasarlıyor ve geliştiriyoruz.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-lightbulb service-icon"></i>
-                    <h3>Fikir Geliştirme ve Danışmanlık</h3>
-                    <p>Uygulama fikrinizi başlangıçtan pazara sunulana kadar tüm süreçlerde uzman danışmanlık hizmeti sunuyoruz.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-sync-alt service-icon"></i>
-                    <h3>Mevcut Uygulama Güncelleme</h3>
-                    <p>Mevcut Android uygulamanız için performans iyileştirmeleri, yeni özellik entegrasyonları ve güncellemeler sağlıyoruz.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-paint-brush service-icon"></i>
-                    <h3>Kullanıcı Arayüzü (UI) & Deneyimi (UX)</h3>
-                    <p>Hedef kitlenizin ihtiyaçlarına uygun, estetik ve sezgisel kullanıcı arayüzleri tasarlıyoruz.</p>
                 </div>
             </div>
         </div>
@@ -109,9 +202,8 @@
                     <h3>Anahtar Teslim Çözümler</h3>
                     <p>Fikir aşamasından yayınlama sürecine kadar tüm adımlarda yanınızdayız, sorunsuz bir süreç sunuyoruz.</p>
                 </div>
-                <div class="why-us-item"> <i class="fas fa-dollar-sign why-us-icon"></i>
-                    <h3>Rekabetçi Fiyatlar</h3>
-                    <p>Yüksek kaliteli hizmeti, bütçe dostu ve şeffaf fiyatlandırma politikasıyla sunuyoruz.</p>
+                <div class="why-us-item"> <i class="fas fa-shield-alt why-us-icon"></i> <h3>Güvenlik ve Gizlilik</h3>
+                    <p>Kullanıcı verilerinin güvenliğini ve gizliliğini en üst düzeyde tutan uygulamalar geliştiriyoruz.</p>
                 </div>
             </div>
         </div>
@@ -120,6 +212,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Bizimle İletişime Geçin</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto;">Bir uygulama fikriniz mi var veya mevcut projelerimiz hakkında daha fazla bilgi mi almak istiyorsunuz? Bize ulaşın!</p>
             <div class="contact-info-grid">
                 <div class="contact-details">
                     <h3>İletişim Bilgileri</h3>
@@ -133,7 +226,7 @@
                         <a href="#" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
     </section>
 
@@ -148,17 +241,15 @@
         document.getElementById('mobile-menu').addEventListener('click', function() {
             var navbar = document.querySelector('.navbar ul');
             navbar.classList.toggle('active');
-            this.classList.toggle('is-active'); // Toggle for hamburger icon animation
+            this.classList.toggle('is-active');
         });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.navbar a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-                // Close mobile menu after clicking a link
                 if (window.innerWidth <= 768) {
                     document.querySelector('.navbar ul').classList.remove('active');
                     document.getElementById('mobile-menu').classList.remove('is-active');
