@@ -207,14 +207,12 @@
             align-items: center;
             opacity: 1;
             transform: scale(1);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
         }
         
-        /* GÜNCELLENDİ: z-index ile katmanlama */
         #app-snapnote { z-index: 1; }
         #app-arsiv { z-index: 2; }
         #app-payday { z-index: 3; }
-
 
         .app-showcase.is-scrolled-past {
             opacity: 0;
@@ -507,9 +505,9 @@
     </footer>
 
     <script>
-        // --- DEVRİM JS MOTORU (NİHAİ VE EN KARARLI VERSİYON) ---
+        // --- DEVRİM JS MOTORU (DETERMİNİSTİK - MATEMATİKSEL VERSİYON) ---
 
-        // 1. Spot Işığı Motoru
+        // 1. Spot Işığı Motoru (Değişiklik yok)
         const spotlight = document.getElementById('spotlight');
         if (spotlight) {
             window.addEventListener('mousemove', (e) => {
@@ -519,36 +517,59 @@
             });
         }
 
-        // 2. Kart Destesi Motoru (KURŞUN GEÇİRMEZ MANTIK)
+        // 2. Kart Destesi Motoru (TAMAMEN YENİ, MATEMATİKSEL MANTIK)
         document.addEventListener('DOMContentLoaded', () => {
+            // Sadece mobil olmayan cihazlarda çalışacak
             if (window.matchMedia("(min-width: 769px)").matches) {
-                const appSections = document.querySelectorAll('.app-showcase');
-                let lastScrollY = window.scrollY;
+                const appStackContainer = document.getElementById('app-stack-container');
+                const appSections = Array.from(document.querySelectorAll('.app-showcase'));
+                
+                if (!appStackContainer || appSections.length === 0) return;
 
-                const observer = new IntersectionObserver((entries) => {
-                    const currentScrollY = window.scrollY;
-                    const direction = currentScrollY > lastScrollY ? 'down' : 'up';
+                let ticking = false;
 
-                    entries.forEach(entry => {
-                        // Eğer aşağı kaydırıyorsak ve kart ekranın üstünden çıkmışsa
-                        if (direction === 'down' && !entry.isIntersecting && entry.boundingClientRect.top < 0) {
-                            entry.target.classList.add('is-scrolled-past');
-                        }
-                        // Eğer yukarı kaydırıyorsak ve kart tekrar ekrana giriyorsa
-                        else if (direction === 'up' && entry.isIntersecting) {
-                            entry.target.classList.remove('is-scrolled-past');
+                function updateCardStates() {
+                    const containerRect = appStackContainer.getBoundingClientRect();
+                    const vh = window.innerHeight;
+                    
+                    // Konteyner ekranda değilse işlem yapma
+                    if (containerRect.bottom < 0 || containerRect.top > vh) {
+                        ticking = false;
+                        return;
+                    }
+                    
+                    // Konteynerin başlangıcından itibaren ne kadar kaydırıldığını hesapla
+                    const pixelsScrolledIntoContainer = -containerRect.top;
+                    
+                    // Hangi kartın aktif olması gerektiğini matematiksel olarak bul
+                    // Her kart için 1 tam ekran (1 * vh) kadar kaydırma alanı var
+                    let activeCardIndex = Math.floor(pixelsScrolledIntoContainer / vh);
+                    
+                    // Değerlerin sınırlar içinde kaldığından emin ol
+                    activeCardIndex = Math.max(0, Math.min(appSections.length - 1, activeCardIndex));
+                    
+                    // Tüm kartların durumunu bu kesin indekse göre güncelle
+                    appSections.forEach((section, index) => {
+                        if (index < activeCardIndex) {
+                            section.classList.add('is-scrolled-past');
+                        } else {
+                            section.classList.remove('is-scrolled-past');
                         }
                     });
 
-                    lastScrollY = currentScrollY;
-                }, { 
-                    // Gözlemcinin tetikleneceği aralığı geniş tutarak her durumu yakalıyoruz
-                    threshold: [0, 0.1, 0.9, 1] 
-                });
+                    ticking = false;
+                }
 
-                appSections.forEach(section => {
-                    observer.observe(section);
-                });
+                function onScroll() {
+                    if (!ticking) {
+                        window.requestAnimationFrame(updateCardStates);
+                        ticking = true;
+                    }
+                }
+
+                window.addEventListener('scroll', onScroll);
+                // Sayfa ilk yüklendiğinde de durumu kontrol et
+                updateCardStates();
             }
         });
     </script>
