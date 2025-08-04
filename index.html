@@ -200,7 +200,6 @@
         /* --- DEVRİM 3: ODAKLANMIŞ ANLATIM (Kart Destesi) --- */
         #app-stack-container {
             position: relative;
-            /* Her kart için 100vh + geçiş için 50vh */
             height: 350vh; 
         }
 
@@ -219,6 +218,7 @@
         .app-showcase.is-scrolled-past {
             opacity: 0;
             transform: scale(0.9);
+            pointer-events: none; /* Önemli: Gizli kartların tıklanmasını engeller */
         }
 
         .app-showcase .container {
@@ -302,7 +302,7 @@
             background: var(--bg-light);
             padding: 2rem;
             border-radius: 10px;
-            height: calc(100% - 4rem); /* Match parent padding */
+            height: calc(100% - 4rem);
         }
         .philosophy-item:hover { background: var(--bg-light); transform: translateY(-5px); }
 
@@ -319,7 +319,7 @@
 
         /* Mobil Cihazlar için Devrimci Uyum */
         @media (max-width: 768px) {
-            #spotlight { display: none; } /* Dokunmatik cihazlarda spot ışığı gereksiz */
+            #spotlight { display: none; }
             .navbar { display: none; } 
             .hero-content h2 { font-size: 2.2rem; letter-spacing: -1px; }
 
@@ -330,6 +330,8 @@
                 position: relative;
                 padding: 80px 0;
                 border-bottom: 1px solid var(--border-color);
+                opacity: 1 !important; /* Mobil için her zaman görünür */
+                transform: none !important; /* Mobil için transformları iptal et */
             }
             .app-showcase .container { grid-template-columns: 1fr; }
             #app-arsiv .app-mockup { order: 0; }
@@ -492,7 +494,7 @@
     </footer>
 
     <script>
-        // --- DEVRİM JS MOTORU ---
+        // --- DEVRİM JS MOTORU (DÜZELTİLMİŞ VERSİYON) ---
 
         // 1. Spot Işığı Motoru
         const spotlight = document.getElementById('spotlight');
@@ -504,38 +506,41 @@
             });
         }
 
-        // 2. Kart Destesi Motoru
-        const appSections = document.querySelectorAll('.app-showcase');
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5 // Kartın yarısı göründüğünde tetiklenir
-        };
+        // 2. Kart Destesi Motoru (HATASI GİDERİLDİ)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Sadece mobil olmayan cihazlarda çalışacak
+            if (window.matchMedia("(min-width: 769px)").matches) {
+                const appSections = document.querySelectorAll('.app-showcase');
+                const appSectionsArray = Array.from(appSections);
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                // Sadece aşağı kaydırırken çalışır
-                if (entry.isIntersecting && entry.boundingClientRect.top < window.innerHeight / 2) {
-                    appSections.forEach(section => {
-                        if (section === entry.target) {
-                            section.classList.remove('is-scrolled-past');
-                        } else if (section.compareDocumentPosition(entry.target) & Node.DOCUMENT_POSITION_FOLLOWING) {
-                            // Hedeflenen elementten sonra gelenleri "geçilmiş" olarak işaretle
-                            section.classList.add('is-scrolled-past');
-                        } else {
-                            section.classList.remove('is-scrolled-past');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const activeIndex = appSectionsArray.findIndex(section => section === entry.target);
+                            
+                            appSectionsArray.forEach((section, index) => {
+                                if (index < activeIndex) {
+                                    // Aktif karttan öncekileri gizle
+                                    section.classList.add('is-scrolled-past');
+                                } else {
+                                    // Aktif kartı ve sonrakileri göster
+                                    section.classList.remove('is-scrolled-past');
+                                }
+                            });
                         }
                     });
-                }
-            });
-        }, observerOptions);
-        
-        // Mobil olmayan cihazlarda gözlemciyi başlat
-        if (window.matchMedia("(min-width: 769px)").matches) {
-            appSections.forEach(section => {
-                observer.observe(section);
-            });
-        }
+                }, { 
+                    root: null,
+                    rootMargin: '0px',
+                    // Kartın ekranın ortasına gelmesine yakın bir eşik
+                    threshold: 0.4 
+                });
+
+                appSections.forEach(section => {
+                    observer.observe(section);
+                });
+            }
+        });
     </script>
 
 </body>
