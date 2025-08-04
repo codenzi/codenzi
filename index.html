@@ -218,7 +218,7 @@
         .app-showcase.is-scrolled-past {
             opacity: 0;
             transform: scale(0.9);
-            pointer-events: none; /* Önemli: Gizli kartların tıklanmasını engeller */
+            pointer-events: none;
         }
 
         .app-showcase .container {
@@ -266,12 +266,18 @@
         #philosophy { padding: 150px 0; text-align: center; }
         .section-title { font-family: var(--font-primary); font-size: 3rem; margin-bottom: 1rem; }
         .section-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;}
-        .philosophy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left; }
+        
+        /* GÜNCELLENDİ: Felsefe Kartları için 4'lü Düzen */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Geniş ekranlar için 4 sütun */
+            gap: 1.5rem; /* Sütunlar arası boşluk ayarlandı */
+            text-align: left;
+        }
         
         /* --- DEVRİM 4: MİKRO-DİNAMİZM --- */
         .philosophy-item {
             background-color: transparent;
-            padding: 2.5rem 2rem;
             border-radius: 12px;
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
@@ -302,13 +308,15 @@
             background: var(--bg-light);
             padding: 2rem;
             border-radius: 10px;
-            height: calc(100% - 4rem);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         .philosophy-item:hover { background: var(--bg-light); transform: translateY(-5px); }
 
         .philosophy-item i { font-size: 2rem; background: var(--glow-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
         .philosophy-item h4 { font-family: var(--font-primary); font-size: 1.3rem; margin: 0 0 0.5rem; }
-        .philosophy-item p { color: var(--text-secondary); margin: 0; }
+        .philosophy-item p { color: var(--text-secondary); margin: 0; flex-grow: 1; }
         
         /* --- Call to Action & Footer --- */
         #cta { background-image: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9)), radial-gradient(circle at 50% 0%, var(--aurora-2) 0%, transparent 60%); padding: 120px 0; text-align: center; }
@@ -318,6 +326,12 @@
         .footer .social-links a:hover { color: var(--text-primary); transform: scale(1.2); }
 
         /* Mobil Cihazlar için Devrimci Uyum */
+        @media (max-width: 992px) {
+            .philosophy-grid {
+                grid-template-columns: repeat(2, 1fr); /* Tabletler için 2 sütun */
+            }
+        }
+
         @media (max-width: 768px) {
             #spotlight { display: none; }
             .navbar { display: none; } 
@@ -330,8 +344,8 @@
                 position: relative;
                 padding: 80px 0;
                 border-bottom: 1px solid var(--border-color);
-                opacity: 1 !important; /* Mobil için her zaman görünür */
-                transform: none !important; /* Mobil için transformları iptal et */
+                opacity: 1 !important;
+                transform: none !important;
             }
             .app-showcase .container { grid-template-columns: 1fr; }
             #app-arsiv .app-mockup { order: 0; }
@@ -340,6 +354,10 @@
             .app-details { text-align: center; }
             .feature-list { display: inline-block; text-align: left; }
             #philosophy { padding: 80px 0; }
+            
+            .philosophy-grid {
+                grid-template-columns: 1fr; /* Mobil için tek sütun */
+            }
         }
     </style>
 </head>
@@ -494,7 +512,7 @@
     </footer>
 
     <script>
-        // --- DEVRİM JS MOTORU (DÜZELTİLMİŞ VERSİYON) ---
+        // --- DEVRİM JS MOTORU ---
 
         // 1. Spot Işığı Motoru
         const spotlight = document.getElementById('spotlight');
@@ -506,9 +524,8 @@
             });
         }
 
-        // 2. Kart Destesi Motoru (HATASI GİDERİLDİ)
+        // 2. Kart Destesi Motoru
         document.addEventListener('DOMContentLoaded', () => {
-            // Sadece mobil olmayan cihazlarda çalışacak
             if (window.matchMedia("(min-width: 769px)").matches) {
                 const appSections = document.querySelectorAll('.app-showcase');
                 const appSectionsArray = Array.from(appSections);
@@ -520,10 +537,8 @@
                             
                             appSectionsArray.forEach((section, index) => {
                                 if (index < activeIndex) {
-                                    // Aktif karttan öncekileri gizle
                                     section.classList.add('is-scrolled-past');
                                 } else {
-                                    // Aktif kartı ve sonrakileri göster
                                     section.classList.remove('is-scrolled-past');
                                 }
                             });
@@ -532,7 +547,6 @@
                 }, { 
                     root: null,
                     rootMargin: '0px',
-                    // Kartın ekranın ortasına gelmesine yakın bir eşik
                     threshold: 0.4 
                 });
 
