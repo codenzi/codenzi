@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathLabs Edu - Gizlilik Politikası</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary-blue: #3498db;
+--dark-blue: #2c3e50;
+--light-blue: #e8f5fd;
+--accent-blue: #6a93cb;
+--text-color: #333;
+--background-light: #f4f7f6;
+--border-color: #ddd;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Open Sans', sans-serif; color: var(--text-color); background-color: var(--background-light); line-height: 1.8; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; color: var(--primary-blue); font-weight: 600; transition: color 0.3s ease; }
+a:hover { color: var(--dark-blue); }
+strong { font-weight: 600; color: var(--dark-blue); }
+.header { background-color: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; left: 0; width: 100%; z-index: 1000; }
+.header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo h1 { font-family: 'Poppins', sans-serif; font-size: 2.2em; color: var(--dark-blue); font-weight: 700; }
+.policy-page { padding: 60px 0; background-color: #fff; }
+.policy-page .container { max-width: 900px; background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 25px rgba(0,0,0,0.07); }
+.policy-page h1, .policy-page h2, .policy-page h3 { font-family: 'Poppins', sans-serif; }
+.policy-page h1 { font-size: 2.6em; color: var(--dark-blue); text-align: center; margin-bottom: 20px; }
+.policy-page h2 { font-size: 1.7em; color: var(--primary-blue); margin-top: 35px; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 2px solid var(--light-blue); }
+.policy-page h3 { font-size: 1.3em; color: var(--dark-blue); margin-top: 25px; margin-bottom: 10px; }
+.policy-page p, .policy-page li { font-size: 1em; line-height: 1.8; margin-bottom: 15px; color: #444; }
+.policy-page ul { margin-left: 25px; margin-bottom: 20px; }
+.policy-page li { margin-bottom: 10px; }
+.policy-page .last-updated { font-size: 0.9em; color: #777; text-align: center; margin-bottom: 40px; }
+.disclaimer-box { background-color: var(--light-blue); border-left: 5px solid var(--primary-blue); padding: 20px; margin: 25px 0; border-radius: 5px; }
+.disclaimer-box p { margin: 0; font-size: 0.95em; font-weight: 600; color: var(--dark-blue); }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const userLang = navigator.language || navigator.userLanguage;
+if (userLang.startsWith('tr')) {
+document.getElementById('english').style.display = 'none';
+document.getElementById('turkish').style.display = 'block';
+} else {
+document.getElementById('english').style.display = 'block';
+document.getElementById('turkish').style.display = 'none';
+}
+});
+</script>
+</head>
+<body>
+
+<header class="header">
+<div class="container">
+<div class="logo">
+<h1>MathLabs Edu</h1>
+</div>
+</div>
+</header>
+
+<main class="policy-page">
+<div class="container">
+
+    <article id="english" style="display: none;">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated"><strong>Version:</strong> 3.0<br><strong>Effective Date:</strong> August 20, 2025</p>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to MathLabs Edu. This Privacy Policy explains how Codenzi Labs ("we," "us," or "our") collects, uses, and shares information about you when you use our mobile application, MathLabs Edu (the "Application").</p>
+        <p>By using the Application, you agree to the collection and use of information in accordance with this policy. This policy is designed to be compliant with key privacy laws like the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and the Turkish Law on the Protection of Personal Data (KVKK).</p>
+        <p>For legal purposes, **Codenzi Labs is the data controller** for the information we process.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>To provide and improve our service, we collect the following types of information:</p>
+
+        <h3>2.1. Information You Provide</h3>
+        <ul>
+            <li><strong>Account Information:</strong> When you sign in with Google, we collect your name, email address, and Google User ID (UID). We need this to create your account, identify you, and manage your subscription status.</li>
+            <li><strong>User Content:</strong> We collect the questions you submit to our AI Assistant and any drawings or notes you make on PDFs. This is essential for the Application's core functionality.</li>
+        </ul>
+
+        <h3>2.2. Information Collected Automatically</h3>
+        <ul>
+            <li><strong>Usage Details:</strong> We use Google Firebase Analytics to understand how you interact with our app. This includes which features you use, how long you use them, and general app performance data.</li>
+            <li><strong>Device Information:</strong> We collect information about your device, such as the model, operating system, and unique identifiers. This helps us optimize the app for different devices.</li>
+            <li><strong>Crash Reports:</strong> If the app crashes, we use Google Firebase Crashlytics to collect an anonymous report. This report helps us find and fix bugs to improve app stability.</li>
+            <li><strong>Purchase Information:</strong> If you buy a premium subscription, Google Play handles the payment. We receive confirmation of your purchase from Google to unlock premium features but we **do not** see or store your payment card details.</li>
+            <li><strong>Advertising ID:</strong> In the free version of the app, we use Google AdMob, which collects your device's advertising ID to show you ads. You can opt-out of personalized ads in your device's settings.</li>
+        </ul>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>We use your information for the following purposes:</p>
+        <ul>
+            <li><strong>To Run the App:</strong> To create your account, provide access to features, and manage your premium subscription.</li>
+            <li><strong>To Improve the App:</strong> To analyze how the app is used, fix bugs, and develop new features.</li>
+            <li><strong>To Provide AI Help:</strong> To send your questions to our AI model and return an answer to you.</li>
+            <li><strong>To Show Ads:</strong> To support the free version of the app by showing ads to non-premium users.</li>
+            <li><strong>For Legal Reasons:</strong> To comply with legal obligations or respond to valid requests from authorities.</li>
+        </ul>
+
+        <h2>4. How We Share Your Information</h2>
+        <p>We do not sell your personal information. We only share it with trusted partners who help us run our service:</p>
+        <ul>
+            <li><strong>Google Services:</strong> We rely heavily on Google to operate MathLabs Edu. Your information is shared with them for the following reasons:
+                <ul>
+                    <li><strong>Firebase:</strong> For user sign-in, database storage, app analytics, and crash reporting.</li>
+                    <li><strong>Google AI Platform:</strong> Your questions to the AI assistant are processed by Google's generative models to provide you with answers.</li>
+                    <li><strong>Google Play Billing:</strong> To securely process your subscription payments.</li>
+                    <li><strong>Google AdMob:</strong> To show ads in the free version.</li>
+                </ul>
+                Your data is handled according to the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
+            </li>
+            <li><strong>Legal Requirements:</strong> We may share your information if required by law or to protect the rights and safety of our company or others.</li>
+        </ul>
+
+        <h2>5. Data Security</h2>
+        <p>We take reasonable steps to protect your information, including using encryption (HTTPS) for all data transfers. However, no online service is 100% secure, so we cannot guarantee absolute security.</p>
+
+        <h2>6. Data Retention</h2>
+        <p>We keep your account information as long as your account is active. If you delete your account, we will remove your data from our active systems within 30 days. Data stored only on your device (like drawings) is deleted when you uninstall the app.</p>
+
+        <h2>7. Your Privacy Rights</h2>
+        <p>You have rights over your personal data. Depending on your location, you can:</p>
+        <ul>
+            <li><strong>Request Access:</strong> Ask for a copy of the data we hold about you.</li>
+            <li><strong>Request Deletion:</strong> Ask us to delete your account and personal data.</li>
+            <li><strong>Object to or Restrict Processing:</strong> In certain cases, you can ask us to stop using your data.</li>
+            <li><strong>Withdraw Consent:</strong> If you gave consent for personalized ads, you can withdraw it at any time in your device settings.</li>
+        </ul>
+        <p>To exercise these rights, please contact us using the email address below.</p>
+
+        <h2>8. Children’s Privacy</h2>
+        <p>MathLabs Edu is not intended for children under 16. We do not knowingly collect personal information from children.</p>
+
+        <h2>9. International Data Transfers</h2>
+        <p>Your information may be stored and processed on servers located outside of your country, managed by our service provider, Google. Google uses legally-approved mechanisms to ensure your data is protected.</p>
+
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this policy. If we make significant changes, we will notify you by updating the date at the top of this policy and, where appropriate, through an in-app message.</p>
+        
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+    </article>
+
+    <article id="turkish" style="display: block;">
+        <h1>Gizlilik Politikası</h1>
+        <p class="last-updated"><strong>Sürüm:</strong> 3.0<br><strong>Yürürlük Tarihi:</strong> 20 Ağustos 2025</p>
+
+        <h2>1. Giriş</h2>
+        <p>MathLabs Edu'ya hoş geldiniz. Bu Gizlilik Politikası, Codenzi Labs ("biz", "bize" veya "bizim") olarak, mobil uygulamamız MathLabs Edu'yu ("Uygulama") kullandığınızda hakkınızdaki bilgileri nasıl topladığımızı, kullandığımızı ve paylaştığımızı açıklamaktadır.</p>
+        <p>Uygulamayı kullanarak, bilgilerin bu politikaya uygun olarak toplanmasını ve kullanılmasını kabul etmiş olursunuz. Bu politika, Genel Veri Koruma Tüzüğü (GDPR), Kaliforniya Tüketici Gizliliği Yasası (CCPA) ve Kişisel Verilerin Korunması Kanunu (KVKK) gibi temel gizlilik yasalarına uyumlu olacak şekilde hazırlanmıştır.</p>
+        <p>Yasal amaçlar doğrultusunda, işlediğimiz bilgiler için **veri sorumlusu Codenzi Labs**'tir.</p>
+
+        <h2>2. Topladığımız Bilgiler</h2>
+        <p>Hizmetimizi sunmak ve iyileştirmek için aşağıdaki türde bilgileri toplarız:</p>
+
+        <h3>2.1. Sizin Sağladığınız Bilgiler</h3>
+        <ul>
+            <li><strong>Hesap Bilgileri:</strong> Google ile oturum açtığınızda adınızı, e-posta adresinizi ve Google Kullanıcı Kimliğinizi (UID) toplarız. Hesabınızı oluşturmak, sizi tanımak ve abonelik durumunuzu yönetmek için bu bilgilere ihtiyacımız var.</li>
+            <li><strong>Kullanıcı İçeriği:</strong> Yapay Zeka Asistanımıza gönderdiğiniz soruları ve PDF'ler üzerinde yaptığınız çizimleri veya notları toplarız. Bu, Uygulamanın temel işlevselliği için gereklidir.</li>
+        </ul>
+
+        <h3>2.2. Otomatik Olarak Toplanan Bilgiler</h3>
+        <ul>
+            <li><strong>Kullanım Detayları:</strong> Uygulamamızla nasıl etkileşimde bulunduğunuzu anlamak için Google Firebase Analytics'i kullanırız. Buna hangi özellikleri kullandığınız, ne kadar süre kullandığınız ve genel uygulama performansı verileri dahildir.</li>
+            <li><strong>Cihaz Bilgileri:</strong> Model, işletim sistemi ve benzersiz tanımlayıcılar gibi cihazınızla ilgili bilgileri toplarız. Bu, uygulamayı farklı cihazlar için optimize etmemize yardımcı olur.</li>
+            <li><strong>Çökme Raporları:</strong> Uygulama çökerse, anonim bir rapor toplamak için Google Firebase Crashlytics'i kullanırız. Bu rapor, hataları bulup düzeltmemize ve uygulamanın kararlılığını artırmamıza yardımcı olur.</li>
+            <li><strong>Satın Alma Bilgileri:</strong> Premium bir abonelik satın alırsanız, ödemeyi Google Play gerçekleştirir. Premium özelliklerin kilidini açmak için Google'dan satın alma işleminizin onayını alırız, ancak ödeme kartı bilgilerinizi **görmeyiz veya saklamayız**.</li>
+            <li><strong>Reklam Kimliği:</strong> Uygulamanın ücretsiz sürümünde, size reklam göstermek için cihazınızın reklam kimliğini toplayan Google AdMob'u kullanırız. Cihazınızın ayarlarından kişiselleştirilmiş reklamları devre dışı bırakabilirsiniz.</li>
+        </ul>
+
+        <h2>3. Bilgilerinizi Nasıl Kullanıyoruz?</h2>
+        <p>Bilgilerinizi aşağıdaki amaçlar için kullanırız:</p>
+        <ul>
+            <li><strong>Uygulamayı Çalıştırmak İçin:</strong> Hesabınızı oluşturmak, özelliklere erişim sağlamak ve premium aboneliğinizi yönetmek.</li>
+            <li><strong>Uygulamayı İyileştirmek İçin:</strong> Uygulamanın nasıl kullanıldığını analiz etmek, hataları düzeltmek ve yeni özellikler geliştirmek.</li>
+            <li><strong>Yapay Zeka Yardımı Sağlamak İçin:</strong> Sorularınızı yapay zeka modelimize göndermek ve size bir yanıt döndürmek.</li>
+            <li><strong>Reklam Göstermek İçin:</strong> Premium olmayan kullanıcılara reklam göstererek uygulamanın ücretsiz sürümünü desteklemek.</li>
+            <li><strong>Yasal Nedenlerle:</strong> Yasal yükümlülüklere uymak veya yetkililerden gelen geçerli taleplere yanıt vermek.</li>
+        </ul>
+
+        <h2>4. Bilgilerinizi Nasıl Paylaşıyoruz?</h2>
+        <p>Kişisel bilgilerinizi satmıyoruz. Yalnızca hizmetimizi yürütmemize yardımcı olan güvenilir iş ortaklarıyla paylaşıyoruz:</p>
+        <ul>
+            <li><strong>Google Hizmetleri:</strong> MathLabs Edu'yu çalıştırmak için büyük ölçüde Google'a güveniyoruz. Bilgileriniz aşağıdaki nedenlerle onlarla paylaşılır:
+                <ul>
+                    <li><strong>Firebase:</strong> Kullanıcı girişi, veritabanı depolaması, uygulama analizleri ve çökme raporlaması için.</li>
+                    <li><strong>Google AI Platformu:</strong> Yapay zeka asistanına sorduğunuz sorular, size yanıt sağlamak için Google'ın üretken modelleri tarafından işlenir.</li>
+                    <li><strong>Google Play Faturalandırma:</strong> Abonelik ödemelerinizi güvenli bir şekilde işlemek için.</li>
+                    <li><strong>Google AdMob:</strong> Ücretsiz sürümde reklam göstermek için.</li>
+                </ul>
+                Verileriniz <a href="https://policies.google.com/privacy" target="_blank">Google Gizlilik Politikası</a>'na göre işlenir.
+            </li>
+            <li><strong>Yasal Gereklilikler:</strong> Yasaların gerektirdiği durumlarda veya şirketimizin ya da başkalarının haklarını ve güvenliğini korumak için bilgilerinizi paylaşabiliriz.</li>
+        </ul>
+
+        <h2>5. Veri Güvenliği</h2>
+        <p>Tüm veri aktarımları için şifreleme (HTTPS) kullanmak da dahil olmak üzere bilgilerinizi korumak için makul adımlar atıyoruz. Ancak hiçbir çevrimiçi hizmet %100 güvenli değildir, bu nedenle mutlak güvenliği garanti edemeyiz.</p>
+
+        <h2>6. Veri Saklama</h2>
+        <p>Hesap bilgilerinizi, hesabınız aktif olduğu sürece saklarız. Hesabınızı silerseniz, verilerinizi aktif sistemlerimizden 30 gün içinde kaldıracağız. Yalnızca cihazınızda saklanan veriler (çizimler gibi), uygulamayı kaldırdığınızda silinir.</p>
+
+        <h2>7. Gizlilik Haklarınız</h2>
+        <p>Kişisel verileriniz üzerinde haklarınız vardır. Bulunduğunuz yere bağlı olarak şunları yapabilirsiniz:</p>
+        <ul>
+            <li><strong>Erişim Talep Etme:</strong> Hakkınızda tuttuğumuz verilerin bir kopyasını isteyebilirsiniz.</li>
+            <li><strong>Silme Talep Etme:</strong> Hesabınızı ve kişisel verilerinizi silmemizi isteyebilirsiniz.</li>
+            <li><strong>İşlemeye İtiraz Etme veya Kısıtlama:</strong> Belirli durumlarda verilerinizi kullanmayı bırakmamızı isteyebilirsiniz.</li>
+            <li><strong>Rızayı Geri Çekme:</strong> Kişiselleştirilmiş reklamlar için onay verdiyseniz, bunu istediğiniz zaman cihaz ayarlarınızdan geri çekebilirsiniz.</li>
+        </ul>
+        <p>Bu hakları kullanmak için lütfen aşağıdaki e-posta adresinden bizimle iletişime geçin.</p>
+
+        <h2>8. Çocukların Gizliliği</h2>
+        <p>MathLabs Edu, 16 yaşın altındaki çocuklara yönelik değildir. Çocuklardan bilerek kişisel bilgi toplamıyoruz.</p>
+
+        <h2>9. Uluslararası Veri Transferleri</h2>
+        <p>Bilgileriniz, hizmet sağlayıcımız Google tarafından yönetilen ve ülkenizin dışında bulunan sunucularda saklanabilir ve işlenebilir. Google, verilerinizin korunmasını sağlamak için yasal olarak onaylanmış mekanizmaları kullanır.</p>
+
+        <h2>10. Bu Politikadaki Değişiklikler</h2>
+        <p>Bu politikayı güncelleyebiliriz. Önemli değişiklikler yaparsak, bu politikanın üst kısmındaki tarihi güncelleyerek ve uygun durumlarda uygulama içi bir mesajla sizi bilgilendireceğiz.</p>
+        
+        <h2>11. Bize Ulaşın</h2>
+        <p>Bu Gizlilik Politikası hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin:</p>
+        <p><strong>E-posta:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+    </article>
+
+</div>
+</main>
+
+</body>
+</html>
