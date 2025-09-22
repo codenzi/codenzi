@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocaChat - Veri Yönetimi ve Silme / Data Management & Deletion</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #3498db;
+            --dark-blue: #2c3e50;
+            --background-light: #f4f7f6;
+            --border-color: #ddd;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--background-light);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-blue);
+            text-align: center;
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6em;
+            color: var(--primary-blue);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+        p, li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .app-name { font-weight: bold; color: var(--primary-blue); }
+        .developer-name { font-weight: bold; color: var(--dark-blue); }
+        .last-updated { font-size: 0.9em; color: #777; text-align: center; margin-bottom: 30px; }
+        .footer { text-align: center; margin-top: 40px; font-size: 14px; color: #777; }
+        
+        /* Dil Gizleme Stilleri */
+        .lang-en, .lang-tr { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="tr" class="lang-tr">
+            <h1><span class="app-name">VocaChat</span> Veri Silme Politikası</h1>
+            <p class="last-updated">Geliştirici: <span class="developer-name">VocaChat Geliştirici Ekibi</span> | Son Güncelleme: 22 Eylül 2025</p>
+
+            <p>Bu sayfa, <span class="app-name">VocaChat</span> hesabınızı ve verilerinizi nasıl sileceğinizi açıklar.</p>
+
+            <h2>Hesabı Kalıcı Olarak Silme</h2>
+            <p>Hesabınızı silme işlemi, uygulama ile ilişkili <strong>tüm verilerinizi</strong> kalıcı olarak yok eder ve bu işlem geri alınamaz.</p>
+            
+            <h3>Adımlar:</h3>
+            <ol>
+                <li>Uygulamada <strong>Profil > Hesap Yönetimi</strong> bölümüne gidin.</li>
+                <li><strong>"Hesabı Sil"</strong> seçeneğine dokunun ve onay adımlarını takip edin.</li>
+            </ol>
+            
+            <p>Bu işlemi tamamladığınızda, tüm hesap bilgileriniz ve uygulama verileriniz sistemlerimizden kalıcı olarak silinecektir.</p>
+        </div>
+
+        <div id="en" class="lang-en">
+            <h1><span class="app-name">VocaChat</span> Data Deletion Policy</h1>
+            <p class="last-updated">Developer: <span class="developer-name">VocaChat Developer Team</span> | Last Updated: September 22, 2025</p>
+
+            <p>This page explains how to delete your <span class="app-name">VocaChat</span> account and data.</p>
+
+            <h2>Permanent Account Deletion</h2>
+            <p>Deleting your account permanently removes <strong>all your data</strong> associated with the application. This action cannot be undone.</p>
+            
+            <h3>Steps:</h3>
+            <ol>
+                <li>In the app, go to <strong>Profile > Account Management</strong>.</li>
+                <li>Tap on <strong>"Delete Account"</strong> and follow the confirmation steps.</li>
+            </ol>
+            
+            <p>Once you complete this process, all your account information and app data will be permanently deleted from our systems.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 <span class="developer-name">VocaChat Developer Team</span></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage; 
+            const langCode = userLang.split('-')[0];
+            const contentTR = document.getElementById('tr');
+            const contentEN = document.getElementById('en');
+            
+            if (langCode === 'tr' && contentTR) {
+                contentTR.style.display = 'block';
+                document.documentElement.lang = 'tr';
+            } else if (contentEN) {
+                contentEN.style.display = 'block';
+                document.documentElement.lang = 'en';
+            }
+        });
+    </script>
+
+</body>
+</html>
