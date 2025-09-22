@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocaChat - Gizlilik Politikası / Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #3498db;
+            --dark-blue: #2c3e50;
+            --light-blue: #e8f5fd;
+            --accent-blue: #6a93cb;
+            --text-color: #333;
+            --light-text: #f0f0f0;
+            --background-light: #f4f7f6;
+            --border-color: #ddd;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--dark-blue);
+        }
+        .header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+        .logo a {
+           color: var(--dark-blue);
+        }
+        .privacy-page {
+            padding: 80px 0;
+            background-color: #fff;
+            min-height: calc(100vh - 120px);
+        }
+        .privacy-page .container {
+            max-width: 900px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .privacy-page h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8em;
+            color: var(--dark-blue);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .privacy-page h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8em;
+            color: var(--primary-blue);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+        .privacy-page h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3em;
+            color: var(--dark-blue);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .privacy-page p, .privacy-page ul {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        .privacy-page ul {
+            list-style-type: disc;
+            padding-left: 30px;
+        }
+        .privacy-page li {
+            margin-bottom: 10px;
+        }
+        .privacy-page li strong, .privacy-page .important-notice strong {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+        .privacy-page .last-updated {
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        .important-notice {
+            background-color: var(--light-blue);
+            border-left: 5px solid var(--primary-blue);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: var(--dark-blue);
+            color: var(--light-text);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        .footer p {
+            margin-bottom: 8px;
+        }
+        .footer a {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .lang-en, .lang-tr {
+            display: none;
+        }
+        @media (max-width: 768px) {
+           .privacy-page .container {
+             padding: 25px;
+           }
+           .privacy-page h1 {
+             font-size: 2.2em;
+             margin-bottom: 30px;
+           }
+           .privacy-page h2 {
+             font-size: 1.6em;
+           }
+           .privacy-page p {
+             font-size: 1em;
+           }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="#">VocaChat</a></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="privacy-page">
+        <div class="container">
+
+            <div id="privacy-tr" class="lang-tr">
+                <h1>VocaChat Gizlilik Politikası</h1>
+                <p>Bu Gizlilik Politikası, geliştirici <strong>Baki Tunçer</strong> ("biz", "bize" veya "bizim") tarafından geliştirilen VocaChat ("Uygulama") mobil uygulamasını kullandığınızda kişisel verilerinizin nasıl toplandığını, kullanıldığını, işlendiğini ve korunduğunu açıklamaktadır. Gizliliğinizin korunması bizim için en yüksek önceliktir.</p>
+                <p>Uygulamayı indirerek, yükleyerek veya kullanarak, bu Gizlilik Politikasında açıklanan uygulamaları anladığınızı ve kabul ettiğinizi beyan edersiniz.</p>
+
+                <h2>1. Veri Sorumlusu</h2>
+                <p>Kişisel verilerinizle ilgili olarak Veri Sorumlusu:</p>
+                <ul>
+                    <li><strong>Geliştirici:</strong> Baki Tunçer</li>
+                    <li><strong>E-posta:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></li>
+                    <li><strong>Web Sitesi:</strong> <a href="https://www.codenzi.com" target="_blank">https://www.codenzi.com</a></li>
+                </ul>
+
+                <h2>2. Hangi Verileri Neden Topluyoruz?</h2>
+                <p>Uygulamamızın temel amacı, dil öğrenme sürecinizi interaktif ve sosyal bir deneyime dönüştürmektir. Bu amacı gerçekleştirmek için bazı verilerinizi işlememiz gerekmektedir:</p>
+                <ul>
+                    <li><strong>Hesap Bilgileri:</strong> Kayıt sırasında sağladığınız e-posta adresi, kullanıcı adı, doğum tarihi ve ana dil gibi bilgiler, hesabınızı oluşturmak, güvenliğini sağlamak ve size özel bir deneyim sunmak için kullanılır. Google ile giriş yaptığınızda, Google hesabınızdaki temel profil bilgileriniz (isim, e-posta, profil resmi) alınır. Kullanıcı adınıza dayalı olarak profil avatarınız, <strong>DiceBear</strong> adlı üçüncü taraf bir servis aracılığıyla otomatik olarak oluşturulur.</li>
+                    <li><strong>Kullanıcı Tarafından Oluşturulan İçerikler:</strong> Sohbet odalarında gönderdiğiniz mesajlar, metinler, yüklediğiniz resimler ve ses kayıtları gibi içerikler, diğer kullanıcılarla etkileşim kurmanızı sağlamak amacıyla sunucularımızda (Firebase) güvenli bir şekilde saklanır.</li>
+                    <li><strong>Yapay Zeka ve Çeviri Verileri:</strong> Uygulama içi çeviri, dilbilgisi analizi veya yapay zeka destekli dil pratiği özelliklerini kullandığınızda, girdiğiniz metinler işlenmek üzere <strong>Google Generative AI</strong> ve <strong>Google ML Kit</strong> gibi üçüncü taraf hizmet sağlayıcılarına gönderilebilir. Bu veriler, yalnızca ilgili hizmetin sağlanması amacıyla kullanılır ve bu hizmet sağlayıcıların kendi gizlilik politikalarına tabidir.</li>
+                    <li><strong>Uygulama Kullanım ve Analiz Verileri:</strong> Uygulama içi ilerlemeniz, tamamladığınız dersler, pratik süreleriniz, puanlarınız, uygulama içi satın alımlarınız ve genel kullanım alışkanlıklarınız gibi veriler; öğrenme deneyiminizi kişiselleştirmek, size geri bildirim sunmak, topluluk sıralamalarını oluşturmak, uygulama hatalarını tespit etmek ve hizmet kalitemizi artırmak amacıyla anonim veya kişisel olarak <strong>işlenebilir</strong>. Bu veriler, Firebase Analytics gibi araçlarla analiz edilebilir.</li>
+                    <li><strong>Cihaz ve Bildirim Bilgileri:</strong> Size anlık bildirimler (push notifications) gönderebilmek için cihazınızın işletim sistemi tarafından sağlanan ve anonimleştirilmiş bir kimlik (Firebase Cloud Messaging Token) saklanır. Bu kimlik, kişisel bilgilerinizle doğrudan ilişkili değildir.</li>
+                </ul>
+
+                <h2>3. Veri İşlemenin Hukuki Sebepleri</h2>
+                <p>Kişisel verilerinizi aşağıdaki hukuki sebeplere dayanarak işliyoruz:</p>
+                 <ul>
+                    <li><strong>Sözleşmenin İfası:</strong> Kullanıcı hesabı oluşturma, sohbet hizmeti sunma ve temel uygulama işlevlerini yerine getirme gibi süreçler, sizinle aramızdaki kullanıcı sözleşmesinin bir gereğidir.</li>
+                    <li><strong>Açık Rıza:</strong> Belirli durumlarda (örneğin, anlık bildirimler göndermek veya cihaz özelliklerine erişmek için) sizden açık rızanızı isteyebiliriz.</li>
+                    <li><strong>Meşru Menfaatler:</strong> Hizmetlerimizi geliştirmek, güvenliği sağlamak, sahtekarlığı önlemek ve uygulama içi analizler yapmak gibi amaçlarla verilerinizi meşru menfaatlerimiz doğrultusunda işleyebiliriz.</li>
+                 </ul>
+
+                <h2>4. Veri Güvenliği ve Saklama</h2>
+                <p>Verilerinizin güvenliği bizim için esastır. Bu kapsamda, sektör standardı olan aşağıdaki teknik ve idari tedbirleri uyguluyoruz:</p>
+                <ul>
+                    <li><strong>Güvenli Sunucu Altyapısı:</strong> Tüm verileriniz, Google tarafından sağlanan Firebase platformunun (Cloud Firestore, Firebase Storage) sunduğu güvenli sunucularda saklanır.</li>
+                    <li><strong>Şifreleme:</strong> Parolanız, geri döndürülemez kriptografik hash algoritmaları kullanılarak şifrelenir ve asla düz metin olarak saklanmaz. Uygulama ve sunucular arasındaki veri aktarımları SSL/TLS ile korunur.</li>
+                    <li><strong>Erişim Kontrolü:</strong> Verilerinize erişim, yalnızca yetkili personel ile ve "bilmesi gereken" prensibiyle sınırlandırılmıştır.</li>
+                </ul>
+                <p><strong>Veri Saklama Süresi:</strong> Kişisel verileriniz, hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde, yasal yükümlülükler veya meşru menfaatler (örneğin, sahtekarlığı önleme) gerektirmedikçe, verileriniz makul bir süre içinde sunucularımızdan kalıcı olarak silinir veya anonim hale getirilir.</p>
+
+                <div class="important-notice">
+                    <p><strong>ÖNEMLİ:</strong> Hesap güvenliğiniz sizin de sorumluluğunuzdadır. Lütfen parolanızı kimseyle paylaşmayın ve güçlü bir parola oluşturun. Parolanızı unutmanız durumunda, uygulama içindeki "Şifremi Unuttum" özelliğini kullanarak e-posta adresinize bir sıfırlama bağlantısı gönderebilirsiniz.</p>
+                </div>
+
+                <h2>5. Cihaz İzinleri</h2>
+                <p>Uygulamanın tüm özelliklerinden faydalanabilmeniz için bazı cihaz izinlerine ihtiyaç duyarız. Bu izinler, yalnızca siz ilgili özelliği aktif olarak kullandığınızda istenir ve cihaz ayarlarınızdan istediğiniz zaman yönetilebilir:</p>
+                <ul>
+                    <li><strong>Kamera (`CAMERA`):</strong> Yalnızca uygulama içi destek taleplerinize fotoğraf eklemek için kullanılır.</li>
+                    <li><strong>Mikrofon (`RECORD_AUDIO`):</strong> Yalnızca Konuşma-Metne (Speech-to-Text) özelliğini kullanmak için gereklidir.</li>
+                    <li><strong>Depolama/Medya (`READ_MEDIA_IMAGES`):</strong> Yalnızca uygulama içi destek taleplerinize cihazınızdan bir medya dosyası eklemeniz için istenir.</li>
+                    <li><strong>İnternet (`INTERNET`):</strong> Uygulamanın sunucularla iletişim kurması, mesaj alıp göndermesi ve diğer çevrimiçi özellikleri kullanabilmesi için zorunludur.</li>
+                </ul>
+
+                <h2>6. Çocukların Gizliliği</h2>
+                <p>Hizmetlerimiz 13 yaşın (veya ilgili ülkedeki yasal yaş sınırının) altındaki kişilere yönelik değildir. Ebeveyn izni olmaksızın 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamadığımızı belirtiriz. Eğer çocuğunuzun bize kişisel bilgi verdiğini düşünüyorsanız, lütfen bizimle iletişime geçin; ilgili verileri derhal silmek için gerekli adımları atalım.</p>
+
+                <h2>7. Veri Sahibi Olarak Haklarınız</h2>
+                <p>Kişisel verileriniz üzerinde kontrole sahipsiniz. Uygulama ayarlarından veya bizimle iletişime geçerek verilerinize erişebilir, onları düzeltebilir veya silinmesini talep edebilirsiniz. Bu haklarınızı kullanmak için lütfen <a href="mailto:info@codenzi.com">info@codenzi.com</a> adresinden bize ulaşın.</p>
+                
+                <h2>8. Gizlilik Politikasındaki Değişiklikler</h2>
+                <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler olması durumunda, sizi uygulama içinde bir bildirimle veya kayıtlı e-posta adresiniz üzerinden bilgilendireceğiz. Politikayı düzenli olarak gözden geçirmek sizin sorumluluğunuzdadır.</p>
+
+                <p class="last-updated">Son Güncelleme Tarihi: 22 Eylül 2025</p>
+            </div>
+
+            <div id="privacy-en" class="lang-en">
+                <h1>VocaChat Privacy Policy</h1>
+                <p>This Privacy Policy explains how your personal data is collected, used, processed, and protected when you use the VocaChat ("Application") mobile application, developed by <strong>Baki Tunçer</strong> ("we", "us", or "our"). The protection of your privacy is our highest priority.</p>
+                <p>By downloading, installing, or using the Application, you declare that you understand and accept the practices described in this Privacy Policy.</p>
+
+                <h2>1. Data Controller</h2>
+                <p>The Data Controller for your personal data is:</p>
+                <ul>
+                    <li><strong>Developer:</strong> Baki Tunçer</li>
+                    <li><strong>Email:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></li>
+                    <li><strong>Website:</strong> <a href="https://www.codenzi.com" target="_blank">https://www.codenzi.com</a></li>
+                </ul>
+
+                <h2>2. What Data We Collect and Why</h2>
+                <p>The primary goal of our application is to transform your language learning journey into an interactive and social experience. To achieve this, we need to process some of your data:</p>
+                <ul>
+                    <li><strong>Account Information:</strong> Information you provide during registration, such as your email address, username, date of birth, and native language, is used to create and secure your account and to offer a personalized experience. When you sign in with Google, we retrieve your basic profile information (name, email, profile picture) from your Google account. Your profile avatar is automatically generated based on your username via a third-party service called <strong>DiceBear</strong>.</li>
+                    <li><strong>User-Generated Content:</strong> Content such as messages, texts, uploaded images, and voice recordings you send in chat rooms is securely stored on our servers (Firebase) to enable your interaction with other users.</li>
+                    <li><strong>AI and Translation Data:</strong> When you use in-app translation, grammar analysis, or AI-powered language practice features, the text you input may be sent to third-party service providers like <strong>Google Generative AI</strong> and <strong>Google ML Kit</strong> for processing. This data is used solely for the purpose of providing that specific service and is subject to the privacy policies of these providers.</li>
+                    <li><strong>Application Usage and Analytics Data:</strong> Data such as your in-app progress, completed lessons, practice times, scores, in-app purchases, and general usage patterns <strong>may be processed</strong>—either anonymously or personally—to personalize your learning experience, provide you with feedback, generate community leaderboards, diagnose app errors, and improve our service quality. This data may be analyzed using tools like Firebase Analytics.</li>
+                    <li><strong>Device and Notification Information:</strong> To send you push notifications, we store an anonymized identifier (Firebase Cloud Messaging Token) provided by your device's operating system. This token is not directly linked to your personal information.</li>
+                </ul>
+
+                <h2>3. Legal Bases for Data Processing</h2>
+                 <p>We process your personal data based on the following legal grounds:</p>
+                 <ul>
+                    <li><strong>Performance of a Contract:</strong> Processes such as creating a user account, providing chat services, and fulfilling core application functionalities are necessary for the performance of the user agreement between you and us.</li>
+                    <li><strong>Explicit Consent:</strong> In certain situations (e.g., for sending push notifications or accessing device features), we may ask for your explicit consent.</li>
+                    <li><strong>Legitimate Interests:</strong> We may process your data for our legitimate interests, such as improving our services, ensuring security, preventing fraud, and conducting in-app analytics.</li>
+                 </ul>
+
+                <h2>4. Data Security and Retention</h2>
+                <p>The security of your data is fundamental to us. In this context, we implement the following industry-standard technical and administrative measures:</p>
+                <ul>
+                    <li><strong>Secure Server Infrastructure:</strong> All your data is stored on secure servers provided by the Google Firebase platform (Cloud Firestore, Firebase Storage).</li>
+                    <li><strong>Encryption:</strong> Your password is never stored in plain text and is encrypted using irreversible cryptographic hash algorithms. Data transfers between the app and our servers are protected with SSL/TLS.</li>
+                    <li><strong>Access Control:</strong> Access to your data is restricted to authorized personnel on a "need-to-know" basis.</li>
+                </ul>
+                <p><strong>Data Retention Period:</strong> Your personal data is retained as long as your account is active. When you delete your account, your data will be permanently deleted from our servers or anonymized within a reasonable timeframe, unless required otherwise by legal obligations or for legitimate interests (e.g., fraud prevention).</p>
+
+                <div class="important-notice">
+                    <p><strong>IMPORTANT:</strong> You are also responsible for your account's security. Please do not share your password with anyone and create a strong one. If you forget your password, you can use the "Forgot Password" feature within the app to send a reset link to your email address.</p>
+                </div>
+
+                <h2>5. Device Permissions</h2>
+                <p>To ensure you can use all features of the application, we require certain device permissions. These permissions are only requested when you actively use the corresponding feature and can be managed at any time from your device settings:</p>
+                <ul>
+                    <li><strong>Camera (`CAMERA`):</strong> Used solely to attach a photo to your in-app support requests.</li>
+                    <li><strong>Microphone (`RECORD_AUDIO`):</strong> Required solely for using the Speech-to-Text feature.</li>
+                    <li><strong>Storage/Media (`READ_MEDIA_IMAGES`):</strong> Requested solely to allow you to attach a media file from your device to your in-app support requests.</li>
+                    <li><strong>Internet (`INTERNET`):</strong> Mandatory for the application to communicate with servers, send and receive messages, and use other online features.</li>
+                </ul>
+
+                <h2>6. Children's Privacy</h2>
+                <p>Our services are not directed to individuals under the age of 13 (or the relevant legal age in your country). We do not knowingly collect personal data from children under 13 without parental consent. If you believe your child has provided us with personal information, please contact us so we can take the necessary steps to delete that information immediately.</p>
+
+                <h2>7. Your Rights as a Data Subject</h2>
+                <p>You have control over your personal data. You can access, correct, or request the deletion of your data through the app settings or by contacting us. To exercise these rights, please contact us at <a href="mailto:info@codenzi.com">info@codenzi.com</a>.</p>
+                
+                <h2>8. Changes to This Privacy Policy</h2>
+                <p>We may update this privacy policy from time to time. If we make material changes, we will notify you via an in-app notification or through your registered email address. It is your responsibility to review this policy periodically.</p>
+                
+                <p class="last-updated">Last Updated: September 22, 2025</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 VocaChat. All rights reserved.</p>
+            <p>Developer: Baki Tunçer</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage; 
+            const turkishContent = document.getElementById('privacy-tr');
+            const englishContent = document.getElementById('privacy-en');
+            
+            if (userLang.startsWith('tr')) {
+                turkishContent.style.display = 'block';
+                englishContent.style.display = 'none';
+                document.documentElement.lang = 'tr';
+            } else {
+                turkishContent.style.display = 'none';
+                englishContent.style.display = 'block';
+                document.documentElement.lang = 'en';
+            }
+        });
+    </script>
+
+</body>
+</html>
