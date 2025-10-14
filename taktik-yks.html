@@ -3,100 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>YKS Taktikleri ve Rehberlik - Ücretsiz WhatsApp Kanalı</title>
-    <meta name="description" content="YKS'ye hazırlanan binlerce öğrenciye özel stratejiler, günlük motivasyon ve rehberlik içerikleri sunan Taktik YKS WhatsApp kanalına hemen ücretsiz katılın!">
-    <meta name="keywords" content="YKS, YKS 2025, YKS taktikleri, YKS rehberlik, YKS motivasyon, TYT, AYT, Taktik uygulaması, YKS hazırlık, ders çalışma programı">
+    <title>Taktik YKS | Sınav Başarın İçin Rehberin</title>
+    <meta name="description" content="YKS'ye hazırlanan binlerce öğrencinin tercihi! Taktik YKS WhatsApp kanalıyla günlük motivasyon, özel stratejiler ve rehberlik içeriklerine ücretsiz ulaşın.">
     <link rel="canonical" href="https://codenzi.com/taktik-yks.html">
+    <link rel="icon" href="https://codenzi.com/favicon.ico" type="image/x-icon"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="YKS Taktikleri ve Rehberlik - Ücretsiz WhatsApp Kanalı">
-    <meta property="og:description" content="Sınav stresini yönet, netlerini artır! YKS'ye özel taktikler, rehberlik ve 'Taktik' uygulaması destekli içerikler için WhatsApp kanalımıza katıl.">
-    <meta property="og:image" content="https://codenzi.com/yks-banner.jpg"> <meta property="og:url" content="https://codenzi.com/taktik-yks.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="tr_TR">
+    <style>
+        :root {
+            --primary-color: #5865F2; /* Discord Mavisi gibi modern bir renk */
+            --whatsapp-color: #25D366;
+            --text-color: #2c3e50;
+            --background-start: #ECE9E6;
+            --background-end: #FFFFFF;
+            --card-background: rgba(255, 255, 255, 0.6);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="YKS Taktikleri ve Rehberlik - Ücretsiz WhatsApp Kanalı">
-    <meta name="twitter:description" content="YKS'ye hazırlıkta bir adım öne geç! Stratejiler, motivasyon ve daha fazlası için Taktik YKS WhatsApp kanalına hemen katıl.">
-    <meta name="twitter:image" content="https://codenzi.com/yks-banner.jpg"> <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 20px;
+            background: linear-gradient(135deg, var(--background-start), var(--background-end));
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            max-width: 600px;
+
+        .main-card {
+            max-width: 500px;
+            width: 100%;
+            background: var(--card-background);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 var(--shadow-color);
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        h1 {
-            color: #2c3e50;
-            font-size: 2em;
+
+        .main-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 var(--shadow-color);
         }
-        p {
-            font-size: 1.1em;
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-color), #c965c9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
             color: #555;
+            margin-bottom: 30px;
         }
-        .cta-button {
-            display: inline-block;
-            background-color: #25D366; /* WhatsApp Rengi */
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            font-size: 1.2em;
-            margin-top: 20px;
-            transition: transform 0.2s;
-        }
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
-        .app-info {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #e8f5e9;
-            border-left: 5px solid #4CAF50;
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
             text-align: left;
         }
+
+        .features-list li {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            width: 90%;
+            background-color: var(--whatsapp-color);
+            color: #fff;
+            padding: 18px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .footer-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>YKS'de Başarıya Giden Yol: Ücretsiz Rehberlik ve Taktikler WhatsApp Kanalı</h1>
+    <div class="main-card">
         
-        <p>
-            Binlerce öğrencinin YKS hazırlık sürecinde yanında olan <strong>Taktik YKS Rehberlik</strong> kanalına katılarak sınavda bir adım öne geçin!
-        </p>
+        <div class="logo">Taktik</div>
+        
+        <h1 class="tagline">YKS'de Başarıya Giden Yolda Rehberin</h1>
 
-        <ul>
-            <li>Günlük Motivasyon ve Stres Yönetimi İpuçları</li>
-            <li>Net Artıran Ders Çalışma Stratejileri</li>
-            <li>TYT ve AYT için Özel Konu Taktikleri</li>
-            <li>Soru-Cevap Etkinlikleri ve Canlı Yayın Duyuruları</li>
+        <p>Sınav stratejileri, günlük motivasyon ve özel içeriklerle binlerce öğrencinin yanında olan topluluğumuza katıl.</p>
+        
+        <ul class="features-list">
+            <li>Net Artıran Özel Ders Taktikleri</li>
+            <li>Stres Yönetimi ve Motivasyon Paylaşımları</li>
+            <li>Kişiselleştirilmiş Rehberlik İçerikleri</li>
+            <li>Soru-Cevap Etkinlikleri ve Sürprizler</li>
         </ul>
 
         <a href="https://whatsapp.com/channel/0029VbB9FtNDp2Q09xHfAq0E" class="cta-button" target="_blank" rel="noopener noreferrer">
-            WHATSAPP KANALINA ÜCRETSİZ KATIL
+            WhatsApp Kanalına Katıl
         </a>
 
-        <div class="app-info">
-            <h2>Taktik Uygulaması ile Hazırlığını Güçlendir!</h2>
-            <p>
-                Bu kanal, aynı zamanda <strong>Taktik</strong> adlı YKS hazırlık uygulamamızın resmi rehberlik platformudur. Uygulamamızı indirerek kişiselleştirilmiş çalışma programları ve deneme analizlerinden faydalanabilirsiniz.
-            </p>
-            </div>
+        <p class="footer-text">
+            Bu kanal <a href="#" target="_blank">Taktik Uygulaması</a> tarafından yönetilmektedir.
+        </p>
+
     </div>
 
 </body>
