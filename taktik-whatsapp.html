@@ -12,14 +12,14 @@
     <style>
         /* app_theme.dart dosyasından alınan renk paleti */
         :root {
-            --primary-color: #0F172A;      /* scaffoldBackgroundColor (Derin gece mavisi) */
-            --secondary-color: #22D3EE;    /* secondaryColor (Canlı Camgöbeği) */
-            --card-color: #1E293B;         /* cardColor (Kart yüzeyi) */
-            --border-color: #334155;       /* lightSurfaceColor (Açık yüzey/çerçeve) */
-            --text-color: #E2E8F0;         /* textColor (Açık metin) */
-            --text-secondary: #94A3B8;     /* secondaryTextColor (İkincil metin) */
-            --gold-color: #FFB020;         /* goldColor (Altın sarısı) */
-            --success-color: #34D399;      /* successColor (Zümrüt) */
+            --primary-color: #0F172A;      /* scaffoldBackgroundColor */
+            --secondary-color: #22D3EE;    /* secondaryColor */
+            --card-color: #1E293B;         /* cardColor */
+            --border-color: #334155;       /* lightSurfaceColor */
+            --text-color: #E2E8F0;         /* textColor */
+            --text-secondary: #94A3B8;     /* secondaryTextColor */
+            --gold-color: #FFB020;         /* goldColor */
+            --success-color: #34D399;      /* successColor */
         }
 
         @keyframes plasma-flow {
@@ -28,15 +28,10 @@
             100% { background-position: 0% 50%; }
         }
 
-        @keyframes subtle-float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-
         @keyframes card-fade-in {
             from {
                 opacity: 0;
-                transform: translateY(30px) scale(0.95);
+                transform: translateY(20px) scale(0.98);
             }
             to {
                 opacity: 1;
@@ -44,29 +39,29 @@
             }
         }
 
-        /* Temel sıfırlama ve mobil öncelikli ayarlar */
+        /* Temel sıfırlama ve kaydırmayı engelleme */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            /* Akıcı font ölçeklemesi */
-            font-size: 16px;
+        html, body {
+            height: 100%;
+            overflow: hidden; /* DİKEY KAYDIRMAYI TAMAMEN ENGELLER */
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--primary-color);
             color: var(--text-color);
-            padding: 40px 20px; /* Kenarlarda mobil için güvenli boşluk */
+            
+            /* Tüm içeriği dikeyde ortalamak ve ekrana sığdırmak için */
             display: flex;
-            flex-direction: column; /* Mobil için dikey hizalama */
-            justify-content: center;
+            flex-direction: column;
+            justify-content: center; /* Dikeyde ortala */
             align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden; /* Yatay taşmayı engelle */
+            padding: 20px; /* Kenarlarda kompakt boşluk */
 
             /* Dinamik arka plan */
             background: linear-gradient(135deg, 
@@ -86,51 +81,48 @@
         }
 
         .header-logo {
-            font-size: 3rem; /* 48px */
+            font-size: 2.5rem; /* 40px (Küçültüldü) */
             font-weight: 900;
             color: var(--secondary-color);
             letter-spacing: 2px;
             text-transform: uppercase;
             /* Neon parlama efekti */
             text-shadow: 0 0 8px var(--secondary-color),
-                         0 0 20px rgba(34, 211, 238, 0.5),
-                         0 0 40px rgba(34, 211, 238, 0.3);
-            margin-bottom: 1rem;
+                         0 0 20px rgba(34, 211, 238, 0.5);
+            margin-bottom: 0.75rem; /* 12px (Azaltıldı) */
         }
 
         .subtitle {
-            font-size: 1.125rem; /* 18px */
+            font-size: 1rem; /* 16px (Küçültüldü) */
             color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 2.5rem; /* 40px */
+            line-height: 1.5;
             font-weight: 500;
+            margin: 0 auto 1.25rem auto; /* 20px (Azaltıldı) */
+            max-width: 300px; /* Pazarlama metninin yayılmasını engelle */
         }
 
         .channel-grid {
             display: grid;
-            gap: 1.5rem; /* 24px */
+            gap: 1rem; /* 16px (Azaltıldı) */
         }
 
         .channel-card {
             display: block;
             text-decoration: none;
             color: var(--text-color);
-            border-radius: 20px; /* Modern yuvarlaklık */
+            border-radius: 16px; /* Butonla uyumlu */
             
             /* "Glassmorphism" / Buzlu Cam Efekti */
             background: rgba(30, 41, 59, 0.6); /* cardColor %60 alpha */
-            backdrop-filter: blur(12px) saturate(150%);
-            -webkit-backdrop-filter: blur(12px) saturate(150%);
+            backdrop-filter: blur(10px) saturate(150%);
+            -webkit-backdrop-filter: blur(10px) saturate(150%);
             
-            /* Parlama efekti */
             border: 1px solid rgba(51, 65, 85, 0.5); /* lightSurfaceColor %50 alpha */
             
-            padding: 1.5rem; /* 24px */
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            padding: 1.25rem; /* 20px (Azaltıldı) */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
             
-            transition: transform 0.3s ease-out, 
-                        box-shadow 0.3s ease-out, 
-                        border-color 0.3s ease-out;
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
             
             /* Kartların sıralı giriş animasyonu */
             opacity: 0;
@@ -143,79 +135,62 @@
         .channel-card:nth-child(3) { animation-delay: 0.3s; }
 
         .channel-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            /* Camgöbeği (secondaryColor) ile güçlü parlama */
-            box-shadow: 0 0 25px rgba(34, 211, 238, 0.3),
-                        0 10px 40px rgba(0, 0, 0, 0.4);
+            transform: scale(1.03); /* Sadece büyüt, kaydırma yok */
+            box-shadow: 0 0 25px rgba(34, 211, 238, 0.3);
             border-color: rgba(34, 211, 238, 0.7);
         }
 
-        .card-header {
+        .card-title {
+            font-size: 1.25rem; /* 20px (Küçültüldü) */
+            font-weight: 700;
+            margin: 0 0 0.75rem 0; /* 12px (Azaltıldı) */
+            color: var(--text-color);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1rem; /* 16px */
-            margin-bottom: 1rem;
-        }
-
-        .card-icon {
-            font-size: 2.5rem; /* 40px */
-            line-height: 1;
-            /* Hafifçe süzülme animasyonu */
-            animation: subtle-float 3s ease-in-out infinite;
-        }
-
-        /* İkonlara farklı gecikmelerle animasyon */
-        .channel-card:nth-child(2) .card-icon { animation-delay: 0.5s; }
-        .channel-card:nth-child(3) .card-icon { animation-delay: 1s; }
-        
-        .card-title {
-            font-size: 1.375rem; /* 22px */
-            font-weight: 700;
-            margin: 0;
-            color: var(--text-color);
         }
 
         .card-description {
-            font-size: 0.94rem; /* 15px */
+            font-size: 0.875rem; /* 14px (Küçültüldü) */
             color: var(--text-secondary);
-            margin: 0 0 1.5rem 0;
-            line-height: 1.6; /* Mobil okunaklığı için artırıldı */
+            margin: 0 0 1rem 0; /* 16px (Azaltıldı) */
+            line-height: 1.5;
         }
-
+        
         /* app_theme.dart -> _buttonStyle ilhamlı */
         .join-button {
             display: block;
             background-color: var(--secondary-color);
-            color: var(--primary-color); /* Koyu metin */
-            padding: 1rem 1.25rem; /* 16px 20px */
+            color: var(--primary-color);
+            padding: 0.875rem 1.25rem; /* 14px 20px (Azaltıldı) */
             border-radius: 16px;
             font-weight: 700;
-            font-size: 1rem; /* 16px */
+            font-size: 0.94rem; /* 15px (Küçültüldü) */
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(34, 211, 238, 0.25);
+            box-shadow: 0 4px 15px rgba(34, 211, 238, 0.2);
             text-transform: uppercase;
         }
 
         .channel-card:hover .join-button {
             background-color: var(--text-color);
             color: var(--primary-color);
-            box-shadow: 0 6px 25px rgba(226, 232, 240, 0.3);
-            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(226, 232, 240, 0.3);
+            transform: scale(1.02);
+        }
+
+        /* İkonlar artık başlığın içinde */
+        .icon {
+            font-size: 1.25rem; /* 20px */
+            line-height: 1;
+            margin-right: 0.75rem; /* 12px */
         }
 
         /* İkonlara özel renkler (app_theme'den) */
-        .icon-lgs { color: var(--gold-color); text-shadow: 0 0 10px var(--gold-color); }
-        .icon-yks { color: var(--success-color); text-shadow: 0 0 10px var(--success-color); }
-        .icon-kpss { color: var(--secondary-color); text-shadow: 0 0 10px var(--secondary-color); }
+        .icon-lgs { color: var(--gold-color); }
+        .icon-yks { color: var(--success-color); }
+        .icon-kpss { color: var(--secondary-color); }
         
-        /* Küçük ekranlar için font ayarı (opsiyonel) */
-        @media (max-width: 360px) {
-            .header-logo { font-size: 2.5rem; }
-            .subtitle { font-size: 1rem; }
-            .card-title { font-size: 1.25rem; }
-        }
     </style>
 </head>
 <body>
@@ -224,41 +199,41 @@
         <div class="header-logo">TAKTİK</div>
         
         <p class="subtitle">
-            Resmi kanallara erişim sağlayarak strateji akışına dahil olun.
-            Başarı için ihtiyacın olan her şey burada.
+            Başarı akışına anında dahil ol.
+            Kaderini değiştirecek özel içerikler bu kanallarda.
         </p>
 
         <div class="channel-grid">
             
             <a href="https://whatsapp.com/channel/0029VbBVIRTKbYMJI3tqsl3u" target="_blank" class="channel-card">
-                <div class="card-header">
-                    <div class="card-icon icon-lgs">🎯</div>
-                    <h2 class="card-title">LGS HEDEF</h2>
-                </div>
+                <h2 class="card-title">
+                    <span class="icon icon-lgs">🎯</span>
+                    Taktik LGS
+                </h2>
                 <p class="card-description">
-                    Stratejik LGS hedefleri, özel <strong>hap bilgiler</strong>, <strong>güncel gelişmeler</strong> ve sizi zirvede tutacak <strong>motivasyon</strong>.
+                    Kritik <strong>hap bilgiler</strong>, özel LGS <strong>soruları</strong> ve zirve için günlük <strong>motivasyon</strong>.
                 </p>
                 <div class="join-button">Erişim Sağla</div>
             </a>
 
             <a href="https://whatsapp.com/channel/0029VbB9FtNDp2Q09xHfAq0E" target="_blank" class="channel-card">
-                <div class="card-header">
-                    <div class="card-icon icon-yks">🧠</div>
-                    <h2 class="card-title">YKS BİLGE</h2>
-                </div>
+                <h2 class="card-title">
+                    <span class="icon icon-yks">🧠</span>
+                    Taktik YKS
+                </h2>
                 <p class="card-description">
-                    TYT-AYT için özel <strong>sorular</strong>, derinlemesine <strong>hap bilgiler</strong>, <strong>güncel</strong> ÖSYM haberleri ve tam odak <strong>motivasyon</strong>.
+                    Net artıran YKS <strong>soruları</strong>, <strong>güncel</strong> ÖSYM haberleri ve anlık <strong>motivasyon</strong> desteği.
                 </p>
                 <div class="join-button">Erişim Sağla</div>
             </a>
 
             <a href="https://whatsapp.com/channel/0029VbBdCY96BIEo5XqCbK1V" target="_blank" class="channel-card">
-                <div class="card-header">
-                    <div class="card-icon icon-kpss">📈</div>
-                    <h2 class="card-title">KPSS KARİYER</h2>
-                </div>
+                <h2 class="card-title">
+                    <span class="icon icon-kpss">📈</span>
+                    Taktik KPSS
+                </h2>
                 <p class="card-description">
-                    KPSS'ye dair <strong>güncel gelişmeler</strong>, kritik <strong>hap bilgiler</strong>, <strong>sorulara</strong> dayalı analizler ve sarsılmaz <strong>motivasyon</strong>.
+                    Memurluk için <strong>güncel gelişmeler</strong>, kilit <strong>hap bilgiler</strong> ve çıkmış <strong>soru</strong> analizleri.
                 </p>
                 <div class="join-button">Erişim Sağla</div>
             </a>
