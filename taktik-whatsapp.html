@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taktik | Resmi WhatsApp Kanalları</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* app_theme.dart dosyasından alınan renk paleti */
+        :root {
+            --primary-color: #0F172A;      /* scaffoldBackgroundColor (Derin gece mavisi) */
+            --secondary-color: #22D3EE;    /* secondaryColor (Canlı Camgöbeği) */
+            --card-color: #1E293B;         /* cardColor (Kart yüzeyi) */
+            --border-color: #334155;       /* lightSurfaceColor (Açık yüzey/çerçeve) */
+            --text-color: #E2E8F0;         /* textColor (Açık metin) */
+            --text-secondary: #94A3B8;     /* secondaryTextColor (İkincil metin) */
+            --gold-color: #FFB020;         /* goldColor (Altın sarısı / Premium) */
+            --button-text-color: #0F172A;  /* Buton metni (Koyu) */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: var(--card-color);
+            border-radius: 16px;
+            /* app_theme.dart -> cardTheme'den ilham alındı */
+            border: 1px solid rgba(51, 65, 85, 0.5); 
+            padding: 32px 24px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 
+                        0 0 30px rgba(34, 211, 238, 0.1); /* Vurgu rengiyle hafif parlama */
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* pubspec.yaml -> name: taktik */
+        .app-name {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--secondary-color); /* Canlı Camgöbeği */
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 0 8px 0;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .channel-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Kartlar arası boşluk */
+        }
+
+        .channel-card {
+            background-color: var(--primary-color); /* Arka plandan bir ton daha koyu */
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(34, 211, 238, 0.2);
+            border-color: var(--secondary-color);
+        }
+
+        .icon {
+            font-size: 40px;
+            /* İkonları premium/ödül rengiyle (goldColor) vurgula */
+            color: var(--gold-color);
+            line-height: 1;
+        }
+
+        .details {
+            flex-grow: 1;
+        }
+
+        .details h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 0 4px 0;
+        }
+
+        .details p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* app_theme.dart -> _buttonStyle'dan ilham alındı */
+        .button {
+            display: inline-block;
+            width: 100%;
+            background-color: var(--secondary-color);
+            color: var(--button-text-color);
+            border-radius: 12px; /* Tema ile uyumlu */
+            padding: 16px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 211, 238, 0.25);
+            margin-top: 16px;
+            box-sizing: border-box; /* Padding'in genişliği etkilememesi için */
+        }
+
+        .button:hover {
+            background-color: var(--text-color); /* Hover'da renk değişimi */
+            color: var(--primary-color);
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
+        }
+
+        footer {
+            margin-top: 32px;
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="app-name">TAKTİK</div>
+        
+        <h1>Resmi Kanallarımıza Davetlisiniz</h1>
+        <p class="subtitle">
+            Sınav sürecinde ihtiyacınız olan özel tüyolar, motivasyon ve güncel bilgiler için topluluğumuza katılın.
+        </p>
+
+        <div class="channel-list">
+            
+            <div class="channel-card">
+                <div class="icon">🏆</div>
+                <div class="details">
+                    <h2>LGS Özel Kanalı</h2>
+                    <p>Stratejiler, deneme analizleri ve son dakika LGS gelişmeleri.</p>
+                </div>
+                <a href="https://whatsapp.com/channel/0029VbBVIRTKbYMJI3tqsl3u" target="_blank" class="button">Kanala Katıl</a>
+            </div>
+
+            <div class="channel-card">
+                <div class="icon">🎓</div>
+                <div class="details">
+                    <h2>YKS Özel Kanalı</h2>
+                    <p>YKS'ye dair her şey, haftalık hedefler ve rehberlik içerikleri.</p>
+                </div>
+                <a href="https://whatsapp.com/channel/0029VbB9FtNDp2Q09xHfAq0E" target="_blank" class="button">Kanala Katıl</a>
+            </div>
+
+            <div class="channel-card">
+                <div class="icon">💼</div>
+                <div class="details">
+                    <h2>KPSS Özel Kanalı</h2>
+                    <p>Güncel bilgiler, memurluk haberleri ve özel çalışma programları.</p>
+                </div>
+                <a href="https://whatsapp.com/channel/0029VbBdCY96BIEo5XqCbK1V" target="_blank" class="button">Kanala Katıl</a>
+            </div>
+
+        </div>
+
+        <footer>
+            © 2025 Taktik. Tüm hakları saklıdır.
+        </footer>
+    </div>
+
+</body>
+</html>
