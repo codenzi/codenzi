@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocaChat - Kullanıcı Sözleşmesi / Terms of Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #3498db;
+            --dark-blue: #2c3e50;
+            --light-blue: #e8f5fd;
+            --accent-blue: #6a93cb;
+            --text-color: #333;
+            --light-text: #f0f0f0;
+            --background-light: #f4f7f6;
+            --border-color: #ddd;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--dark-blue);
+        }
+        .header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+        .logo a {
+           color: var(--dark-blue);
+        }
+        .policy-page {
+            padding: 80px 0;
+            background-color: #fff;
+            min-height: calc(100vh - 120px);
+        }
+        .policy-page .container {
+            max-width: 900px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .policy-page h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8em;
+            color: var(--dark-blue);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .policy-page h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8em;
+            color: var(--primary-blue);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+        .policy-page h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3em;
+            color: var(--dark-blue);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .policy-page p, .policy-page ul {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        .policy-page ul {
+            list-style-type: disc;
+            padding-left: 30px;
+        }
+        .policy-page li {
+            margin-bottom: 10px;
+        }
+        .policy-page li strong, .policy-page .important-notice strong {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+        .policy-page .last-updated {
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        .important-notice {
+            background-color: var(--light-blue);
+            border-left: 5px solid var(--primary-blue);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: var(--dark-blue);
+            color: var(--light-text);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        .footer p {
+            margin-bottom: 8px;
+        }
+        .footer a {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .lang-en, .lang-tr {
+            display: none;
+        }
+        @media (max-width: 768px) {
+           .policy-page .container {
+             padding: 25px;
+           }
+           .policy-page h1 {
+             font-size: 2.2em;
+             margin-bottom: 30px;
+           }
+           .policy-page h2 {
+             font-size: 1.6em;
+           }
+           .policy-page p {
+             font-size: 1em;
+           }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="#">VocaChat</a></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="policy-page">
+        <div class="container">
+
+            <div id="terms-tr" class="lang-tr">
+                <h1>VocaChat Kullanıcı Sözleşmesi</h1>
+                <p>Bu Kullanıcı Sözleşmesi ("Sözleşme"), <strong>Baki Tunçer</strong> ("Geliştirici", "biz", "bize" veya "bizim") tarafından sağlanan VocaChat mobil uygulaması ("Uygulama" veya "Hizmet") ile bu hizmeti kullanan kişi ("Kullanıcı" veya "siz") arasındaki yasal olarak bağlayıcı şartları ve koşulları belirler.</p>
+                <p>Uygulamayı indirerek, yükleyerek, bir hesap oluşturarak veya hizmetleri kullanarak, bu Sözleşmeyi ve <a href="#">Gizlilik Politikamızı</a> okuduğunuzu, anladığınızı ve bunlara yasal olarak bağlı kalmayı kabul ettiğinizi beyan edersiniz.</p>
+
+                <h2>1. Hizmetlerin Tanımı</h2>
+                <p>VocaChat, kullanıcılara dilbilgisi dersleri, kelime ezberleme araçları, yapay zeka (VocaBot) ile sohbet pratiği ve çeşitli dil becerilerini (dinleme, okuma, yazma, konuşma) geliştirmeye yönelik alıştırmalar sunan bir dil öğrenme uygulamasıdır. Hizmetler, ücretsiz (reklam destekli) veya ücretli abonelik ("Premium") modeliyle sunulabilir.</p>
+
+                <h2>2. Kullanıcı Hesapları</h2>
+                <ul>
+                    <li><strong>Hesap Oluşturma:</strong> Hizmetlerin belirli özelliklerini (örn. ilerleme takibi, premium) kullanmak için bir hesap oluşturmanız gerekmektedir. Bu, bir e-posta adresi ve parola kullanarak veya Google kimlik doğrulama hizmeti aracılığıyla yapılabilir.</li>
+                    <li><strong>Yaş Sınırı:</strong> Uygulamayı kullanmak ve bir hesap oluşturmak için en az 13 yaşında (veya ülkenizdeki yasal yaş sınırında) olmanız gerekir.</li>
+                    <li><strong>Hesap Güvenliği:</strong> Parolanızın ve hesabınızın güvenliğini sağlamak sizin sorumluluğunuzdadır. Hesabınız altında gerçekleşen tüm faaliyetlerden siz sorumlusunuz.</li>
+                    <li><strong>Hesap Bilgileri:</strong> Kayıt sırasında doğru ve güncel bilgi vermeyi kabul edersiniz.</li>
+                </ul>
+
+                <h2>3. Kullanım Kuralları ve Kısıtlamalar</h2>
+                <p>Uygulamayı kullanırken aşağıdaki kurallara uymayı kabul edersiniz:</p>
+                <ul>
+                    <li>Hizmetleri yasa dışı, dolandırıcılık amaçlı veya bu Sözleşmeyi ihlal edecek herhangi bir amaçla kullanamazsınız.</li>
+                    <li>Yapay zeka (VocaBot) ile etkileşimleriniz de dahil olmak üzere, hizmeti kullanırken nefret söylemi, müstehcenlik, taciz veya şiddet içeren içerikler üretemez veya bu yönde girişimlerde bulunamazsınız.</li>
+                    <li>Liderlik tablosu (Leaderboard) gibi ortak alanlarda görünebilecek <strong>kullanıcı adınızı</strong> veya profil bilgilerinizi, başkalarını taciz edecek, yanıltacak veya rahatsız edecek şekilde belirleyemezsiniz.</li>
+                    <li>Uygulamanın çalışmasını engellemeye, bozmaya veya sunucularına aşırı yük bindirmeye (örn. API'lere aşırı istek gönderme) çalışamazsınız.</li>
+                    <li>Uygulamayı kaynak koda dönüştüremez (reverse engineering), kopyalayamaz, değiştiremez veya taklit edemezsiniz.</li>
+                    <li>Ücretsiz sürümde reklamların gösterilmesini engelleyecek yazılımlar veya yöntemler kullanamazsınız.</li>
+                    <li>Hesabınızı başkalarıyla paylaşamaz, satamaz veya devredemezsiniz.</li>
+                </ul>
+                <p>Bu kuralların ihlali, hesabınızın uyarılmaksızın askıya alınmasına veya kalıcı olarak sonlandırılmasına neden olabilir.</p>
+
+                <h2>4. Premium Abonelikler</h2>
+                <p>Uygulama, ek özelliklere erişim sağlayan ücretli abonelikler sunabilir.</p>
+                <ul>
+                    <li><strong>VocaChat Premium:</strong> Gelişmiş özelliklere (örn. reklamsız kullanım, VocaBot'a sınırsız erişim, tüm derslerin kilidini açma) erişim sağlayan, otomatik olarak yenilenen bir abonelik hizmeti sunabiliriz.</li>
+                    <li><strong>Ödemeler ve İptal:</strong> Ödemeler ve abonelik yönetimi (yenileme ve iptal dahil) Google Play Store veya Apple App Store ("Uygulama Mağazaları") üzerinden gerçekleştirilir ve ilgili Uygulama Mağazasının şart ve koşullarına tabidir. İptal işlemleri doğrudan Uygulama Mağazası hesabınız üzerinden yapılmalıdır.</li>
+                    <li><strong>İadeler:</strong> Tüm satın alımlar nihaidir ve Geliştirici tarafından iade yapılmaz. İade talepleri, ilgili Uygulama Mağazasının kendi iade politikalarına göre yönetilmelidir.</li>
+                </ul>
+
+                <h2>5. Reklamlar</h2>
+                <p>Uygulamanın ücretsiz sürümü, <strong>Google AdMob</strong> gibi üçüncü taraf reklam sağlayıcılarından gelen reklamlar içerebilir. VocaChat Premium'a abone olmak, bu reklamların gösterimini kaldırır.</p>
+
+                <h2>6. Fikri Mülkiyet</h2>
+                <p>Uygulama, ders içerikleri, metinler, grafikler, logolar, yazılım, VocaBot karakteri ve tasarımlar dahil ancak bunlarla sınırlı olmamak üzere, Geliştirici'ye ait olan veya Geliştirici tarafından lisanslanan mülkiyet materyallerini içerir. Size yalnızca Hizmetlere erişmek ve bunları kişisel, ticari olmayan amaçlarla kullanmak için sınırlı, devredilemez, münhasır olmayan bir lisans veriyoruz.</p>
+
+                <h2>7. Garanti Reddi ve Sorumluluğun Sınırlandırılması</h2>
+                <ul>
+                    <li><strong>Garanti Reddi:</strong> Uygulama "olduğu gibi" ve "mevcut olduğu şekilde" sunulmaktadır. Hizmetlerin kesintisiz, hatasız, güvenli veya her zaman kullanılabilir olacağını garanti etmeyiz. VocaBot (yapay zeka) tarafından sağlanan yanıtların, çevirilerin veya dilbilgisi düzeltmelerinin doğruluğu veya uygunluğu konusunda hiçbir garanti vermemekteyiz. Dil öğrenme sonuçlarınız tamamen sizin çabanıza bağlıdır.</li>
+                    <li><strong>Sorumluluğun Sınırlandırılması:</strong> Geliştirici, uygulamayı kullanmanızdan veya kullanamamanızdan kaynaklanan hiçbir dolaylı, tesadüfi veya cezai zarardan (veri kaybı, kar kaybı veya yapay zeka ile etkileşimden doğan manevi zarar dahil) sorumlu tutulamaz.</li>
+                </ul>
+
+                <h2>8. Üçüncü Taraf Hizmetler</h2>
+                <p>Uygulamamız, işlevsellik sağlamak için Google (Firebase, Gemini AI, AdMob), RevenueCat ve DiceBear gibi üçüncü taraf hizmetleri kullanabilir. Bu hizmetlerin kullanımı, kendi hizmet şartlarına ve gizlilik politikalarına tabidir.</p>
+                
+                <h2>9. Sözleşmenin Feshi</h2>
+                <ul>
+                    <li><strong>Kullanıcı Tarafından Fesih:</strong> Hesabınızı uygulama ayarlarından silerek bu Sözleşmeyi istediğiniz zaman feshedebilirsiniz. Hesabınızı silmek, satın aldığınız abonelikleri otomatik olarak iptal etmez; aboneliklerinizi ilgili Uygulama Mağazasından ayrıca iptal etmeniz gerekir.</li>
+                    <li><strong>Geliştirici Tarafından Fesih:</strong> Bu Sözleşmeyi ihlal etmeniz durumunda, Geliştirici hesabınızı veya hizmetlere erişiminizi önceden bildirimde bulunmaksızın derhal askıya alabilir veya sonlandırabilir.</li>
+                </ul>
+
+                <h2>10. Sözleşme Değişiklikleri</h2>
+                <p>Bu Sözleşmeyi zaman zaman güncelleme hakkımızı saklı tutarız. Önemli değişiklikler olması durumunda, sizi uygulama içinde bir bildirimle veya kayıtlı e-posta adresiniz üzerinden bilgilendireceğiz. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni şartları kabul ettiğiniz anlamına gelir.</p>
+
+                <h2>11. Geçerli Hukuk</h2>
+                <p>Bu Sözleşme, Türkiye Cumhuriyeti kanunlarına tabi olacak ve bu kanunlara göre yorumlanacaktır. Bu Sözleşmeden kaynaklanan veya bu Sözleşmeyle ilgili olarak ortaya çıkan her türlü anlaşmazlıkta İstanbul Mahkemeleri ve İcra Daireleri yetkili olacaktır.</p>
+
+                <h2>12. İletişim</h2>
+                <p>Bu Kullanıcı Sözleşmesi ile ilgili herhangi bir sorunuz veya endişeniz varsa, lütfen bizimle <a href="mailto:info@codenzi.com">info@codenzi.com</a> adresi üzerinden iletişime geçin.</p>
+
+                <p class="last-updated">Son Güncelleme Tarihi: 6 Kasım 2025</p>
+            </div>
+
+            <div id="terms-en" class="lang-en">
+                <h1>VocaChat Terms of Service</h1>
+                <p>This Terms of Service ("Agreement") sets forth the legally binding terms and conditions between <strong>Baki Tunçer</strong> ("Developer", "we", "us", or "our") and the person ("User" or "you") using the VocaChat mobile application ("Application" or "Service").</p>
+                <p>By downloading, installing, creating an account, or using the services, you declare that you have read, understood, and agree to be legally bound by this Agreement and our <a href="#">Privacy Policy</a>.</p>
+
+                <h2>1. Description of Services</h2>
+                <p>VocaChat is a language learning application that provides users with grammar lessons, vocabulary tools, chat practice with artificial intelligence (VocaBot), and exercises to develop various language skills (listening, reading, writing, speaking). The Services may be offered as a free (ad-supported) or a paid subscription ("Premium") model.</p>
+
+                <h2>2. User Accounts</h2>
+                <ul>
+                    <li><strong>Account Creation:</strong> You must create an account to use certain features of the Services (e.g., progress tracking, premium). This can be done using an email address and password, or through the Google authentication service.</li>
+                    <li><strong>Age Requirement:</strong> You must be at least 13 years old (or the age of legal consent in your country) to use the Application and create an account.</li>
+                    <li><strong>Account Security:</strong> You are responsible for maintaining the security of your password and account. You are responsible for all activities that occur under your account.</li>
+                    <li><strong>Account Information:</strong> You agree to provide accurate and current information upon registration.</li>
+                </ul>
+
+                <h2>3. Rules of Conduct and Restrictions</h2>
+                <p>You agree to abide by the following rules when using the Application:</p>
+                <ul>
+                    <li>You may not use the Services for any illegal, fraudulent, or purpose that violates this Agreement.</li>
+                    <li>You may not generate or attempt to generate content that includes hate speech, obscenity, harassment, or violence, including in your interactions with the AI (VocaBot).</li>
+                    <li>You may not set your <strong>username</strong> or profile information, which may be visible on public areas like the Leaderboard, in a way that harasses, misleads, or offends others.</li>
+                    <li>You may not attempt to disrupt, impair, or overload the servers or operation of the Application (e.g., by making excessive API requests).</li>
+                    <li>You may not reverse-engineer, decompile, copy, modify, or create derivative works of the Application.</li>
+                    <li>You may not use software or other methods to block or interfere with the display of advertisements in the free version.</li>
+                    <li>You may not share, sell, or transfer your account to others.</li>
+                </ul>
+                <p>Violation of these rules may result in the suspension or permanent termination of your account without warning.</p>
+
+                <h2>4. Premium Subscriptions</h2>
+                <p>The Application may offer paid subscriptions to access additional features.</p>
+                <ul>
+                    <li><strong>VocaChat Premium:</strong> We may offer an auto-renewing subscription service that provides access to enhanced features (e.g., ad-free use, unlimited access to VocaBot, unlocking all lessons).</li>
+                    <li><strong>Payments and Cancellation:</strong> Payments and subscription management (including renewals and cancellations) are handled through the Google Play Store or Apple App Store ("App Stores") and are subject to the terms and conditions of the respective App Store. Cancellations must be made directly through your App Store account.</li>
+                    <li><strong>Refunds:</strong> All purchases are final and non-refundable by the Developer. Refund requests must be managed according to the refund policy of the respective App Store.</li>
+                </ul>
+
+                <h2>5. Advertisements</h2>
+                <p>The free version of the Application may contain third-party advertisements from providers such as <strong>Google AdMob</strong>. Subscribing to VocaChat Premium will remove the display of these ads.</p>
+
+                <h2>6. Intellectual Property</h2>
+                <p>The Application, including but not limited to its lesson content, text, graphics, logos, software, VocaBot character, and designs, contains proprietary materials owned or licensed by the Developer. We grant you a limited, non-transferable, non-exclusive license to access and use the Services for personal, non-commercial purposes only.</p>
+
+                <h2>7. Disclaimer of Warranties and Limitation of Liability</h2>
+                <ul>
+                    <li><strong>Disclaimer:</strong> The Application is provided "as is" and "as available". We do not warrant that the services will be uninterrupted, error-free, secure, or always available. We make no guarantees regarding the accuracy or appropriateness of responses, translations, or grammar corrections provided by VocaBot (AI). Your language learning outcomes depend entirely on your own effort.</li>
+                    <li><strong>Limitation of Liability:</strong> The Developer shall not be liable for any indirect, incidental, or punitive damages (including loss of data, loss of profit, or emotional distress arising from interactions with the AI) resulting from your use or inability to use the Application.</li>
+                </ul>
+
+                <h2>8. Third-Party Services</h2>
+                <p>Our Application may use third-party services to provide functionality, such as Google (Firebase, Gemini AI, AdMob), RevenueCat, and DiceBear. Your use of these services is subject to their own terms of service and privacy policies.</p>
+                
+                <h2>9. Termination of Agreement</h2>
+                <ul>
+                    <li><strong>Termination by User:</strong> You may terminate this Agreement at any time by deleting your account from the application settings. Deleting your account does not automatically cancel any active subscriptions; you must cancel subscriptions separately via the respective App Store.</li>
+                    <li><strong>Termination by Developer:</strong> The Developer may immediately suspend or terminate your account or access to the Services, without prior notice, if you breach this Agreement.</li>
+                </ul>
+
+                <h2>10. Changes to the Agreement</h2>
+                <p>We reserve the right to update this Agreement from time to time. If we make material changes, we will notify you via an in-app notification or through your registered email address. Your continued use of the Application after such changes constitutes your acceptance of the new terms.</p>
+
+                <h2>11. Governing Law</h2>
+                <p>This Agreement shall be governed by and construed in accordance with the laws of the Republic of Turkey. Any disputes arising from or in connection with this Agreement shall be subject to the exclusive jurisdiction of the Courts and Execution Offices of Istanbul.</p>
+
+                <h2>12. Contact</h2>
+                <p>If you have any questions or concerns about this Terms of Service, please contact us at <a href="mailto:info@codenzi.com">info@codenzi.com</a>.</p>
+
+                <p class="last-updated">Last Updated: November 6, 2025</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 VocaChat. All rights reserved.</p>
+            <p>Developer: Baki Tunçer</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage; 
+            const turkishContent = document.getElementById('terms-tr');
+            const englishContent = document.getElementById('terms-en');
+            
+            if (userLang.startsWith('tr')) {
+                turkishContent.style.display = 'block';
+                englishContent.style.display = 'none';
+                document.documentElement.lang = 'tr';
+            } else {
+                turkishContent.style.display = 'none';
+                englishContent.style.display = 'block';
+                document.documentElement.lang = 'en';
+            }
+        });
+    </script>
+
+</body>
+</html>
