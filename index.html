@@ -24,17 +24,27 @@
     
     <title>Codenzi | Dijital Deneyimi Yeniden Tanımlıyoruz</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --bg-dark: #0A0A0A;
-            --bg-light: #111111;
-            --border-color: rgba(255, 255, 255, 0.1);
-            --text-primary: #EAEAEA;
-            --text-secondary: #888888;
-            --glow-gradient: linear-gradient(90deg, #3B82F6, #A855F7);
+            /* Canlı Renk Paleti */
+            --primary-blue: #3B82F6;
+            --primary-purple: #8B5CF6;
+            --primary-pink: #EC4899;
+            
+            --bg-deep: #0f172a; /* Tam siyah değil, çok koyu lacivert */
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-highlight: rgba(255, 255, 255, 0.15);
+            
+            --text-primary: #FFFFFF;
+            --text-secondary: #cbd5e1;
+            
+            /* Üçlü Gradyan - Codenzi İmzası */
+            --brand-gradient: linear-gradient(135deg, #3B82F6 0%, #A855F7 50%, #EC4899 100%);
+            
             --font-primary: 'Poppins', sans-serif;
             --font-secondary: 'Inter', sans-serif;
         }
@@ -48,71 +58,134 @@
         }
 
         body {
-            background-color: var(--bg-dark);
+            background-color: var(--bg-deep);
             color: var(--text-primary);
             font-family: var(--font-secondary);
             margin: 0;
             line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- Canlı Arka Plan Efekti (Aurora Blobs) --- */
+        .background-glows {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .glow-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            background: var(--primary-blue);
+            width: 600px; height: 600px;
+            top: -10%; left: -10%;
+        }
+        .blob-2 {
+            background: var(--primary-purple);
+            width: 500px; height: 500px;
+            bottom: 20%; right: -10%;
+            animation-delay: -5s;
+        }
+        .blob-3 {
+            background: var(--primary-pink);
+            width: 400px; height: 400px;
+            bottom: -10%; left: 30%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, 50px) scale(1.1); }
+            100% { transform: translate(-20px, -30px) scale(0.9); }
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
+        }
+
+        /* --- Glassmorphism Utils --- */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
         }
 
         /* --- Header --- */
         .header {
-            padding: 1rem 0;
+            padding: 1.2rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.6);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
+            background: rgba(15, 23, 42, 0.6); /* Transparan koyu zemin */
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
         }
+        
         .header .container { display: flex; justify-content: space-between; align-items: center; }
+        
         .logo h1 {
             margin: 0;
             font-family: var(--font-primary);
-            font-size: 1.8rem;
-            background: var(--glow-gradient);
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--brand-gradient);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+            filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.4)); /* Glow Effect */
         }
+        
         .navbar ul { margin: 0; padding: 0; list-style: none; display: flex; align-items: center; }
-        .navbar li { margin-left: 30px; position: relative; } /* Dropdown için relative eklendi */
+        .navbar li { margin-left: 35px; position: relative; }
+        
         .navbar a {
-            color: var(--text-primary);
+            color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            padding: 5px 0;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: flex; align-items: center; gap: 6px;
         }
+        
         .navbar a:hover {
             color: #fff;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
 
-        /* --- Dropdown Menu Stilleri (YENİ) --- */
+        /* Dropdown */
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: rgba(10, 10, 10, 0.95);
-            min-width: 220px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            background: rgba(15, 23, 42, 0.9);
+            min-width: 240px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
             z-index: 1001;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            top: 100%;
-            left: -10px;
-            padding: 10px 0;
-            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            top: 140%;
+            left: -20px;
+            padding: 10px;
+            backdrop-filter: blur(20px);
             opacity: 0;
             transform: translateY(10px);
             transition: all 0.3s ease;
@@ -125,205 +198,322 @@
         }
 
         .dropdown-content a {
-            padding: 12px 20px;
+            padding: 12px 16px;
             color: var(--text-secondary);
-            display: block;
-            font-weight: 500;
-            font-size: 0.95rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
         }
 
         .dropdown-content a:hover {
+            background: rgba(255, 255, 255, 0.08);
             color: #fff;
-            background-color: rgba(255, 255, 255, 0.05);
-            padding-left: 25px; /* Hover efekti */
+            transform: translateX(5px);
         }
         
-        .dropdown i { font-size: 0.8rem; transition: transform 0.3s; }
+        .dropdown i { font-size: 0.7rem; transition: transform 0.3s; }
         .dropdown:hover i { transform: rotate(180deg); }
 
-
-        /* --- Genel Bölüm Stilleri --- */
+        /* --- Sections --- */
         section {
-            padding: 120px 0;
+            padding: 140px 0;
             position: relative;
-            overflow: hidden;
-        }
-        section:not(#hero) {
-             border-top: 1px solid var(--border-color);
         }
 
         /* --- Hero Section --- */
         #hero {
-            min-height: 90vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding-top: 150px;
+            padding-top: 100px;
         }
+        
         .hero-content h2 {
             font-family: var(--font-primary);
-            font-size: clamp(2.8rem, 7vw, 5rem);
+            font-size: clamp(3rem, 6vw, 5.5rem);
             margin: 0 0 1.5rem;
             line-height: 1.1;
-            font-weight: 700;
-            letter-spacing: -2px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
         }
+        
         .hero-content .highlight {
-            background: var(--glow-gradient);
+            background: var(--brand-gradient);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
         }
+        
+        /* Highlight Altındaki Blur Efekti */
+        .hero-content .highlight::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            left: 0;
+            background: var(--brand-gradient);
+            filter: blur(40px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+
         .hero-content p {
-            font-size: 1.25rem;
-            max-width: 650px;
-            margin: 0 auto 2.5rem;
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
             color: var(--text-secondary);
+            font-weight: 300;
         }
+        
         .btn-primary {
-            background: var(--glow-gradient);
+            background: var(--brand-gradient);
+            background-size: 200% 200%;
+            animation: gradientMove 5s ease infinite;
             color: #fff;
-            padding: 15px 35px;
-            border-radius: 8px;
+            padding: 18px 45px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(137, 54, 255, 0.3);
-            border: none;
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(31, 111, 235, 0.4);
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+            border: 1px solid rgba(255,255,255,0.2);
+            display: inline-block;
         }
         
-        /* --- Uygulama Tanıtım Bölümü --- */
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.5);
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- App Showcase --- */
         .app-showcase .container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 6rem;
             align-items: center;
         }
-        
-        /* Zig-Zag Düzeni */
-        section:nth-of-type(odd):not(#hero) .app-mockup {
-            order: 2;
+
+        /* Zig-Zag */
+        section:nth-of-type(odd):not(#hero) .app-mockup { order: 2; }
+        section:nth-of-type(odd):not(#hero) .app-details { padding-left: 0; padding-right: 2rem; }
+        section:nth-of-type(even):not(#hero) .app-details { padding-left: 2rem; }
+
+        .app-mockup {
+            position: relative;
         }
         
-        /* Arkaplan rengi değişimi */
-        section:nth-of-type(odd):not(#hero) {
-             background-color: var(--bg-light);
+        /* Mockup Arkası Glow */
+        .app-mockup::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; height: 80%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(40px);
+            z-index: -1;
         }
 
         .app-mockup img {
             max-width: 100%;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-            transition: transform 0.4s ease;
+            border-radius: 40px;
+            /* Hafif 3D efekti */
+            transform: perspective(1000px) rotateY(-5deg);
+            box-shadow: -20px 20px 60px rgba(0,0,0,0.5);
+            transition: transform 0.5s ease;
         }
-        .app-mockup img:hover {
-            transform: scale(1.05);
+        
+        section:nth-of-type(odd) .app-mockup img { transform: perspective(1000px) rotateY(5deg); }
+        
+        .app-mockup:hover img {
+            transform: perspective(1000px) rotateY(0deg) scale(1.03);
         }
 
-        .app-details .app-icon { width: 70px; height: 70px; border-radius: 16px; margin-bottom: 1.5rem; }
-        .app-details h3 { font-family: var(--font-primary); font-size: 3rem; margin: 0; }
-        .app-details .app-tagline { font-size: 1.2rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 1.5rem; }
-        .feature-list { list-style: none; padding: 0; margin: 2rem 0; }
-        .feature-list li { display: flex; align-items: center; margin-bottom: 1rem; font-size: 1.05rem; }
-        .feature-list i { font-size: 1.2rem; width: 30px; text-align: center; margin-right: 15px; background: var(--glow-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Buton Grubu ve Stilleri */
-        .store-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+        .app-details .app-icon { 
+            width: 80px; height: 80px; 
+            border-radius: 20px; 
+            margin-bottom: 1.5rem; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
+        
+        .app-details h3 { 
+            font-family: var(--font-primary); 
+            font-size: 3.5rem; 
+            margin: 0; 
+            line-height: 1;
+            font-weight: 700;
+        }
+        
+        .app-details .app-tagline { 
+            font-size: 1.3rem; 
+            font-weight: 500; 
+            color: var(--primary-purple); /* Tagline rengi mor */
+            margin-bottom: 2rem; 
+            display: block;
+            margin-top: 0.5rem;
+        }
+        
+        .feature-list { list-style: none; padding: 0; margin: 2rem 0; }
+        .feature-list li { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 1.2rem; 
+            font-size: 1.1rem; 
+            color: var(--text-secondary);
+        }
+        
+        .feature-list i { 
+            font-size: 1.2rem; 
+            width: 40px; 
+            height: 40px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            margin-right: 15px; 
+            color: var(--primary-pink); /* İkon rengi pembe */
+            border: 1px solid var(--glass-border);
+        }
+
+        .store-buttons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 2.5rem; }
         
         .btn-store { 
             display: inline-flex; 
             align-items: center; 
-            gap: 10px; 
-            background: rgba(255,255,255,0.05); 
-            border: 1px solid var(--border-color); 
-            color: var(--text-primary); 
-            padding: 12px 25px; 
-            border-radius: 8px; 
+            gap: 12px; 
+            background: var(--glass-highlight); 
+            border: 1px solid var(--glass-border); 
+            color: #fff; 
+            padding: 14px 28px; 
+            border-radius: 12px; 
             text-decoration: none; 
             font-weight: 600; 
-            transition: all 0.3s ease; 
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
         }
         
         .btn-store:hover { 
-            background: var(--text-primary); 
-            color: var(--bg-dark); 
-            border-color: var(--text-primary); 
+            background: #fff; 
+            color: #000; 
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255,255,255,0.15);
         }
 
         .btn-store.coming-soon {
-            cursor: default;
-            color: var(--text-secondary);
-            border-color: rgba(255, 255, 255, 0.05);
+            opacity: 0.6;
+            cursor: not-allowed;
         }
-        
         .btn-store.coming-soon:hover {
-            background: rgba(255,255,255,0.05);
-            color: var(--text-secondary);
+            background: var(--glass-highlight);
+            color: #fff;
             transform: none;
-            border-color: var(--text-secondary);
+            box-shadow: none;
         }
 
-        /* --- Felsefe ve Diğer Bölümler --- */
+        /* --- Philosophy --- */
         #philosophy { text-align: center; }
-        .section-title { font-family: var(--font-primary); font-size: 3rem; margin-bottom: 1rem; }
-        .section-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;}
+        .section-title { font-family: var(--font-primary); font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
+        .section-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 5rem; max-width: 600px; margin-left: auto; margin-right: auto;}
         
         .philosophy-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
+            gap: 2rem;
             text-align: left;
         }
+        
         .philosophy-item {
-            background-color: var(--bg-light);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
+            padding: 3rem 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
+        
+        /* Glass Card Utility zaten var, buna hover efekti ekleyelim */
         .philosophy-item:hover {
-            transform: translateY(-10px);
-            border-color: #A855F7;
+            transform: translateY(-15px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--primary-purple);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
-        .philosophy-item i { font-size: 2rem; background: var(--glow-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
-        .philosophy-item h4 { font-family: var(--font-primary); font-size: 1.3rem; margin: 0 0 0.5rem; }
-        .philosophy-item p { color: var(--text-secondary); margin: 0; }
         
-        #cta { text-align: center; background-color: var(--bg-light); }
-        .footer { padding: 4rem 0; text-align: center; color: var(--text-secondary); }
-        .footer .social-links { margin-bottom: 1rem; }
-        .footer .social-links a { color: var(--text-secondary); margin: 0 15px; font-size: 1.5rem; transition: color 0.3s ease, transform 0.3s ease; display: inline-block; }
-        .footer .social-links a:hover { color: var(--text-primary); transform: scale(1.2); }
+        .philosophy-item i { 
+            font-size: 2.5rem; 
+            background: var(--brand-gradient);
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            margin-bottom: 1.5rem; 
+            display: inline-block;
+        }
         
-        /* --- Mobil Uyum --- */
+        .philosophy-item h4 { font-family: var(--font-primary); font-size: 1.4rem; margin: 0 0 1rem; color: #fff; }
+        .philosophy-item p { color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6; }
+
+        /* --- CTA Section --- */
+        #cta { 
+            text-align: center; 
+            background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.1) 100%);
+        }
+
+        /* --- Footer --- */
+        .footer { 
+            padding: 4rem 0; 
+            text-align: center; 
+            color: var(--text-secondary); 
+            border-top: 1px solid var(--glass-border);
+            background: rgba(15, 23, 42, 0.8);
+        }
+        .footer .social-links a { 
+            color: var(--text-secondary); 
+            margin: 0 15px; 
+            font-size: 1.5rem; 
+            transition: all 0.3s; 
+        }
+        .footer .social-links a:hover { 
+            color: var(--primary-pink); 
+            transform: scale(1.2); 
+            text-shadow: 0 0 15px var(--primary-pink);
+        }
+
+        /* --- Responsive --- */
         @media (max-width: 992px) {
-            .app-showcase .container { grid-template-columns: 1fr; }
+            .app-showcase .container { grid-template-columns: 1fr; gap: 4rem; }
             section:nth-of-type(odd):not(#hero) .app-mockup { order: 0; }
-            .app-mockup { margin-bottom: 3rem; text-align: center;}
-            .app-details { text-align: center; }
+            section:nth-of-type(even):not(#hero) .app-details,
+            section:nth-of-type(odd):not(#hero) .app-details { padding: 0; text-align: center; }
             .feature-list { display: inline-block; text-align: left; }
             .philosophy-grid { grid-template-columns: repeat(2, 1fr); }
             .store-buttons { justify-content: center; }
+            .app-mockup img { transform: none !important; }
         }
 
         @media (max-width: 768px) {
             .navbar { display: none; } 
+            .hero-content h2 { font-size: 2.8rem; }
             .philosophy-grid { grid-template-columns: 1fr; }
+            .blob-1, .blob-2, .blob-3 { opacity: 0.2; } /* Mobilde performansı artırmak için */
         }
     </style>
 </head>
 <body>
-    
+
+    <div class="background-glows">
+        <div class="glow-blob blob-1"></div>
+        <div class="glow-blob blob-2"></div>
+        <div class="glow-blob blob-3"></div>
+    </div>
+
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -368,16 +558,16 @@
                 <div class="app-details">
                     <img src="logo.png" alt="Taktik Icon" class="app-icon">
                     <h3>Taktik</h3>
-                    <p class="app-tagline">Yapay zeka destekli sınav stratejisti ve başarı koçunuz.</p>
+                    <span class="app-tagline">Yapay zeka destekli sınav stratejisti.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-brain"></i> Kişiselleştirilmiş YZ Koçluğu ve Stratejik Planlama</li>
-                        <li><i class="fas fa-chart-area"></i> Detaylı Net Takibi, Konu Analizi ve Eksik Tespiti</li>
-                        <li><i class="fas fa-clock"></i> Entegre Pomodoro Sayacı ve Haftalık Ders Programı</li>
-                        <li><i class="fas fa-medal"></i> Rekabetçi 'Arena' Modu ve Oyunlaştırılmış İlerleme</li>
+                        <li><i class="fas fa-brain"></i> Kişiselleştirilmiş YZ Koçluğu</li>
+                        <li><i class="fas fa-chart-area"></i> Detaylı Net Takibi ve Analiz</li>
+                        <li><i class="fas fa-clock"></i> Entegre Pomodoro Sayacı</li>
+                        <li><i class="fas fa-medal"></i> Rekabetçi 'Arena' Modu</li>
                     </ul>
                     <div class="store-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.taktik" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
-                        <a href="#" class="btn-store coming-soon" onclick="return false;">App Store'da Yakında <i class="fab fa-app-store-ios"></i></a>
+                        <a href="https://apps.apple.com/us/app/taktik-ai-ko%C3%A7-yks-lgs-kpss/id6755930518" class="btn-store" target="_blank">App Store <i class="fab fa-app-store-ios"></i></a>
                     </div>
                 </div>
             </div>
@@ -391,12 +581,12 @@
                 <div class="app-details">
                     <img src="logo.png" alt="VocaChat Icon" class="app-icon">
                     <h3>VocaChat</h3>
-                    <p class="app-tagline">Yapay zeka destekli kişisel Dil koçunuz.</p>
+                    <span class="app-tagline">Yapay zeka destekli kişisel Dil koçunuz.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-robot"></i> Vocabot ile 7/24 Sınırsız ve Gerçekçi Sohbet Pratiği</li>
-                        <li><i class="fas fa-layer-group"></i> Okuma, Yazma, Dinleme ve Konuşmada Tam Kapsamlı Gelişim</li>
-                        <li><i class="fas fa-chart-pie"></i> Etkili Gramer Çalışmaları ve Gerçek Hayat Senaryo Simülasyonları</li>
-                        <li><i class="fas fa-globe"></i> Global Liderlik Tablolarında Dünyayla Yarışma Hazı</li>
+                        <li><i class="fas fa-robot"></i> Vocabot ile 7/24 Sınırsız Pratik</li>
+                        <li><i class="fas fa-layer-group"></i> Okuma, Yazma, Dinleme Gelişimi</li>
+                        <li><i class="fas fa-chart-pie"></i> Gerçek Hayat Senaryo Simülasyonları</li>
+                        <li><i class="fas fa-globe"></i> Global Liderlik Tabloları</li>
                     </ul>
                     <div class="store-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.vocachat" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
@@ -414,12 +604,12 @@
                 <div class="app-details">
                     <img src="logo.png" alt="Payday Icon" class="app-icon">
                     <h3>Payday</h3>
-                    <p class="app-tagline">Finansal gücü elinize alın ve geleceği bugün şekillendirin.</p>
+                    <span class="app-tagline">Finansal gücü elinize alın.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-robot"></i> Otomatik Servet Pilotu ile Birikim Hedefleri</li>
-                        <li><i class="fas fa-chart-line"></i> Akıllı Öngörü Sistemi ve Harcama Uyarıları</li>
-                        <li><i class="fas fa-trophy"></i> Başarımlar ile Oyunlaştırılmış Finansal Disiplin</li>
-                        <li><i class="fas fa-user-secret"></i> Kırılmaz Gizlilik Kalkanı (On-Device Veri)</li>
+                        <li><i class="fas fa-robot"></i> Otomatik Servet Pilotu</li>
+                        <li><i class="fas fa-chart-line"></i> Akıllı Öngörü Sistemi</li>
+                        <li><i class="fas fa-trophy"></i> Oyunlaştırılmış Finansal Disiplin</li>
+                        <li><i class="fas fa-user-secret"></i> Kırılmaz Gizlilik Kalkanı</li>
                     </ul>
                     <div class="store-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.payday" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
@@ -437,11 +627,11 @@
                 <div class="app-details">
                     <img src="logo.png" alt="Akıllı Arşiv Icon" class="app-icon">
                     <h3>Akıllı Arşiv</h3>
-                    <p class="app-tagline">Telefonunuzdaki kaosa hükmedin. Sonsuza dek.</p>
+                    <span class="app-tagline">Telefonunuzdaki kaosa hükmedin.</span>
                     <ul class="feature-list">
                         <li><i class="fas fa-share-nodes"></i> Tek Dokunuşla Merkezi Arşivleme</li>
-                        <li><i class="fas fa-copy"></i> Akıllı Kopya Engelleyici (Hash Kontrolü)</li>
-                        <li><i class="fas fa-shield-halved"></i> Otomatik ve Zırhlı Google Drive Yedeklemesi</li>
+                        <li><i class="fas fa-copy"></i> Akıllı Kopya Engelleyici (Hash)</li>
+                        <li><i class="fas fa-shield-halved"></i> Zırhlı Google Drive Yedeklemesi</li>
                         <li><i class="fas fa-folder-tree"></i> Akıllı Otomatik Kategorizasyon</li>
                     </ul>
                     <div class="store-buttons">
@@ -459,12 +649,12 @@
                 <div class="app-details">
                     <img src="logo.png" alt="SnapNote Icon" class="app-icon">
                     <h3>SnapNote</h3>
-                    <p class="app-tagline">Hayatın hızında düşünen tek not defteri.</p>
+                    <span class="app-tagline">Hayatın hızında düşünen not defteri.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-bolt"></i> Anında Not için Ana Ekran Widget'ları</li>
+                        <li><i class="fas fa-bolt"></i> Anında Not Widget'ları</li>
                         <li><i class="fas fa-lock"></i> SHA-256 Askeri Düzey Şifreleme</li>
-                        <li><i class="fas fa-cloud-arrow-up"></i> Gizli ve Güvenli Google Drive Yedeklemesi</li>
-                        <li><i class="fas fa-palette"></i> Kişiselleştirilebilir Zengin Arayüz</li>
+                        <li><i class="fas fa-cloud-arrow-up"></i> Gizli Drive Yedeklemesi</li>
+                        <li><i class="fas fa-palette"></i> Kişiselleştirilebilir Arayüz</li>
                     </ul>
                     <div class="store-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.snapnote" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
@@ -478,22 +668,22 @@
                 <h2 class="section-title">Codenzi Felsefesi</h2>
                 <p class="section-subtitle">Yazdığımız her satır kodun arkasında bu dört temel ilke yatar.</p>
                 <div class="philosophy-grid">
-                    <div class="philosophy-item">
+                    <div class="philosophy-item glass-card">
                         <i class="fas fa-users"></i>
                         <h4>Kullanıcı Odaklı Deneyim</h4>
                         <p>Teknoloji insan için vardır. Uygulamalarımız, sezgisel, akıcı ve hayatı gerçekten kolaylaştıran bir deneyim sunar.</p>
                     </div>
-                    <div class="philosophy-item">
+                    <div class="philosophy-item glass-card">
                         <i class="fas fa-shield-alt"></i>
                         <h4>Tavizsiz Güvenlik</h4>
                         <p>Dijital dünyada en değerli varlığınız verilerinizdir. Gizliliğinizi korumak bizim için bir standarttır.</p>
                     </div>
-                    <div class="philosophy-item">
+                    <div class="philosophy-item glass-card">
                         <i class="fas fa-lightbulb"></i>
                         <h4>Problem Çözen İnovasyon</h4>
                         <p>Sadece var olanı kopyalamıyor, gerçek dünya problemlerine kalıcı ve akıllı çözümler getiriyoruz.</p>
                     </div>
-                    <div class="philosophy-item">
+                    <div class="philosophy-item glass-card">
                         <i class="fas fa-sync-alt"></i>
                         <h4>Sürekli Gelişim</h4>
                         <p>Ürünlerimiz yaşayan birer organizmadır. Geri bildirimlerinizle sürekli gelişir ve daha iyiye evrilir.</p>
