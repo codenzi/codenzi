@@ -24,7 +24,7 @@
     
     <title>Codenzi | Dijital Deneyimi Yeniden Tanımlıyoruz</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -34,13 +34,17 @@
             --primary-purple: #8B5CF6;
             --primary-pink: #EC4899;
             
-            --bg-deep: #0f172a; /* Tam siyah değil, çok koyu lacivert */
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --glass-highlight: rgba(255, 255, 255, 0.15);
+            /* AÇIK TEMA RENKLERİ */
+            --bg-light: #f8fafc; /* Çok açık gri/beyaz */
+            --bg-card: #ffffff; /* Kartlar için saf beyaz */
             
-            --text-primary: #FFFFFF;
-            --text-secondary: #cbd5e1;
+            /* Glassmorphism için koyu gölgeler */
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(0, 0, 0, 0.08);
+            --glass-highlight: rgba(0, 0, 0, 0.04);
+            
+            --text-primary: #1e293b; /* Koyu gri/siyah */
+            --text-secondary: #64748b; /* Orta koyulukta gri */
             
             /* Üçlü Gradyan - Codenzi İmzası */
             --brand-gradient: linear-gradient(135deg, #3B82F6 0%, #A855F7 50%, #EC4899 100%);
@@ -58,7 +62,7 @@
         }
 
         body {
-            background-color: var(--bg-deep);
+            background-color: var(--bg-light);
             color: var(--text-primary);
             font-family: var(--font-secondary);
             margin: 0;
@@ -77,38 +81,43 @@
             z-index: -1;
             overflow: hidden;
             pointer-events: none;
+            /* Açık tema için parlaklığı artır, opaklığı azalt */
+            filter: brightness(1.1); 
         }
 
         .glow-blob {
             position: absolute;
             border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
+            /* Bulanıklığı artırarak daha yumuşak geçişler sağla */
+            filter: blur(120px);
+            /* Açık arka planda çok baskın olmaması için opaklığı düşür */
+            opacity: 0.2; 
             animation: float 20s infinite alternate ease-in-out;
+            mix-blend-mode: multiply; /* Renklerin daha iyi karışması için */
         }
 
         .blob-1 {
             background: var(--primary-blue);
-            width: 600px; height: 600px;
-            top: -10%; left: -10%;
+            width: 700px; height: 700px;
+            top: -15%; left: -10%;
         }
         .blob-2 {
             background: var(--primary-purple);
-            width: 500px; height: 500px;
-            bottom: 20%; right: -10%;
+            width: 600px; height: 600px;
+            bottom: 10%; right: -15%;
             animation-delay: -5s;
         }
         .blob-3 {
             background: var(--primary-pink);
-            width: 400px; height: 400px;
-            bottom: -10%; left: 30%;
+            width: 500px; height: 500px;
+            bottom: -20%; left: 25%;
             animation-delay: -10s;
         }
 
         @keyframes float {
             0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(30px, 50px) scale(1.1); }
-            100% { transform: translate(-20px, -30px) scale(0.9); }
+            50% { transform: translate(40px, 60px) scale(1.08); }
+            100% { transform: translate(-30px, -40px) scale(0.92); }
         }
 
         .container {
@@ -117,14 +126,22 @@
             padding: 0 24px;
         }
 
-        /* --- Glassmorphism Utils --- */
+        /* --- Glassmorphism Utils (Açık Tema İçin Güncellendi) --- */
         .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: var(--bg-card);
+            /* Daha hafif, beyaz ağırlıklı bir blur efekti */
+            backdrop-filter: blur(20px) saturate(1.1);
+            -webkit-backdrop-filter: blur(20px) saturate(1.1);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            /* Daha yumuşak, koyu gölge */
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+             box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.12);
+             border-color: rgba(139, 92, 246, 0.3); /* Mor kenarlık vurgusu */
         }
 
         /* --- Header --- */
@@ -134,7 +151,8 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.6); /* Transparan koyu zemin */
+            /* Açık ve transparan arka plan */
+            background: rgba(255, 255, 255, 0.8); 
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--glass-border);
             transition: all 0.3s ease;
@@ -152,7 +170,8 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
-            filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.4)); /* Glow Effect */
+            /* Açık tema için gölgeyi biraz daha belirginleştir */
+            filter: drop-shadow(0 2px 10px rgba(168, 85, 247, 0.25)); 
         }
         
         .navbar ul { margin: 0; padding: 0; list-style: none; display: flex; align-items: center; }
@@ -161,31 +180,34 @@
         .navbar a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: all 0.3s ease;
             font-size: 0.95rem;
             display: flex; align-items: center; gap: 6px;
         }
         
         .navbar a:hover {
-            color: #fff;
-            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            color: var(--primary-purple); /* Hover rengi mor */
+            /* Text shadow kaldırıldı veya çok hafifletildi */
+            text-shadow: 0 0 1px rgba(139, 92, 246, 0.1);
         }
 
         /* Dropdown */
         .dropdown-content {
             display: none;
             position: absolute;
-            background: rgba(15, 23, 42, 0.9);
+            /* Çok açık, neredeyse beyaz arka plan */
+            background: rgba(255, 255, 255, 0.95);
             min-width: 240px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            /* Yumuşak koyu gölge */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.04);
             z-index: 1001;
             border: 1px solid var(--glass-border);
             border-radius: 16px;
             top: 140%;
             left: -20px;
             padding: 10px;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(25px);
             opacity: 0;
             transform: translateY(10px);
             transition: all 0.3s ease;
@@ -202,11 +224,13 @@
             color: var(--text-secondary);
             border-radius: 8px;
             font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .dropdown-content a:hover {
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
+            /* Hover'da çok hafif gri arka plan */
+            background: rgba(0, 0, 0, 0.04);
+            color: var(--primary-purple);
             transform: translateX(5px);
         }
         
@@ -226,7 +250,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding-top: 100px;
+            padding-top: 120px;
         }
         
         .hero-content h2 {
@@ -236,6 +260,7 @@
             line-height: 1.1;
             font-weight: 800;
             letter-spacing: -0.03em;
+            color: var(--text-primary);
         }
         
         .hero-content .highlight {
@@ -247,18 +272,18 @@
             display: inline-block;
         }
         
-        /* Highlight Altındaki Blur Efekti */
+        /* Highlight Altındaki Blur Efekti (Açık Tema İçin) */
         .hero-content .highlight::after {
             content: '';
             position: absolute;
             width: 100%;
-            height: 50%;
-            bottom: 0;
+            height: 40%;
+            bottom: 5%;
             left: 0;
             background: var(--brand-gradient);
-            filter: blur(40px);
+            filter: blur(35px);
             z-index: -1;
-            opacity: 0.4;
+            opacity: 0.25; /* Opaklık azaltıldı */
         }
 
         .hero-content p {
@@ -266,7 +291,7 @@
             max-width: 700px;
             margin: 0 auto 3rem;
             color: var(--text-secondary);
-            font-weight: 300;
+            font-weight: 400;
         }
         
         .btn-primary {
@@ -277,17 +302,17 @@
             padding: 18px 45px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
-            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
+            border: none;
             display: inline-block;
         }
         
         .btn-primary:hover {
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.5);
+            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.4);
         }
         
         @keyframes gradientMove {
@@ -299,7 +324,7 @@
         /* --- App Showcase --- */
         .app-showcase .container {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 6rem;
             align-items: center;
         }
@@ -313,38 +338,43 @@
             position: relative;
         }
         
-        /* Mockup Arkası Glow */
+        /* Mockup Arkası Glow (Açık Tema İçin) */
         .app-mockup::before {
             content: '';
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 80%; height: 80%;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(0,0,0,0) 70%);
-            filter: blur(40px);
+            width: 90%; height: 90%;
+            /* Daha yumuşak, mor ağırlıklı bir gradyan */
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.05) 50%, rgba(0,0,0,0) 80%);
+            filter: blur(50px);
             z-index: -1;
         }
 
         .app-mockup img {
             max-width: 100%;
             border-radius: 40px;
-            /* Hafif 3D efekti */
-            transform: perspective(1000px) rotateY(-5deg);
-            box-shadow: -20px 20px 60px rgba(0,0,0,0.5);
-            transition: transform 0.5s ease;
+            transform: perspective(1000px) rotateY(-8deg);
+            /* Gölgeler daha yumuşak ve renkli */
+            box-shadow: -15px 20px 50px rgba(59, 130, 246, 0.15), 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.5s ease-out;
         }
         
-        section:nth-of-type(odd) .app-mockup img { transform: perspective(1000px) rotateY(5deg); }
+        section:nth-of-type(odd) .app-mockup img { 
+            transform: perspective(1000px) rotateY(8deg); 
+            box-shadow: 15px 20px 50px rgba(168, 85, 247, 0.15), 0 5px 15px rgba(0,0,0,0.05);
+        }
         
         .app-mockup:hover img {
-            transform: perspective(1000px) rotateY(0deg) scale(1.03);
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+            box-shadow: 0 30px 60px rgba(139, 92, 246, 0.2);
         }
 
         .app-details .app-icon { 
-            width: 80px; height: 80px; 
-            border-radius: 20px; 
+            width: 90px; height: 90px; 
+            border-radius: 22px; 
             margin-bottom: 1.5rem; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
         
         .app-details h3 { 
@@ -352,157 +382,177 @@
             font-size: 3.5rem; 
             margin: 0; 
             line-height: 1;
-            font-weight: 700;
+            font-weight: 800;
+            color: var(--text-primary);
         }
         
         .app-details .app-tagline { 
             font-size: 1.3rem; 
-            font-weight: 500; 
-            color: var(--primary-purple); /* Tagline rengi mor */
-            margin-bottom: 2rem; 
+            font-weight: 600; 
+            color: var(--primary-purple); 
+            margin-bottom: 2.5rem; 
             display: block;
-            margin-top: 0.5rem;
+            margin-top: 0.75rem;
         }
         
         .feature-list { list-style: none; padding: 0; margin: 2rem 0; }
         .feature-list li { 
             display: flex; 
             align-items: center; 
-            margin-bottom: 1.2rem; 
+            margin-bottom: 1.25rem; 
             font-size: 1.1rem; 
             color: var(--text-secondary);
+            font-weight: 500;
         }
         
         .feature-list i { 
             font-size: 1.2rem; 
-            width: 40px; 
-            height: 40px;
+            width: 44px; 
+            height: 44px;
             display: flex; align-items: center; justify-content: center;
-            background: rgba(255,255,255,0.05);
-            border-radius: 50%;
-            margin-right: 15px; 
-            color: var(--primary-pink); /* İkon rengi pembe */
-            border: 1px solid var(--glass-border);
+            /* Hafif renkli arka plan */
+            background: rgba(236, 72, 153, 0.08);
+            border-radius: 12px;
+            margin-right: 18px; 
+            color: var(--primary-pink); 
+            /* Kenarlık kaldırıldı, sadece arka plan var */
+            /* border: 1px solid var(--glass-border); */
         }
 
-        .store-buttons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 2.5rem; }
+        .store-buttons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 3rem; }
         
         .btn-store { 
             display: inline-flex; 
             align-items: center; 
             gap: 12px; 
-            background: var(--glass-highlight); 
-            border: 1px solid var(--glass-border); 
-            color: #fff; 
-            padding: 14px 28px; 
-            border-radius: 12px; 
+            /* Çok hafif gri arka plan */
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0; 
+            color: var(--text-primary);
+            padding: 14px 30px; 
+            border-radius: 14px; 
             text-decoration: none; 
             font-weight: 600; 
             transition: all 0.3s ease;
-            backdrop-filter: blur(4px);
         }
         
         .btn-store:hover { 
-            background: #fff; 
-            color: #000; 
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255,255,255,0.15);
+            background: var(--text-primary); 
+            color: #fff; 
+            border-color: var(--text-primary);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
         .btn-store.coming-soon {
-            opacity: 0.6;
+            background: transparent;
+            color: var(--text-secondary);
+            border-color: var(--glass-border);
+            opacity: 0.8;
             cursor: not-allowed;
         }
         .btn-store.coming-soon:hover {
-            background: var(--glass-highlight);
-            color: #fff;
             transform: none;
             box-shadow: none;
+            color: var(--text-primary);
+            border-color: var(--text-secondary);
         }
 
         /* --- Philosophy --- */
         #philosophy { text-align: center; }
-        .section-title { font-family: var(--font-primary); font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
-        .section-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 5rem; max-width: 600px; margin-left: auto; margin-right: auto;}
+        .section-title { font-family: var(--font-primary); font-size: 3rem; margin-bottom: 1rem; font-weight: 800; color: var(--text-primary); }
+        .section-subtitle { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 5rem; max-width: 650px; margin-left: auto; margin-right: auto; font-weight: 400;}
         
         .philosophy-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+            gap: 2.5rem;
             text-align: left;
         }
         
         .philosophy-item {
-            padding: 3rem 2rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
+            padding: 3.5rem 2.5rem;
+            /* Glass card stilleri yukarıda tanımlı */
         }
         
-        /* Glass Card Utility zaten var, buna hover efekti ekleyelim */
+        /* Glass Card Utility already handles basic styles. Let's refine hover for light mode. */
         .philosophy-item:hover {
-            transform: translateY(-15px);
-            background: rgba(255, 255, 255, 0.07);
-            border-color: var(--primary-purple);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            /* Dönüşüm ve gölge glass-card:hover'dan geliyor */
+            /* Arka planı hafifçe renklendir */
+            background: linear-gradient(to bottom right, #ffffff, #f8fafc);
         }
         
         .philosophy-item i { 
-            font-size: 2.5rem; 
+            font-size: 2.8rem; 
             background: var(--brand-gradient);
             -webkit-background-clip: text; 
             background-clip: text; 
             -webkit-text-fill-color: transparent; 
-            margin-bottom: 1.5rem; 
+            margin-bottom: 2rem; 
             display: inline-block;
+            filter: drop-shadow(0 5px 15px rgba(168, 85, 247, 0.2));
         }
         
-        .philosophy-item h4 { font-family: var(--font-primary); font-size: 1.4rem; margin: 0 0 1rem; color: #fff; }
-        .philosophy-item p { color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.6; }
+        .philosophy-item h4 { font-family: var(--font-primary); font-size: 1.5rem; margin: 0 0 1rem; color: var(--text-primary); font-weight: 700; }
+        .philosophy-item p { color: var(--text-secondary); margin: 0; font-size: 1rem; line-height: 1.7; }
 
         /* --- CTA Section --- */
         #cta { 
             text-align: center; 
-            background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.1) 100%);
+            /* Çok hafif, renkli bir arka plan gradyanı */
+            background: linear-gradient(180deg, var(--bg-light) 0%, rgba(59, 130, 246, 0.05) 100%);
+            padding-bottom: 160px;
         }
 
         /* --- Footer --- */
         .footer { 
-            padding: 4rem 0; 
+            padding: 5rem 0; 
             text-align: center; 
             color: var(--text-secondary); 
-            border-top: 1px solid var(--glass-border);
-            background: rgba(15, 23, 42, 0.8);
+            border-top: 1px solid #e2e8f0;
+            background: #ffffff; /* Saf beyaz footer */
         }
+        .footer .social-links { margin-bottom: 1.5rem; }
         .footer .social-links a { 
             color: var(--text-secondary); 
-            margin: 0 15px; 
-            font-size: 1.5rem; 
-            transition: all 0.3s; 
+            margin: 0 18px; 
+            font-size: 1.6rem; 
+            transition: all 0.3s ease; 
+            display: inline-block;
         }
         .footer .social-links a:hover { 
-            color: var(--primary-pink); 
-            transform: scale(1.2); 
-            text-shadow: 0 0 15px var(--primary-pink);
+            color: var(--primary-purple); 
+            transform: translateY(-3px) scale(1.1); 
+            /* text-shadow: 0 5px 15px rgba(139, 92, 246, 0.3); */
+        }
+        .footer p {
+            font-size: 0.95rem;
         }
 
         /* --- Responsive --- */
         @media (max-width: 992px) {
-            .app-showcase .container { grid-template-columns: 1fr; gap: 4rem; }
+            .app-showcase .container { grid-template-columns: 1fr; gap: 5rem; }
             section:nth-of-type(odd):not(#hero) .app-mockup { order: 0; }
             section:nth-of-type(even):not(#hero) .app-details,
             section:nth-of-type(odd):not(#hero) .app-details { padding: 0; text-align: center; }
-            .feature-list { display: inline-block; text-align: left; }
-            .philosophy-grid { grid-template-columns: repeat(2, 1fr); }
-            .store-buttons { justify-content: center; }
-            .app-mockup img { transform: none !important; }
+            .feature-list { display: inline-block; text-align: left; margin-top: 1.5rem; }
+            .store-buttons { justify-content: center; margin-top: 2.5rem; }
+            .philosophy-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+            .app-mockup img { transform: none !important; box-shadow: 0 20px 50px rgba(0,0,0,0.1) !important; }
+            .app-details h3 { font-size: 2.8rem; }
+            .hero-content h2 { font-size: 3.5rem; }
         }
 
         @media (max-width: 768px) {
             .navbar { display: none; } 
             .hero-content h2 { font-size: 2.8rem; }
+            .hero-content p { font-size: 1.1rem; }
             .philosophy-grid { grid-template-columns: 1fr; }
-            .blob-1, .blob-2, .blob-3 { opacity: 0.2; } /* Mobilde performansı artırmak için */
+            .blob-1, .blob-2, .blob-3 { opacity: 0.15; filter: blur(100px); }
+            section { padding: 100px 0; }
+            .app-details .app-icon { margin-left: auto; margin-right: auto; }
+            .btn-primary { padding: 15px 35px; font-size: 1rem; }
+            .footer { padding: 3rem 0; }
         }
     </style>
 </head>
