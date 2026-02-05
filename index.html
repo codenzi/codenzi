@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="wZCaK97_CpiYinwtjYKW1tyHKMARZe-OSra6bOAe8AQ" />
+    <meta name="description" content="Codenzi, yapay zeka destekli eğitim ve üretkenlik teknolojileri geliştiren yeni nesil bir teknoloji girişimidir.">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17404053901"></script>
     <script>
@@ -22,7 +23,7 @@
       });
     </script>
     
-    <title>Codenzi | Dijital Deneyimi Yeniden Tanımlıyoruz</title>
+    <title>Codenzi | AI Destekli Teknoloji Girişimi</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -81,19 +82,16 @@
             z-index: -1;
             overflow: hidden;
             pointer-events: none;
-            /* Açık tema için parlaklığı artır, opaklığı azalt */
             filter: brightness(1.1); 
         }
 
         .glow-blob {
             position: absolute;
             border-radius: 50%;
-            /* Bulanıklığı artırarak daha yumuşak geçişler sağla */
             filter: blur(120px);
-            /* Açık arka planda çok baskın olmaması için opaklığı düşür */
             opacity: 0.2; 
             animation: float 20s infinite alternate ease-in-out;
-            mix-blend-mode: multiply; /* Renklerin daha iyi karışması için */
+            mix-blend-mode: multiply;
         }
 
         .blob-1 {
@@ -126,22 +124,20 @@
             padding: 0 24px;
         }
 
-        /* --- Glassmorphism Utils (Açık Tema İçin Güncellendi) --- */
+        /* --- Glassmorphism Utils --- */
         .glass-card {
             background: var(--bg-card);
-            /* Daha hafif, beyaz ağırlıklı bir blur efekti */
             backdrop-filter: blur(20px) saturate(1.1);
             -webkit-backdrop-filter: blur(20px) saturate(1.1);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
-            /* Daha yumuşak, koyu gölge */
             box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
         }
         
         .glass-card:hover {
              box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.12);
-             border-color: rgba(139, 92, 246, 0.3); /* Mor kenarlık vurgusu */
+             border-color: rgba(139, 92, 246, 0.3);
         }
 
         /* --- Header --- */
@@ -151,7 +147,6 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            /* Açık ve transparan arka plan */
             background: rgba(255, 255, 255, 0.8); 
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--glass-border);
@@ -170,7 +165,6 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
-            /* Açık tema için gölgeyi biraz daha belirginleştir */
             filter: drop-shadow(0 2px 10px rgba(168, 85, 247, 0.25)); 
         }
         
@@ -187,8 +181,7 @@
         }
         
         .navbar a:hover {
-            color: var(--primary-purple); /* Hover rengi mor */
-            /* Text shadow kaldırıldı veya çok hafifletildi */
+            color: var(--primary-purple);
             text-shadow: 0 0 1px rgba(139, 92, 246, 0.1);
         }
 
@@ -196,10 +189,8 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            /* Çok açık, neredeyse beyaz arka plan */
             background: rgba(255, 255, 255, 0.95);
             min-width: 240px;
-            /* Yumuşak koyu gölge */
             box-shadow: 0 15px 35px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.04);
             z-index: 1001;
             border: 1px solid var(--glass-border);
@@ -228,7 +219,6 @@
         }
 
         .dropdown-content a:hover {
-            /* Hover'da çok hafif gri arka plan */
             background: rgba(0, 0, 0, 0.04);
             color: var(--primary-purple);
             transform: translateX(5px);
@@ -272,7 +262,6 @@
             display: inline-block;
         }
         
-        /* Highlight Altındaki Blur Efekti (Açık Tema İçin) */
         .hero-content .highlight::after {
             content: '';
             position: absolute;
@@ -283,12 +272,12 @@
             background: var(--brand-gradient);
             filter: blur(35px);
             z-index: -1;
-            opacity: 0.25; /* Opaklık azaltıldı */
+            opacity: 0.25;
         }
 
         .hero-content p {
             font-size: 1.3rem;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto 3rem;
             color: var(--text-secondary);
             font-weight: 400;
@@ -338,14 +327,12 @@
             position: relative;
         }
         
-        /* Mockup Arkası Glow (Açık Tema İçin) */
         .app-mockup::before {
             content: '';
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             width: 90%; height: 90%;
-            /* Daha yumuşak, mor ağırlıklı bir gradyan */
             background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.05) 50%, rgba(0,0,0,0) 80%);
             filter: blur(50px);
             z-index: -1;
@@ -355,7 +342,6 @@
             max-width: 100%;
             border-radius: 40px;
             transform: perspective(1000px) rotateY(-8deg);
-            /* Gölgeler daha yumuşak ve renkli */
             box-shadow: -15px 20px 50px rgba(59, 130, 246, 0.15), 0 5px 15px rgba(0,0,0,0.05);
             transition: all 0.5s ease-out;
         }
@@ -410,13 +396,10 @@
             width: 44px; 
             height: 44px;
             display: flex; align-items: center; justify-content: center;
-            /* Hafif renkli arka plan */
             background: rgba(236, 72, 153, 0.08);
             border-radius: 12px;
             margin-right: 18px; 
             color: var(--primary-pink); 
-            /* Kenarlık kaldırıldı, sadece arka plan var */
-            /* border: 1px solid var(--glass-border); */
         }
 
         .store-buttons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 3rem; }
@@ -425,7 +408,6 @@
             display: inline-flex; 
             align-items: center; 
             gap: 12px; 
-            /* Çok hafif gri arka plan */
             background: #f1f5f9;
             border: 1px solid #e2e8f0; 
             color: var(--text-primary);
@@ -472,13 +454,9 @@
         
         .philosophy-item {
             padding: 3.5rem 2.5rem;
-            /* Glass card stilleri yukarıda tanımlı */
         }
         
-        /* Glass Card Utility already handles basic styles. Let's refine hover for light mode. */
         .philosophy-item:hover {
-            /* Dönüşüm ve gölge glass-card:hover'dan geliyor */
-            /* Arka planı hafifçe renklendir */
             background: linear-gradient(to bottom right, #ffffff, #f8fafc);
         }
         
@@ -499,7 +477,6 @@
         /* --- CTA Section --- */
         #cta { 
             text-align: center; 
-            /* Çok hafif, renkli bir arka plan gradyanı */
             background: linear-gradient(180deg, var(--bg-light) 0%, rgba(59, 130, 246, 0.05) 100%);
             padding-bottom: 160px;
         }
@@ -510,7 +487,7 @@
             text-align: center; 
             color: var(--text-secondary); 
             border-top: 1px solid #e2e8f0;
-            background: #ffffff; /* Saf beyaz footer */
+            background: #ffffff; 
         }
         .footer .social-links { margin-bottom: 1.5rem; }
         .footer .social-links a { 
@@ -523,7 +500,6 @@
         .footer .social-links a:hover { 
             color: var(--primary-purple); 
             transform: translateY(-3px) scale(1.1); 
-            /* text-shadow: 0 5px 15px rgba(139, 92, 246, 0.3); */
         }
         .footer p {
             font-size: 0.95rem;
@@ -571,9 +547,9 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#hero">Anasayfa</a></li>
+                    <li><a href="#hero">Vizyon</a></li>
                     <li class="dropdown">
-                        <a href="#app-taktik">Uygulamalarımız <i class="fas fa-chevron-down"></i></a>
+                        <a href="#app-taktik">Ürün Ekosistemi <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <a href="#app-taktik">Taktik</a>
                             <a href="#app-vocachat">VocaChat</a>
@@ -582,7 +558,7 @@
                             <a href="#app-snapnote">SnapNote</a>
                         </div>
                     </li>
-                    <li><a href="#philosophy">Felsefemiz</a></li>
+                    <li><a href="#philosophy">Değerlerimiz</a></li>
                     <li><a href="#cta">İletişim</a></li>
                 </ul>
             </nav>
@@ -593,9 +569,9 @@
         <section id="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h2>Fikirler Koda, Kodlar <br><span class="highlight">Hayata Dönüşür</span></h2>
-                    <p>Gündelik problemleri çözen, güvenliği ve kullanıcı deneyimini merkeze alan mobil uygulamalar tasarlıyor ve geliştiriyoruz.</p>
-                    <a href="#app-taktik" class="btn-primary">Uygulamaları Keşfet</a>
+                    <h2>Yapay Zeka Destekli <br><span class="highlight">Geleceği Kodluyoruz</span></h2>
+                    <p>Codenzi Labs olarak, üretkenlik ve öğrenme süreçlerini yeniden tanımlayan, ölçeklenebilir mobil teknolojiler ve yapay zeka çözümleri geliştiriyoruz.</p>
+                    <a href="#app-taktik" class="btn-primary">Ekosistemi Keşfet</a>
                 </div>
             </div>
         </section>
@@ -608,14 +584,15 @@
                 <div class="app-details">
                     <img src="logo.png" alt="Taktik Icon" class="app-icon">
                     <h3>Taktik</h3>
-                    <span class="app-tagline">Yapay zeka destekli sınav stratejisti.</span>
+                    <span class="app-tagline">Milyonlarca öğrenci için YZ destekli strateji.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-brain"></i> Kişiselleştirilmiş YZ Koçluğu</li>
-                        <li><i class="fas fa-chart-area"></i> Detaylı Net Takibi ve Analiz</li>
-                        <li><i class="fas fa-clock"></i> Entegre Pomodoro Sayacı</li>
-                        <li><i class="fas fa-medal"></i> Rekabetçi 'Arena' Modu</li>
+                        <li><i class="fas fa-brain"></i> Adaptif Öğrenme Algoritmaları</li>
+                        <li><i class="fas fa-chart-area"></i> Derinlemesine Performans Analitiği</li>
+                        <li><i class="fas fa-clock"></i> Odak Yönetimi ve Pomodoro Entegrasyonu</li>
+                        <li><i class="fas fa-medal"></i> Oyunlaştırılmış 'Arena' Rekabet Modülü</li>
                     </ul>
                     <div class="store-buttons">
+                        <a href="https://taktik.codenzi.com" class="btn-store" target="_blank" style="background: var(--text-primary); color: #fff; border-color: var(--text-primary);">Web Sitesi <i class="fas fa-globe"></i></a>
                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.taktik" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
                         <a href="https://apps.apple.com/us/app/taktik-ai-ko%C3%A7-yks-lgs-kpss/id6755930518" class="btn-store" target="_blank">App Store <i class="fab fa-app-store-ios"></i></a>
                     </div>
@@ -631,12 +608,12 @@
                 <div class="app-details">
                     <img src="logo.png" alt="VocaChat Icon" class="app-icon">
                     <h3>VocaChat</h3>
-                    <span class="app-tagline">Yapay zeka destekli kişisel Dil koçunuz.</span>
+                    <span class="app-tagline">Dil öğreniminde LLM devrimi.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-robot"></i> Vocabot ile 7/24 Sınırsız Pratik</li>
-                        <li><i class="fas fa-layer-group"></i> Okuma, Yazma, Dinleme Gelişimi</li>
-                        <li><i class="fas fa-chart-pie"></i> Gerçek Hayat Senaryo Simülasyonları</li>
-                        <li><i class="fas fa-globe"></i> Global Liderlik Tabloları</li>
+                        <li><i class="fas fa-robot"></i> Generative AI Tabanlı Konuşma Partneri</li>
+                        <li><i class="fas fa-layer-group"></i> Çok Modlu Dil Gelişim Altyapısı</li>
+                        <li><i class="fas fa-chart-pie"></i> Gerçek Zamanlı Senaryo Simülasyonu</li>
+                        <li><i class="fas fa-globe"></i> Global Etkileşim ve Sıralama Ağı</li>
                     </ul>
                     <div class="store-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.vocachat" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
@@ -654,12 +631,12 @@
                 <div class="app-details">
                     <img src="logo.png" alt="Payday Icon" class="app-icon">
                     <h3>Payday</h3>
-                    <span class="app-tagline">Finansal gücü elinize alın.</span>
+                    <span class="app-tagline">Finansal okuryazarlık ve varlık yönetimi.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-robot"></i> Otomatik Servet Pilotu</li>
-                        <li><i class="fas fa-chart-line"></i> Akıllı Öngörü Sistemi</li>
-                        <li><i class="fas fa-trophy"></i> Oyunlaştırılmış Finansal Disiplin</li>
-                        <li><i class="fas fa-user-secret"></i> Kırılmaz Gizlilik Kalkanı</li>
+                        <li><i class="fas fa-robot"></i> Otomatik Bütçe Optimizasyon Motoru</li>
+                        <li><i class="fas fa-chart-line"></i> Harcama Öngörü ve Trend Analizi</li>
+                        <li><i class="fas fa-trophy"></i> Davranışsal Finans Modelleri</li>
+                        <li><i class="fas fa-user-secret"></i> Uçtan Uca Şifreli Veri Gizliliği</li>
                     </ul>
                     <div class="store-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.payday" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
@@ -677,12 +654,12 @@
                 <div class="app-details">
                     <img src="logo.png" alt="Akıllı Arşiv Icon" class="app-icon">
                     <h3>Akıllı Arşiv</h3>
-                    <span class="app-tagline">Telefonunuzdaki kaosa hükmedin.</span>
+                    <span class="app-tagline">Veri yönetimi ve dijital minimalizm.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-share-nodes"></i> Tek Dokunuşla Merkezi Arşivleme</li>
-                        <li><i class="fas fa-copy"></i> Akıllı Kopya Engelleyici (Hash)</li>
-                        <li><i class="fas fa-shield-halved"></i> Zırhlı Google Drive Yedeklemesi</li>
-                        <li><i class="fas fa-folder-tree"></i> Akıllı Otomatik Kategorizasyon</li>
+                        <li><i class="fas fa-share-nodes"></i> Merkezi Veri Entegrasyon Hub'ı</li>
+                        <li><i class="fas fa-copy"></i> Hash Tabanlı Tekilleştirme Teknolojisi</li>
+                        <li><i class="fas fa-shield-halved"></i> Bulut Senkronizasyon Protokolleri</li>
+                        <li><i class="fas fa-folder-tree"></i> Semantik İçerik Kategorizasyonu</li>
                     </ul>
                     <div class="store-buttons">
                          <a href="https://play.google.com/store/apps/details?id=com.codenzi.ceparsivi" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
@@ -699,12 +676,12 @@
                 <div class="app-details">
                     <img src="logo.png" alt="SnapNote Icon" class="app-icon">
                     <h3>SnapNote</h3>
-                    <span class="app-tagline">Hayatın hızında düşünen not defteri.</span>
+                    <span class="app-tagline">Mikro-not alma ve hızlı bilgi yakalama.</span>
                     <ul class="feature-list">
-                        <li><i class="fas fa-bolt"></i> Anında Not Widget'ları</li>
+                        <li><i class="fas fa-bolt"></i> Düşük Gecikmeli Widget Mimarisi</li>
                         <li><i class="fas fa-lock"></i> SHA-256 Askeri Düzey Şifreleme</li>
-                        <li><i class="fas fa-cloud-arrow-up"></i> Gizli Drive Yedeklemesi</li>
-                        <li><i class="fas fa-palette"></i> Kişiselleştirilebilir Arayüz</li>
+                        <li><i class="fas fa-cloud-arrow-up"></i> Güvenli Bulut Yedekleme</li>
+                        <li><i class="fas fa-palette"></i> Adaptif Kullanıcı Arayüzü</li>
                     </ul>
                     <div class="store-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.snapnote" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
@@ -715,28 +692,28 @@
 
         <section id="philosophy">
             <div class="container">
-                <h2 class="section-title">Codenzi Felsefesi</h2>
-                <p class="section-subtitle">Yazdığımız her satır kodun arkasında bu dört temel ilke yatar.</p>
+                <h2 class="section-title">Teknoloji Vizyonumuz</h2>
+                <p class="section-subtitle">Geliştirdiğimiz her ürün, ölçeklenebilir mimari ve kullanıcı odaklı tasarım ilkeleri üzerine kuruludur.</p>
                 <div class="philosophy-grid">
                     <div class="philosophy-item glass-card">
                         <i class="fas fa-users"></i>
-                        <h4>Kullanıcı Odaklı Deneyim</h4>
-                        <p>Teknoloji insan için vardır. Uygulamalarımız, sezgisel, akıcı ve hayatı gerçekten kolaylaştıran bir deneyim sunar.</p>
+                        <h4>Deneyim Odaklılık</h4>
+                        <p>Teknolojiyi insan yeteneklerini artırmak için kullanıyoruz. Ürünlerimiz, sezgisel akışlar ve yüksek erişilebilirlik standartları sunar.</p>
                     </div>
                     <div class="philosophy-item glass-card">
                         <i class="fas fa-shield-alt"></i>
-                        <h4>Tavizsiz Güvenlik</h4>
-                        <p>Dijital dünyada en değerli varlığınız verilerinizdir. Gizliliğinizi korumak bizim için bir standarttır.</p>
+                        <h4>Veri Egemenliği</h4>
+                        <p>Kullanıcı verisi, bizim değil kullanıcının mülküdür. Gizlilik odaklı mühendislik yaklaşımımızla dijital güvenliği standartlaştırıyoruz.</p>
                     </div>
                     <div class="philosophy-item glass-card">
                         <i class="fas fa-lightbulb"></i>
-                        <h4>Problem Çözen İnovasyon</h4>
-                        <p>Sadece var olanı kopyalamıyor, gerçek dünya problemlerine kalıcı ve akıllı çözümler getiriyoruz.</p>
+                        <h4>Yıkıcı İnovasyon</h4>
+                        <p>Mevcut çözümleri kopyalamıyor; yapay zeka ve veri bilimi ile sektörel problemleri kökten çözen yeni paradigmalar geliştiriyoruz.</p>
                     </div>
                     <div class="philosophy-item glass-card">
                         <i class="fas fa-sync-alt"></i>
-                        <h4>Sürekli Gelişim</h4>
-                        <p>Ürünlerimiz yaşayan birer organizmadır. Geri bildirimlerinizle sürekli gelişir ve daha iyiye evrilir.</p>
+                        <h4>Çevik Gelişim</h4>
+                        <p>Sürekli entegrasyon ve dağıtım (CI/CD) süreçlerimizle, ürünlerimizi geri bildirim döngüleri üzerinden dinamik olarak evriltiyoruz.</p>
                     </div>
                 </div>
             </div>
@@ -744,9 +721,9 @@
 
         <section id="cta">
             <div class="container">
-                <h2 class="section-title">Bir Sonraki Büyük Fikri Birlikte Hayata Geçirelim mi?</h2>
-                <p class="section-subtitle">Bir uygulama projeniz varsa veya sadece bir 'merhaba' demek isterseniz, kapımız her zaman açık.</p>
-                <a href="mailto:info@codenzi.com" class="btn-primary">Bize Ulaşın</a>
+                <h2 class="section-title">Geleceği Birlikte İnşa Edelim</h2>
+                <p class="section-subtitle">Codenzi Labs ekosistemi, partnerlikler ve yatırımcı ilişkileri hakkında bilgi almak için bizimle iletişime geçin.</p>
+                <a href="mailto:info@codenzi.com" class="btn-primary">İletişime Geçin</a>
             </div>
         </section>
     </main>
@@ -758,7 +735,7 @@
                 <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
-            <p>&copy; 2025 Codenzi. Tüm Hakları Saklıdır. | <a href="privacy-genel.html" style="color: var(--text-secondary);">Gizlilik Politikası</a></p>
+            <p>&copy; 2025 Codenzi Labs. Tüm Hakları Saklıdır. | <a href="privacy-genel.html" style="color: var(--text-secondary);">Gizlilik Politikası</a></p>
         </div>
     </footer>
     
