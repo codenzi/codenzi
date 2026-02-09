@@ -60,6 +60,7 @@
             color: #2d3748;
             font-weight: 600;
         }
+        /* Uyarı Kutuları CSS */
         .warning-box {
             background-color: #fffaf0;
             border: 1px solid #fbd38d;
@@ -76,6 +77,57 @@
             padding: 15px;
             margin: 20px 0;
         }
+        /* Yeni Eklenen Premium Limitler CSS */
+        .premium-limits-box {
+            background-color: #f0f9ff;
+            border: 1px solid #bee3f8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .premium-limits-header {
+            color: #2b6cb0;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .limits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+        }
+        .limit-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        .limit-name {
+            font-weight: 500;
+            color: #4a5568;
+            font-size: 14px;
+        }
+        .limit-value {
+            background-color: #ebf8ff;
+            color: #3182ce;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        .limit-note {
+            font-size: 12px;
+            color: #718096;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        /* Genel CSS */
         .caps-lock {
             font-weight: bold;
             font-size: 0.9em;
@@ -102,7 +154,7 @@
 <body>
     <div class="container">
         <h1>KULLANIM KOŞULLARI (EULA)</h1>
-        <p class="date-info"><strong>Yürürlük Tarihi:</strong> 12 Aralık 2025</p>
+        <p class="date-info"><strong>Yürürlük Tarihi:</strong> 09 Şubat 2026</p>
 
         <p>Lütfen <strong>Taktik</strong> mobil uygulamasını ("Uygulama") kullanmadan önce bu Kullanım Koşullarını ("Koşullar") dikkatlice okuyun.</p>
 
@@ -136,9 +188,43 @@
             </ul>
         </div>
 
-        <h2>5. PREMİUM ABONELİKLER VE İADELER</h2>
+        <h2>5. PREMİUM ABONELİKLER VE LİMİTLER</h2>
+        <p>Premium özellikler, Apple App Store veya Google Play Store üzerinden satın alınır ve adil kullanım politikası çerçevesinde aşağıdaki aylık limitlere tabidir.</p>
+        
+        <div class="premium-limits-box">
+            <div class="premium-limits-header">
+                🚀 Pro (Premium) Kullanıcı Aylık Hakları
+            </div>
+            <div class="limits-grid">
+                <div class="limit-card">
+                    <span class="limit-name">Sohbet / Motivasyon / Analiz</span>
+                    <span class="limit-value">1000 Mesaj</span>
+                </div>
+                <div class="limit-card">
+                    <span class="limit-name">Soru Çözücü</span>
+                    <span class="limit-value">800 Soru</span>
+                </div>
+                <div class="limit-card">
+                    <span class="limit-name">Etüt Odası</span>
+                    <span class="limit-value">350 İşlem</span>
+                </div>
+                <div class="limit-card">
+                    <span class="limit-name">Haftalık Plan</span>
+                    <span class="limit-value">50 Adet</span>
+                </div>
+                <div class="limit-card">
+                    <span class="limit-name">Zihin Haritası</span>
+                    <span class="limit-value">200 Adet</span>
+                </div>
+                <div class="limit-card">
+                    <span class="limit-name">Not Defteri (İçerik Üretimi)</span>
+                    <span class="limit-value">200 Adet</span>
+                </div>
+            </div>
+            <p class="limit-note">* Bu limitler her faturalandırma döneminde (aylık) yenilenir. Kullanılmayan haklar bir sonraki aya devretmez.</p>
+        </div>
         <ul>
-            <li><strong>Satın Alma:</strong> Premium özellikler Apple App Store veya Google Play Store üzerinden satın alınır. Ödeme bilgileriniz bizim tarafımızdan saklanmaz.</li>
+            <li><strong>Satın Alma:</strong> Ödeme bilgileriniz bizim tarafımızdan saklanmaz, ilgili mağaza (Store) tarafından işlenir.</li>
             <li><strong>İptal ve İade:</strong> Tüm iade talepleri ve abonelik iptalleri, satın alımın yapıldığı mağazanın (Apple/Google) politikalarına tabidir. Doğrudan para iadesi yapma yetkimiz yoktur. Aboneliğinizi telefonunuzun "Abonelikler" menüsünden yönetmelisiniz.</li>
         </ul>
 
