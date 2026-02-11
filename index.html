@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="wZCaK97_CpiYinwtjYKW1tyHKMARZe-OSra6bOAe8AQ" />
-    <meta name="description" content="Codenzi, ölçeklenebilir yapay zeka mimarileri ve bulut tabanlı mobil teknolojiler geliştiren, ürün odaklı bir teknoloji girişimidir (Venture Studio).">
-    <meta name="keywords" content="AI Startup, EdTech, FinTech, SaaS, Mobile App Studio, Google Cloud AI">
+    <meta name="description" content="Codenzi, Flutter ve Google Cloud teknolojileriyle ölçeklenebilir yapay zeka destekli mobil uygulamalar geliştiren bir teknoloji girişimidir.">
+    <meta name="keywords" content="AI Startup, Mobile App, Flutter, Firebase, Gemini AI, Google Cloud">
 
     <!-- Google Tag Manager / Analytics (Mevcut kodların korundu) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17404053901"></script>
@@ -23,7 +23,7 @@
       });
     </script>
     
-    <title>Codenzi | AI & Product Venture Studio</title>
+    <title>Codenzi | AI & Mobile Technology Studio</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -325,7 +325,7 @@
             border: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* --- Technology Stack (Google Cloud Bait) --- */
+        /* --- Technology Stack --- */
         #tech-stack {
             padding: 100px 0;
             background: linear-gradient(to bottom, var(--dark-bg), #0B1120);
@@ -334,25 +334,29 @@
         .tech-grid {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 3rem;
             flex-wrap: wrap;
             margin-top: 3rem;
         }
         .tech-item {
             background: rgba(255,255,255,0.03);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 16px;
-            width: 180px;
+            width: 200px;
             border: 1px solid rgba(255,255,255,0.05);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .tech-item:hover {
             background: rgba(255,255,255,0.08);
             transform: translateY(-5px);
+            border-color: var(--primary-blue);
         }
         .tech-item i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
             color: #fff;
         }
         .tech-item span {
@@ -385,11 +389,11 @@
             .product-visual { order: -1; margin-bottom: 2rem; }
             .hero-content h2 { font-size: 3rem; }
             .metrics-bar { gap: 2rem; }
+            .footer-content { flex-direction: column; gap: 2rem; text-align: center; }
         }
         @media (max-width: 768px) {
             .navbar { display: none; }
             .hero-buttons { flex-direction: column; }
-            .footer-content { flex-direction: column; gap: 2rem; text-align: center; }
             .legal-links { margin-top: 1rem; }
             .legal-links a { margin: 0 10px; }
         }
@@ -404,15 +408,15 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>Codenzi</h1> <!-- "Codenzi.ai" yerine sadece "Codenzi" yapıldı -->
+                <h1>Codenzi</h1>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#products">Platform</a></li>
-                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#products">Ecosystem</a></li>
+                    <li><a href="#tech-stack">Technology</a></li>
                     <li><a href="#about">About</a></li>
-                    <!-- Ajans olmadığınızı vurgulamak için "Yatırımcı İlişkileri" butonu -->
-                    <li><a href="mailto:investors@codenzi.com" class="btn-nav-cta">Investor Relations</a></li>
+                    <!-- Ajans olmadığınızı vurgulamak için "Partnerlik" -->
+                    <li><a href="mailto:partners@codenzi.com" class="btn-nav-cta">Partnerships</a></li>
                 </ul>
             </nav>
         </div>
@@ -422,35 +426,35 @@
         <section id="hero">
             <div class="container">
                 <div class="badge">
-                    <i class="fas fa-rocket"></i> Pre-Seed Stage Venture
+                    <i class="fas fa-bolt"></i> Mobile AI Venture
                 </div>
                 <div class="hero-content">
-                    <h2>Scaling the Future of<br><span class="gradient-text">Human Productivity</span></h2>
-                    <p>Codenzi is a product venture studio building the next generation of <b>AI-native applications</b>. We leverage scalable cloud architectures to empower our users worldwide.</p>
+                    <h2>Innovating with<br><span class="gradient-text">Intelligent Mobile Apps</span></h2>
+                    <p>Codenzi is a technology studio developing next-generation mobile applications powered by Artificial Intelligence. We build products that empower users globally.</p>
                     
                     <div class="hero-buttons">
-                        <a href="#products" class="btn-primary">Explore Our Portfolio</a>
-                        <a href="#technology" class="btn-outline">View Tech Stack</a>
+                        <a href="#products" class="btn-primary">Discover Our Apps</a>
+                        <a href="#tech-stack" class="btn-outline">Our Tech Stack</a>
                     </div>
                 </div>
 
-                <!-- Startup Metrics: Çok daha gerçekçi rakamlar (Early Traction) -->
+                <!-- Startup Metrics: Gerçekçi ve sade -->
                 <div class="metrics-bar">
                     <div class="metric-item">
                         <span class="metric-val">3</span>
-                        <span class="metric-lbl">Active Products</span>
+                        <span class="metric-lbl">Live Products</span>
                     </div>
                     <div class="metric-item">
                         <span class="metric-val">25K+</span>
-                        <span class="metric-lbl">Registered Users</span>
+                        <span class="metric-lbl">Active Users</span>
                     </div>
                     <div class="metric-item">
-                        <span class="metric-val">1M+</span>
-                        <span class="metric-lbl">Predictions Served</span>
+                        <span class="metric-val">AI-First</span>
+                        <span class="metric-lbl">Approach</span>
                     </div>
                     <div class="metric-item">
-                        <span class="metric-val">99.9%</span>
-                        <span class="metric-lbl">Cloud Uptime</span>
+                        <span class="metric-val">Cloud</span>
+                        <span class="metric-lbl">Native</span>
                     </div>
                 </div>
             </div>
@@ -459,73 +463,73 @@
         <section id="products" style="padding: 100px 0;">
             <div class="container">
                 <div class="section-header">
-                    <h3>Proprietary Product Ecosystem</h3>
-                    <p>Our internal R&D labs design, build, and scale products from zero to one.</p>
+                    <h3>Our Mobile Ecosystem</h3>
+                    <p>We design, develop, and operate our own suite of applications.</p>
                 </div>
 
                 <!-- Product 1 -->
                 <div class="product-card">
                     <div class="product-info">
-                        <span class="product-tag">EdTech & AI</span>
+                        <span class="product-tag">EdTech & Strategy</span>
                         <h4>Taktik</h4>
-                        <p class="product-desc">An AI-driven strategic learning assistant that adapts to student performance in real-time using reinforcement learning models.</p>
+                        <p class="product-desc">A smart study companion that helps students optimize their exam preparation strategy using personalized insights.</p>
                         <div class="tech-stack-mini">
-                            <span class="ts-badge">TensorFlow</span>
-                            <span class="ts-badge">Cloud Functions</span>
-                            <span class="ts-badge">React Native</span>
+                            <span class="ts-badge">Flutter</span>
+                            <span class="ts-badge">Firebase</span>
+                            <span class="ts-badge">AI Analytics</span>
                         </div>
-                        <a href="https://taktik.codenzi.com" target="_blank" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">Visit Platform <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://taktik.codenzi.com" target="_blank" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="product-visual">
-                        <img src="taktik.webp" alt="Taktik AI Dashboard" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Taktik+AI+Interface'">
+                        <img src="taktik.webp" alt="Taktik App Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Taktik+Mobile+App'">
                     </div>
                 </div>
 
                 <!-- Product 2 -->
                 <div class="product-card">
                     <div class="product-visual">
-                        <img src="vocachat.webp" alt="VocaChat Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=VocaChat+AI'">
+                        <img src="vocachat.webp" alt="VocaChat App Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=VocaChat+AI'">
                     </div>
                     <div class="product-info">
-                        <span class="product-tag">Generative AI & NLP</span>
+                        <span class="product-tag">Generative AI</span>
                         <h4>VocaChat</h4>
-                        <p class="product-desc">Leveraging Large Language Models (LLMs) to create immersive language learning simulations. Features real-time voice synthesis and semantic analysis.</p>
+                        <p class="product-desc">An immersive language learning application powered by Gemini. Real-time conversation practice with AI agents.</p>
                         <div class="tech-stack-mini">
-                            <span class="ts-badge">Gemini Pro API</span>
-                            <span class="ts-badge">Cloud Run</span>
-                            <span class="ts-badge">WebSockets</span>
+                            <span class="ts-badge">Flutter</span>
+                            <span class="ts-badge">Gemini API</span>
+                            <span class="ts-badge">Text-to-Speech</span>
                         </div>
-                        <a href="#" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">View Case Study</a>
+                        <a href="#" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">Coming Soon</a>
                     </div>
                 </div>
 
                  <!-- Product 3 -->
                  <div class="product-card">
                     <div class="product-info">
-                        <span class="product-tag">FinTech & Analytics</span>
+                        <span class="product-tag">FinTech</span>
                         <h4>Payday</h4>
-                        <p class="product-desc">Behavioral finance algorithms meeting modern UX. Payday processes user transaction data securely to provide predictive budget modeling.</p>
+                        <p class="product-desc">A personal finance tracker designed for modern habits. Secure, fast, and insightful budget management.</p>
                         <div class="tech-stack-mini">
-                            <span class="ts-badge">BigQuery</span>
-                            <span class="ts-badge">Node.js</span>
                             <span class="ts-badge">Flutter</span>
+                            <span class="ts-badge">Firebase Auth</span>
+                            <span class="ts-badge">Cloud Functions</span>
                         </div>
-                        <a href="#" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">Learn More</a>
+                        <a href="#" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">Coming Soon</a>
                     </div>
                     <div class="product-visual">
-                         <img src="payday.webp" alt="Payday Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Payday+FinTech'">
+                         <img src="payday.webp" alt="Payday App Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Payday+Finance+App'">
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- TECHNOLOGY SECTION: Google Cloud için KRİTİK -->
-        <section id="technology">
+        <!-- TECHNOLOGY SECTION: Sadece Gerçek Stack -->
+        <section id="tech-stack">
             <div class="container">
                 <div class="section-header">
-                    <h3>Built on Cloud Native Infrastructure</h3>
-                    <p>We don't just use apps; we engineer scalable systems powered by best-in-class technology.</p>
+                    <h3>Built with Modern Stack</h3>
+                    <p>We leverage the best of Google's ecosystem to build performant and scalable apps.</p>
                 </div>
                 <div class="tech-grid">
                     <div class="tech-item">
@@ -533,24 +537,16 @@
                         <span>Google Cloud</span>
                     </div>
                     <div class="tech-item">
-                        <i class="fas fa-brain"></i>
-                        <span>TensorFlow</span>
-                    </div>
-                    <div class="tech-item">
-                        <i class="fab fa-docker"></i>
-                        <span>Kubernetes</span>
+                        <i class="fas fa-mobile-alt"></i> <!-- Flutter iconu olmadığı için mobile icon -->
+                        <span>Flutter</span>
                     </div>
                     <div class="tech-item">
                         <i class="fas fa-fire"></i>
                         <span>Firebase</span>
                     </div>
                     <div class="tech-item">
-                        <i class="fab fa-python"></i>
-                        <span>Python AI</span>
-                    </div>
-                    <div class="tech-item">
-                        <i class="fab fa-react"></i>
-                        <span>React Native</span>
+                        <i class="fas fa-brain"></i>
+                        <span>Gemini AI</span>
                     </div>
                 </div>
             </div>
@@ -559,12 +555,11 @@
         <!-- About / CTA -->
         <section id="about" style="padding: 100px 0; text-align: center;">
             <div class="container">
-                <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Driven by Product Innovation</h3>
+                <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Creating Value Through Technology</h3>
                 <p style="max-width: 600px; margin: 0 auto 3rem; color: var(--text-muted);">
-                    Codenzi is a dedicated product studio. We do not provide external consultancy services. We are solely focused on designing and scaling our own proprietary platforms.
+                    Codenzi Labs is passionate about building mobile experiences that solve real-world problems. We are constantly innovating to bring the best products to our users.
                 </p>
-                <!-- Ajans izlenimini önlemek için iletişim butonunu değiştirdik -->
-                <a href="mailto:partners@codenzi.com" class="btn-primary">Partnership & Media Inquiries</a>
+                <a href="mailto:partners@codenzi.com" class="btn-primary">Contact Us</a>
             </div>
         </section>
 
@@ -574,9 +569,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <!-- Inc. kaldırıldı, daha genel ve güvenli -->
                     <h4 style="color:#fff; margin:0 0 10px;">Codenzi Labs</h4>
-                    <p>A Product Venture Studio.</p>
+                    <p>Building the next generation of apps.</p>
                 </div>
                 <div class="social-links">
                     <a href="#" style="color:#fff; font-size:1.2rem; margin:0 10px;"><i class="fab fa-linkedin"></i></a>
@@ -588,8 +582,9 @@
                     <a href="#">Terms of Service</a>
                 </div>
             </div>
+            
             <div style="text-align: center; margin-top: 3rem; opacity: 0.5; font-size: 0.8rem;">
-                &copy; 2025 Codenzi Team. All rights reserved.
+                &copy; 2025 Codenzi Labs. All rights reserved.
             </div>
         </div>
     </footer>
