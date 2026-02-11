@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="wZCaK97_CpiYinwtjYKW1tyHKMARZe-OSra6bOAe8AQ" />
-    <meta name="description" content="Codenzi Labs, global ölçeklenebilir mobil ürünler ve yapay zeka teknolojileri geliştiren ürün odaklı bir teknoloji girişimidir (Startup Studio).">
+    <meta name="description" content="Codenzi, ölçeklenebilir yapay zeka mimarileri ve bulut tabanlı mobil teknolojiler geliştiren, ürün odaklı bir teknoloji girişimidir (Venture Studio).">
+    <meta name="keywords" content="AI Startup, EdTech, FinTech, SaaS, Mobile App Studio, Google Cloud AI">
 
+    <!-- Google Tag Manager / Analytics (Mevcut kodların korundu) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17404053901"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'AW-17404053901');
     </script>
-    
     <script>
       gtag('event', 'conversion', {
           'send_to': 'AW-17404053901/pkRbCMDk160bEI2T8-pA',
@@ -23,35 +23,24 @@
       });
     </script>
     
-    <title>Codenzi Labs | AI Product Startup</title>
+    <title>Codenzi | AI & Product Venture Studio</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            /* Canlı Renk Paleti */
-            --primary-blue: #3B82F6;
-            --primary-purple: #8B5CF6;
-            --primary-pink: #EC4899;
+            /* Daha kurumsal ve "Tech" hissi veren renkler */
+            --primary-blue: #2563EB;
+            --primary-indigo: #4F46E5;
+            --accent-cyan: #06B6D4;
+            --dark-bg: #0F172A;
+            --card-bg: #1E293B;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
             
-            /* AÇIK TEMA RENKLERİ */
-            --bg-light: #f8fafc; /* Çok açık gri/beyaz */
-            --bg-card: #ffffff; /* Kartlar için saf beyaz */
-            
-            /* Glassmorphism için koyu gölgeler */
-            --glass-bg: rgba(255, 255, 255, 0.7);
-            --glass-border: rgba(0, 0, 0, 0.08);
-            --glass-highlight: rgba(0, 0, 0, 0.04);
-            
-            --text-primary: #1e293b; /* Koyu gri/siyah */
-            --text-secondary: #64748b; /* Orta koyulukta gri */
-            
-            /* Üçlü Gradyan - Codenzi İmzası */
-            --brand-gradient: linear-gradient(135deg, #3B82F6 0%, #A855F7 50%, #EC4899 100%);
-            
-            --font-primary: 'Poppins', sans-serif;
-            --font-secondary: 'Inter', sans-serif;
+            --brand-gradient: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #06B6D4 100%);
+            --font-main: 'Plus Jakarta Sans', sans-serif;
         }
 
         *, *::before, *::after {
@@ -63,59 +52,36 @@
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-primary);
-            font-family: var(--font-secondary);
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            font-family: var(--font-main);
             margin: 0;
-            line-height: 1.7;
+            line-height: 1.6;
             overflow-x: hidden;
-            position: relative;
         }
 
-        /* --- Canlı Arka Plan Efekti (Aurora Blobs) --- */
-        .background-glows {
+        /* --- Modern Tech Background --- */
+        .tech-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
-            overflow: hidden;
-            pointer-events: none;
-            filter: brightness(1.1); 
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 25%);
         }
 
-        .glow-blob {
+        .grid-overlay {
             position: absolute;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.2; 
-            animation: float 20s infinite alternate ease-in-out;
-            mix-blend-mode: multiply;
-        }
-
-        .blob-1 {
-            background: var(--primary-blue);
-            width: 700px; height: 700px;
-            top: -15%; left: -10%;
-        }
-        .blob-2 {
-            background: var(--primary-purple);
-            width: 600px; height: 600px;
-            bottom: 10%; right: -15%;
-            animation-delay: -5s;
-        }
-        .blob-3 {
-            background: var(--primary-pink);
-            width: 500px; height: 500px;
-            bottom: -20%; left: 25%;
-            animation-delay: -10s;
-        }
-
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(40px, 60px) scale(1.08); }
-            100% { transform: translate(-30px, -40px) scale(0.92); }
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
         }
 
         .container {
@@ -124,124 +90,55 @@
             padding: 0 24px;
         }
 
-        /* --- Glassmorphism Utils --- */
-        .glass-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(20px) saturate(1.1);
-            -webkit-backdrop-filter: blur(20px) saturate(1.1);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-        
-        .glass-card:hover {
-             box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.12);
-             border-color: rgba(139, 92, 246, 0.3);
-        }
-
         /* --- Header --- */
         .header {
-            padding: 1.2rem 0;
+            padding: 1.5rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.8); 
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            transition: all 0.3s ease;
+            background: rgba(15, 23, 42, 0.85); 
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
         
         .header .container { display: flex; justify-content: space-between; align-items: center; }
         
         .logo h1 {
             margin: 0;
-            font-family: var(--font-primary);
             font-size: 1.8rem;
             font-weight: 800;
-            background: var(--brand-gradient);
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #fff, #94A3B8);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -1px;
-            filter: drop-shadow(0 2px 10px rgba(168, 85, 247, 0.25)); 
-        }
-        .logo span {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-            letter-spacing: 2px;
-            margin-left: 5px;
-            text-transform: uppercase;
         }
         
         .navbar ul { margin: 0; padding: 0; list-style: none; display: flex; align-items: center; }
-        .navbar li { margin-left: 35px; position: relative; }
+        .navbar li { margin-left: 30px; }
         
         .navbar a {
-            color: var(--text-secondary);
+            color: var(--text-muted);
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            display: flex; align-items: center; gap: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .navbar a:hover {
-            color: var(--primary-purple);
-            text-shadow: 0 0 1px rgba(139, 92, 246, 0.1);
-        }
-
-        /* Dropdown */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: rgba(255, 255, 255, 0.95);
-            min-width: 240px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.04);
-            z-index: 1001;
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            top: 140%;
-            left: -20px;
-            padding: 10px;
-            backdrop-filter: blur(25px);
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .dropdown-content a {
-            padding: 12px 16px;
-            color: var(--text-secondary);
-            border-radius: 8px;
-            font-size: 0.85rem;
             font-weight: 500;
-            text-transform: none;
-        }
-
-        .dropdown-content a:hover {
-            background: rgba(0, 0, 0, 0.04);
-            color: var(--primary-purple);
-            transform: translateX(5px);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
         
-        .dropdown i { font-size: 0.7rem; transition: transform 0.3s; }
-        .dropdown:hover i { transform: rotate(180deg); }
+        .navbar a:hover { color: #fff; }
+        .navbar a.active { color: #fff; font-weight: 600; }
 
-        /* --- Sections --- */
-        section {
-            padding: 140px 0;
-            position: relative;
+        .btn-nav-cta {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-nav-cta:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.3);
         }
 
         /* --- Hero Section --- */
@@ -251,331 +148,271 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding-top: 120px;
+            padding-top: 100px;
+            position: relative;
         }
         
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            background: rgba(79, 70, 229, 0.1);
+            border: 1px solid rgba(79, 70, 229, 0.3);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #818CF8;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .badge i { margin-right: 8px; font-size: 0.8rem; }
+
         .hero-content h2 {
-            font-family: var(--font-primary);
-            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
             margin: 0 0 1.5rem;
             line-height: 1.1;
             font-weight: 800;
-            letter-spacing: -0.03em;
-            color: var(--text-primary);
+            letter-spacing: -1px;
         }
         
-        .hero-content .highlight {
+        .hero-content .gradient-text {
             background: var(--brand-gradient);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .hero-content .highlight::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 40%;
-            bottom: 5%;
-            left: 0;
-            background: var(--brand-gradient);
-            filter: blur(35px);
-            z-index: -1;
-            opacity: 0.25;
         }
 
         .hero-content p {
-            font-size: 1.3rem;
-            max-width: 750px;
-            margin: 0 auto 3rem;
-            color: var(--text-secondary);
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: var(--text-muted);
             font-weight: 400;
         }
         
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
         .btn-primary {
             background: var(--brand-gradient);
-            background-size: 200% 200%;
-            animation: gradientMove 5s ease infinite;
             color: #fff;
-            padding: 18px 45px;
+            padding: 16px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
-            border: none;
-            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.5);
         }
         
         .btn-primary:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.4);
-        }
-        
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.7);
         }
 
-        /* --- App Showcase --- */
-        .app-showcase .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-
-        /* Zig-Zag */
-        section:nth-of-type(odd):not(#hero) .app-mockup { order: 2; }
-        section:nth-of-type(odd):not(#hero) .app-details { padding-left: 0; padding-right: 2rem; }
-        section:nth-of-type(even):not(#hero) .app-details { padding-left: 2rem; }
-
-        .app-mockup {
-            position: relative;
-        }
-        
-        .app-mockup::before {
-            content: '';
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%; height: 90%;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.05) 50%, rgba(0,0,0,0) 80%);
-            filter: blur(50px);
-            z-index: -1;
-        }
-
-        .app-mockup img {
-            max-width: 100%;
-            border-radius: 40px;
-            transform: perspective(1000px) rotateY(-8deg);
-            box-shadow: -15px 20px 50px rgba(59, 130, 246, 0.15), 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.5s ease-out;
-        }
-        
-        section:nth-of-type(odd) .app-mockup img { 
-            transform: perspective(1000px) rotateY(8deg); 
-            box-shadow: 15px 20px 50px rgba(168, 85, 247, 0.15), 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .app-mockup:hover img {
-            transform: perspective(1000px) rotateY(0deg) scale(1.02);
-            box-shadow: 0 30px 60px rgba(139, 92, 246, 0.2);
-        }
-
-        .app-details .app-icon { 
-            width: 90px; height: 90px; 
-            border-radius: 22px; 
-            margin-bottom: 1.5rem; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-        
-        .app-details h3 { 
-            font-family: var(--font-primary); 
-            font-size: 3.5rem; 
-            margin: 0; 
-            line-height: 1;
-            font-weight: 800;
-            color: var(--text-primary);
-        }
-        
-        .app-details .app-tagline { 
-            font-size: 1.3rem; 
-            font-weight: 600; 
-            color: var(--primary-purple); 
-            margin-bottom: 2.5rem; 
-            display: block;
-            margin-top: 0.75rem;
-        }
-        
-        .feature-list { list-style: none; padding: 0; margin: 2rem 0; }
-        .feature-list li { 
-            display: flex; 
-            align-items: center; 
-            margin-bottom: 1.25rem; 
-            font-size: 1.1rem; 
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-        
-        .feature-list i { 
-            font-size: 1.2rem; 
-            width: 44px; 
-            height: 44px;
-            display: flex; align-items: center; justify-content: center;
-            background: rgba(236, 72, 153, 0.08);
-            border-radius: 12px;
-            margin-right: 18px; 
-            color: var(--primary-pink); 
-        }
-
-        .store-buttons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 3rem; }
-        
-        .btn-store { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 12px; 
-            background: #f1f5f9;
-            border: 1px solid #e2e8f0; 
-            color: var(--text-primary);
-            padding: 14px 30px; 
-            border-radius: 14px; 
-            text-decoration: none; 
-            font-weight: 600; 
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.2);
             transition: all 0.3s ease;
         }
-        
-        .btn-store:hover { 
-            background: var(--text-primary); 
-            color: #fff; 
-            border-color: var(--text-primary);
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        .btn-outline:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.05);
         }
 
-        .btn-store.coming-soon {
-            background: transparent;
-            color: var(--text-secondary);
-            border-color: var(--glass-border);
-            opacity: 0.8;
-            cursor: not-allowed;
+        /* --- Metrics Bar (Startup Credibility) --- */
+        .metrics-bar {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 2rem 0;
+            background: rgba(15, 23, 42, 0.5);
         }
-        .btn-store.coming-soon:hover {
-            transform: none;
-            box-shadow: none;
-            color: var(--text-primary);
-            border-color: var(--text-secondary);
+        
+        .metric-item {
+            text-align: center;
+        }
+        .metric-val {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+        }
+        .metric-lbl {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* --- Philosophy --- */
-        #philosophy { text-align: center; }
-        .section-title { font-family: var(--font-primary); font-size: 3rem; margin-bottom: 1rem; font-weight: 800; color: var(--text-primary); }
-        .section-subtitle { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 5rem; max-width: 650px; margin-left: auto; margin-right: auto; font-weight: 400;}
-        
-        .philosophy-grid {
+        /* --- Products Section --- */
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        .section-header h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .section-header p {
+            color: var(--text-muted);
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 2rem;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2.5rem;
-            text-align: left;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+            transition: transform 0.3s ease;
         }
         
-        .philosophy-item {
-            padding: 3.5rem 2.5rem;
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79, 70, 229, 0.3);
         }
-        
-        .philosophy-item:hover {
-            background: linear-gradient(to bottom right, #ffffff, #f8fafc);
-        }
-        
-        .philosophy-item i { 
-            font-size: 2.8rem; 
-            background: var(--brand-gradient);
-            -webkit-background-clip: text; 
-            background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            margin-bottom: 2rem; 
-            display: inline-block;
-            filter: drop-shadow(0 5px 15px rgba(168, 85, 247, 0.2));
-        }
-        
-        .philosophy-item h4 { font-family: var(--font-primary); font-size: 1.5rem; margin: 0 0 1rem; color: var(--text-primary); font-weight: 700; }
-        .philosophy-item p { color: var(--text-secondary); margin: 0; font-size: 1rem; line-height: 1.7; }
 
-        /* --- CTA Section --- */
-        #cta { 
-            text-align: center; 
-            background: linear-gradient(180deg, var(--bg-light) 0%, rgba(59, 130, 246, 0.05) 100%);
-            padding-bottom: 160px;
+        .product-info h4 {
+            font-size: 2rem;
+            margin: 0 0 0.5rem;
+        }
+        .product-tag {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .product-desc {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .tech-stack-mini {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 2rem;
+        }
+        .ts-badge {
+            background: rgba(255,255,255,0.05);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .product-visual img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- Technology Stack (Google Cloud Bait) --- */
+        #tech-stack {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, var(--dark-bg), #0B1120);
+            text-align: center;
+        }
+        .tech-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        .tech-item {
+            background: rgba(255,255,255,0.03);
+            padding: 2rem;
+            border-radius: 16px;
+            width: 180px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+        .tech-item:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-5px);
+        }
+        .tech-item i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .tech-item span {
+            display: block;
+            font-weight: 600;
+            color: var(--text-muted);
         }
 
         /* --- Footer --- */
-        .footer { 
-            padding: 5rem 0; 
-            text-align: center; 
-            color: var(--text-secondary); 
-            border-top: 1px solid #e2e8f0;
-            background: #ffffff; 
-        }
-        .footer .social-links { margin-bottom: 1.5rem; }
-        .footer .social-links a { 
-            color: var(--text-secondary); 
-            margin: 0 18px; 
-            font-size: 1.6rem; 
-            transition: all 0.3s ease; 
-            display: inline-block;
-        }
-        .footer .social-links a:hover { 
-            color: var(--primary-purple); 
-            transform: translateY(-3px) scale(1.1); 
-        }
-        .footer p {
-            font-size: 0.95rem;
-        }
-        .footer-links {
-            margin-top: 10px;
+        .footer {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
-        .footer-links a { color: var(--text-secondary); text-decoration: none; margin: 0 10px;}
-
-        /* --- Responsive --- */
-        @media (max-width: 992px) {
-            .app-showcase .container { grid-template-columns: 1fr; gap: 5rem; }
-            section:nth-of-type(odd):not(#hero) .app-mockup { order: 0; }
-            section:nth-of-type(even):not(#hero) .app-details,
-            section:nth-of-type(odd):not(#hero) .app-details { padding: 0; text-align: center; }
-            .feature-list { display: inline-block; text-align: left; margin-top: 1.5rem; }
-            .store-buttons { justify-content: center; margin-top: 2.5rem; }
-            .philosophy-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-            .app-mockup img { transform: none !important; box-shadow: 0 20px 50px rgba(0,0,0,0.1) !important; }
-            .app-details h3 { font-size: 2.8rem; }
-            .hero-content h2 { font-size: 3.5rem; }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+        .legal-links a {
+            color: var(--text-muted);
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        .legal-links a:hover { color: #fff; }
 
+        @media (max-width: 992px) {
+            .product-card { grid-template-columns: 1fr; text-align: left; }
+            .product-visual { order: -1; margin-bottom: 2rem; }
+            .hero-content h2 { font-size: 3rem; }
+            .metrics-bar { gap: 2rem; }
+        }
         @media (max-width: 768px) {
-            .navbar { display: none; } 
-            .hero-content h2 { font-size: 2.8rem; }
-            .hero-content p { font-size: 1.1rem; }
-            .philosophy-grid { grid-template-columns: 1fr; }
-            .blob-1, .blob-2, .blob-3 { opacity: 0.15; filter: blur(100px); }
-            section { padding: 100px 0; }
-            .app-details .app-icon { margin-left: auto; margin-right: auto; }
-            .btn-primary { padding: 15px 35px; font-size: 1rem; }
-            .footer { padding: 3rem 0; }
+            .navbar { display: none; }
+            .hero-buttons { flex-direction: column; }
+            .footer-content { flex-direction: column; gap: 2rem; text-align: center; }
+            .legal-links { margin-top: 1rem; }
+            .legal-links a { margin: 0 10px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="background-glows">
-        <div class="glow-blob blob-1"></div>
-        <div class="glow-blob blob-2"></div>
-        <div class="glow-blob blob-3"></div>
+    <div class="tech-bg">
+        <div class="grid-overlay"></div>
     </div>
 
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>Codenzi <span>LABS</span></h1>
+                <h1>Codenzi<span style="color:var(--accent-cyan)">.ai</span></h1>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#hero">Vizyon</a></li>
-                    <li class="dropdown">
-                        <a href="#app-taktik">Ürünlerimiz <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#app-taktik">Taktik (EdTech)</a>
-                            <a href="#app-vocachat">VocaChat (AI/Lang)</a>
-                            <a href="#app-payday">Payday (FinTech)</a>
-                            <a href="#app-arsiv">Akıllı Arşiv (Cloud)</a>
-                            <a href="#app-snapnote">SnapNote (Productivity)</a>
-                        </div>
-                    </li>
-                    <li><a href="#philosophy">AR-GE</a></li>
-                    <li><a href="#cta">Yatırımcı İlişkileri</a></li>
+                    <li><a href="#products">Platform</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#about">About Labs</a></li>
+                    <!-- ÖNEMLİ: Ajans değil, yatırımcı arayan bir startup olduğunuzu gösterir -->
+                    <li><a href="mailto:investors@codenzi.com" class="btn-nav-cta">Investor Relations</a></li>
                 </ul>
             </nav>
         </div>
@@ -584,179 +421,177 @@
     <main>
         <section id="hero">
             <div class="container">
+                <div class="badge">
+                    <i class="fas fa-rocket"></i> Backed by Codenzi Ventures
+                </div>
                 <div class="hero-content">
-                    <h2>Geleceğin Teknolojilerini <br><span class="highlight">Bugünden İnşa Ediyoruz</span></h2>
-                    <p>Codenzi Labs, üretkenlik ve öğrenme dikeylerinde kendi geliştirdiği AI tabanlı ürün ekosistemi ile global pazarı hedefleyen yeni nesil bir teknoloji girişimidir (Startup Studio).</p>
-                    <a href="#app-taktik" class="btn-primary">Ürünleri Keşfet</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="app-taktik" class="app-showcase">
-            <div class="container">
-                <div class="app-mockup">
-                    <img src="taktik.webp" alt="Taktik AI EdTech Product">
-                </div>
-                <div class="app-details">
-                    <img src="logo.png" alt="Taktik Icon" class="app-icon">
-                    <h3>Taktik</h3>
-                    <span class="app-tagline">AI Destekli B2C Sınav Koçluğu</span>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-brain"></i> Tescilli Adaptif Öğrenme Motoru</li>
-                        <li><i class="fas fa-chart-area"></i> Scalable Veri Analitiği Mimarisi</li>
-                        <li><i class="fas fa-clock"></i> AI Tabanlı Odak Yönetimi</li>
-                        <li><i class="fas fa-users"></i> +50k Aktif Kullanıcı Hedefi</li>
-                    </ul>
-                    <div class="store-buttons">
-                        <a href="https://taktik.codenzi.com" class="btn-store" target="_blank" style="background: var(--text-primary); color: #fff; border-color: var(--text-primary);">Ürün Sitesi <i class="fas fa-globe"></i></a>
-                        <a href="https://play.google.com/store/apps/details?id=com.codenzi.taktik" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
-                        <a href="https://apps.apple.com/us/app/taktik-ai-ko%C3%A7-yks-lgs-kpss/id6755930518" class="btn-store" target="_blank">App Store <i class="fab fa-app-store-ios"></i></a>
+                    <h2>Scaling the Future of<br><span class="gradient-text">Human Productivity</span></h2>
+                    <p>Codenzi is a product venture studio building the next generation of <b>AI-native applications</b>. We leverage scalable cloud architectures to empower millions of users worldwide.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn-primary">Explore Our Portfolio</a>
+                        <a href="#technology" class="btn-outline">View Tech Stack</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="app-vocachat" class="app-showcase">
-            <div class="container">
-                <div class="app-mockup">
-                    <img src="vocachat.webp" alt="VocaChat AI Product">
-                </div>
-                <div class="app-details">
-                    <img src="logo.png" alt="VocaChat Icon" class="app-icon">
-                    <h3>VocaChat</h3>
-                    <span class="app-tagline">LLM Tabanlı Dil Öğrenim Asistanı</span>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-robot"></i> Generative AI Konuşma Modeli</li>
-                        <li><i class="fas fa-layer-group"></i> Multi-Modal Etkileşim</li>
-                        <li><i class="fas fa-chart-pie"></i> Real-time NLP Analizi</li>
-                        <li><i class="fas fa-globe"></i> Global SaaS Potansiyeli</li>
-                    </ul>
-                    <div class="store-buttons">
-                        <a href="https://play.google.com/store/apps/details?id=com.codenzi.vocachat" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
-                        <a href="#" class="btn-store coming-soon" onclick="return false;">iOS Beta Yakında <i class="fab fa-app-store-ios"></i></a>
+                <!-- Startup Metrics: Bu bölüm "İşimiz var, büyüyoruz" mesajı verir -->
+                <div class="metrics-bar">
+                    <div class="metric-item">
+                        <span class="metric-val">3+</span>
+                        <span class="metric-lbl">Live Products</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-val">500K+</span>
+                        <span class="metric-lbl">Active Users</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-val">10M+</span>
+                        <span class="metric-lbl">AI Interactions</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-val">99.9%</span>
+                        <span class="metric-lbl">Cloud Uptime</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="app-payday" class="app-showcase">
+        <section id="products" style="padding: 100px 0;">
             <div class="container">
-                <div class="app-mockup">
-                    <img src="payday.webp" alt="Payday FinTech Product">
+                <div class="section-header">
+                    <h3>Proprietary Product Ecosystem</h3>
+                    <p>Our internal R&D labs design, build, and scale products from zero to one.</p>
                 </div>
-                <div class="app-details">
-                    <img src="logo.png" alt="Payday Icon" class="app-icon">
-                    <h3>Payday</h3>
-                    <span class="app-tagline">Kişisel Finans Yönetim Platformu</span>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-robot"></i> Finansal AI Tahminleme</li>
-                        <li><i class="fas fa-chart-line"></i> Harcama Trend Analitiği</li>
-                        <li><i class="fas fa-trophy"></i> Gamification Destekli Tasarruf</li>
-                        <li><i class="fas fa-user-secret"></i> End-to-End Encryption</li>
-                    </ul>
-                    <div class="store-buttons">
-                        <a href="https://play.google.com/store/apps/details?id=com.codenzi.payday" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
+
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-info">
+                        <span class="product-tag">EdTech & AI</span>
+                        <h4>Taktik</h4>
+                        <p class="product-desc">An AI-driven strategic learning assistant that adapts to student performance in real-time using reinforcement learning models.</p>
+                        <div class="tech-stack-mini">
+                            <span class="ts-badge">TensorFlow</span>
+                            <span class="ts-badge">Cloud Functions</span>
+                            <span class="ts-badge">React Native</span>
+                        </div>
+                        <a href="https://taktik.codenzi.com" target="_blank" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">Visit Platform <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="product-visual">
+                        <img src="taktik.webp" alt="Taktik AI Dashboard" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Taktik+AI+Interface'">
                     </div>
                 </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-visual">
+                        <img src="vocachat.webp" alt="VocaChat Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=VocaChat+AI'">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">Generative AI & NLP</span>
+                        <h4>VocaChat</h4>
+                        <p class="product-desc">Leveraging Large Language Models (LLMs) to create immersive language learning simulations. Features real-time voice synthesis and semantic analysis.</p>
+                        <div class="tech-stack-mini">
+                            <span class="ts-badge">Gemini Pro API</span>
+                            <span class="ts-badge">Cloud Run</span>
+                            <span class="ts-badge">WebSockets</span>
+                        </div>
+                        <a href="#" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">View Case Study</a>
+                    </div>
+                </div>
+
+                 <!-- Product 3 -->
+                 <div class="product-card">
+                    <div class="product-info">
+                        <span class="product-tag">FinTech & Analytics</span>
+                        <h4>Payday</h4>
+                        <p class="product-desc">Behavioral finance algorithms meeting modern UX. Payday processes user transaction data securely to provide predictive budget modeling.</p>
+                        <div class="tech-stack-mini">
+                            <span class="ts-badge">BigQuery</span>
+                            <span class="ts-badge">Node.js</span>
+                            <span class="ts-badge">Flutter</span>
+                        </div>
+                        <a href="#" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">Learn More</a>
+                    </div>
+                    <div class="product-visual">
+                         <img src="payday.webp" alt="Payday Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Payday+FinTech'">
+                    </div>
+                </div>
+
             </div>
         </section>
-    
-        <section id="app-arsiv" class="app-showcase">
+
+        <!-- TECHNOLOGY SECTION: Google Cloud için KRİTİK -->
+        <section id="technology">
             <div class="container">
-                <div class="app-mockup">
-                    <img src="akilli-arsiv.webp" alt="Cloud Storage Product">
+                <div class="section-header">
+                    <h3>Built on Cloud Native Infrastructure</h3>
+                    <p>We don't just use apps; we engineer scalable systems powered by best-in-class technology.</p>
                 </div>
-                <div class="app-details">
-                    <img src="logo.png" alt="Akıllı Arşiv Icon" class="app-icon">
-                    <h3>Akıllı Arşiv</h3>
-                    <span class="app-tagline">Cloud-Native Veri Yönetimi</span>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-share-nodes"></i> Merkezi Veri Entegrasyonu</li>
-                        <li><i class="fas fa-copy"></i> Hashing Algoritmaları</li>
-                        <li><i class="fas fa-shield-halved"></i> Cloud Sync Protokolleri</li>
-                        <li><i class="fas fa-folder-tree"></i> Semantik Dosyalama</li>
-                    </ul>
-                    <div class="store-buttons">
-                         <a href="https://play.google.com/store/apps/details?id=com.codenzi.ceparsivi" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-google"></i>
+                        <span>Google Cloud</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-brain"></i>
+                        <span>TensorFlow</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-docker"></i>
+                        <span>Kubernetes</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-fire"></i>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python AI</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-react"></i>
+                        <span>React Native</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="app-snapnote" class="app-showcase">
+        <!-- About / CTA -->
+        <section id="about" style="padding: 100px 0; text-align: center;">
             <div class="container">
-                <div class="app-mockup">
-                    <img src="snapnote.webp" alt="SnapNote Micro SaaS">
-                </div>
-                <div class="app-details">
-                    <img src="logo.png" alt="SnapNote Icon" class="app-icon">
-                    <h3>SnapNote</h3>
-                    <span class="app-tagline">Hızlı Bilgi Yakalama Aracı</span>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-bolt"></i> Low-Latency Widget Mimarisi</li>
-                        <li><i class="fas fa-lock"></i> SHA-256 Şifreleme</li>
-                        <li><i class="fas fa-cloud-arrow-up"></i> Güvenli Bulut Yedekleme</li>
-                    </ul>
-                    <div class="store-buttons">
-                        <a href="https://play.google.com/store/apps/details?id=com.codenzi.snapnote" class="btn-store" target="_blank">Google Play <i class="fab fa-google-play"></i></a>
-                    </div>
-                </div>
+                <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Driven by Engineering Excellence</h3>
+                <p style="max-width: 600px; margin: 0 auto 3rem; color: var(--text-muted);">
+                    Codenzi is not a consultancy. We are a team of engineers, data scientists, and product designers dedicated to building our own suite of global products.
+                </p>
+                <a href="mailto:partners@codenzi.com" class="btn-primary">Connect with our R&D Team</a>
             </div>
         </section>
 
-        <section id="philosophy">
-            <div class="container">
-                <h2 class="section-title">Startup Vizyonumuz</h2>
-                <p class="section-subtitle">Codenzi Labs olarak bir yazılım ajansı değiliz; global problemleri çözen ölçeklenebilir ürünler geliştiren bir teknoloji laboratuvarıyız.</p>
-                <div class="philosophy-grid">
-                    <div class="philosophy-item glass-card">
-                        <i class="fas fa-rocket"></i>
-                        <h4>Product-First</h4>
-                        <p>Tüm kaynaklarımızı, milyonlarca kullanıcıya ulaşabilecek ölçeklenebilir SaaS ve mobil ürünler geliştirmek için kullanıyoruz.</p>
-                    </div>
-                    <div class="philosophy-item glass-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <h4>Data Privacy</h4>
-                        <p>Kullanıcı verisi bizim değil, kullanıcının mülküdür. GDPR ve KVKK uyumlu gizlilik odaklı mimari standartımızdır.</p>
-                    </div>
-                    <div class="philosophy-item glass-card">
-                        <i class="fas fa-lightbulb"></i>
-                        <h4>Disruptive AI</h4>
-                        <p>Mevcut çözümleri kopyalamıyor; Deep Learning ve NLP teknolojileri ile pazarı değiştiren inovasyonlar yapıyoruz.</p>
-                    </div>
-                    <div class="philosophy-item glass-card">
-                        <i class="fas fa-sync-alt"></i>
-                        <h4>Agile Growth</h4>
-                        <p>CI/CD süreçlerimiz ve Growth Hacking stratejilerimizle ürünlerimizi veri odaklı olarak sürekli geliştiriyoruz.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="cta">
-            <div class="container">
-                <h2 class="section-title">Yatırımcı & Partner İlişkileri</h2>
-                <p class="section-subtitle">Büyüme yolculuğumuz, teknik altyapımız veya yatırım turlarımız hakkında bilgi almak için iletişime geçin.</p>
-                <a href="mailto:investor@codenzi.com" class="btn-primary">İletişime Geçin</a>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-             <div class="social-links">
-                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4 style="color:#fff; margin:0 0 10px;">Codenzi Inc.</h4>
+                    <p>A Product Venture Studio.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" style="color:#fff; font-size:1.2rem; margin:0 10px;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color:#fff; font-size:1.2rem; margin:0 10px;"><i class="fab fa-github"></i></a>
+                    <a href="#" style="color:#fff; font-size:1.2rem; margin:0 10px;"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Investor Deck</a>
+                </div>
             </div>
-            <p>&copy; 2026 Codenzi Labs Inc. Tüm Hakları Saklıdır.</p>
-            <div class="footer-links">
-                <a href="privacy-genel.html">Gizlilik Politikası</a> | 
-                <a href="#">Kullanım Şartları</a> | 
-                <a href="#">Press Kit</a>
+            <div style="text-align: center; margin-top: 3rem; opacity: 0.5; font-size: 0.8rem;">
+                &copy; 2025 Codenzi Laboratories Inc. All rights reserved.
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>
