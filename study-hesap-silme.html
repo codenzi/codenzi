@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hesap Silme / Account Deletion - StudiCat</title>
+    <title>Hesap ve Veri Silme - StudiCat</title>
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -53,23 +53,23 @@
         }
 
         .container {
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
             background-color: var(--card);
             padding: 40px;
             border-radius: 24px;
             box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
-            text-align: center;
             border: 1px solid #E2E8F0;
         }
 
         .logo {
             font-weight: 900;
-            font-size: 32px;
+            font-size: 28px;
             color: var(--primary);
-            margin-bottom: 30px;
-            letter-spacing: -1px;
+            text-align: center;
+            margin-bottom: 25px;
             text-transform: uppercase;
+            letter-spacing: -1px;
         }
 
         .logo span {
@@ -78,43 +78,80 @@
 
         h1 {
             font-weight: 700;
-            font-size: 24px;
+            font-size: 22px;
             margin-bottom: 20px;
             color: var(--primary);
+            text-align: center;
         }
 
         p {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.6;
             color: var(--text-secondary);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        ul {
+            padding-left: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
+            align-items: center;
         }
 
         .email-btn {
             display: inline-block;
             background-color: var(--secondary);
             color: #000000;
-            padding: 18px 36px;
+            padding: 16px 24px;
             text-decoration: none;
-            border-radius: 16px;
+            border-radius: 12px;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
-            margin-bottom: 20px;
         }
 
         .email-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(34, 211, 238, 0.4);
-            filter: brightness(1.1);
+        }
+
+        .partial-btn {
+            color: var(--text-secondary);
+            font-size: 13px;
+            text-decoration: underline;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .footer-note {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--accent);
-            margin-top: 20px;
+            margin-top: 30px;
             font-weight: 600;
+            text-align: center;
         }
 
         /* Language visibility */
@@ -124,10 +161,8 @@
         function switchLanguage(lang) {
             document.querySelectorAll('[lang]').forEach(el => {
                 if (el.tagName !== 'HTML') {
-                    el.style.display = el.getAttribute('lang') === lang ? 'block' : 'none';
-                    if (el.classList.contains('email-btn')) {
-                        el.style.display = el.getAttribute('lang') === lang ? 'inline-block' : 'none';
-                    }
+                    const isButton = el.classList.contains('email-btn') || el.classList.contains('partial-btn');
+                    el.style.display = el.getAttribute('lang') === lang ? (isButton ? 'inline-block' : 'block') : 'none';
                 }
             });
         }
@@ -145,26 +180,46 @@
 
         <!-- TÜRKÇE İÇERİK -->
         <div lang="tr">
-            <h1>Hesap Silme Talebi</h1>
-            <p>
-                <b>StudiCat</b> hesabınızı ve hesabınıza bağlı tüm verileri kalıcı olarak silmek için lütfen kayıtlı e-posta adresinizden bize bir talep gönderin.
-            </p>
-            <a href="mailto:info@codenzi.com?subject=StudiCat Hesap Silme Talebi&body=Merhaba, StudiCat uygulamasındaki hesabımın ve tüm verilerimin kalıcı olarak silinmesini istiyorum.%0D%0A%0D%0AKayıtlı E-posta: " class="email-btn" lang="tr">
-                Talebi E-posta ile Gönder
-            </a>
-            <p class="footer-note">* Bu işlem geri alınamaz ve tüm verileriniz sunucularımızdan temizlenir.</p>
+            <h1>Hesap ve Veri Silme Talebi</h1>
+            <p><b>StudiCat</b> (Codenzi) olarak verilerinizin gizliliğini önemsiyoruz. Google Play politikalarına uygun olarak, hesabınızı ve ilişkili tüm verilerinizi aşağıdaki yöntemle silebilirsiniz.</p>
+
+            <div class="section-title">Hangi Veriler Siliniyor?</div>
+            <ul>
+                <li>Kişisel Bilgiler (Ad, e-posta, profil fotoğrafı)</li>
+                <li>Uygulama İçi Veriler (Çözülen sorular, istatistikler, ilerleme durumu)</li>
+                <li>Cihaz ve Tanılama Verileri (Analiz amaçlı toplanan anonim kimlikler)</li>
+            </ul>
+
+            <div class="section-title">Adımlar ve Saklama Süresi</div>
+            <p>Aşağıdaki butona tıklayarak talebinizi iletebilirsiniz. Kimlik doğrulamasının ardından tüm verileriniz <b>en geç 30 gün içinde</b> sunucularımızdan kalıcı olarak temizlenir. Yasal zorunluluklar gereği (fatura vb.) saklanması gereken veriler bu sürenin sonunda da anonimleştirilir.</p>
+
+            <div class="btn-group">
+                <a href="mailto:info@codenzi.com?subject=StudiCat Hesap Silme Talebi&body=Merhaba, StudiCat uygulamasındaki hesabımın ve tüm verilerimin kalıcı olarak silinmesini istiyorum.%0D%0A%0D%0AKayıtlı E-posta: " class="email-btn">Hesabımı ve Tüm Verilerimi Sil</a>
+                <a href="mailto:info@codenzi.com?subject=StudiCat Veri Silme Talebi&body=Merhaba, hesabımı silmeden sadece şu verilerimin silinmesini istiyorum: " class="partial-btn" lang="tr">Sadece Belirli Verileri Sil (Kısmi Silme)</a>
+            </div>
+            <p class="footer-note">* Bu işlem geri alınamaz.</p>
         </div>
 
         <!-- ENGLISH CONTENT -->
         <div lang="en">
-            <h1>Account Deletion Request</h1>
-            <p>
-                To permanently delete your <b>StudiCat</b> account and all associated data, please send a request from your registered email address.
-            </p>
-            <a href="mailto:info@codenzi.com?subject=StudiCat Account Deletion Request&body=Hello, I want to permanently delete my account and all data in the StudiCat app.%0D%0A%0D%0ARegistered Email: " class="email-btn" lang="en">
-                Send Request via Email
-            </a>
-            <p class="footer-note">* This action cannot be undone and all your data will be cleared from our servers.</p>
+            <h1>Account & Data Deletion Request</h1>
+            <p>At <b>StudiCat</b> (Codenzi), we value your privacy. In compliance with Google Play policies, you can request the deletion of your account and all associated data.</p>
+
+            <div class="section-title">What Data Will Be Deleted?</div>
+            <ul>
+                <li>Personal Information (Name, email, profile picture)</li>
+                <li>In-app Data (Solved questions, statistics, progress)</li>
+                <li>Device & Diagnostic Data (Anonymous identifiers collected for analytics)</li>
+            </ul>
+
+            <div class="section-title">Process and Retention Period</div>
+            <p>You can submit your request by clicking the button below. After identity verification, all your data will be permanently cleared from our servers <b>within 30 days</b>. Data that must be kept for legal obligations (e.g., invoices) will be anonymized after this period.</p>
+
+            <div class="btn-group">
+                <a href="mailto:info@codenzi.com?subject=StudiCat Account Deletion Request&body=Hello, I want to permanently delete my account and all data in the StudiCat app.%0D%0A%0D%0ARegistered Email: " class="email-btn">Delete My Account and All Data</a>
+                <a href="mailto:info@codenzi.com?subject=StudiCat Data Deletion Request&body=Hello, I want to delete specific data without removing my account: " class="partial-btn" lang="en">Delete Specific Data Only (Partial Deletion)</a>
+            </div>
+            <p class="footer-note">* This action cannot be undone.</p>
         </div>
     </div>
 
