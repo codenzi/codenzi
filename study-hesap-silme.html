@@ -3,73 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hesap ve Veri Silme Talebi - Taktik</title>
+    <title>Hesap Silme / Account Deletion - StudiCat</title>
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0F172A;
+            --secondary: #22D3EE;
+            --accent: #E71D36;
+            --bg: #F1F5F9;
+            --card: #FFFFFF;
+            --text: #0F172A;
+            --text-secondary: #64748B;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             margin: 0;
             padding: 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
-        .container {
-            max-width: 600px;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        h1 {
-            color: #2c3e50;
-            font-size: 24px;
+
+        .lang-switch {
             margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
         }
-        p {
-            font-size: 16px;
-            margin-bottom: 25px;
-        }
-        .email-link {
-            display: inline-block;
-            background-color: #3498db;
-            color: #ffffff;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .email-link:hover {
-            background-color: #2980b9;
-        }
-        .footer-note {
+
+        .lang-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
             font-size: 14px;
-            color: #7f8c8d;
-            margin-top: 30px;
+            transition: opacity 0.3s;
         }
+
+        .lang-btn:hover {
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+            text-align: center;
+            border: 1px solid #E2E8F0;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .info-box {
+            background-color: #F8FAFC;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .info-box ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+        }
+
+        .email-btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: #000000;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
+        }
+
+        .email-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(34, 211, 238, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .footer-note {
+            font-size: 12px;
+            color: var(--accent);
+            margin-top: 32px;
+            font-weight: 600;
+        }
+
+        /* Language visibility */
+        [lang="en"] { display: none; }
     </style>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('[lang]').forEach(el => {
+                if (el.tagName !== 'HTML') {
+                    el.style.display = el.getAttribute('lang') === lang ? 'block' : 'none';
+                    if (el.classList.contains('email-btn')) {
+                        el.style.display = el.getAttribute('lang') === lang ? 'inline-block' : 'none';
+                    }
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 
+    <div class="lang-switch">
+        <button class="lang-btn" onclick="switchLanguage('tr')">TR</button>
+        <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+    </div>
+
     <div class="container">
-        <h1>Hesap ve Veri Silme Talebi</h1>
-        <p>
-            Taktik uygulamasındaki hesabınızı ve ilgili tüm verilerinizi kalıcı olarak silmek için bir talep oluşturabilirsiniz. Verilerinizin gizliliği ve kontrolü sizin elinizdedir.
-        </p>
-        <p>
-            Hesabınızı silme işlemini başlatmak için lütfen aşağıdaki e-posta adresine, uygulamaya kayıtlı olduğunuz e-posta adresi veya kullanıcı adınızı belirten bir e-posta gönderin.
-        </p>
+        <div class="logo">STUDI<span>CAT</span></div>
 
-        <a href="mailto:info@codenzi.com?subject=Taktik Hesabımı Silme Talebi" class="email-link">info@codenzi.com adresine E-posta Gönder</a>
+        <!-- TÜRKÇE İÇERİK -->
+        <div lang="tr">
+            <h1>Hesap Silme Talebi</h1>
+            <p>
+                <b>StudiCat</b> hesabınızı silmek istediğiniz için üzgünüz. Bu işlem sonucunda aşağıdaki verileriniz <b>kalıcı olarak</b> silinecektir:
+            </p>
+            <div class="info-box">
+                <ul>
+                    <li>Profil bilgileriniz ve ayarlarınız</li>
+                    <li>Çözdüğünüz sorular ve başarı istatistikleriniz</li>
+                    <li>Tüm uygulama içi etkinlik geçmişiniz</li>
+                    <li>Kaydedilen içerikleriniz</li>
+                </ul>
+            </div>
+            <p>İşlemi başlatmak için kayıtlı e-posta adresinizden bize bir talep göndermeniz yeterlidir.</p>
+            <a href="mailto:info@codenzi.com?subject=StudiCat Hesap Silme Talebi&body=Merhaba, StudiCat uygulamasındaki hesabımın ve verilerimin silinmesini istiyorum.%0D%0A%0D%0AKayıtlı E-posta: " class="email-btn" lang="tr">
+                Talebi E-posta ile Gönder
+            </a>
+            <p class="footer-note">* Bu işlem geri alınamaz ve tüm verileriniz sunucularımızdan temizlenir.</p>
+        </div>
 
-        <p class="footer-note">
-            Talebiniz bize ulaştıktan sonra kimliğiniz doğrulanacak ve silme işlemi en kısa sürede tamamlanacaktır. Bu işlem geri alınamaz.
-        </p>
+        <!-- ENGLISH CONTENT -->
+        <div lang="en">
+            <h1>Account Deletion Request</h1>
+            <p>
+                We are sorry to see you go. By deleting your <b>StudiCat</b> account, the following data will be <b>permanently</b> removed:
+            </p>
+            <div class="info-box">
+                <ul>
+                    <li>Your profile information and settings</li>
+                    <li>Solved questions and performance statistics</li>
+                    <li>All in-app activity history</li>
+                    <li>Your saved content</li>
+                </ul>
+            </div>
+            <p>To initiate the process, please send a request from your registered email address.</p>
+            <a href="mailto:info@codenzi.com?subject=StudiCat Account Deletion Request&body=Hello, I want to delete my account and data in the StudiCat app.%0D%0A%0D%0ARegistered Email: " class="email-btn" lang="en">
+                Send Request via Email
+            </a>
+            <p class="footer-note">* This action cannot be undone and all your data will be cleared from our servers.</p>
+        </div>
     </div>
 
 </body>
