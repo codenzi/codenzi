@@ -2,142 +2,209 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="meta-title">Organa - Organ Health & Calorie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title id="meta-title">Organa - Organ Health & Calorie Tracker</title>
     
     <meta id="og-title" property="og:title" content="Organa: Organ Health & Calorie">
-    <meta id="og-desc" property="og:description" content="Download Organa now to track your nutrition and organ health smartly.">
+    <meta id="og-desc" property="og:description" content="Track your nutrition, calories, and organ health with AI-backed accuracy.">
+    <meta property="og:image" content="400x400bb-75.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #10b981;
-            --primary-hover: #059669;
-            --bg: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.75);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border: rgba(255, 255, 255, 0.08);
+            --bg-base: #090d16;
+            --surface-glass: rgba(18, 24, 38, 0.72);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --accent: #10b981;
+            --accent-glow: rgba(16, 185, 129, 0.28);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: radial-gradient(circle at top, #1e293b, var(--bg));
-            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 24px;
-        }
-
-        .container {
-            max-width: 440px;
-            width: 100%;
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            padding: 40px 28px;
-            text-align: center;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .spinner-wrapper {
             position: relative;
-            width: 68px;
-            height: 68px;
-            margin: 0 auto 20px;
+            overflow-x: hidden;
         }
 
-        .spinner {
-            width: 100%;
-            height: 100%;
-            border: 3px solid rgba(16, 185, 129, 0.15);
-            border-top: 3px solid var(--primary);
-            border-radius: 50%;
-            animation: spin 1s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
-        }
-
-        .spinner-icon {
-            position: absolute;
+        /* Arka plan derinlik ışıkları */
+        .ambient-glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0,0,0,0) 70%);
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
+            transform: translate(-50%, -60%);
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(80px);
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .card {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 420px;
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 36px;
+            padding: 44px 32px;
+            text-align: center;
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+
+        /* App Icon - Apple Squircle stili */
+        .app-icon-wrapper {
+            position: relative;
+            width: 104px;
+            height: 104px;
+            margin: 0 auto 28px;
+        }
+
+        .app-icon {
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+            object-fit: cover;
+            display: block;
+            box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Modern minimal radar/loader efekti */
+        .loading-ring {
+            position: absolute;
+            inset: -6px;
+            border-radius: 30px;
+            border: 2px solid transparent;
+            border-top-color: var(--accent);
+            border-right-color: var(--accent);
+            animation: ringPulse 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ringPulse {
+            0% { transform: rotate(0deg); opacity: 0.8; }
+            50% { opacity: 0.3; }
+            100% { transform: rotate(360deg); opacity: 0.8; }
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.03em;
             margin-bottom: 8px;
         }
 
         p {
-            font-size: 15px;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 28px;
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 32px;
+            font-weight: 400;
         }
 
-        .btn-group {
+        .actions {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
 
-        .btn {
+        /* Sektör Standardı Store Butonları */
+        .btn-store {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
-            width: 100%;
-            padding: 16px 20px;
-            font-size: 15px;
-            font-weight: 600;
-            color: #fff;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 16px;
+            justify-content: flex-start;
+            padding: 13px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-glass);
+            border-radius: 18px;
+            color: #ffffff;
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
             cursor: pointer;
+            gap: 16px;
         }
 
-        .btn:hover {
-            background: rgba(255, 255, 255, 0.12);
+        .btn-store:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.16);
+            transform: translateY(-2px);
+        }
+
+        .btn-store:active {
+            transform: scale(0.98);
+        }
+
+        .store-icon {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .store-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            line-height: 1.15;
+        }
+
+        .store-subtitle {
+            font-size: 10.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .store-title {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        /* Tekil Birincil Buton (Mobil yönlendirme için) */
+        .btn-direct {
+            padding: 16px 24px;
+            background: var(--text-primary);
+            color: #000000;
+            border-radius: 18px;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 10px 24px -6px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-direct:hover {
+            opacity: 0.92;
             transform: translateY(-1px);
         }
 
-        .btn-primary {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #042f2e;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-hover);
-            border-color: var(--primary-hover);
-            color: #fff;
-        }
-
-        .btn svg {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
-            flex-shrink: 0;
+        .btn-direct:active {
+            transform: scale(0.98);
         }
 
         .hidden {
@@ -148,39 +215,41 @@
     <script>
         var fallbackTimer;
 
-        // Dil Sözlüğü
         var i18n = {
             tr: {
                 title: "Organa - Sağlık & Kalori Takibi",
                 ogTitle: "Organa: Organ Health & Calorie",
-                ogDesc: "Organa uygulamasını hemen indir, sağlığını ve beslenmeni akıllıca takip et.",
-                loadingTitle: "Organa Açılıyor",
-                loadingDesc: "Mağazaya yönlendiriliyorsunuz. Açılmazsa dokunun:",
-                btnGoToStore: "Mağazaya Git",
-                desktopTitle: "Organa'yı İndir",
-                desktopDesc: "Kullandığınız platformu seçin:",
-                btnAppStore: "App Store'dan İndir",
-                btnPlayStore: "Google Play'den İndir",
+                ogDesc: "Organa ile sağlığını ve beslenmeni akıllıca takip et.",
+                redirectingTitle: "Organa Açılıyor",
+                redirectingDesc: "Mağazaya yönlendiriliyorsunuz. Uygulama açılmazsa dokunun:",
+                btnFallback: "Mağazayı Aç",
+                desktopTitle: "Organa",
+                desktopDesc: "Kullandığın platformu seçerek hemen indir:",
+                iosBadgeSub: "App Store'dan",
+                androidBadgeSub: "Google Play'den",
+                iosBadgeMain: "İndirin",
+                androidBadgeMain: "Edinin",
                 iosUrl: "https://apps.apple.com/tr/app/organa-organ-health-calorie/id6793627852?l=tr",
                 androidUrl: "https://play.google.com/store/apps/details?id=com.codenzi.health&hl=tr"
             },
             en: {
-                title: "Organa - Organ Health & Calorie",
+                title: "Organa - Organ Health & Calorie Tracker",
                 ogTitle: "Organa: Organ Health & Calorie",
-                ogDesc: "Download Organa now to track your nutrition and organ health smartly.",
-                loadingTitle: "Opening Organa",
-                loadingDesc: "Redirecting to the store. Tap below if it doesn't open:",
-                btnGoToStore: "Open Store",
-                desktopTitle: "Download Organa",
-                desktopDesc: "Choose your platform:",
-                btnAppStore: "Download on App Store",
-                btnPlayStore: "Get it on Google Play",
+                ogDesc: "Smart calorie tracking & organ-focused nutrition.",
+                redirectingTitle: "Opening Organa",
+                redirectingDesc: "Redirecting to your store. Tap below if nothing happens:",
+                btnFallback: "Open Store",
+                desktopTitle: "Organa",
+                desktopDesc: "Select your platform to download the app:",
+                iosBadgeSub: "Download on the",
+                androidBadgeSub: "GET IT ON",
+                iosBadgeMain: "App Store",
+                androidBadgeMain: "Google Play",
                 iosUrl: "https://apps.apple.com/app/organa-organ-health-calorie/id6793627852",
                 androidUrl: "https://play.google.com/store/apps/details?id=com.codenzi.health&hl=en"
             }
         };
 
-        // Kullanıcı dilini tespit et (tr değilse varsayılan en)
         var userLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
         var currentLang = userLang.startsWith("tr") ? "tr" : "en";
         var content = i18n[currentLang];
@@ -194,18 +263,20 @@
             document.getElementById("og-title").setAttribute("content", content.ogTitle);
             document.getElementById("og-desc").setAttribute("content", content.ogDesc);
 
-            document.getElementById("loading-title").innerText = content.loadingTitle;
-            document.getElementById("loading-desc").innerText = content.loadingDesc;
-            document.getElementById("btn-manual-redirect").innerText = content.btnGoToStore;
+            document.getElementById("redirect-title").innerText = content.redirectingTitle;
+            document.getElementById("redirect-desc").innerText = content.redirectingDesc;
+            document.getElementById("btn-manual-redirect").innerText = content.btnFallback;
 
             document.getElementById("desktop-title").innerText = content.desktopTitle;
             document.getElementById("desktop-desc").innerText = content.desktopDesc;
-            
-            document.getElementById("text-appstore").innerText = content.btnAppStore;
-            document.getElementById("text-playstore").innerText = content.btnPlayStore;
 
-            document.getElementById("link-appstore").href = content.iosUrl;
-            document.getElementById("link-playstore").href = content.androidUrl;
+            document.getElementById("ios-sub").innerText = content.iosBadgeSub;
+            document.getElementById("ios-main").innerText = content.iosBadgeMain;
+            document.getElementById("android-sub").innerText = content.androidBadgeSub;
+            document.getElementById("android-main").innerText = content.androidBadgeMain;
+
+            document.getElementById("link-ios").href = content.iosUrl;
+            document.getElementById("link-android").href = content.androidUrl;
         }
 
         function getPlatform() {
@@ -215,7 +286,7 @@
             return { isIOS: isIOS, isAndroid: isAndroid };
         }
 
-        function redirect(isManualClick) {
+        function triggerRedirect(isManual) {
             var platform = getPlatform();
 
             if (platform.isIOS) {
@@ -234,20 +305,22 @@
                 return;
             }
 
-            // Masaüstü cihazlar
-            document.getElementById("loading-state").classList.add("hidden");
-            document.getElementById("desktop-state").classList.remove("hidden");
+            // Desktop / Unknown
+            document.getElementById("state-loading").classList.add("hidden");
+            document.getElementById("state-desktop").classList.remove("hidden");
+            document.getElementById("ring").classList.add("hidden");
         }
 
         window.onload = function() {
             applyTranslations();
-            
             var platform = getPlatform();
+
             if (platform.isIOS || platform.isAndroid) {
-                redirect(false);
+                triggerRedirect(false);
             } else {
-                document.getElementById("loading-state").classList.add("hidden");
-                document.getElementById("desktop-state").classList.remove("hidden");
+                document.getElementById("state-loading").classList.add("hidden");
+                document.getElementById("state-desktop").classList.remove("hidden");
+                document.getElementById("ring").classList.add("hidden");
             }
         };
 
@@ -260,33 +333,47 @@
 </head>
 <body>
 
-    <div class="container">
-        <!-- Mobil için Otomatik Yönlendirme Ekranı -->
-        <div id="loading-state">
-            <div class="spinner-wrapper">
-                <div class="spinner"></div>
-                <span class="spinner-icon">🌿</span>
-            </div>
-            <h1 id="loading-title">Organa Açılıyor</h1>
-            <p id="loading-desc">Mağazaya yönlendiriliyorsunuz. Açılmazsa dokunun:</p>
-            <div class="btn-group">
-                <button id="btn-manual-redirect" onclick="redirect(true)" class="btn btn-primary">Mağazaya Git</button>
+    <div class="ambient-glow"></div>
+
+    <div class="card">
+        <div class="app-icon-wrapper">
+            <div id="ring" class="loading-ring"></div>
+            <img src="400x400bb-75.webp" alt="Organa Logo" class="app-icon">
+        </div>
+
+        <!-- Mobil Cihazlar: Otomatik Yönlendirme Durumu -->
+        <div id="state-loading">
+            <h1 id="redirect-title">Organa Açılıyor</h1>
+            <p id="redirect-desc">Mağazaya yönlendiriliyorsunuz...</p>
+            <div class="actions">
+                <button id="btn-manual-redirect" onclick="triggerRedirect(true)" class="btn-direct">Mağazayı Aç</button>
             </div>
         </div>
 
-        <!-- Masaüstü Seçim Ekranı -->
-        <div id="desktop-state" class="hidden">
-            <div style="font-size: 40px; margin-bottom: 14px;">🌿</div>
-            <h1 id="desktop-title">Organa'yı İndir</h1>
-            <p id="desktop-desc">Kullandığınız platformu seçin:</p>
-            <div class="btn-group">
-                <a id="link-appstore" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.66-1.09 1.73-.95 2.76 1.01.08 2.06-.51 2.68-1.26z"/></svg>
-                    <span id="text-appstore">App Store'dan İndir</span>
+        <!-- Masaüstü: Resmi Standart Store Seçim Kartları -->
+        <div id="state-desktop" class="hidden">
+            <h1 id="desktop-title">Organa</h1>
+            <p id="desktop-desc">Kullandığın platformu seçerek hemen indir:</p>
+            
+            <div class="actions">
+                <a id="link-ios" href="#" target="_blank" rel="noopener noreferrer" class="btn-store">
+                    <svg class="store-icon" viewBox="0 0 384 512">
+                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+                    </svg>
+                    <div class="store-meta">
+                        <span id="ios-sub" class="store-subtitle">Download on the</span>
+                        <span id="ios-main" class="store-title">App Store</span>
+                    </div>
                 </a>
-                <a id="link-playstore" href="#" target="_blank" rel="noopener noreferrer" class="btn">
-                    <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.373 2.373 0 0 1-.61-.926V2.74c.15-.357.362-.68.61-.926zm11.24 11.24l2.122-2.122-11.83-6.83 9.708 8.952zm0 1.892l-9.708 8.952 11.83-6.83-2.122-2.122zm2.09-3.053l3.655 2.11a1.2 1.2 0 0 1 0 2.086l-3.655 2.11-1.874-1.874 1.874-1.874z"/></svg>
-                    <span id="text-playstore">Google Play'den İndir</span>
+
+                <a id="link-android" href="#" target="_blank" rel="noopener noreferrer" class="btn-store">
+                    <svg class="store-icon" viewBox="0 0 512 512">
+                        <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+                    </svg>
+                    <div class="store-meta">
+                        <span id="android-sub" class="store-subtitle">GET IT ON</span>
+                        <span id="android-main" class="store-title">Google Play</span>
+                    </div>
                 </a>
             </div>
         </div>
