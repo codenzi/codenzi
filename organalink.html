@@ -12,19 +12,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
-    <meta name="theme-color" content="#090d16">
+    <meta name="theme-color" content="#f4f8fb">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
     <style>
         :root {
-            --bg-base: #090d16;
-            --surface-glass: rgba(18, 24, 38, 0.72);
-            --border-glass: rgba(255, 255, 255, 0.08);
-            --text-primary: #ffffff;
-            --text-secondary: #94a3b8;
-            --accent: #10b981;
-            --accent-glow: rgba(16, 185, 129, 0.28);
+            --bg-base: #f4f8fb;
+            --surface-glass: rgba(255, 255, 255, 0.86);
+            --border-glass: #e6e9ef;
+            --text-primary: #0b0d12;
+            --text-secondary: #5b6474;
+            --accent: #059669;
         }
 
         * {
@@ -38,6 +37,7 @@
             font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-optical-sizing: auto;
             -webkit-font-smoothing: antialiased;
+            background: linear-gradient(160deg, #e3f8f0 0%, #e8f3ff 50%, #f3eeff 100%);
             background-color: var(--bg-base);
             color: var(--text-primary);
             min-height: 100vh;
@@ -52,33 +52,19 @@
             overflow-x: hidden;
         }
 
-        /* Arka plan derinlik ışıkları */
-        .ambient-glow {
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0,0,0,0) 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -60%);
-            z-index: 0;
-            pointer-events: none;
-            filter: blur(80px);
-        }
-
         .card {
             position: relative;
             z-index: 1;
             width: 100%;
             max-width: 420px;
             background: var(--surface-glass);
-            border: 1px solid var(--border-glass);
+            border: 1px solid rgba(255, 255, 255, 0.9);
             border-radius: 36px;
             padding: 44px 32px;
             text-align: center;
             backdrop-filter: blur(28px);
             -webkit-backdrop-filter: blur(28px);
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 32px 64px -28px rgba(16, 24, 40, 0.28);
         }
 
         /* App Icon - Apple Squircle stili */
@@ -95,24 +81,35 @@
             border-radius: 24px;
             object-fit: cover;
             display: block;
-            box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 14px 28px -12px rgba(16, 24, 40, 0.28), 0 0 0 1px rgba(15, 23, 42, 0.06);
         }
 
-        /* Modern minimal radar/loader efekti */
+        /* Yönlendirme göstergesi: ikonun altında ince ilerleme çubuğu */
         .loading-ring {
             position: absolute;
-            inset: -6px;
-            border-radius: 30px;
-            border: 2px solid transparent;
-            border-top-color: var(--accent);
-            border-right-color: var(--accent);
-            animation: ringPulse 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            left: 18px;
+            right: 18px;
+            bottom: -16px;
+            height: 3px;
+            border-radius: 3px;
+            background: rgba(5, 150, 105, 0.15);
+            overflow: hidden;
+        }
+
+        .loading-ring::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40%;
+            border-radius: inherit;
+            background: var(--accent);
+            animation: ringPulse 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
         }
 
         @keyframes ringPulse {
-            0% { transform: rotate(0deg); opacity: 0.8; }
-            50% { opacity: 0.3; }
-            100% { transform: rotate(360deg); opacity: 0.8; }
+            0% { left: -40%; }
+            100% { left: 100%; }
         }
 
         h1 {
@@ -142,10 +139,10 @@
             align-items: center;
             justify-content: flex-start;
             padding: 13px 20px;
-            background: rgba(255, 255, 255, 0.04);
+            background: #ffffff;
             border: 1px solid var(--border-glass);
             border-radius: 18px;
-            color: #ffffff;
+            color: var(--text-primary);
             text-decoration: none;
             transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
             cursor: pointer;
@@ -153,8 +150,8 @@
         }
 
         .btn-store:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.16);
+            background: #f7f8fb;
+            border-color: #d6dae1;
             transform: translateY(-2px);
         }
 
@@ -165,7 +162,7 @@
         .store-icon {
             width: 24px;
             height: 24px;
-            fill: #ffffff;
+            fill: var(--text-primary);
             flex-shrink: 0;
         }
 
@@ -196,14 +193,14 @@
         .btn-direct {
             padding: 16px 24px;
             background: var(--text-primary);
-            color: #000000;
+            color: #ffffff;
             border-radius: 18px;
             font-weight: 700;
             font-size: 15px;
             border: none;
             cursor: pointer;
             transition: all 0.2s ease;
-            box-shadow: 0 10px 24px -6px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 12px 24px -12px rgba(16, 24, 40, 0.5);
         }
 
         .btn-direct:hover {
@@ -229,7 +226,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: #64748b;
+            color: #667085;
             font-size: 13px;
             font-weight: 600;
             text-decoration: none;
@@ -242,7 +239,7 @@
         }
 
         .brand-signature:hover {
-            color: var(--text-secondary);
+            color: var(--text-primary);
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -376,8 +373,6 @@
     </script>
 </head>
 <body>
-
-    <div class="ambient-glow"></div>
 
     <div class="card">
         <div class="app-icon-wrapper">

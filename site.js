@@ -69,18 +69,6 @@
         }
     }
 
-    /* ---------- Pointer spotlight on cards ---------- */
-    if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
-        var spots = document.querySelectorAll("[data-spotlight]");
-        for (var s = 0; s < spots.length; s++) {
-            spots[s].addEventListener("pointermove", function (e) {
-                var rect = this.getBoundingClientRect();
-                this.style.setProperty("--mx", (e.clientX - rect.left) + "px");
-                this.style.setProperty("--my", (e.clientY - rect.top) + "px");
-            });
-        }
-    }
-
     /* ---------- Documents: reading progress + table of contents ---------- */
     var doc = document.querySelector(".doc");
     var docBody = doc && doc.querySelector(".doc-body");
