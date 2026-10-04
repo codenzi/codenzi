@@ -4,162 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Archive - Gizlilik Politikası</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Genel Ayarlar */
-        :root {
-            --primary-blue: #3498db; /* Temel Mavi */
-            --dark-blue: #2c3e50;    /* Koyu Mavi/Lacivert */
-            --light-blue: #e8f5fd;   /* Çok Açık Mavi */
-            --accent-blue: #6a93cb;  /* Orta Mavi */
-            --text-color: #333;
-            --light-text: #f0f0f0;
-            --background-light: #f4f7f6;
-            --border-color: #ddd;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-color);
-            background-color: var(--background-light);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--primary-blue);
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--dark-blue);
-        }
-        
-        strong {
-            font-weight: 600;
-            color: var(--dark-blue);
-        }
-
-        /* Header ve Navigasyon */
-        .header {
-            background-color: #fff;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.2em;
-            color: var(--dark-blue);
-            font-weight: 700;
-        }
-
-        /* Ana İçerik Stilleri */
-        .policy-page {
-            padding: 60px 0;
-            background-color: #fff;
-        }
-
-        .policy-page .container {
-            max-width: 900px;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
-        }
-
-        .policy-page h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.6em;
-            color: var(--dark-blue);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .policy-page h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.7em;
-            color: var(--primary-blue);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid var(--light-blue);
-        }
-
-        .policy-page h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2em;
-            color: var(--dark-blue);
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-
-        .policy-page p, .policy-page li {
-            font-size: 1em;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            color: #444;
-        }
-
-        .policy-page ul {
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-
-        .policy-page li {
-            margin-bottom: 10px;
-        }
-        
-        .policy-page .last-updated {
-            font-size: 0.9em;
-            color: #777;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .disclaimer-box {
-            background-color: var(--light-blue);
-            border-left: 5px solid var(--primary-blue);
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 5px;
-        }
-
-        .disclaimer-box p {
-            margin: 0;
-            font-size: 0.95em;
-            font-weight: 600;
-            color: var(--dark-blue);
-        }
-    </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Cihaz dilini al (örneğin: "tr-TR", "en-US")
-            const userLang = navigator.language || navigator.userLanguage; 
+            const userLang = navigator.language || navigator.userLanguage;
 
             // Türkçe ise Türkçe bölümünü göster, değilse İngilizce'yi
             if (userLang.startsWith('tr')) {
@@ -171,182 +19,205 @@
             }
         });
     </script>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0b0f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="site.js" defer></script>
 </head>
-<body>
+<body class="doc-page">
 
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Smart Archive</h1>
-            </div>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="/" aria-label="Codenzi"><img src="assets/img/codenzi-mark.png" width="38" height="20" alt=""><span class="brand-word">Codenzi</span></a>
+            <span class="crumb-sep" aria-hidden="true"></span>
+            <div class="product-chip"><img class="product-chip__icon" src="akilli-arsiv.webp" width="26" height="26" alt=""><h1>Smart Archive</h1></div>
         </div>
     </header>
 
-    <main class="policy-page">
-        <div class="container">
-            
-            <article id="english" style="display: none;">
-                <h1>Privacy Policy</h1>
-                <p class="last-updated">Last Updated: July 16, 2025</p>
+    <main class="doc">
+        <div class="doc-body">
+            <div class="policy-page">
+                <div class="container">
 
-                <h2>1. Introduction</h2>
-                <p>At Codenzi ("we", "us", or "our"), we deeply value your privacy. This Privacy Policy explains what information we collect, how we use, store, share, and protect it when you use the Smart Archive mobile application ("Application").</p>
-                <p>By downloading, installing, or using our Application, you agree to the data practices described in this Privacy Policy. Please read this policy carefully.</p>
+                    <article id="english" style="display: none;">
+                        <h1>Privacy Policy</h1>
+                        <p class="last-updated">Last Updated: July 16, 2025</p>
 
-                <h2>2. Information We Collect</h2>
-                <p>We collect various types of information to provide and improve the functionality of the Application. This information is divided into two main categories:</p>
+                        <h2>1. Introduction</h2>
+                        <p>At Codenzi ("we", "us", or "our"), we deeply value your privacy. This Privacy Policy explains what information we collect, how we use, store, share, and protect it when you use the Smart Archive mobile application ("Application").</p>
+                        <p>By downloading, installing, or using our Application, you agree to the data practices described in this Privacy Policy. Please read this policy carefully.</p>
 
-                <h3>a) Information You Provide Directly</h3>
-                <ul>
-                    <li><strong>Your Archived Files:</strong> Any files you choose to archive through the Application (e.g., PDFs, office documents, images, videos, audio files). These files are stored solely on your device in the Application's private, protected storage area.</li>
-                    <li><strong>File Information:</strong> To help you manage your archived files, we store basic information such as the file name, date saved, file size, and the category you assign.</li>
-                    <li><strong>Category Information:</strong> We store the custom category names you create to organize your files.</li>
-                    <li><strong>Camera and Video Recordings:</strong> When you use the feature to add a new file by taking a photo or recording a video from within the Application, these media files are processed to be added directly to your archive.</li>
-                </ul>
+                        <h2>2. Information We Collect</h2>
+                        <p>We collect various types of information to provide and improve the functionality of the Application. This information is divided into two main categories:</p>
 
-                <h3>b) Information Collected Automatically</h3>
-                <ul>
-                    <li><strong>Google Account Information:</strong> If you choose to use the optional Google Drive backup feature, you will be asked to sign in with your Google account. In this case, we access basic Google Account information, such as your email address and profile name, to provide the backup service.</li>
-                    <li><strong>Usage and Analytics Data:</strong> To understand how you use the Application and to improve our services, we collect anonymized usage data through Google Firebase Analytics. This data includes information like which features are used and how often, but it does not include your personal files or their content.</li>
-                    <li><strong>Crash Reports:</strong> If an error or crash occurs in the Application, we collect anonymous crash reports through Google Firebase Crashlytics to help us diagnose and fix the problem. These reports include technical information like the device model and operating system version.</li>
-                    <li><strong>Advertising Identifiers:</strong> We use the Google AdMob service to display ads in the free version of the Application. AdMob may use your device's advertising identifier to serve more relevant ads. For our users in the European Economic Area (EEA) and the UK, we obtain your consent for personalized advertising through the Google User Messaging Platform (UMP).</li>
-                    <li><strong>Purchase Information:</strong> If you purchase a premium subscription, this transaction is securely handled through the Google Play Billing System. We store transaction information (tokens) provided by Google Play to verify your subscription status, but we never access or store sensitive payment information like credit card details.</li>
-                </ul>
-
-                <h2>3. How We Use Your Information</h2>
-                <p>We use the information we collect for the following purposes:</p>
-                <ul>
-                    <li><strong>Providing Application Functionality:</strong> To securely archive, organize, view, and manage your files.</li>
-                    <li><strong>Google Drive Backup and Restore:</strong> To back up your archive to your Google Drive account at your request and restore it whenever you wish.</li>
-                    <li><strong>Customer Support:</strong> To respond to feedback or support requests you send via the "Contact Us" feature.</li>
-                    <li><strong>Improving and Enhancing the Application:</strong> To fix bugs, improve performance, and enhance the user experience by understanding the most popular features.</li>
-                    <li><strong>Providing Premium Services:</strong> To manage your premium subscriptions and activate benefits like an ad-free experience.</li>
-                    <li><strong>Serving Ads:</strong> To display advertisements to cover the development costs of the free version of the Application.</li>
-                </ul>
-
-                <h2>4. Sharing of Your Information</h2>
-                <p>We do not sell, rent, or trade your personal files and data to third parties without your consent. Your information may only be shared with the following parties and service providers:</p>
-                <ul>
-                    <li><strong>Google, LLC:</strong>
+                        <h3>a) Information You Provide Directly</h3>
                         <ul>
-                            <li><strong>Google Drive:</strong> When you use the backup feature, your encrypted archive file is stored in your own Google Drive account. Your data is protected subject to Google's Privacy Policy.</li>
-                            <li><strong>Google AdMob and Firebase:</strong> Analytics, crash reporting, and advertising services we use to improve the application and serve ads. The data collected through these services is anonymized and subject to Google's own privacy policies.</li>
-                            <li><strong>Google Play Billing:</strong> For premium subscription transactions. This process is managed by Google, and your payment information is not shared with us.</li>
+                            <li><strong>Your Archived Files:</strong> Any files you choose to archive through the Application (e.g., PDFs, office documents, images, videos, audio files). These files are stored solely on your device in the Application's private, protected storage area.</li>
+                            <li><strong>File Information:</strong> To help you manage your archived files, we store basic information such as the file name, date saved, file size, and the category you assign.</li>
+                            <li><strong>Category Information:</strong> We store the custom category names you create to organize your files.</li>
+                            <li><strong>Camera and Video Recordings:</strong> When you use the feature to add a new file by taking a photo or recording a video from within the Application, these media files are processed to be added directly to your archive.</li>
                         </ul>
-                    </li>
-                    <li><strong>Legal Obligations:</strong> We may share information if required by law, court order, or an official government request, to the extent required by law.</li>
-                </ul>
 
-                <h2>5. Data Storage and Security</h2>
-                <ul>
-                    <li><strong>Local Storage:</strong> All your archived files and related metadata are stored in the Application's private internal storage area on your device, which is protected by the Android operating system. Other applications cannot access these files.</li>
-                    <li><strong>Google Drive Backups:</strong> Data backed up to Google Drive is protected by your Google account's security protocols (e.g., password, two-factor authentication).</li>
-                    <li><strong>Security Measures:</strong> We take data security seriously and implement industry-standard technical and administrative security measures (such as MD5 hashing used to detect duplicate files) to protect your data. However, please be aware that no method of transmission over the internet or electronic storage is 100% secure.</li>
-                </ul>
-
-                <h2>6. Your Rights and Choices</h2>
-                <p>You have full control over your data:</p>
-                <ul>
-                    <li><strong>Access and Deletion:</strong> You can delete files and categories within the application at any time. Deleting a file permanently removes both the file itself and all related metadata from your device.</li>
-                    <li><strong>Disconnecting Your Google Account:</strong> You can revoke the Application's access to your Google Drive at any time by signing out from the Settings menu.</li>
-                    <li><strong>Managing Backups:</strong> You can manually create, restore, or permanently delete your backups in Google Drive. You can enable or disable the automatic backup feature in Settings.</li>
-                    <li><strong>Downloading Your Data:</strong> You can export all your archived files and settings as a ZIP file using the "Download My Data" option in the Settings menu.</li>
-                    <li><strong>Managing Ad Consent:</strong> Users in the EEA and UK can change their personalized advertising consent at any time via the "Privacy Options" in the Settings menu.</li>
-                </ul>
-
-                <h2>7. Children's Privacy</h2>
-                <p>Our application is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with information, we will take steps to delete such information immediately.</p>
-
-                <h2>8. Changes to This Privacy Policy</h2>
-                <p>We may update this Privacy Policy from time to time. When we make changes, we will update the "Last Updated" date at the top of the policy. Your continued use of the Application after the changes take effect means that you accept the new policy.</p>
-
-                <h2>9. Contact Us</h2>
-                <p>If you have any questions or concerns about this Privacy Policy, please contact us at the following email address:</p>
-                <p><strong>Email:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
-            </article>
-
-            <article id="turkish" style="display: block;">
-                <h1>Gizlilik Politikası</h1>
-                <p class="last-updated">Son Güncelleme Tarihi: 16 Temmuz 2025</p>
-
-                <h2>1. Giriş</h2>
-                <p>Codenzi ("biz", "bize" veya "bizim") olarak gizliliğinize büyük önem veriyoruz. Bu Gizlilik Politikası, Smart Archive mobil uygulamasını ("Uygulama") kullandığınızda hangi bilgileri topladığımızı, bu bilgileri nasıl kullandığımızı, sakladığımızı, paylaştığımızı ve koruduğumuzu açıklamaktadır.</p>
-                <p>Uygulamamızı indirerek, kurarak veya kullanarak bu Gizlilik Politikası'nda açıklanan veri uygulamalarını kabul etmiş olursunuz. Lütfen bu politikayı dikkatle okuyun.</p>
-
-                <h2>2. Topladığımız Bilgiler</h2>
-                <p>Uygulamanın işlevlerini sunmak ve geliştirmek için çeşitli türde bilgiler topluyoruz. Bu bilgiler iki ana kategoriye ayrılır:</p>
-
-                <h3>a) Doğrudan Sizin Sağladığınız Bilgiler</h3>
-                <ul>
-                    <li><strong>Arşivlenmiş Dosyalarınız:</strong> Uygulama aracılığıyla arşivlemeyi seçtiğiniz her türlü dosya (PDF, ofis belgeleri, resimler, videolar, ses dosyaları vb.). Bu dosyalar, yalnızca sizin cihazınızda, uygulamanın özel ve korumalı depolama alanında saklanır.</li>
-                    <li><strong>Dosya Bilgileri:</strong> Arşivlediğiniz dosyaları yönetmenize yardımcı olmak için dosya adı, kaydetme tarihi, dosya boyutu gibi temel bilgileri ve atadığınız kategoriyi saklarız.</li>
-                    <li><strong>Kategori Bilgileri:</strong> Dosyalarınızı düzenlemeniz için oluşturduğunuz özel kategori adlarını saklarız.</li>
-                    <li><strong>Kamera ve Video Kayıtları:</strong> Uygulama içinden yeni bir dosya eklemek için fotoğraf çekme veya video kaydetme özelliğini kullandığınızda, bu medya dosyaları doğrudan arşivinize eklenmek üzere işlenir.</li>
-                </ul>
-
-                <h3>b) Otomatik Olarak Toplanan Bilgiler</h3>
-                <ul>
-                    <li><strong>Google Hesap Bilgileri:</strong> İsteğe bağlı olan Google Drive yedekleme özelliğini kullanmayı seçerseniz, Google hesabınızla giriş yapmanız istenir. Bu durumda, yedekleme hizmetini sunabilmek için e-posta adresiniz ve profil adınız gibi temel Google Hesap bilgilerinize erişim sağlarız.</li>
-                    <li><strong>Kullanım ve Analiz Verileri:</strong> Uygulamayı nasıl kullandığınızı anlamak ve hizmetlerimizi geliştirmek amacıyla, Google Firebase Analytics aracılığıyla anonimleştirilmiş kullanım verileri toplarız. Bu veriler, hangi özelliklerin ne sıklıkla kullanıldığı gibi bilgileri içerir ancak kişisel dosyalarınızı veya içeriklerini kapsamaz.</li>
-                    <li><strong>Kilitlenme Raporları:</strong> Uygulamada bir hata veya kilitlenme meydana geldiğinde, sorunu teşhis edip çözmemize yardımcı olması için Google Firebase Crashlytics aracılığıyla anonim kilitlenme raporları toplarız. Bu raporlar, cihaz modeli, işletim sistemi sürümü gibi teknik bilgileri içerir.</li>
-                    <li><strong>Reklam Tanımlayıcıları:</strong> Uygulamanın ücretsiz sürümünde reklam göstermek amacıyla Google AdMob hizmetini kullanırız. AdMob, ilgi alanlarınıza daha uygun reklamlar sunmak için cihazınızın reklam tanımlayıcısını kullanabilir. Avrupa Ekonomik Alanı (AEA) ve Birleşik Krallık'taki kullanıcılarımız için Google Kullanıcı Mesajlaşma Platformu (UMP) aracılığıyla kişiselleştirilmiş reklamlar için onayınızı alırız.</li>
-                    <li><strong>Satın Alma Bilgileri:</strong> Premium abonelik satın alırsanız, bu işlem Google Play Faturalandırma Sistemi üzerinden güvenli bir şekilde gerçekleştirilir. Abonelik durumunuzu doğrulamak için Google Play tarafından sağlanan işlem bilgilerini (token) saklarız, ancak kredi kartı gibi hassas ödeme bilgilerinize asla erişmeyiz veya bunları saklamayız.</li>
-                </ul>
-
-                <h2>3. Bilgilerinizi Nasıl Kullanıyoruz?</h2>
-                <p>Topladığımız bilgileri aşağıdaki amaçlar için kullanırız:</p>
-                <ul>
-                    <li><strong>Uygulama İşlevselliğini Sağlamak:</strong> Dosyalarınızı güvenli bir şekilde arşivlemek, düzenlemek, görüntülemek ve yönetmek.</li>
-                    <li><strong>Google Drive Yedekleme ve Geri Yükleme:</strong> İsteğiniz üzerine arşivinizi Google Drive hesabınıza yedeklemek ve dilediğiniz zaman geri yüklemek.</li>
-                    <li><strong>Müşteri Desteği:</strong> "Bize Ulaşın" özelliği aracılığıyla gönderdiğiniz geri bildirimlere veya destek taleplerine yanıt vermek.</li>
-                    <li><strong>Uygulamayı Geliştirmek ve İyileştirmek:</strong> Hataları gidermek, performansı artırmak ve en popüler özellikleri anlayarak kullanıcı deneyimini iyileştirmek.</li>
-                    <li><strong>Premium Hizmetler Sunmak:</strong> Premium aboneliklerinizi yönetmek ve reklamsız bir deneyim gibi avantajları etkinleştirmek.</li>
-                    <li><strong>Reklam Sunmak:</strong> Uygulamanın ücretsiz sürümünün geliştirme maliyetlerini karşılamak amacıyla reklamlar göstermek.</li>
-                </ul>
-
-                <h2>4. Bilgilerinizin Paylaşımı</h2>
-                <p>Kişisel dosyalarınızı ve verilerinizi izniniz olmadan üçüncü taraflara satmayız, kiralamayız veya ticaretini yapmayız. Bilgileriniz yalnızca aşağıdaki durumlar ve hizmet sağlayıcılarla paylaşılabilir:</p>
-                <ul>
-                    <li><strong>Google, LLC:</strong>
+                        <h3>b) Information Collected Automatically</h3>
                         <ul>
-                            <li><strong>Google Drive:</strong> Yedekleme özelliğini kullandığınızda, şifrelenmiş arşiv dosyanız sizin kendi Google Drive hesabınızda saklanır. Verileriniz, Google'ın Gizlilik Politikası'na tabi olarak korunur.</li>
-                            <li><strong>Google AdMob ve Firebase:</strong> Uygulamayı geliştirmek ve reklam sunmak için kullandığımız analiz, kilitlenme raporlama ve reklam hizmetleri. Bu hizmetler aracılığıyla toplanan veriler anonimleştirilmiştir ve Google'ın kendi gizlilik politikalarına tabidir.</li>
-                            <li><strong>Google Play Faturalandırma:</strong> Premium abonelik işlemleri için. Bu süreç Google tarafından yönetilir ve ödeme bilgileriniz bizimle paylaşılmaz.</li>
+                            <li><strong>Google Account Information:</strong> If you choose to use the optional Google Drive backup feature, you will be asked to sign in with your Google account. In this case, we access basic Google Account information, such as your email address and profile name, to provide the backup service.</li>
+                            <li><strong>Usage and Analytics Data:</strong> To understand how you use the Application and to improve our services, we collect anonymized usage data through Google Firebase Analytics. This data includes information like which features are used and how often, but it does not include your personal files or their content.</li>
+                            <li><strong>Crash Reports:</strong> If an error or crash occurs in the Application, we collect anonymous crash reports through Google Firebase Crashlytics to help us diagnose and fix the problem. These reports include technical information like the device model and operating system version.</li>
+                            <li><strong>Advertising Identifiers:</strong> We use the Google AdMob service to display ads in the free version of the Application. AdMob may use your device's advertising identifier to serve more relevant ads. For our users in the European Economic Area (EEA) and the UK, we obtain your consent for personalized advertising through the Google User Messaging Platform (UMP).</li>
+                            <li><strong>Purchase Information:</strong> If you purchase a premium subscription, this transaction is securely handled through the Google Play Billing System. We store transaction information (tokens) provided by Google Play to verify your subscription status, but we never access or store sensitive payment information like credit card details.</li>
                         </ul>
-                    </li>
-                    <li><strong>Yasal Yükümlülükler:</strong> Yasal bir zorunluluk, mahkeme kararı veya resmi bir devlet talebi olması durumunda, yasaların gerektirdiği ölçüde bilgi paylaşımı yapabiliriz.</li>
-                </ul>
 
-                <h2>5. Veri Depolama ve Güvenlik</h2>
-                <ul>
-                    <li><strong>Yerel Depolama:</strong> Tüm arşivlenmiş dosyalarınız ve ilgili meta veriler, cihazınızdaki Android işletim sisteminin koruması altında olan, uygulamanın özel dahili depolama alanında saklanır. Diğer uygulamalar bu dosyalara erişemez.</li>
-                    <li><strong>Google Drive Yedekleri:</strong> Google Drive'a yedeklenen veriler, sizin Google hesabınızın güvenlik protokolleri (şifre, iki faktörlü kimlik doğrulama vb.) tarafından korunur.</li>
-                    <li><strong>Güvenlik Önlemleri:</strong> Veri güvenliğini ciddiye alıyoruz ve verilerinizi korumak için (örneğin yinelenen dosyaları tespit etmek için kullanılan MD5 karması gibi) endüstri standardı teknik ve idari güvenlik önlemleri uyguluyoruz. Ancak internet üzerinden hiçbir aktarım veya elektronik depolama yönteminin %100 güvenli olmadığını lütfen unutmayın.</li>
-                </ul>
+                        <h2>3. How We Use Your Information</h2>
+                        <p>We use the information we collect for the following purposes:</p>
+                        <ul>
+                            <li><strong>Providing Application Functionality:</strong> To securely archive, organize, view, and manage your files.</li>
+                            <li><strong>Google Drive Backup and Restore:</strong> To back up your archive to your Google Drive account at your request and restore it whenever you wish.</li>
+                            <li><strong>Customer Support:</strong> To respond to feedback or support requests you send via the "Contact Us" feature.</li>
+                            <li><strong>Improving and Enhancing the Application:</strong> To fix bugs, improve performance, and enhance the user experience by understanding the most popular features.</li>
+                            <li><strong>Providing Premium Services:</strong> To manage your premium subscriptions and activate benefits like an ad-free experience.</li>
+                            <li><strong>Serving Ads:</strong> To display advertisements to cover the development costs of the free version of the Application.</li>
+                        </ul>
 
-                <h2>6. Haklarınız ve Seçimleriniz</h2>
-                <p>Verileriniz üzerinde tam kontrole sahipsiniz:</p>
-                <ul>
-                    <li><strong>Erişim ve Silme:</strong> Uygulama içindeki dosyaları ve kategorileri istediğiniz zaman silebilirsiniz. Bir dosyayı silmek, hem dosyanın kendisini hem de ilgili tüm meta verileri cihazınızdan kalıcı olarak kaldırır.</li>
-                    <li><strong>Google Hesabı Bağlantısını Kesme:</strong> Ayarlar menüsünden Google hesabınızın bağlantısını keserek (Oturumu Kapat) Uygulamanın Google Drive'ınıza erişimini istediğiniz zaman iptal edebilirsiniz.</li>
-                    <li><strong>Yedekleri Yönetme:</strong> Google Drive'daki yedeklerinizi manuel olarak oluşturabilir, geri yükleyebilir veya kalıcı olarak silebilirsiniz. Otomatik yedekleme özelliğini Ayarlar'dan etkinleştirebilir veya devre dışı bırakabilirsiniz.</li>
-                    <li><strong>Veri İndirme:</strong> Ayarlar menüsündeki "Verilerimi İndir" seçeneği ile tüm arşivlenmiş dosyalarınızı ve ayarlarınızı bir ZIP dosyası olarak dışa aktarabilirsiniz.</li>
-                    <li><strong>Reklam Onayını Yönetme:</strong> AEA ve Birleşik Krallık'taki kullanıcılar, Ayarlar menüsündeki "Gizlilik Seçenekleri" üzerinden kişiselleştirilmiş reklam onaylarını istedikleri zaman değiştirebilirler.</li>
-                </ul>
+                        <h2>4. Sharing of Your Information</h2>
+                        <p>We do not sell, rent, or trade your personal files and data to third parties without your consent. Your information may only be shared with the following parties and service providers:</p>
+                        <ul>
+                            <li><strong>Google, LLC:</strong>
+                                <ul>
+                                    <li><strong>Google Drive:</strong> When you use the backup feature, your encrypted archive file is stored in your own Google Drive account. Your data is protected subject to Google's Privacy Policy.</li>
+                                    <li><strong>Google AdMob and Firebase:</strong> Analytics, crash reporting, and advertising services we use to improve the application and serve ads. The data collected through these services is anonymized and subject to Google's own privacy policies.</li>
+                                    <li><strong>Google Play Billing:</strong> For premium subscription transactions. This process is managed by Google, and your payment information is not shared with us.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Legal Obligations:</strong> We may share information if required by law, court order, or an official government request, to the extent required by law.</li>
+                        </ul>
 
-                <h2>7. Çocukların Gizliliği</h2>
-                <p>Uygulamamız 13 yaşın altındaki çocuklara yönelik değildir. Bilerek 13 yaşın altındaki çocuklardan kişisel bilgi toplamıyoruz. Eğer 13 yaşın altındaki bir çocuğun bize bilgi verdiğini fark edersek, bu bilgiyi derhal silmek için adımlar atarız.</p>
+                        <h2>5. Data Storage and Security</h2>
+                        <ul>
+                            <li><strong>Local Storage:</strong> All your archived files and related metadata are stored in the Application's private internal storage area on your device, which is protected by the Android operating system. Other applications cannot access these files.</li>
+                            <li><strong>Google Drive Backups:</strong> Data backed up to Google Drive is protected by your Google account's security protocols (e.g., password, two-factor authentication).</li>
+                            <li><strong>Security Measures:</strong> We take data security seriously and implement industry-standard technical and administrative security measures (such as MD5 hashing used to detect duplicate files) to protect your data. However, please be aware that no method of transmission over the internet or electronic storage is 100% secure.</li>
+                        </ul>
 
-                <h2>8. Bu Gizlilik Politikasındaki Değişiklikler</h2>
-                <p>Bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Değişiklikler yapıldığında, politikanın başındaki "Son Güncelleme Tarihi"ni güncelleyeceğiz. Değişikliklerin yürürlüğe girmesinden sonra Uygulama'yı kullanmaya devam etmeniz, yeni politikayı kabul ettiğiniz anlamına gelir.</p>
+                        <h2>6. Your Rights and Choices</h2>
+                        <p>You have full control over your data:</p>
+                        <ul>
+                            <li><strong>Access and Deletion:</strong> You can delete files and categories within the application at any time. Deleting a file permanently removes both the file itself and all related metadata from your device.</li>
+                            <li><strong>Disconnecting Your Google Account:</strong> You can revoke the Application's access to your Google Drive at any time by signing out from the Settings menu.</li>
+                            <li><strong>Managing Backups:</strong> You can manually create, restore, or permanently delete your backups in Google Drive. You can enable or disable the automatic backup feature in Settings.</li>
+                            <li><strong>Downloading Your Data:</strong> You can export all your archived files and settings as a ZIP file using the "Download My Data" option in the Settings menu.</li>
+                            <li><strong>Managing Ad Consent:</strong> Users in the EEA and UK can change their personalized advertising consent at any time via the "Privacy Options" in the Settings menu.</li>
+                        </ul>
 
-                <h2>9. Bize Ulaşın</h2>
-                <p>Bu Gizlilik Politikası ile ilgili herhangi bir sorunuz veya endişeniz varsa, lütfen bize aşağıdaki e-posta adresinden ulaşın:</p>
-                <p><strong>E-posta:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
-            </article>
+                        <h2>7. Children's Privacy</h2>
+                        <p>Our application is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with information, we will take steps to delete such information immediately.</p>
 
+                        <h2>8. Changes to This Privacy Policy</h2>
+                        <p>We may update this Privacy Policy from time to time. When we make changes, we will update the "Last Updated" date at the top of the policy. Your continued use of the Application after the changes take effect means that you accept the new policy.</p>
+
+                        <h2>9. Contact Us</h2>
+                        <p>If you have any questions or concerns about this Privacy Policy, please contact us at the following email address:</p>
+                        <p><strong>Email:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+                    </article>
+
+                    <article id="turkish" style="display: block;">
+                        <h1>Gizlilik Politikası</h1>
+                        <p class="last-updated">Son Güncelleme Tarihi: 16 Temmuz 2025</p>
+
+                        <h2>1. Giriş</h2>
+                        <p>Codenzi ("biz", "bize" veya "bizim") olarak gizliliğinize büyük önem veriyoruz. Bu Gizlilik Politikası, Smart Archive mobil uygulamasını ("Uygulama") kullandığınızda hangi bilgileri topladığımızı, bu bilgileri nasıl kullandığımızı, sakladığımızı, paylaştığımızı ve koruduğumuzu açıklamaktadır.</p>
+                        <p>Uygulamamızı indirerek, kurarak veya kullanarak bu Gizlilik Politikası'nda açıklanan veri uygulamalarını kabul etmiş olursunuz. Lütfen bu politikayı dikkatle okuyun.</p>
+
+                        <h2>2. Topladığımız Bilgiler</h2>
+                        <p>Uygulamanın işlevlerini sunmak ve geliştirmek için çeşitli türde bilgiler topluyoruz. Bu bilgiler iki ana kategoriye ayrılır:</p>
+
+                        <h3>a) Doğrudan Sizin Sağladığınız Bilgiler</h3>
+                        <ul>
+                            <li><strong>Arşivlenmiş Dosyalarınız:</strong> Uygulama aracılığıyla arşivlemeyi seçtiğiniz her türlü dosya (PDF, ofis belgeleri, resimler, videolar, ses dosyaları vb.). Bu dosyalar, yalnızca sizin cihazınızda, uygulamanın özel ve korumalı depolama alanında saklanır.</li>
+                            <li><strong>Dosya Bilgileri:</strong> Arşivlediğiniz dosyaları yönetmenize yardımcı olmak için dosya adı, kaydetme tarihi, dosya boyutu gibi temel bilgileri ve atadığınız kategoriyi saklarız.</li>
+                            <li><strong>Kategori Bilgileri:</strong> Dosyalarınızı düzenlemeniz için oluşturduğunuz özel kategori adlarını saklarız.</li>
+                            <li><strong>Kamera ve Video Kayıtları:</strong> Uygulama içinden yeni bir dosya eklemek için fotoğraf çekme veya video kaydetme özelliğini kullandığınızda, bu medya dosyaları doğrudan arşivinize eklenmek üzere işlenir.</li>
+                        </ul>
+
+                        <h3>b) Otomatik Olarak Toplanan Bilgiler</h3>
+                        <ul>
+                            <li><strong>Google Hesap Bilgileri:</strong> İsteğe bağlı olan Google Drive yedekleme özelliğini kullanmayı seçerseniz, Google hesabınızla giriş yapmanız istenir. Bu durumda, yedekleme hizmetini sunabilmek için e-posta adresiniz ve profil adınız gibi temel Google Hesap bilgilerinize erişim sağlarız.</li>
+                            <li><strong>Kullanım ve Analiz Verileri:</strong> Uygulamayı nasıl kullandığınızı anlamak ve hizmetlerimizi geliştirmek amacıyla, Google Firebase Analytics aracılığıyla anonimleştirilmiş kullanım verileri toplarız. Bu veriler, hangi özelliklerin ne sıklıkla kullanıldığı gibi bilgileri içerir ancak kişisel dosyalarınızı veya içeriklerini kapsamaz.</li>
+                            <li><strong>Kilitlenme Raporları:</strong> Uygulamada bir hata veya kilitlenme meydana geldiğinde, sorunu teşhis edip çözmemize yardımcı olması için Google Firebase Crashlytics aracılığıyla anonim kilitlenme raporları toplarız. Bu raporlar, cihaz modeli, işletim sistemi sürümü gibi teknik bilgileri içerir.</li>
+                            <li><strong>Reklam Tanımlayıcıları:</strong> Uygulamanın ücretsiz sürümünde reklam göstermek amacıyla Google AdMob hizmetini kullanırız. AdMob, ilgi alanlarınıza daha uygun reklamlar sunmak için cihazınızın reklam tanımlayıcısını kullanabilir. Avrupa Ekonomik Alanı (AEA) ve Birleşik Krallık'taki kullanıcılarımız için Google Kullanıcı Mesajlaşma Platformu (UMP) aracılığıyla kişiselleştirilmiş reklamlar için onayınızı alırız.</li>
+                            <li><strong>Satın Alma Bilgileri:</strong> Premium abonelik satın alırsanız, bu işlem Google Play Faturalandırma Sistemi üzerinden güvenli bir şekilde gerçekleştirilir. Abonelik durumunuzu doğrulamak için Google Play tarafından sağlanan işlem bilgilerini (token) saklarız, ancak kredi kartı gibi hassas ödeme bilgilerinize asla erişmeyiz veya bunları saklamayız.</li>
+                        </ul>
+
+                        <h2>3. Bilgilerinizi Nasıl Kullanıyoruz?</h2>
+                        <p>Topladığımız bilgileri aşağıdaki amaçlar için kullanırız:</p>
+                        <ul>
+                            <li><strong>Uygulama İşlevselliğini Sağlamak:</strong> Dosyalarınızı güvenli bir şekilde arşivlemek, düzenlemek, görüntülemek ve yönetmek.</li>
+                            <li><strong>Google Drive Yedekleme ve Geri Yükleme:</strong> İsteğiniz üzerine arşivinizi Google Drive hesabınıza yedeklemek ve dilediğiniz zaman geri yüklemek.</li>
+                            <li><strong>Müşteri Desteği:</strong> "Bize Ulaşın" özelliği aracılığıyla gönderdiğiniz geri bildirimlere veya destek taleplerine yanıt vermek.</li>
+                            <li><strong>Uygulamayı Geliştirmek ve İyileştirmek:</strong> Hataları gidermek, performansı artırmak ve en popüler özellikleri anlayarak kullanıcı deneyimini iyileştirmek.</li>
+                            <li><strong>Premium Hizmetler Sunmak:</strong> Premium aboneliklerinizi yönetmek ve reklamsız bir deneyim gibi avantajları etkinleştirmek.</li>
+                            <li><strong>Reklam Sunmak:</strong> Uygulamanın ücretsiz sürümünün geliştirme maliyetlerini karşılamak amacıyla reklamlar göstermek.</li>
+                        </ul>
+
+                        <h2>4. Bilgilerinizin Paylaşımı</h2>
+                        <p>Kişisel dosyalarınızı ve verilerinizi izniniz olmadan üçüncü taraflara satmayız, kiralamayız veya ticaretini yapmayız. Bilgileriniz yalnızca aşağıdaki durumlar ve hizmet sağlayıcılarla paylaşılabilir:</p>
+                        <ul>
+                            <li><strong>Google, LLC:</strong>
+                                <ul>
+                                    <li><strong>Google Drive:</strong> Yedekleme özelliğini kullandığınızda, şifrelenmiş arşiv dosyanız sizin kendi Google Drive hesabınızda saklanır. Verileriniz, Google'ın Gizlilik Politikası'na tabi olarak korunur.</li>
+                                    <li><strong>Google AdMob ve Firebase:</strong> Uygulamayı geliştirmek ve reklam sunmak için kullandığımız analiz, kilitlenme raporlama ve reklam hizmetleri. Bu hizmetler aracılığıyla toplanan veriler anonimleştirilmiştir ve Google'ın kendi gizlilik politikalarına tabidir.</li>
+                                    <li><strong>Google Play Faturalandırma:</strong> Premium abonelik işlemleri için. Bu süreç Google tarafından yönetilir ve ödeme bilgileriniz bizimle paylaşılmaz.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Yasal Yükümlülükler:</strong> Yasal bir zorunluluk, mahkeme kararı veya resmi bir devlet talebi olması durumunda, yasaların gerektirdiği ölçüde bilgi paylaşımı yapabiliriz.</li>
+                        </ul>
+
+                        <h2>5. Veri Depolama ve Güvenlik</h2>
+                        <ul>
+                            <li><strong>Yerel Depolama:</strong> Tüm arşivlenmiş dosyalarınız ve ilgili meta veriler, cihazınızdaki Android işletim sisteminin koruması altında olan, uygulamanın özel dahili depolama alanında saklanır. Diğer uygulamalar bu dosyalara erişemez.</li>
+                            <li><strong>Google Drive Yedekleri:</strong> Google Drive'a yedeklenen veriler, sizin Google hesabınızın güvenlik protokolleri (şifre, iki faktörlü kimlik doğrulama vb.) tarafından korunur.</li>
+                            <li><strong>Güvenlik Önlemleri:</strong> Veri güvenliğini ciddiye alıyoruz ve verilerinizi korumak için (örneğin yinelenen dosyaları tespit etmek için kullanılan MD5 karması gibi) endüstri standardı teknik ve idari güvenlik önlemleri uyguluyoruz. Ancak internet üzerinden hiçbir aktarım veya elektronik depolama yönteminin %100 güvenli olmadığını lütfen unutmayın.</li>
+                        </ul>
+
+                        <h2>6. Haklarınız ve Seçimleriniz</h2>
+                        <p>Verileriniz üzerinde tam kontrole sahipsiniz:</p>
+                        <ul>
+                            <li><strong>Erişim ve Silme:</strong> Uygulama içindeki dosyaları ve kategorileri istediğiniz zaman silebilirsiniz. Bir dosyayı silmek, hem dosyanın kendisini hem de ilgili tüm meta verileri cihazınızdan kalıcı olarak kaldırır.</li>
+                            <li><strong>Google Hesabı Bağlantısını Kesme:</strong> Ayarlar menüsünden Google hesabınızın bağlantısını keserek (Oturumu Kapat) Uygulamanın Google Drive'ınıza erişimini istediğiniz zaman iptal edebilirsiniz.</li>
+                            <li><strong>Yedekleri Yönetme:</strong> Google Drive'daki yedeklerinizi manuel olarak oluşturabilir, geri yükleyebilir veya kalıcı olarak silebilirsiniz. Otomatik yedekleme özelliğini Ayarlar'dan etkinleştirebilir veya devre dışı bırakabilirsiniz.</li>
+                            <li><strong>Veri İndirme:</strong> Ayarlar menüsündeki "Verilerimi İndir" seçeneği ile tüm arşivlenmiş dosyalarınızı ve ayarlarınızı bir ZIP dosyası olarak dışa aktarabilirsiniz.</li>
+                            <li><strong>Reklam Onayını Yönetme:</strong> AEA ve Birleşik Krallık'taki kullanıcılar, Ayarlar menüsündeki "Gizlilik Seçenekleri" üzerinden kişiselleştirilmiş reklam onaylarını istedikleri zaman değiştirebilirler.</li>
+                        </ul>
+
+                        <h2>7. Çocukların Gizliliği</h2>
+                        <p>Uygulamamız 13 yaşın altındaki çocuklara yönelik değildir. Bilerek 13 yaşın altındaki çocuklardan kişisel bilgi toplamıyoruz. Eğer 13 yaşın altındaki bir çocuğun bize bilgi verdiğini fark edersek, bu bilgiyi derhal silmek için adımlar atarız.</p>
+
+                        <h2>8. Bu Gizlilik Politikasındaki Değişiklikler</h2>
+                        <p>Bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Değişiklikler yapıldığında, politikanın başındaki "Son Güncelleme Tarihi"ni güncelleyeceğiz. Değişikliklerin yürürlüğe girmesinden sonra Uygulama'yı kullanmaya devam etmeniz, yeni politikayı kabul ettiğiniz anlamına gelir.</p>
+
+                        <h2>9. Bize Ulaşın</h2>
+                        <p>Bu Gizlilik Politikası ile ilgili herhangi bir sorunuz veya endişeniz varsa, lütfen bize aşağıdaki e-posta adresinden ulaşın:</p>
+                        <p><strong>E-posta:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+                    </article>
+
+                </div>
+            </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <a class="brand" href="/" aria-label="Codenzi"><img src="assets/img/codenzi-mark.png" width="30" height="16" alt="">Codenzi</a>
+            <div class="site-footer__meta">
+                <p>&copy; 2026 Codenzi</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
