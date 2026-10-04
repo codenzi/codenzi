@@ -1,7 +1,7 @@
 /* ==========================================================================
    Codenzi Design System — core
    Shared by every page: tokens, base, header, footer, documents.
-   Light by default, dark when the OS asks for it (or data-theme="dark").
+   Bright, light theme across every page.
    ========================================================================== */
 
 /* ---------- Tokens ---------- */
@@ -73,83 +73,8 @@
     --i-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
     --i-arrow-left: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 19-7-7 7-7'/%3E%3Cpath d='M19 12H5'/%3E%3C/svg%3E");
     --i-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    --i-chevron-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-opacity='.7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
     --i-shield: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E");
     --i-globe: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20'/%3E%3Cpath d='M2 12h20'/%3E%3C/svg%3E");
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        color-scheme: dark;
-        --bg: #0a0b0f;
-        --bg-elev: #111318;
-        --bg-subtle: #0f1116;
-        --bg-muted: #171a21;
-        --line: #22262e;
-        --line-strong: #2e333d;
-        --fg: #f4f5f7;
-        --fg-2: #c2c7d0;
-        --fg-3: #8d94a1;
-        --fg-4: #626976;
-        --accent: #8b8dff;
-        --accent-strong: #a9abff;
-        --accent-soft: rgba(124, 127, 255, 0.12);
-        --accent-line: rgba(124, 127, 255, 0.3);
-        --link: #a5a8ff;
-        --ring: rgba(139, 141, 255, 0.55);
-        --warn-bg: rgba(245, 166, 35, 0.07);
-        --warn-line: rgba(245, 166, 35, 0.26);
-        --warn-ico: #f5a623;
-        --info-bg: rgba(59, 130, 246, 0.08);
-        --info-line: rgba(96, 165, 250, 0.28);
-        --info-ico: #60a5fa;
-        --note-bg: rgba(139, 92, 246, 0.09);
-        --note-line: rgba(167, 139, 250, 0.3);
-        --note-ico: #a78bfa;
-        --danger-bg: rgba(229, 72, 77, 0.08);
-        --danger-line: rgba(255, 99, 105, 0.28);
-        --danger-ico: #ff6369;
-        --danger-fg: #ff9592;
-        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-        --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -6px rgba(0, 0, 0, 0.5);
-        --shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.3), 0 24px 48px -12px rgba(0, 0, 0, 0.6);
-    }
-}
-
-:root[data-theme="dark"] {
-    color-scheme: dark;
-    --bg: #0a0b0f;
-    --bg-elev: #111318;
-    --bg-subtle: #0f1116;
-    --bg-muted: #171a21;
-    --line: #22262e;
-    --line-strong: #2e333d;
-    --fg: #f4f5f7;
-    --fg-2: #c2c7d0;
-    --fg-3: #8d94a1;
-    --fg-4: #626976;
-    --accent: #8b8dff;
-    --accent-strong: #a9abff;
-    --accent-soft: rgba(124, 127, 255, 0.12);
-    --accent-line: rgba(124, 127, 255, 0.3);
-    --link: #a5a8ff;
-    --ring: rgba(139, 141, 255, 0.55);
-    --warn-bg: rgba(245, 166, 35, 0.07);
-    --warn-line: rgba(245, 166, 35, 0.26);
-    --warn-ico: #f5a623;
-    --info-bg: rgba(59, 130, 246, 0.08);
-    --info-line: rgba(96, 165, 250, 0.28);
-    --info-ico: #60a5fa;
-    --note-bg: rgba(139, 92, 246, 0.09);
-    --note-line: rgba(167, 139, 250, 0.3);
-    --note-ico: #a78bfa;
-    --danger-bg: rgba(229, 72, 77, 0.08);
-    --danger-line: rgba(255, 99, 105, 0.28);
-    --danger-ico: #ff6369;
-    --danger-fg: #ff9592;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -6px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.3), 0 24px 48px -12px rgba(0, 0, 0, 0.6);
 }
 
 /* ---------- Base ---------- */
@@ -376,13 +301,13 @@ input {
     height: 26px;
     border-radius: 7px;
     object-fit: cover;
-    box-shadow: 0 0 0 1px var(--line);
 }
 
 .product-chip__icon--tile {
     padding: 3px;
     background: #fff;
     object-fit: contain;
+    box-shadow: 0 0 0 1px var(--line);
 }
 
 /* Header navigation for document pages (existing nav lists) */
@@ -1185,16 +1110,6 @@ input {
     cursor: pointer;
     -webkit-appearance: none;
     appearance: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .lang-selector select {
-        background-image: var(--i-chevron-light);
-    }
-}
-
-:root[data-theme="dark"] .lang-selector select {
-    background-image: var(--i-chevron-light);
 }
 
 /* Back link */
