@@ -5,150 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hesap ve Veri Silme - StudiCat</title>
     <!-- Montserrat Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0F172A;
-            --secondary: #22D3EE;
-            --accent: #E71D36;
-            --bg: #F1F5F9;
-            --card: #FFFFFF;
-            --text: #0F172A;
-            --text-secondary: #64748B;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .lang-switch {
-            margin-bottom: 20px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .lang-btn {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 14px;
-            transition: opacity 0.3s;
-        }
-
-        .lang-btn:hover {
-            opacity: 0.9;
-        }
-
-        .container {
-            max-width: 600px;
-            width: 100%;
-            background-color: var(--card);
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
-            border: 1px solid #E2E8F0;
-        }
-
-        .logo {
-            font-weight: 900;
-            font-size: 28px;
-            color: var(--primary);
-            text-align: center;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-        }
-
-        .logo span {
-            color: var(--secondary);
-        }
-
-        h1 {
-            font-weight: 700;
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: var(--primary);
-            text-align: center;
-        }
-
-        p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            font-weight: 700;
-            color: var(--primary);
-            margin-top: 25px;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 30px;
-            align-items: center;
-        }
-
-        .email-btn {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: #000000;
-            padding: 16px 24px;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 15px;
-            width: 100%;
-            max-width: 300px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3);
-        }
-
-        .email-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(34, 211, 238, 0.4);
-        }
-
-        .partial-btn {
-            color: var(--text-secondary);
-            font-size: 13px;
-            text-decoration: underline;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .footer-note {
-            font-size: 12px;
-            color: var(--accent);
-            margin-top: 30px;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        /* Language visibility */
-        [lang="en"] { display: none; }
-    </style>
     <script>
         function switchLanguage(lang) {
             document.querySelectorAll('[lang]').forEach(el => {
@@ -159,47 +15,81 @@
             });
         }
     </script>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0b0f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        [lang="en"] { display: none; }
+    </style>
+    <script src="site.js" defer></script>
 </head>
-<body>
+<body class="doc-page">
 
-    <div class="lang-switch">
-        <button class="lang-btn" onclick="switchLanguage('tr')">TR</button>
-        <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
-    </div>
-
-    <div class="container">
-        <div class="logo">STUDI<span>CAT</span></div>
-
-        <!-- TÜRKÇE İÇERİK -->
-        <div lang="tr">
-            <h1>Hesap ve Veri Silme Talebi</h1>
-            <p><b>StudiCat</b> (Codenzi) olarak verilerinizin gizliliğini önemsiyoruz. Hesabınızı ve ilişkili tüm verilerinizi aşağıdaki yöntemle silebilirsiniz.</p>
-
-            <div class="section-title">Adımlar ve Saklama Süresi</div>
-            <p>Aşağıdaki butona tıklayarak talebinizi iletebilirsiniz. Kimlik doğrulamasının ardından tüm verileriniz <b>en geç 30 gün içinde</b> sunucularımızdan kalıcı olarak temizlenir. Yasal zorunluluklar gereği saklanması gereken veriler bu sürenin sonunda anonimleştirilir.</p>
-
-            <div class="btn-group">
-                <a href="mailto:info@codenzi.com?subject=StudiCat Hesap Silme Talebi&body=Merhaba, StudiCat uygulamasındaki hesabımın ve tüm verilerimin kalıcı olarak silinmesini istiyorum.%0D%0A%0D%0AKayıtlı E-posta: " class="email-btn">Hesabımı ve Tüm Verilerimi Sil</a>
-                <a href="mailto:info@codenzi.com?subject=StudiCat Veri Silme Talebi&body=Merhaba, hesabımı silmeden sadece şu verilerimin silinmesini istiyorum: " class="partial-btn" lang="tr">Sadece Belirli Verileri Sil (Kısmi Silme)</a>
-            </div>
-            <p class="footer-note">* Bu işlem geri alınamaz.</p>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="/" aria-label="Codenzi"><img src="assets/img/codenzi-mark.png" width="38" height="20" alt=""><span class="brand-word">Codenzi</span></a>
+            <span class="crumb-sep" aria-hidden="true"></span>
+            <div class="product-chip"><span>StudiCat</span></div>
         </div>
+    </header>
 
-        <!-- ENGLISH CONTENT -->
-        <div lang="en">
-            <h1>Account & Data Deletion Request</h1>
-            <p>At <b>StudiCat</b> (Codenzi), we value your privacy. You can request the deletion of your account and all associated data using the method below.</p>
-
-            <div class="section-title">Process and Retention Period</div>
-            <p>You can submit your request by clicking the button below. After identity verification, all your data will be permanently cleared from our servers <b>within 30 days</b>. Data that must be kept for legal obligations will be anonymized after this period.</p>
-
-            <div class="btn-group">
-                <a href="mailto:info@codenzi.com?subject=StudiCat Account Deletion Request&body=Hello, I want to permanently delete my account and all data in the StudiCat app.%0D%0A%0D%0ARegistered Email: " class="email-btn">Delete My Account and All Data</a>
-                <a href="mailto:info@codenzi.com?subject=StudiCat Data Deletion Request&body=Hello, I want to delete specific data without removing my account: " class="partial-btn" lang="en">Delete Specific Data Only (Partial Deletion)</a>
+    <main class="doc doc--action">
+        <div class="doc-body">
+            <div class="lang-switch">
+                <button class="lang-btn" onclick="switchLanguage('tr')">TR</button>
+                <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
             </div>
-            <p class="footer-note">* This action cannot be undone.</p>
+
+            <div class="container">
+                <div class="logo">STUDI<span>CAT</span></div>
+
+                <!-- TÜRKÇE İÇERİK -->
+                <div lang="tr">
+                    <h1>Hesap ve Veri Silme Talebi</h1>
+                    <p><b>StudiCat</b> (Codenzi) olarak verilerinizin gizliliğini önemsiyoruz. Hesabınızı ve ilişkili tüm verilerinizi aşağıdaki yöntemle silebilirsiniz.</p>
+
+                    <div class="section-title">Adımlar ve Saklama Süresi</div>
+                    <p>Aşağıdaki butona tıklayarak talebinizi iletebilirsiniz. Kimlik doğrulamasının ardından tüm verileriniz <b>en geç 30 gün içinde</b> sunucularımızdan kalıcı olarak temizlenir. Yasal zorunluluklar gereği saklanması gereken veriler bu sürenin sonunda anonimleştirilir.</p>
+
+                    <div class="btn-group">
+                        <a href="mailto:info@codenzi.com?subject=StudiCat Hesap Silme Talebi&body=Merhaba, StudiCat uygulamasındaki hesabımın ve tüm verilerimin kalıcı olarak silinmesini istiyorum.%0D%0A%0D%0AKayıtlı E-posta: " class="email-btn">Hesabımı ve Tüm Verilerimi Sil</a>
+                        <a href="mailto:info@codenzi.com?subject=StudiCat Veri Silme Talebi&body=Merhaba, hesabımı silmeden sadece şu verilerimin silinmesini istiyorum: " class="partial-btn" lang="tr">Sadece Belirli Verileri Sil (Kısmi Silme)</a>
+                    </div>
+                    <p class="footer-note">* Bu işlem geri alınamaz.</p>
+                </div>
+
+                <!-- ENGLISH CONTENT -->
+                <div lang="en">
+                    <h1>Account & Data Deletion Request</h1>
+                    <p>At <b>StudiCat</b> (Codenzi), we value your privacy. You can request the deletion of your account and all associated data using the method below.</p>
+
+                    <div class="section-title">Process and Retention Period</div>
+                    <p>You can submit your request by clicking the button below. After identity verification, all your data will be permanently cleared from our servers <b>within 30 days</b>. Data that must be kept for legal obligations will be anonymized after this period.</p>
+
+                    <div class="btn-group">
+                        <a href="mailto:info@codenzi.com?subject=StudiCat Account Deletion Request&body=Hello, I want to permanently delete my account and all data in the StudiCat app.%0D%0A%0D%0ARegistered Email: " class="email-btn">Delete My Account and All Data</a>
+                        <a href="mailto:info@codenzi.com?subject=StudiCat Data Deletion Request&body=Hello, I want to delete specific data without removing my account: " class="partial-btn" lang="en">Delete Specific Data Only (Partial Deletion)</a>
+                    </div>
+                    <p class="footer-note">* This action cannot be undone.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <a class="brand" href="/" aria-label="Codenzi"><img src="assets/img/codenzi-mark.png" width="30" height="16" alt="">Codenzi</a>
+            <div class="site-footer__meta">
+                <p>&copy; 2026 Codenzi</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

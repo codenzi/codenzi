@@ -4,369 +4,256 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taktik - Kullanım Koşulları</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 40px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        h1 {
-            color: #1a202c;
-            border-bottom: 3px solid #e2e8f0;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
-        h2 {
-            color: #2d3748;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-size: 20px;
-            font-weight: 700;
-            border-left: 4px solid #4299e1;
-            padding-left: 10px;
-        }
-        h3 {
-            color: #4a5568;
-            font-size: 16px;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        p, li {
-            font-size: 15px;
-            color: #4a5568;
-            margin-bottom: 12px;
-        }
-        ul {
-            margin-left: 20px;
-            padding-left: 15px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        strong {
-            color: #2d3748;
-            font-weight: 600;
-        }
-
-        /* --- UYARI KUTULARI --- */
-        .warning-box {
-            background-color: #fffaf0;
-            border: 1px solid #fbd38d;
-            border-left: 4px solid #ed8936;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .ai-disclaimer-box {
-            background-color: #fff5f5;
-            border: 1px solid #feb2b2;
-            border-left: 4px solid #fc8181;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-
-        /* --- YENİ PREMIUM TABLOSU --- */
-        .rights-container {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            overflow: hidden;
-            margin: 20px 0;
-            background-color: #fff;
-        }
-        .rights-header {
-            background-color: #f7fafc;
-            padding: 15px 20px;
-            border-bottom: 1px solid #e2e8f0;
-            font-weight: 700;
-            color: #2d3748;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
-        .rights-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .rights-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 20px;
-            border-bottom: 1px solid #edf2f7;
-            font-size: 15px;
-        }
-        .rights-item:last-child {
-            border-bottom: none;
-        }
-        .rights-label {
-            color: #4a5568;
-            font-weight: 500;
-        }
-        .rights-value {
-            color: #3182ce;
-            font-weight: 700;
-            font-family: monospace, sans-serif;
-            font-size: 16px;
-            background: #ebf8ff;
-            padding: 4px 12px;
-            border-radius: 6px;
-        }
-
-        /* --- GENEL STİLLER --- */
-        .caps-lock {
-            font-weight: bold;
-            font-size: 0.9em;
-            color: #e53e3e;
-        }
-        .contact {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #edf2f7;
-            text-align: center;
-        }
-        .contact a {
-            color: #4299e1;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .date-info {
-            font-size: 0.85em;
-            color: #718096;
-            margin-bottom: 20px;
-        }
-    </style>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0b0f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="site.js" defer></script>
 </head>
-<body>
-    <div class="container">
-        <h1>KULLANIM KOŞULLARI (EULA)</h1>
-        <p class="date-info"><strong>Son Güncelleme:</strong> 17 Mart 2026</p>
+<body class="doc-page">
 
-        <h2>VERİ SORUMLUSU</h2>
-        <p><strong>Hizmet Sağlayıcı:</strong> Codenzi<br>
-        <strong>E-posta:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a><br>
-        <strong>Ülke:</strong> Türkiye Cumhuriyeti<br>
-        <strong>Veri Sorumlusu:</strong> Codenzi (6698 Sayılı Kişisel Verilerin Korunması Kanunu kapsamında)</p>
-
-        <p>Lütfen <strong>Taktik</strong> mobil uygulamasını ("Uygulama") kullanmadan önce bu Kullanım Koşullarını ("Koşullar") dikkatlice okuyun.</p>
-
-        <p><strong>Taktik</strong> ("biz", "bize" veya "bizim") ile siz ("Kullanıcı") arasındaki bu sözleşme; uygulamaya erişiminizi, hizmetlerden yararlanma şartlarını ve karşılıklı yasal sorumlulukları düzenleyen bağlayıcı bir anlaşmadır.</p>
-
-        <p>Uygulamaya erişerek veya kullanarak, bu Koşulları ve <strong>Gizlilik Politikamızı</strong> kabul etmiş sayılırsınız.</p>
-        <h2>1. HİZMETİN KAPSAMI VE NİTELİĞİ</h2>
-        <p>Taktik uygulaması; öğrencilere sınav hazırlık süreçlerinde destek olmak, çalışma stratejileri oluşturmak ve motivasyon sağlamak amacıyla geliştirilmiş, yapay zeka destekli bir eğitim aracıdır. Uygulama bir <strong>eğitim kurumunun, tıbbi kuruluşun veya profesyonel danışmanlık hizmetinin</strong> yerine geçmez.</p>
-
-        <h2>2. UYGUNLUK VE YAŞ SINIRI</h2>
-        <div class="warning-box">
-            <strong>18 Yaş Altı Kullanıcılar İçin Uyarı:</strong><br>
-            Hizmetlerimizi kullanmak için en az 13 yaşında olmanız gerekmektedir. Eğer 13 ile 18 yaşları arasındaysanız, bu Koşulları bir ebeveyniniz veya yasal vasiniz ile birlikte okuduğunuzu ve ebeveyninizin bu koşulları sizin adınıza kabul ettiğini beyan edersiniz.
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="/" aria-label="Codenzi"><img src="assets/img/codenzi-mark.png" width="38" height="20" alt=""><span class="brand-word">Codenzi</span></a>
+            <span class="crumb-sep" aria-hidden="true"></span>
+            <div class="product-chip"><img class="product-chip__icon" src="taktik.png" width="26" height="26" alt=""><span>Taktik</span></div>
         </div>
+    </header>
 
-        <h2>3. HESAP GÜVENLİĞİ VE KULLANIMI</h2>
-        <ul>
-            <li><strong>Doğru Bilgi:</strong> Kayıt olurken verdiğiniz bilgilerin (sınav türü, yaş, e-posta vb.) doğru ve güncel olduğunu kabul edersiniz.</li>
-            <li><strong>Hesap Güvenliği:</strong> Hesabınızın güvenliğinden siz sorumlusunuz. Şifrenizi kimseyle paylaşmamalısınız.</li>
-            <li><strong>Devir Yasağı:</strong> Hesabınızı başkasına satamaz, kiralayamaz veya devredemezsiniz. Hesap paylaşımı tespit edilirse hesabınız askıya alınabilir.</li>
-            <li><strong>Hesap Silme:</strong> Hesabınızı uygulama içindeki "Ayarlar > Hesabı Sil" seçeneğinden veya info@codenzi.com adresine e-posta göndererek silebilirsiniz. <strong>ÖNEMLİ UYARI:</strong> Uygulama üzerinden hesabınızı silmeniz, Apple App Store veya Google Play Store üzerindeki aktif aboneliğinizi <strong>otomatik olarak DURDURMAZ.</strong> Abonelik iptali ve ödeme işlemleri teknik olarak yalnızca ilgili mağazanın (App Store/Play Store) "Abonelikler" menüsü üzerinden yönetilebilmektedir.</li>
-            <li><strong>Hesap Askıya Alma:</strong> Kural ihlali durumunda hesabınız geçici veya kalıcı olarak askıya alınabilir. İtiraz hakkınız için info@codenzi.com adresine başvurabilirsiniz.</li>
-        </ul>
+    <main class="doc">
+        <div class="doc-body">
+            <div class="container">
+                <h1>KULLANIM KOŞULLARI (EULA)</h1>
+                <p class="date-info"><strong>Son Güncelleme:</strong> 17 Mart 2026</p>
 
-        <h2>4. YAPAY ZEKA (AI) YASAL UYARISI</h2>
-        <p>Uygulama, Google Gemini ve benzeri yapay zeka teknolojilerini kullanarak size önerilerde bulunur.</p>
-        <div class="ai-disclaimer-box">
-            <h3>FERAGATNAME (SORUMLULUK REDDİ):</h3>
-            <ul>
-                <li><strong>Doğruluk Garantisi Yoktur:</strong> Yapay zeka ("AI Koç"), nadiren de olsa hatalı, eksik veya güncel olmayan bilgiler ("halüsinasyon") üretebilir. Sınav müfredatları veya konu içerikleri hakkındaki AI yanıtlarını her zaman resmi kaynaklardan doğrulayın.</li>
-                <li><strong>Taktik Oyunları İçerikleri:</strong> "Taktik Oyunları" bölümündeki tüm sorular, açıklamalar ve cevaplar yapay zeka tarafından otomatik olarak üretilmektedir. Bu içeriklerin akademik doğruluğu ve güncelliği garanti edilmez. AI üretimi içeriklerde hatalı bilgiler, güncel olmayan müfredat bilgileri veya yanlış çözümler bulunabilir. Lütfen öğrendiğiniz bilgileri ders kitaplarınız, öğretmenleriniz veya resmi kaynaklardan mutlaka doğrulayın. Taktik Oyunları eğlenceli bir pekiştirme aracıdır ancak tek başına güvenilir bir eğitim kaynağı olarak kullanılmamalıdır.</li>
-                <li><strong>Podcast İçerikleri:</strong> "Podcast" özelliği ile üretilen tüm ses içerikleri (anlatım, açıklama, özet vb.) yapay zeka tarafından otomatik olarak oluşturulur ve sentetik ses teknolojisi kullanılarak seslendirılır. Bu podcast içeriklerinin akademik doğruluğu, güncelliği ve eksiksizliği garanti edilmez. AI tarafından üretilen podcast'lerde hatalı bilgiler, güncel olmayan müfredat bilgileri, yanlış telaffuzlar veya eksik açıklamalar bulunabilir. Podcast içerikleri yalnızca takviye dinleme materyali olarak kullanılmalı, öğrenilen bilgiler mutlaka resmi kaynaklardan doğrulanmalıdır. Podcast içerikleri profesyonel eğitim materyali veya ders kitabı yerine geçmez.</li>
-                <li><strong>Başarı Garantisi Yoktur:</strong> Uygulamanın sunduğu çalışma programlarına uymanız, sınavda belirli bir puanı alacağınızı veya üniversiteye yerleşeceğinizi garanti etmez. Akademik başarısızlıktan Taktik sorumlu tutulamaz.</li>
-                <li><strong>Psikolojik Tavsiye Değildir:</strong> "Motivasyon" veya "Psikolojik Destek" özellikleri sadece moral verme amaçlıdır. Profesyonel tıbbi tedavi veya klinik psikolog desteği yerine geçmez. Ciddi durumlarda lütfen bir uzmana başvurun.</li>
-            </ul>
+                <h2>VERİ SORUMLUSU</h2>
+                <p><strong>Hizmet Sağlayıcı:</strong> Codenzi<br>
+                <strong>E-posta:</strong> <a href="mailto:info@codenzi.com">info@codenzi.com</a><br>
+                <strong>Ülke:</strong> Türkiye Cumhuriyeti<br>
+                <strong>Veri Sorumlusu:</strong> Codenzi (6698 Sayılı Kişisel Verilerin Korunması Kanunu kapsamında)</p>
+
+                <p>Lütfen <strong>Taktik</strong> mobil uygulamasını ("Uygulama") kullanmadan önce bu Kullanım Koşullarını ("Koşullar") dikkatlice okuyun.</p>
+
+                <p><strong>Taktik</strong> ("biz", "bize" veya "bizim") ile siz ("Kullanıcı") arasındaki bu sözleşme; uygulamaya erişiminizi, hizmetlerden yararlanma şartlarını ve karşılıklı yasal sorumlulukları düzenleyen bağlayıcı bir anlaşmadır.</p>
+
+                <p>Uygulamaya erişerek veya kullanarak, bu Koşulları ve <strong>Gizlilik Politikamızı</strong> kabul etmiş sayılırsınız.</p>
+                <h2>1. HİZMETİN KAPSAMI VE NİTELİĞİ</h2>
+                <p>Taktik uygulaması; öğrencilere sınav hazırlık süreçlerinde destek olmak, çalışma stratejileri oluşturmak ve motivasyon sağlamak amacıyla geliştirilmiş, yapay zeka destekli bir eğitim aracıdır. Uygulama bir <strong>eğitim kurumunun, tıbbi kuruluşun veya profesyonel danışmanlık hizmetinin</strong> yerine geçmez.</p>
+
+                <h2>2. UYGUNLUK VE YAŞ SINIRI</h2>
+                <div class="warning-box">
+                    <strong>18 Yaş Altı Kullanıcılar İçin Uyarı:</strong><br>
+                    Hizmetlerimizi kullanmak için en az 13 yaşında olmanız gerekmektedir. Eğer 13 ile 18 yaşları arasındaysanız, bu Koşulları bir ebeveyniniz veya yasal vasiniz ile birlikte okuduğunuzu ve ebeveyninizin bu koşulları sizin adınıza kabul ettiğini beyan edersiniz.
+                </div>
+
+                <h2>3. HESAP GÜVENLİĞİ VE KULLANIMI</h2>
+                <ul>
+                    <li><strong>Doğru Bilgi:</strong> Kayıt olurken verdiğiniz bilgilerin (sınav türü, yaş, e-posta vb.) doğru ve güncel olduğunu kabul edersiniz.</li>
+                    <li><strong>Hesap Güvenliği:</strong> Hesabınızın güvenliğinden siz sorumlusunuz. Şifrenizi kimseyle paylaşmamalısınız.</li>
+                    <li><strong>Devir Yasağı:</strong> Hesabınızı başkasına satamaz, kiralayamaz veya devredemezsiniz. Hesap paylaşımı tespit edilirse hesabınız askıya alınabilir.</li>
+                    <li><strong>Hesap Silme:</strong> Hesabınızı uygulama içindeki "Ayarlar > Hesabı Sil" seçeneğinden veya info@codenzi.com adresine e-posta göndererek silebilirsiniz. <strong>ÖNEMLİ UYARI:</strong> Uygulama üzerinden hesabınızı silmeniz, Apple App Store veya Google Play Store üzerindeki aktif aboneliğinizi <strong>otomatik olarak DURDURMAZ.</strong> Abonelik iptali ve ödeme işlemleri teknik olarak yalnızca ilgili mağazanın (App Store/Play Store) "Abonelikler" menüsü üzerinden yönetilebilmektedir.</li>
+                    <li><strong>Hesap Askıya Alma:</strong> Kural ihlali durumunda hesabınız geçici veya kalıcı olarak askıya alınabilir. İtiraz hakkınız için info@codenzi.com adresine başvurabilirsiniz.</li>
+                </ul>
+
+                <h2>4. YAPAY ZEKA (AI) YASAL UYARISI</h2>
+                <p>Uygulama, Google Gemini ve benzeri yapay zeka teknolojilerini kullanarak size önerilerde bulunur.</p>
+                <div class="ai-disclaimer-box">
+                    <h3>FERAGATNAME (SORUMLULUK REDDİ):</h3>
+                    <ul>
+                        <li><strong>Doğruluk Garantisi Yoktur:</strong> Yapay zeka ("AI Koç"), nadiren de olsa hatalı, eksik veya güncel olmayan bilgiler ("halüsinasyon") üretebilir. Sınav müfredatları veya konu içerikleri hakkındaki AI yanıtlarını her zaman resmi kaynaklardan doğrulayın.</li>
+                        <li><strong>Taktik Oyunları İçerikleri:</strong> "Taktik Oyunları" bölümündeki tüm sorular, açıklamalar ve cevaplar yapay zeka tarafından otomatik olarak üretilmektedir. Bu içeriklerin akademik doğruluğu ve güncelliği garanti edilmez. AI üretimi içeriklerde hatalı bilgiler, güncel olmayan müfredat bilgileri veya yanlış çözümler bulunabilir. Lütfen öğrendiğiniz bilgileri ders kitaplarınız, öğretmenleriniz veya resmi kaynaklardan mutlaka doğrulayın. Taktik Oyunları eğlenceli bir pekiştirme aracıdır ancak tek başına güvenilir bir eğitim kaynağı olarak kullanılmamalıdır.</li>
+                        <li><strong>Podcast İçerikleri:</strong> "Podcast" özelliği ile üretilen tüm ses içerikleri (anlatım, açıklama, özet vb.) yapay zeka tarafından otomatik olarak oluşturulur ve sentetik ses teknolojisi kullanılarak seslendirılır. Bu podcast içeriklerinin akademik doğruluğu, güncelliği ve eksiksizliği garanti edilmez. AI tarafından üretilen podcast'lerde hatalı bilgiler, güncel olmayan müfredat bilgileri, yanlış telaffuzlar veya eksik açıklamalar bulunabilir. Podcast içerikleri yalnızca takviye dinleme materyali olarak kullanılmalı, öğrenilen bilgiler mutlaka resmi kaynaklardan doğrulanmalıdır. Podcast içerikleri profesyonel eğitim materyali veya ders kitabı yerine geçmez.</li>
+                        <li><strong>Başarı Garantisi Yoktur:</strong> Uygulamanın sunduğu çalışma programlarına uymanız, sınavda belirli bir puanı alacağınızı veya üniversiteye yerleşeceğinizi garanti etmez. Akademik başarısızlıktan Taktik sorumlu tutulamaz.</li>
+                        <li><strong>Psikolojik Tavsiye Değildir:</strong> "Motivasyon" veya "Psikolojik Destek" özellikleri sadece moral verme amaçlıdır. Profesyonel tıbbi tedavi veya klinik psikolog desteği yerine geçmez. Ciddi durumlarda lütfen bir uzmana başvurun.</li>
+                    </ul>
+                </div>
+
+                <h2>5. ABONELİKLER VE KULLANIM HAKLARI</h2>
+                <p>Abonelikler, Apple App Store veya Google Play Store üzerinden satın alınır ve adil kullanım politikası çerçevesinde aşağıdaki aylık kullanım haklarına tabidir.</p>
+
+                <h3>ABONELİK SÜRELERİ VE ÜCRETLER:</h3>
+                <ul>
+                    <li><strong>Aylık Abonelik:</strong> Her ay otomatik olarak yenilenir</li>
+                    <li><strong>Yıllık Abonelik:</strong> Her yıl otomatik olarak yenilenir</li>
+                    <li><strong>Ücretsiz Deneme:</strong> Mevcut kampanyalara göre ücretsiz deneme sunulabilir</li>
+                    <li><strong>Otomatik Yenilenme:</strong> Aboneliğiniz süre dolmadan en az 24 saat önce iptal edilmezse otomatik olarak yenilenir</li>
+                    <li><strong>İptal:</strong> Aboneliğinizi istediğiniz zaman App Store/Play Store üzerinden iptal edebilirsiniz. İptal, mevcut dönemin sonunda geçerli olur</li>
+                </ul>
+
+                <div class="rights-container">
+                    <div class="rights-header">PRO KULLANICI AYLIK HAKLARI*</div>
+                    <ul class="rights-list">
+                        <li class="rights-item">
+                            <span class="rights-label">Sohbet / Motivasyon / Analiz / Strateji</span>
+                            <span class="rights-value">1000</span>
+                        </li>
+                        <li class="rights-item">
+                            <span class="rights-label">Soru Çözücü</span>
+                            <span class="rights-value">800</span>
+                        </li>
+                        <li class="rights-item">
+                            <span class="rights-label">Etüt Odası</span>
+                            <span class="rights-value">350</span>
+                        </li>
+                        <li class="rights-item">
+                            <span class="rights-label">Zihin Haritası</span>
+                            <span class="rights-value">200</span>
+                        </li>
+                        <li class="rights-item">
+                            <span class="rights-label">Not Defteri</span>
+                            <span class="rights-value">200</span>
+                        </li>
+                        <li class="rights-item">
+                            <span class="rights-label">Haftalık Plan</span>
+                            <span class="rights-value">50</span>
+                        </li>
+                        <li class="rights-item">
+                            <span class="rights-label">Podcast Üretme</span>
+                            <span class="rights-value">30</span>
+                        </li>
+                    </ul>
+                </div>
+                <p class="fine-print">* Belirtilen kullanım limitleri; kampanya dönemleri, operasyonel gereklilikler veya uygulama güncellemeleri doğrultusunda Codenzi tarafından değiştirilebilir.</p>
+
+                <ul>
+                    <li><strong>Yenilenme:</strong> Bu haklar her ayın başında (ayın 1'inde) sıfırlanır ve yenilenir, bir sonraki aya devretmez.</li>
+                    <li><strong>Cayma Hakkı Hakkında Bilgilendirme:</strong> 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği uyarınca; dijital içerikler ve abonelikler gibi "elektronik ortamda anında ifa edilen hizmetler", kullanıma başlandığı andan itibaren cayma hakkı istisnası kapsamına girebilmektedir. Bu nedenle, satın alınan dijital içeriklerin iadesi, ilgili uygulama mağazasının (Apple App Store veya Google Play Store) kendi iade koşullarına ve teknik değerlendirmesine tabidir.</li>
+                    <li><strong>İade Süreçleri:</strong> Tüm teknik iade talepleri ve abonelik iptalleri, satın alımın yapıldığı mağazanın (Apple App Store veya Google Play Store) kendi politikalarına tabidir. Codenzi'nin mağaza üzerinden yapılan ödemelere doğrudan para iadesi yapma yetkisi bulunmamaktadır.</li>
+                </ul>
+
+                <h2>6. KULLANICI İÇERİKLERİ VE "ARENA" KURALLARI</h2>
+                <p>Uygulama, diğer kullanıcılarla etkileşime geçebileceğiniz, sıralamanızı görebileceğiniz sosyal özellikler ("Arena", "Liderlik Tablosu") içerir.</p>
+                <ul>
+                    <li><strong>Saygı Çerçevesi:</strong> Diğer kullanıcılara hakaret etmek, zorbalık yapmak, nefret söyleminde bulunmak veya taciz etmek kesinlikle yasaktır ve derhal kalıcı yasaklanma (uzaklaştırma) sebebidir.</li>
+                    <li><strong>İçerik Sorumluluğu:</strong> Oluşturduğunuz kullanıcı adı ve diğer tüm içeriklerden tamamen siz sorumlusunuz.</li>
+                    <li><strong>İçerik Moderasyonu:</strong> Uygunsuz içerik tespit ettiğinizde, ilgili profili "Kullanıcıyı Raporla" butonu ile bildirebilirsiniz. Raporlar 24 saat içinde değerlendirilir ve gerekli işlem yapılır.</li>
+                </ul>
+
+                <h2>7. YASAKLI FAALİYETLER VE HİLE (ANTI-CHEAT)</h2>
+                <p>Uygulamanın bütünlüğünü korumak adına aşağıdakiler yasaktır:</p>
+                <ul>
+                    <li>Liderlik tablosunda yükselmek için hile yapmak, bot kullanmak veya sistem açıklarını (bug) kötüye kullanmak.</li>
+                    <li>Uygulamanın kaynak kodlarını tersine mühendislik (reverse engineering) ile çözmeye çalışmak.</li>
+                    <li>Suni trafik oluşturarak sunuculara (Firebase) saldırı düzenlemek.</li>
+                </ul>
+                <p>Bu kuralların ihlali durumunda, önceden haber vermeksizin hesabınızı feshetme hakkımızı saklı tutarız.</p>
+
+                <h2>8. SINIRLI SORUMLULUK</h2>
+                <p class="caps-lock">YASALARIN İZİN VERDİĞİ EN GENİŞ KAPSAMDA; TAKTİK VE EKİBİ, UYGULAMANIN KULLANIMINDAN VEYA KULLANILAMAMASINDAN KAYNAKLANAN HİÇBİR DOLAYLI, ARIZİ, ÖZEL VEYA CEZAİ ZARARDAN (VERİ KAYBI, SINAV BAŞARISIZLIĞI, CİHAZ ARIZASI DAHİL) SORUMLU OLMAYACAKTIR.</p>
+
+                <h2>9. FİKRİ MÜLKİYET VE TELİF HAKLARI</h2>
+                <ul>
+                    <li><strong>Tüm Haklar Saklıdır:</strong> Taktik uygulamasının tüm içeriği (tasarım, logo, metin, kod, grafik, ses dosyaları vb.) Codenzi'nin fikri mülkiyetidir.</li>
+                    <li><strong>AI Tarafından Üretilen İçerikler:</strong> Yapay zeka tarafından size özel üretilen çalışma planları, soru çözümleri ve tavsiyeler <strong>sadece kişisel kullanımınız içindir.</strong> Bu içeriklerin kopyalanarak başka bir ticari platformda, uygulamada veya basılı yayında kullanılması yasaktır.</li>
+                    <li><strong>Podcast İçeriklerinin Kullanımı:</strong> Yapay zeka tarafından üretilen podcast ses dosyaları <strong>yalnızca kişisel eğitim amaçlı kullanım içindir.</strong> Bu podcast içeriklerini indirip başka platformlarda paylaşmak, ticari amaçla kullanmak, yeniden yayınlamak veya üçüncü kişilere dağıtmak kesinlikle yasaktır. Podcast içerikleri telif hakları ile korunmaktadır ve izinsiz kullanımı yasal takibat gerektirebilir.</li>
+                    <li><strong>Kullanım Lisansı:</strong> Size, bu uygulamayı yalnızca kişisel amaçlarla kullanmak için sınırlı, devredilemez bir lisans verilmiştir.</li>
+                </ul>
+
+                <h2>10. KİŞİSEL VERİLERİN KORUNMASI (KVKK/GDPR)</h2>
+                <p>Kişisel verileriniz 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve GDPR kapsamında işlenmektedir. Detaylı bilgi için <strong>Gizlilik Politikamızı</strong> inceleyiniz.</p>
+
+                <h3>VERİ SAHİBİ HAKLARINIZ:</h3>
+                <ul>
+                    <li><strong>Erişim Hakkı:</strong> Hangi kişisel verilerinizin işlendiğini öğrenme</li>
+                    <li><strong>Düzeltme Hakkı:</strong> Yanlış veya eksik verilerin düzeltilmesini talep etme</li>
+                    <li><strong>Silme Hakkı:</strong> Verilerinizin silinmesini talep etme</li>
+                    <li><strong>İtiraz Hakkı:</strong> Veri işleme faaliyetlerine itiraz etme</li>
+                    <li><strong>Taşınabilirlik Hakkı:</strong> Verilerinizin size veya başka bir hizmete aktarılmasını talep etme</li>
+                </ul>
+                <p>Bu haklarınızı kullanmak için info@codenzi.com adresine e-posta gönderebilirsiniz. Talepleriniz 30 gün içinde yanıtlanacaktır.</p>
+
+                <h3>VERİ SAKLAMA SÜRELERİ:</h3>
+                <ul>
+                    <li><strong>Aktif Hesaplar:</strong> Hesabınız aktif olduğu sürece verileriniz saklanır</li>
+                    <li><strong>Silinen Hesaplar:</strong> Hesap silme talebinden sonra 30 gün içinde verileriniz silinir</li>
+                    <li><strong>Yasal Yükümlülükler:</strong> Vergi, muhasebe ve yasal yükümlülükler için gerekli veriler, ilgili mevzuatın öngördüğü süre boyunca saklanır (genellikle 10 yıl)</li>
+                    <li><strong>İstatistiksel Veriler:</strong> Anonimleştirilmiş kullanım verileri ürün geliştirme amacıyla süresiz saklanabilir</li>
+                </ul>
+
+                <h2>11. ÜÇÜNCÜ TARAF HİZMETLER VE ENTEGRASYONLAR</h2>
+                <p>Taktik uygulaması aşağıdaki üçüncü taraf hizmetlerini kullanmaktadır:</p>
+                <ul>
+                    <li><strong>Google Gemini AI:</strong> Yapay zeka destekli özellikler için (<a href="https://ai.google.dev/gemini-api/terms" target="_blank">Kullanım Koşulları</a>)</li>
+                    <li><strong>Firebase (Google):</strong> Veri depolama, kimlik doğrulama ve analitik için (<a href="https://firebase.google.com/terms" target="_blank">Kullanım Koşulları</a>)</li>
+                    <li><strong>RevenueCat:</strong> Abonelik yönetimi için (<a href="https://www.revenuecat.com/terms" target="_blank">Kullanım Koşulları</a>)</li>
+                    <li><strong>Apple App Store / Google Play Store:</strong> Uygulama dağıtımı ve ödeme işlemleri için</li>
+                </ul>
+                <p><strong>Sorumluluk Reddi:</strong> Bu üçüncü taraf hizmetlerin gizlilik politikaları ve kullanım koşulları, bizim kontrolümüz dışındadır. Bu hizmetlerin kullanımından kaynaklanan sorunlardan sorumlu değiliz.</p>
+
+                <h2>12. HİZMETİN DURDURULMASI VE FESHİ</h2>
+                <ul>
+                    <li><strong>Planlı Bakım:</strong> Sistem bakımı ve güncelleme çalışmaları için hizmet geçici olarak durdurulabilir. Mümkün olduğunca önceden bildirim yapılır.</li>
+                    <li><strong>Plansız Kesintiler:</strong> Teknik arızalar, sunucu sorunları veya güvenlik tehditleri nedeniyle hizmet kesintiye uğrayabilir. Bu durumlardan sorumlu değiliz.</li>
+                    <li><strong>Hizmetin Kalıcı Sonlandırılması:</strong> Uygulamayı kalıcı olarak kapatmaya karar verirsek, kullanıcılara en az 30 gün önceden bildirimde bulunuruz. Abonelikler için kalan süre oranında iade süreçleri mağaza üzerinden işletilebilir.</li>
+                    <li><strong>Hesap Feshi:</strong> Kullanım koşullarını ihlal etmeniz durumunda hesabınızı önceden haber vermeksizin feshedebiliriz. İhlal durumunda ödeme iadesi yapılmaz.</li>
+                </ul>
+
+                <h2>13. MÜCBİR SEBEPLER (FORCE MAJEURE)</h2>
+                <p>Doğal afetler, savaş, terör saldırıları, pandemi, hükümet kısıtlamaları, internet kesintileri veya kontrolümüz dışındaki diğer olağanüstü durumlar nedeniyle hizmet sağlayamamaktan sorumlu tutulamayız. Bu durumlarda yükümlülüklerimiz askıya alınır.</p>
+
+                <h2>14. ŞİKAYET VE İTİRAZ PROSEDÜRÜ</h2>
+                <ul>
+                    <li><strong>İlk Başvuru:</strong> Herhangi bir şikayet veya itirazınız için info@codenzi.com adresine detaylı bilgi ile başvurun</li>
+                    <li><strong>Yanıt Süresi:</strong> Başvurularınız 14 iş günü içinde yanıtlanır. Karmaşık durumlarda bu süre 30 güne uzayabilir</li>
+                    <li><strong>Haksız Hesap Kapatma:</strong> Hesabınızın haksız yere kapatıldığını düşünüyorsanız, delillerinizle birlikte başvurabilirsiniz</li>
+                    <li><strong>İade Talepleri:</strong> Abonelik iadesi talepleri için doğrudan App Store/Play Store'a başvurmanız gerekmektedir</li>
+                    <li><strong>Tüketici Hakem Heyeti:</strong> Anlaşmazlık çözülemezse, Tüketici Hakem Heyetlerine başvurma hakkınız saklıdır</li>
+                </ul>
+
+                <h2>15. BİLDİRİMLER VE İLETİŞİM</h2>
+                <p>Önemli güncellemeler ve bildirimler aşağıdaki yöntemlerle yapılır:</p>
+                <ul>
+                    <li><strong>Uygulama İçi Bildirim:</strong> Kritik değişiklikler için push notification gönderilir</li>
+                    <li><strong>E-posta:</strong> Kayıtlı e-posta adresinize bilgilendirme mesajları gönderilir</li>
+                    <li><strong>Uygulama İçi Duyuru:</strong> Güncellemeler uygulama içinde banner ile duyurulur</li>
+                    <li><strong>Web Sitesi:</strong> Güncel koşullar her zaman uygulama içinde erişilebilir</li>
+                </ul>
+
+                <h2>16. DİL VE YETKİLİ HUKUK</h2>
+                <ul>
+                    <li><strong>Resmi Dil:</strong> Bu sözleşmenin resmi dili Türkçe'dir. Uyuşmazlık durumunda Türkçe versiyon geçerlidir.</li>
+                    <li><strong>Bölünebilirlik:</strong> Bu sözleşmenin herhangi bir maddesi geçersiz sayılırsa, diğer maddeler yürürlükte kalır.</li>
+                    <li><strong>Feragat Etmeme:</strong> Herhangi bir hakkımızı kullanmamamız, o haktan feragat ettiğimiz anlamına gelmez.</li>
+                </ul>
+
+                <h2>17. DEĞİŞİKLİKLER VE GÜNCELLEMELER</h2>
+                <p>Bu koşulları zaman zaman güncelleyebiliriz. Değişiklikler şu şekilde bildirilir:</p>
+                <ul>
+                    <li><strong>Küçük Değişiklikler:</strong> Yazım hataları, açıklayıcı düzenlemeler için bildirim gerekmez</li>
+                    <li><strong>Önemli Değişiklikler:</strong> Haklarınızı etkileyen değişiklikler için 30 gün önceden e-posta ve uygulama içi bildirim yapılır</li>
+                    <li><strong>Kabul:</strong> Değişiklikler bildirildikten sonra uygulamayı kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir</li>
+                    <li><strong>Ret:</strong> Değişiklikleri kabul etmiyorsanız, hesabınızı kapatabilirsiniz</li>
+                </ul>
+
+                <h2>18. İLETİŞİM VE UYUŞMAZLIKLAR</h2>
+                <p>Bu sözleşme Türkiye Cumhuriyeti yasalarına tabidir. Her türlü uyuşmazlıkta İstanbul Mahkemeleri ve İcra Daireleri yetkilidir.</p>
+
+                <div class="contact">
+                    <p><strong>İletişim:</strong></p>
+                    <p>Destek ve sorularınız için: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
+                    <p><strong>Veri Sorumlusuna Başvuru:</strong> KVKK kapsamındaki haklarınızı kullanmak için info@codenzi.com</p>
+                    <p class="fine-print">
+                        <strong>Son Güncelleme:</strong> 17 Mart 2026<br>
+                        <strong>Versiyon:</strong> 2.0
+                    </p>
+                </div>
+            </div>
         </div>
+    </main>
 
-        <h2>5. ABONELİKLER VE KULLANIM HAKLARI</h2>
-        <p>Abonelikler, Apple App Store veya Google Play Store üzerinden satın alınır ve adil kullanım politikası çerçevesinde aşağıdaki aylık kullanım haklarına tabidir.</p>
-
-        <h3>ABONELİK SÜRELERİ VE ÜCRETLER:</h3>
-        <ul>
-            <li><strong>Aylık Abonelik:</strong> Her ay otomatik olarak yenilenir</li>
-            <li><strong>Yıllık Abonelik:</strong> Her yıl otomatik olarak yenilenir</li>
-            <li><strong>Ücretsiz Deneme:</strong> Mevcut kampanyalara göre ücretsiz deneme sunulabilir</li>
-            <li><strong>Otomatik Yenilenme:</strong> Aboneliğiniz süre dolmadan en az 24 saat önce iptal edilmezse otomatik olarak yenilenir</li>
-            <li><strong>İptal:</strong> Aboneliğinizi istediğiniz zaman App Store/Play Store üzerinden iptal edebilirsiniz. İptal, mevcut dönemin sonunda geçerli olur</li>
-        </ul>
-
-        <div class="rights-container">
-            <div class="rights-header">PRO KULLANICI AYLIK HAKLARI*</div>
-            <ul class="rights-list">
-                <li class="rights-item">
-                    <span class="rights-label">Sohbet / Motivasyon / Analiz / Strateji</span>
-                    <span class="rights-value">1000</span>
-                </li>
-                <li class="rights-item">
-                    <span class="rights-label">Soru Çözücü</span>
-                    <span class="rights-value">800</span>
-                </li>
-                <li class="rights-item">
-                    <span class="rights-label">Etüt Odası</span>
-                    <span class="rights-value">350</span>
-                </li>
-                <li class="rights-item">
-                    <span class="rights-label">Zihin Haritası</span>
-                    <span class="rights-value">200</span>
-                </li>
-                <li class="rights-item">
-                    <span class="rights-label">Not Defteri</span>
-                    <span class="rights-value">200</span>
-                </li>
-                <li class="rights-item">
-                    <span class="rights-label">Haftalık Plan</span>
-                    <span class="rights-value">50</span>
-                </li>
-                <li class="rights-item">
-                    <span class="rights-label">Podcast Üretme</span>
-                    <span class="rights-value">30</span>
-                </li>
-            </ul>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <a class="brand" href="/" aria-label="Codenzi"><img src="assets/img/codenzi-mark.png" width="30" height="16" alt="">Codenzi</a>
+            <div class="site-footer__meta">
+                <p>&copy; 2026 Codenzi</p>
+            </div>
         </div>
-        <p style="font-size: 0.85em; color: #718096; margin-bottom: 20px;">* Belirtilen kullanım limitleri; kampanya dönemleri, operasyonel gereklilikler veya uygulama güncellemeleri doğrultusunda Codenzi tarafından değiştirilebilir.</p>
+    </footer>
 
-        <ul>
-            <li><strong>Yenilenme:</strong> Bu haklar her ayın başında (ayın 1'inde) sıfırlanır ve yenilenir, bir sonraki aya devretmez.</li>
-            <li><strong>Cayma Hakkı Hakkında Bilgilendirme:</strong> 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği uyarınca; dijital içerikler ve abonelikler gibi "elektronik ortamda anında ifa edilen hizmetler", kullanıma başlandığı andan itibaren cayma hakkı istisnası kapsamına girebilmektedir. Bu nedenle, satın alınan dijital içeriklerin iadesi, ilgili uygulama mağazasının (Apple App Store veya Google Play Store) kendi iade koşullarına ve teknik değerlendirmesine tabidir.</li>
-            <li><strong>İade Süreçleri:</strong> Tüm teknik iade talepleri ve abonelik iptalleri, satın alımın yapıldığı mağazanın (Apple App Store veya Google Play Store) kendi politikalarına tabidir. Codenzi'nin mağaza üzerinden yapılan ödemelere doğrudan para iadesi yapma yetkisi bulunmamaktadır.</li>
-        </ul>
-
-        <h2>6. KULLANICI İÇERİKLERİ VE "ARENA" KURALLARI</h2>
-        <p>Uygulama, diğer kullanıcılarla etkileşime geçebileceğiniz, sıralamanızı görebileceğiniz sosyal özellikler ("Arena", "Liderlik Tablosu") içerir.</p>
-        <ul>
-            <li><strong>Saygı Çerçevesi:</strong> Diğer kullanıcılara hakaret etmek, zorbalık yapmak, nefret söyleminde bulunmak veya taciz etmek kesinlikle yasaktır ve derhal kalıcı yasaklanma (uzaklaştırma) sebebidir.</li>
-            <li><strong>İçerik Sorumluluğu:</strong> Oluşturduğunuz kullanıcı adı ve diğer tüm içeriklerden tamamen siz sorumlusunuz.</li>
-            <li><strong>İçerik Moderasyonu:</strong> Uygunsuz içerik tespit ettiğinizde, ilgili profili "Kullanıcıyı Raporla" butonu ile bildirebilirsiniz. Raporlar 24 saat içinde değerlendirilir ve gerekli işlem yapılır.</li>
-        </ul>
-
-        <h2>7. YASAKLI FAALİYETLER VE HİLE (ANTI-CHEAT)</h2>
-        <p>Uygulamanın bütünlüğünü korumak adına aşağıdakiler yasaktır:</p>
-        <ul>
-            <li>Liderlik tablosunda yükselmek için hile yapmak, bot kullanmak veya sistem açıklarını (bug) kötüye kullanmak.</li>
-            <li>Uygulamanın kaynak kodlarını tersine mühendislik (reverse engineering) ile çözmeye çalışmak.</li>
-            <li>Suni trafik oluşturarak sunuculara (Firebase) saldırı düzenlemek.</li>
-        </ul>
-        <p>Bu kuralların ihlali durumunda, önceden haber vermeksizin hesabınızı feshetme hakkımızı saklı tutarız.</p>
-
-        <h2>8. SINIRLI SORUMLULUK</h2>
-        <p class="caps-lock">YASALARIN İZİN VERDİĞİ EN GENİŞ KAPSAMDA; TAKTİK VE EKİBİ, UYGULAMANIN KULLANIMINDAN VEYA KULLANILAMAMASINDAN KAYNAKLANAN HİÇBİR DOLAYLI, ARIZİ, ÖZEL VEYA CEZAİ ZARARDAN (VERİ KAYBI, SINAV BAŞARISIZLIĞI, CİHAZ ARIZASI DAHİL) SORUMLU OLMAYACAKTIR.</p>
-
-        <h2>9. FİKRİ MÜLKİYET VE TELİF HAKLARI</h2>
-        <ul>
-            <li><strong>Tüm Haklar Saklıdır:</strong> Taktik uygulamasının tüm içeriği (tasarım, logo, metin, kod, grafik, ses dosyaları vb.) Codenzi'nin fikri mülkiyetidir.</li>
-            <li><strong>AI Tarafından Üretilen İçerikler:</strong> Yapay zeka tarafından size özel üretilen çalışma planları, soru çözümleri ve tavsiyeler <strong>sadece kişisel kullanımınız içindir.</strong> Bu içeriklerin kopyalanarak başka bir ticari platformda, uygulamada veya basılı yayında kullanılması yasaktır.</li>
-            <li><strong>Podcast İçeriklerinin Kullanımı:</strong> Yapay zeka tarafından üretilen podcast ses dosyaları <strong>yalnızca kişisel eğitim amaçlı kullanım içindir.</strong> Bu podcast içeriklerini indirip başka platformlarda paylaşmak, ticari amaçla kullanmak, yeniden yayınlamak veya üçüncü kişilere dağıtmak kesinlikle yasaktır. Podcast içerikleri telif hakları ile korunmaktadır ve izinsiz kullanımı yasal takibat gerektirebilir.</li>
-            <li><strong>Kullanım Lisansı:</strong> Size, bu uygulamayı yalnızca kişisel amaçlarla kullanmak için sınırlı, devredilemez bir lisans verilmiştir.</li>
-        </ul>
-
-        <h2>10. KİŞİSEL VERİLERİN KORUNMASI (KVKK/GDPR)</h2>
-        <p>Kişisel verileriniz 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve GDPR kapsamında işlenmektedir. Detaylı bilgi için <strong>Gizlilik Politikamızı</strong> inceleyiniz.</p>
-
-        <h3>VERİ SAHİBİ HAKLARINIZ:</h3>
-        <ul>
-            <li><strong>Erişim Hakkı:</strong> Hangi kişisel verilerinizin işlendiğini öğrenme</li>
-            <li><strong>Düzeltme Hakkı:</strong> Yanlış veya eksik verilerin düzeltilmesini talep etme</li>
-            <li><strong>Silme Hakkı:</strong> Verilerinizin silinmesini talep etme</li>
-            <li><strong>İtiraz Hakkı:</strong> Veri işleme faaliyetlerine itiraz etme</li>
-            <li><strong>Taşınabilirlik Hakkı:</strong> Verilerinizin size veya başka bir hizmete aktarılmasını talep etme</li>
-        </ul>
-        <p>Bu haklarınızı kullanmak için info@codenzi.com adresine e-posta gönderebilirsiniz. Talepleriniz 30 gün içinde yanıtlanacaktır.</p>
-
-        <h3>VERİ SAKLAMA SÜRELERİ:</h3>
-        <ul>
-            <li><strong>Aktif Hesaplar:</strong> Hesabınız aktif olduğu sürece verileriniz saklanır</li>
-            <li><strong>Silinen Hesaplar:</strong> Hesap silme talebinden sonra 30 gün içinde verileriniz silinir</li>
-            <li><strong>Yasal Yükümlülükler:</strong> Vergi, muhasebe ve yasal yükümlülükler için gerekli veriler, ilgili mevzuatın öngördüğü süre boyunca saklanır (genellikle 10 yıl)</li>
-            <li><strong>İstatistiksel Veriler:</strong> Anonimleştirilmiş kullanım verileri ürün geliştirme amacıyla süresiz saklanabilir</li>
-        </ul>
-
-        <h2>11. ÜÇÜNCÜ TARAF HİZMETLER VE ENTEGRASYONLAR</h2>
-        <p>Taktik uygulaması aşağıdaki üçüncü taraf hizmetlerini kullanmaktadır:</p>
-        <ul>
-            <li><strong>Google Gemini AI:</strong> Yapay zeka destekli özellikler için (<a href="https://ai.google.dev/gemini-api/terms" target="_blank">Kullanım Koşulları</a>)</li>
-            <li><strong>Firebase (Google):</strong> Veri depolama, kimlik doğrulama ve analitik için (<a href="https://firebase.google.com/terms" target="_blank">Kullanım Koşulları</a>)</li>
-            <li><strong>RevenueCat:</strong> Abonelik yönetimi için (<a href="https://www.revenuecat.com/terms" target="_blank">Kullanım Koşulları</a>)</li>
-            <li><strong>Apple App Store / Google Play Store:</strong> Uygulama dağıtımı ve ödeme işlemleri için</li>
-        </ul>
-        <p><strong>Sorumluluk Reddi:</strong> Bu üçüncü taraf hizmetlerin gizlilik politikaları ve kullanım koşulları, bizim kontrolümüz dışındadır. Bu hizmetlerin kullanımından kaynaklanan sorunlardan sorumlu değiliz.</p>
-
-        <h2>12. HİZMETİN DURDURULMASI VE FESHİ</h2>
-        <ul>
-            <li><strong>Planlı Bakım:</strong> Sistem bakımı ve güncelleme çalışmaları için hizmet geçici olarak durdurulabilir. Mümkün olduğunca önceden bildirim yapılır.</li>
-            <li><strong>Plansız Kesintiler:</strong> Teknik arızalar, sunucu sorunları veya güvenlik tehditleri nedeniyle hizmet kesintiye uğrayabilir. Bu durumlardan sorumlu değiliz.</li>
-            <li><strong>Hizmetin Kalıcı Sonlandırılması:</strong> Uygulamayı kalıcı olarak kapatmaya karar verirsek, kullanıcılara en az 30 gün önceden bildirimde bulunuruz. Abonelikler için kalan süre oranında iade süreçleri mağaza üzerinden işletilebilir.</li>
-            <li><strong>Hesap Feshi:</strong> Kullanım koşullarını ihlal etmeniz durumunda hesabınızı önceden haber vermeksizin feshedebiliriz. İhlal durumunda ödeme iadesi yapılmaz.</li>
-        </ul>
-
-        <h2>13. MÜCBİR SEBEPLER (FORCE MAJEURE)</h2>
-        <p>Doğal afetler, savaş, terör saldırıları, pandemi, hükümet kısıtlamaları, internet kesintileri veya kontrolümüz dışındaki diğer olağanüstü durumlar nedeniyle hizmet sağlayamamaktan sorumlu tutulamayız. Bu durumlarda yükümlülüklerimiz askıya alınır.</p>
-
-        <h2>14. ŞİKAYET VE İTİRAZ PROSEDÜRÜ</h2>
-        <ul>
-            <li><strong>İlk Başvuru:</strong> Herhangi bir şikayet veya itirazınız için info@codenzi.com adresine detaylı bilgi ile başvurun</li>
-            <li><strong>Yanıt Süresi:</strong> Başvurularınız 14 iş günü içinde yanıtlanır. Karmaşık durumlarda bu süre 30 güne uzayabilir</li>
-            <li><strong>Haksız Hesap Kapatma:</strong> Hesabınızın haksız yere kapatıldığını düşünüyorsanız, delillerinizle birlikte başvurabilirsiniz</li>
-            <li><strong>İade Talepleri:</strong> Abonelik iadesi talepleri için doğrudan App Store/Play Store'a başvurmanız gerekmektedir</li>
-            <li><strong>Tüketici Hakem Heyeti:</strong> Anlaşmazlık çözülemezse, Tüketici Hakem Heyetlerine başvurma hakkınız saklıdır</li>
-        </ul>
-
-        <h2>15. BİLDİRİMLER VE İLETİŞİM</h2>
-        <p>Önemli güncellemeler ve bildirimler aşağıdaki yöntemlerle yapılır:</p>
-        <ul>
-            <li><strong>Uygulama İçi Bildirim:</strong> Kritik değişiklikler için push notification gönderilir</li>
-            <li><strong>E-posta:</strong> Kayıtlı e-posta adresinize bilgilendirme mesajları gönderilir</li>
-            <li><strong>Uygulama İçi Duyuru:</strong> Güncellemeler uygulama içinde banner ile duyurulur</li>
-            <li><strong>Web Sitesi:</strong> Güncel koşullar her zaman uygulama içinde erişilebilir</li>
-        </ul>
-
-        <h2>16. DİL VE YETKİLİ HUKUK</h2>
-        <ul>
-            <li><strong>Resmi Dil:</strong> Bu sözleşmenin resmi dili Türkçe'dir. Uyuşmazlık durumunda Türkçe versiyon geçerlidir.</li>
-            <li><strong>Bölünebilirlik:</strong> Bu sözleşmenin herhangi bir maddesi geçersiz sayılırsa, diğer maddeler yürürlükte kalır.</li>
-            <li><strong>Feragat Etmeme:</strong> Herhangi bir hakkımızı kullanmamamız, o haktan feragat ettiğimiz anlamına gelmez.</li>
-        </ul>
-
-        <h2>17. DEĞİŞİKLİKLER VE GÜNCELLEMELER</h2>
-        <p>Bu koşulları zaman zaman güncelleyebiliriz. Değişiklikler şu şekilde bildirilir:</p>
-        <ul>
-            <li><strong>Küçük Değişiklikler:</strong> Yazım hataları, açıklayıcı düzenlemeler için bildirim gerekmez</li>
-            <li><strong>Önemli Değişiklikler:</strong> Haklarınızı etkileyen değişiklikler için 30 gün önceden e-posta ve uygulama içi bildirim yapılır</li>
-            <li><strong>Kabul:</strong> Değişiklikler bildirildikten sonra uygulamayı kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir</li>
-            <li><strong>Ret:</strong> Değişiklikleri kabul etmiyorsanız, hesabınızı kapatabilirsiniz</li>
-        </ul>
-
-        <h2>18. İLETİŞİM VE UYUŞMAZLIKLAR</h2>
-        <p>Bu sözleşme Türkiye Cumhuriyeti yasalarına tabidir. Her türlü uyuşmazlıkta İstanbul Mahkemeleri ve İcra Daireleri yetkilidir.</p>
-
-        <div class="contact">
-            <p><strong>İletişim:</strong></p>
-            <p>Destek ve sorularınız için: <a href="mailto:info@codenzi.com">info@codenzi.com</a></p>
-            <p><strong>Veri Sorumlusuna Başvuru:</strong> KVKK kapsamındaki haklarınızı kullanmak için info@codenzi.com</p>
-            <p style="margin-top: 20px; font-size: 0.85em; color: #718096;">
-                <strong>Son Güncelleme:</strong> 17 Mart 2026<br>
-                <strong>Versiyon:</strong> 2.0
-            </p>
-        </div>
-    </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,553 +21,87 @@
           'currency': 'TRY'
       });
     </script>
-    
+
     <title>Codenzi | AI & Mobile Technology Startup</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            /* Daha kurumsal ve "Tech" hissi veren renkler */
-            --primary-blue: #2563EB;
-            --primary-indigo: #4F46E5;
-            --accent-cyan: #06B6D4;
-            --dark-bg: #0F172A;
-            --card-bg: #1E293B;
-            --text-main: #F8FAFC;
-            --text-muted: #94A3B8;
-            
-            --brand-gradient: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #06B6D4 100%);
-            --font-main: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--dark-bg);
-            color: var(--text-main);
-            font-family: var(--font-main);
-            margin: 0;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* --- Modern Tech Background --- */
-        .tech-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: 
-                radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.15) 0%, transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 25%);
-        }
-
-        .grid-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.5;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* --- Header --- */
-        .header {
-            padding: 1.5rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            background: rgba(15, 23, 42, 0.85); 
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .header .container { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-        }
-        
-        .logo h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(to right, #fff, #94A3B8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .navbar ul { 
-            margin: 0; 
-            padding: 0; 
-            list-style: none; 
-            display: flex; 
-            align-items: center; 
-        }
-
-        .navbar li { 
-            margin-left: 30px; 
-        }
-        
-        .navbar a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-        
-        .navbar a:hover { 
-            color: #fff; 
-        }
-
-        .navbar a.active { 
-            color: #fff; 
-            font-weight: 600; 
-        }
-
-        .btn-nav-cta {
-            background: rgba(255,255,255,0.1);
-            padding: 8px 20px;
-            border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .btn-nav-cta:hover {
-            background: rgba(255,255,255,0.2);
-            border-color: rgba(255,255,255,0.3);
-        }
-
-        /* --- Hero Section --- */
-        #hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding-top: 100px;
-            position: relative;
-        }
-        
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 6px 16px;
-            background: rgba(79, 70, 229, 0.1);
-            border: 1px solid rgba(79, 70, 229, 0.3);
-            border-radius: 30px;
-            font-size: 0.85rem;
-            color: #818CF8;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .badge i { 
-            margin-right: 8px; 
-            font-size: 0.8rem; 
-        }
-
-        .hero-content h2 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin: 0 0 1.5rem;
-            line-height: 1.1;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-        
-        .hero-content .gradient-text {
-            background: var(--brand-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-content p {
-            font-size: 1.15rem;
-            max-width: 800px;
-            margin: 0 auto 2.5rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            line-height: 1.7;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-        }
-
-        .btn-primary {
-            background: var(--brand-gradient);
-            color: #fff;
-            padding: 16px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.5);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.7);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: #fff;
-            padding: 16px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline:hover {
-            border-color: #fff;
-            background: rgba(255,255,255,0.05);
-        }
-
-        /* --- Metrics Bar --- */
-        .metrics-bar {
-            margin-top: 4rem;
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            flex-wrap: wrap;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding: 2rem 0;
-            background: rgba(15, 23, 42, 0.5);
-        }
-        
-        .metric-item {
-            text-align: center;
-        }
-
-        .metric-val {
-            display: block;
-            font-size: 2rem;
-            font-weight: 800;
-            color: #fff;
-        }
-
-        .metric-lbl {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* --- Products Section --- */
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .product-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 24px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
-            align-items: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(79, 70, 229, 0.3);
-        }
-
-        .product-info h4 {
-            font-size: 2rem;
-            margin: 0 0 0.5rem;
-        }
-
-        .product-meta {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 1.5rem;
-        }
-        
-        .product-tag {
-            color: var(--accent-cyan);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .product-desc {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-        
-        .tech-stack-mini {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .ts-badge {
-            background: rgba(255,255,255,0.05);
-            padding: 5px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .product-visual img {
-            width: 100%;
-            border-radius: 16px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* --- Technology Stack --- */
-        #tech-stack {
-            padding: 100px 0;
-            background: linear-gradient(to bottom, var(--dark-bg), #0B1120);
-            text-align: center;
-        }
-
-        .tech-grid {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .tech-item {
-            background: rgba(255,255,255,0.03);
-            padding: 2.5rem;
-            border-radius: 16px;
-            width: 200px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .tech-item:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateY(-5px);
-            border-color: var(--primary-blue);
-        }
-
-        .tech-item i {
-            font-size: 3rem;
-            margin-bottom: 1.2rem;
-            color: #fff;
-        }
-
-        .tech-item span {
-            display: block;
-            font-weight: 600;
-            color: var(--text-muted);
-        }
-
-        /* --- About & Team Section --- */
-        #about {
-            padding: 100px 0;
-            background: var(--dark-bg);
-        }
-
-        .business-description {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 5rem;
-        }
-
-        .business-description h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .business-description p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .team-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 2.5rem;
-            text-align: left;
-        }
-
-        .team-card h4 {
-            font-size: 1.5rem;
-            margin: 0 0 0.2rem;
-            color: #fff;
-        }
-
-        .team-card .role {
-            color: var(--accent-cyan);
-            font-weight: 600;
-            font-size: 0.95rem;
-            display: block;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .team-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* --- Footer --- */
-        .footer {
-            padding: 4rem 0;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .legal-links a {
-            color: var(--text-muted);
-            margin-left: 20px;
-            text-decoration: none;
-        }
-
-        .legal-links a:hover { 
-            color: #fff; 
-        }
-
-        @media (max-width: 992px) {
-            .product-card { 
-                grid-template-columns: 1fr; 
-                text-align: left; 
-            }
-            .product-visual { 
-                order: -1; 
-                margin-bottom: 2rem; 
-            }
-            .hero-content h2 { 
-                font-size: 3rem; 
-            }
-            .metrics-bar { 
-                gap: 2rem; 
-            }
-            .footer-content { 
-                flex-direction: column; 
-                gap: 2rem; 
-                text-align: center; 
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar { 
-                display: none; 
-            }
-            .hero-buttons { 
-                flex-direction: column; 
-            }
-            .legal-links { 
-                margin-top: 1rem; 
-            }
-            .legal-links a { 
-                margin: 0 10px; 
-            }
-        }
-    </style>
+    <meta name="theme-color" content="#07080c">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="site.js" defer></script>
 </head>
-<body>
+<body class="home">
 
-    <div class="tech-bg">
-        <div class="grid-overlay"></div>
-    </div>
-
-    <header class="header">
-        <div class="container">
-            <div class="logo">
+    <header class="site-header site-header--home">
+        <div class="site-header__inner">
+            <a class="brand logo" href="#hero" aria-label="Codenzi">
+                <img src="assets/img/codenzi-mark.png" width="38" height="20" alt="">
                 <h1>Codenzi</h1>
-            </div>
-            <nav class="navbar">
+            </a>
+            <nav class="site-nav" aria-label="Primary">
                 <ul>
                     <li><a href="#about">Company</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#tech-stack">Technology</a></li>
-                    <li><a href="mailto:info@codenzi.com" class="btn-nav-cta">Connect</a></li>
                 </ul>
+            </nav>
+            <a href="mailto:info@codenzi.com" class="btn btn--light btn--sm nav-cta">Connect</a>
+            <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
+                <span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <nav aria-label="Mobile">
+                <a href="#about">Company</a>
+                <a href="#products">Products</a>
+                <a href="#tech-stack">Technology</a>
+                <a href="mailto:info@codenzi.com" class="btn btn--light btn--lg">Connect</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="hero">
-            <div class="container">
+        <section id="hero" class="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-grid"></div>
+                <div class="hero-glow hero-glow--1"></div>
+                <div class="hero-glow hero-glow--2"></div>
+                <div class="hero-glow hero-glow--3"></div>
+            </div>
+
+            <div class="wrap hero-inner">
                 <div class="badge">
-                    <i class="fas fa-bolt"></i> Digital-Native Tech Startup
+                    <span class="badge-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                    </span>
+                    Digital-Native Tech Startup
                 </div>
                 <div class="hero-content">
                     <h2>Innovating with<br><span class="gradient-text">Intelligent Mobile Apps</span></h2>
                     <p>Codenzi is an independent technology startup. We exclusively design, build, and operate our own proprietary mobile applications. Our mission is to solve everyday challenges for students and individuals by providing accessible, AI-powered tools for education and personal finance.</p>
-                    
+
                     <div class="hero-buttons">
-                        <a href="#products" class="btn-primary">View Our Products</a>
-                        <a href="#about" class="btn-outline">Meet The Team</a>
+                        <a href="#products" class="btn btn--light btn--lg">View Our Products <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                        <a href="#about" class="btn btn--ghost btn--lg">Meet The Team</a>
+                    </div>
+                </div>
+
+                <div class="hero-showcase" aria-hidden="true">
+                    <div class="orbit orbit--1"></div>
+                    <div class="orbit orbit--2"></div>
+                    <div class="showcase-glow"></div>
+                    <div class="showcase-app showcase-app--left">
+                        <span class="app-tile"><img src="vocachat.webp" width="96" height="96" alt=""></span>
+                    </div>
+                    <div class="showcase-app showcase-app--center">
+                        <img class="showcase-taktik" src="taktik.png" width="184" height="184" alt="">
+                    </div>
+                    <div class="showcase-app showcase-app--right">
+                        <span class="app-tile"><img src="payday.webp" width="96" height="96" alt=""></span>
                     </div>
                 </div>
 
@@ -588,148 +122,183 @@
             </div>
         </section>
 
-        <section id="products" style="padding: 100px 0;">
-            <div class="container">
-                <div class="section-header">
+        <section id="products" class="section">
+            <div class="wrap">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">Products</span>
                     <h3>Our App Portfolio</h3>
                     <p>We do not operate as an agency. Below are the proprietary software products entirely conceptualized, developed, and maintained by the Codenzi team.</p>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-info">
-                        <div class="product-meta">
-                            <span class="product-tag">EdTech</span>
+                <div class="product-grid">
+                    <article class="product-card product-card--feature product-card--taktik" data-reveal data-spotlight>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-tag">EdTech</span>
+                            </div>
+                            <h4><img class="product-logo" src="taktik.png" width="48" height="48" alt="">Taktik</h4>
+                            <p class="product-desc">A smart study companion targeting exam preparation. It solves the problem of inefficient studying by helping students optimize their test strategies using personalized data insights.</p>
+                            <div class="tech-stack-mini">
+                                <span class="ts-badge">Flutter</span>
+                                <span class="ts-badge">Firebase</span>
+                                <span class="ts-badge">AI Analytics</span>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.codenzi.taktik" target="_blank" class="product-link">View Details <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
                         </div>
-                        <h4>Taktik</h4>
-                        <p class="product-desc">A smart study companion targeting exam preparation. It solves the problem of inefficient studying by helping students optimize their test strategies using personalized data insights.</p>
-                        <div class="tech-stack-mini">
-                            <span class="ts-badge">Flutter</span>
-                            <span class="ts-badge">Firebase</span>
-                            <span class="ts-badge">AI Analytics</span>
+                        <div class="product-visual">
+                            <div class="pv-rings" aria-hidden="true"></div>
+                            <img class="pv-icon" src="taktik.png" width="208" height="208" alt="Taktik App Interface" loading="lazy">
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.codenzi.taktik" target="_blank" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="product-visual">
-                        <img src="taktik.webp" alt="Taktik App Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Taktik+Mobile+App'">
-                    </div>
-                </div>
+                    </article>
 
-                <div class="product-card">
-                    <div class="product-visual">
-                        <img src="vocachat.webp" alt="VocaChat App Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=VocaChat+AI'">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-meta">
-                            <span class="product-tag">Generative AI</span>
+                    <article class="product-card product-card--vocachat" data-reveal data-spotlight>
+                        <div class="product-visual">
+                            <div class="pv-rings" aria-hidden="true"></div>
+                            <span class="pv-tile"><img src="vocachat.webp" width="128" height="128" alt="VocaChat App Interface" loading="lazy"></span>
                         </div>
-                        <h4>VocaChat</h4>
-                        <p class="product-desc">An immersive language learning application aimed at breaking the conversational barrier. It uses Gemini API to provide real-time speaking practice with intelligent AI agents.</p>
-                        <div class="tech-stack-mini">
-                            <span class="ts-badge">Flutter</span>
-                            <span class="ts-badge">Gemini API</span>
-                            <span class="ts-badge">Text-to-Speech</span>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-tag">Generative AI</span>
+                            </div>
+                            <h4><img class="product-logo product-logo--tile" src="vocachat.webp" width="40" height="40" alt="">VocaChat</h4>
+                            <p class="product-desc">An immersive language learning application aimed at breaking the conversational barrier. It uses Gemini API to provide real-time speaking practice with intelligent AI agents.</p>
+                            <div class="tech-stack-mini">
+                                <span class="ts-badge">Flutter</span>
+                                <span class="ts-badge">Gemini API</span>
+                                <span class="ts-badge">Text-to-Speech</span>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.codenzi.vocachat" target="_blank" class="product-link">View Details <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.codenzi.vocachat" target="_blank" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                    </article>
 
-                 <div class="product-card">
-                    <div class="product-info">
-                        <div class="product-meta">
-                            <span class="product-tag">FinTech</span>
+                    <article class="product-card product-card--payday" data-reveal data-spotlight>
+                        <div class="product-visual">
+                            <div class="pv-rings" aria-hidden="true"></div>
+                            <span class="pv-tile"><img src="payday.webp" width="128" height="128" alt="Payday App Interface" loading="lazy"></span>
                         </div>
-                        <h4>Payday</h4>
-                        <p class="product-desc">A modern personal finance tracker. Payday targets individuals struggling with budget management by offering secure, fast, and highly visual financial tracking.</p>
-                        <div class="tech-stack-mini">
-                            <span class="ts-badge">Flutter</span>
-                            <span class="ts-badge">Firebase Auth</span>
-                            <span class="ts-badge">Cloud Functions</span>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-tag">FinTech</span>
+                            </div>
+                            <h4><img class="product-logo product-logo--tile" src="payday.webp" width="40" height="40" alt="">Payday</h4>
+                            <p class="product-desc">A modern personal finance tracker. Payday targets individuals struggling with budget management by offering secure, fast, and highly visual financial tracking.</p>
+                            <div class="tech-stack-mini">
+                                <span class="ts-badge">Flutter</span>
+                                <span class="ts-badge">Firebase Auth</span>
+                                <span class="ts-badge">Cloud Functions</span>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.codenzi.payday" target="_blank" class="product-link">View Details <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.codenzi.payday" target="_blank" class="btn-outline" style="padding: 10px 25px; font-size: 0.9rem;">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="product-visual">
-                         <img src="payday.webp" alt="Payday App Interface" onerror="this.src='https://placehold.co/600x400/1e293b/FFF?text=Payday+Finance+App'">
-                    </div>
+                    </article>
                 </div>
-
             </div>
         </section>
 
-        <section id="tech-stack">
-            <div class="container">
-                <div class="section-header">
+        <section id="tech-stack" class="section section--tech">
+            <div class="wrap">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">Technology</span>
                     <h3>Powered by Google Ecosystem</h3>
                     <p>We exclusively utilize cutting-edge cloud infrastructure to ensure our products scale securely globally.</p>
                 </div>
+                <svg width="0" height="0" class="sr-only" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="gemini-grad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#4796E3"/>
+                            <stop offset="0.55" stop-color="#9177C7"/>
+                            <stop offset="1" stop-color="#CA6673"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
                 <div class="tech-grid">
-                    <div class="tech-item">
-                        <i class="fab fa-google"></i>
-                        <span>Google Cloud</span>
+                    <div class="tech-item tech-item--gcloud" data-reveal data-spotlight>
+                        <span class="tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12.19 2.38a9.344 9.344 0 0 0-9.234 6.893c.053-.02-.055.013 0 0-3.875 2.551-3.922 8.11-.247 10.941l.006-.007-.007.03a6.717 6.717 0 0 0 4.077 1.356h5.173l.03.03h5.192c6.687.053 9.376-8.605 3.835-12.35a9.365 9.365 0 0 0-2.821-4.552l-.043.043.006-.05A9.344 9.344 0 0 0 12.19 2.38zm-.358 4.146c1.244-.04 2.518.368 3.486 1.15a5.186 5.186 0 0 1 1.862 4.078v.518c3.53-.07 3.53 5.262 0 5.193h-5.193l-.008.009v-.04H6.785a2.59 2.59 0 0 1-1.067-.23h.001a2.597 2.597 0 1 1 3.437-3.437l3.013-3.012A6.747 6.747 0 0 0 8.11 8.24c.018-.01.04-.026.054-.023a5.186 5.186 0 0 1 3.67-1.69z"/></svg></span>
+                        <span class="tech-name">Google Cloud</span>
                     </div>
-                    <div class="tech-item">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Flutter</span>
+                    <div class="tech-item tech-item--flutter" data-reveal data-spotlight>
+                        <span class="tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg></span>
+                        <span class="tech-name">Flutter</span>
                     </div>
-                    <div class="tech-item">
-                        <i class="fas fa-fire"></i>
-                        <span>Firebase</span>
+                    <div class="tech-item tech-item--firebase" data-reveal data-spotlight>
+                        <span class="tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.455 8.369c-.538-.748-1.778-2.285-3.681-4.569-.826-.991-1.535-1.832-1.884-2.245a146 146 0 0 0-.488-.576l-.207-.245-.113-.133-.022-.032-.01-.005L12.57 0l-.609.488c-1.555 1.246-2.828 2.851-3.681 4.64-.523 1.064-.864 2.105-1.043 3.176-.047.241-.088.489-.121.738-.209-.017-.421-.028-.632-.033-.018-.001-.035-.002-.059-.003a7.46 7.46 0 0 0-2.28.274l-.317.089-.163.286c-.765 1.342-1.198 2.869-1.252 4.416-.07 2.01.477 3.954 1.583 5.625 1.082 1.633 2.61 2.882 4.42 3.611l.236.095.071.025.003-.001a9.59 9.59 0 0 0 2.941.568q.171.006.342.006c1.273 0 2.513-.249 3.69-.742l.008.004.313-.145a9.63 9.63 0 0 0 3.927-3.335c1.01-1.49 1.577-3.234 1.641-5.042.075-2.161-.643-4.304-2.133-6.371m-7.083 6.695c.328 1.244.264 2.44-.191 3.558-1.135-1.12-1.967-2.352-2.475-3.665-.543-1.404-.87-2.74-.974-3.975.48.157.922.366 1.315.622 1.132.737 1.914 1.902 2.325 3.461zm.207 6.022c.482.368.99.712 1.513 1.028-.771.21-1.565.302-2.369.273a8 8 0 0 1-.373-.022c.458-.394.869-.823 1.228-1.279zm1.347-6.431c-.516-1.957-1.527-3.437-3.002-4.398-.647-.421-1.385-.741-2.194-.95.011-.134.026-.268.043-.4.014-.113.03-.216.046-.313.133-.689.332-1.37.589-2.025.099-.25.206-.499.321-.74l.004-.008c.177-.358.376-.719.61-1.105l.092-.152-.003-.001c.544-.851 1.197-1.627 1.942-2.311l.288.341c.672.796 1.304 1.548 1.878 2.237 1.291 1.549 2.966 3.583 3.612 4.48 1.277 1.771 1.893 3.579 1.83 5.375-.049 1.395-.461 2.755-1.195 3.933-.694 1.116-1.661 2.05-2.8 2.708-.636-.318-1.559-.839-2.539-1.599.79-1.575.952-3.28.479-5.072zm-2.575 5.397c-.725.939-1.587 1.55-2.09 1.856-.081-.029-.163-.06-.243-.093l-.065-.026c-1.49-.616-2.747-1.656-3.635-3.01-.907-1.384-1.356-2.993-1.298-4.653.041-1.19.338-2.327.882-3.379.316-.07.638-.114.96-.131l.084-.002c.162-.003.324-.003.478 0 .227.011.454.035.677.07.073 1.513.445 3.145 1.105 4.852.637 1.644 1.694 3.162 3.144 4.515z"/></svg></span>
+                        <span class="tech-name">Firebase</span>
                     </div>
-                    <div class="tech-item">
-                        <i class="fas fa-brain"></i>
-                        <span>Gemini AI</span>
+                    <div class="tech-item tech-item--gemini" data-reveal data-spotlight>
+                        <span class="tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg></span>
+                        <span class="tech-name">Gemini AI</span>
                     </div>
                 </div>
             </div>
         </section>
 
-   <section id="about">
-    <div class="container">
-        <div class="business-description">
-            <h3>About Codenzi</h3>
-            <p>Codenzi is an independent, product-driven technology company dedicated to engineering high-impact mobile applications for the global B2C market. We focus exclusively on building, scaling, and publishing our own proprietary ecosystem of apps, spearheaded by our comprehensive educational platform, Taktik. As a dedicated product studio, we do not take on client work or external consulting; our sole mission is to solve real-world problems through seamless, scalable digital experiences.</p>
-        </div>
+        <section id="about" class="section">
+            <div class="wrap">
+                <div class="business-description" data-reveal>
+                    <div class="bd-head">
+                        <span class="eyebrow">Company</span>
+                        <h3>About Codenzi</h3>
+                    </div>
+                    <p>Codenzi is an independent, product-driven technology company dedicated to engineering high-impact mobile applications for the global B2C market. We focus exclusively on building, scaling, and publishing our own proprietary ecosystem of apps, spearheaded by our comprehensive educational platform, Taktik. As a dedicated product studio, we do not take on client work or external consulting; our sole mission is to solve real-world problems through seamless, scalable digital experiences.</p>
+                </div>
 
-        <div class="section-header" style="margin-bottom: 3rem;">
-            <h3 style="font-size: 2rem;">Meet The Founders</h3>
-        </div>
+                <div class="section-header section-header--compact" data-reveal>
+                    <h3>Meet The Founders</h3>
+                </div>
 
-        <div class="team-grid">
-            <div class="team-card">
-                <h4>Baki Tunçer</h4>
-                <span class="role">Founder & Core Developer</span>
-                <p>As a founder and core developer, Baki plays a foundational role in executing Codenzi's development and operational lifecycles. He takes a hands-on approach across the entire tech stack, managing code repositories, privacy architectures, and refining UI/UX implementations. Together with Kerim, they ensure that every product shipped under the Codenzi brand is optimized, secure, and ready to scale in a competitive global market.</p>
+                <div class="team-grid">
+                    <article class="team-card" data-reveal data-spotlight>
+                        <div class="team-head">
+                            <span class="avatar" aria-hidden="true">BT</span>
+                            <div>
+                                <h4>Baki Tunçer</h4>
+                                <span class="role">Founder &amp; Core Developer</span>
+                            </div>
+                        </div>
+                        <p>As a founder and core developer, Baki plays a foundational role in executing Codenzi's development and operational lifecycles. He takes a hands-on approach across the entire tech stack, managing code repositories, privacy architectures, and refining UI/UX implementations. Together with Kerim, they ensure that every product shipped under the Codenzi brand is optimized, secure, and ready to scale in a competitive global market.</p>
+                    </article>
+
+                    <article class="team-card" data-reveal data-spotlight>
+                        <div class="team-head">
+                            <span class="avatar avatar--alt" aria-hidden="true">KK</span>
+                            <div>
+                                <h4>Kerim Karaman</h4>
+                                <span class="role">Founder &amp; Lead Architect</span>
+                            </div>
+                        </div>
+                        <p>As a founder and technical architect of Codenzi, Kerim drives the company's product vision and technical strategy. He specializes in cross-platform mobile development using Flutter and designs robust, scalable backend infrastructures with Google Cloud Platform and Firebase. With deep expertise in secure mobile architectures, Kerim ensures that Codenzi's flagship product, Taktik, is built to top-tier industry standards from the ground up.</p>
+                    </article>
+                </div>
             </div>
-
-            <div class="team-card">
-                <h4>Kerim Karaman</h4>
-                <span class="role">Founder & Lead Architect</span>
-                <p>As a founder and technical architect of Codenzi, Kerim drives the company's product vision and technical strategy. He specializes in cross-platform mobile development using Flutter and designs robust, scalable backend infrastructures with Google Cloud Platform and Firebase. With deep expertise in secure mobile architectures, Kerim ensures that Codenzi's flagship product, Taktik, is built to top-tier industry standards from the ground up.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
+        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
+    <footer class="site-footer site-footer--home">
+        <div class="wrap">
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <h4 style="color:#fff; margin:0 0 10px;">Codenzi</h4>
+                    <a class="brand" href="#hero" aria-label="Codenzi">
+                        <img src="assets/img/codenzi-mark.png" width="38" height="20" alt="">
+                        <h4>Codenzi</h4>
+                    </a>
                     <p>Building the next generation of digital products.</p>
-                    <a href="mailto:info@codenzi.com" style="color: var(--text-muted); font-size: 0.9rem; text-decoration: none; margin-top: 15px; display: block;">info@codenzi.com</a>
+                    <a href="mailto:info@codenzi.com" class="footer-mail">info@codenzi.com</a>
                 </div>
-                <div class="legal-links">
+                <nav class="footer-links legal-links" aria-label="Footer">
+                    <a href="#about">Company</a>
+                    <a href="#products">Products</a>
+                    <a href="#tech-stack">Technology</a>
                     <a href="https://www.codenzi.com/privacy-genel.html">Privacy Policy</a>
-                </div>
+                </nav>
             </div>
-            
-            <div style="text-align: center; margin-top: 3rem; opacity: 0.5; font-size: 0.8rem;">
-                &copy; 2026 Codenzi. All rights reserved.
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Codenzi. All rights reserved.</span>
+                <a href="mailto:info@codenzi.com" class="btn btn--ghost btn--sm">Connect</a>
             </div>
+
+            <div class="footer-wordmark" aria-hidden="true">Codenzi</div>
         </div>
     </footer>
 
 </body>
 </html>
-
