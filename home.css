@@ -466,12 +466,20 @@
 }
 
 .showcase-app--far-left .showcase-icon {
-    border-radius: 24px;
     animation-delay: -2s;
 }
 
-.showcase-app--far-right .showcase-icon {
+.app-tile--far {
+    width: 104px;
+    height: 104px;
+    border-radius: 24px;
+    animation-duration: 9s;
     animation-delay: -6s;
+}
+
+.app-tile--far img {
+    width: 70px;
+    height: 70px;
 }
 
 .app-tile img {
