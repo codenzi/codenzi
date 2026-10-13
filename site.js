@@ -69,6 +69,32 @@
         }
     }
 
+    /* ---------- App carousel (narrow screens) ---------- */
+    var rail = document.querySelector("[data-rail-track]");
+    var railPrev = document.querySelector("[data-rail-prev]");
+    var railNext = document.querySelector("[data-rail-next]");
+    if (rail && railPrev && railNext) {
+        var railStep = function () {
+            var card = rail.querySelector(".app-card");
+            var gap = parseFloat(getComputedStyle(rail).columnGap) || 16;
+            return card ? card.getBoundingClientRect().width + gap : rail.clientWidth * 0.8;
+        };
+        var railUpdate = function () {
+            var max = rail.scrollWidth - rail.clientWidth - 2;
+            railPrev.disabled = rail.scrollLeft <= 2;
+            railNext.disabled = rail.scrollLeft >= max;
+        };
+        railPrev.addEventListener("click", function () {
+            rail.scrollBy({ left: -railStep(), behavior: reduceMotion ? "auto" : "smooth" });
+        });
+        railNext.addEventListener("click", function () {
+            rail.scrollBy({ left: railStep(), behavior: reduceMotion ? "auto" : "smooth" });
+        });
+        rail.addEventListener("scroll", railUpdate, { passive: true });
+        window.addEventListener("resize", railUpdate);
+        railUpdate();
+    }
+
     /* ---------- Documents: reading progress + table of contents ---------- */
     var doc = document.querySelector(".doc");
     var docBody = doc && doc.querySelector(".doc-body");
